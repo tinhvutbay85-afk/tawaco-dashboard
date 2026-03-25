@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAWACO – Bảng Điều Khiển Kinh Doanh Q1/2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg:     #07090f;
+    --card:   #0f1624;
+    --card2:  #151e30;
+    --border: #1c2a40;
+    --blue:   #3b82f6;
+    --cyan:   #06b6d4;
+    --green:  #10b981;
+    --yellow: #f59e0b;
+    --red:    #ef4444;
+    --text:   #e2e8f0;
+    --muted:  #64748b;
+  }
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  html { font-size: 16px; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ─────────────────────── */
+  .header {
+    background: linear-gradient(135deg,#0d1526 0%,#1a3252 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 20px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 100;
+  }
+  .logo { display:flex; align-items:center; gap:14px; }
+  .logo-icon {
+    width:50px; height:50px; border-radius:14px;
+    background: linear-gradient(135deg,var(--blue),var(--cyan));
+    display:flex; align-items:center; justify-content:center;
+    font-size:26px; box-shadow:0 0 24px rgba(59,130,246,.45);
+  }
+  .logo-title  { font-size:22px; font-weight:800; color:#fff; }
+  .logo-sub    { font-size:12px; color:var(--muted); margin-top:2px; }
+  .live-badge  {
+    display:flex; align-items:center; gap:8px;
+    background: rgba(16,185,129,.12);
+    border: 1px solid rgba(16,185,129,.3);
+    border-radius:20px; padding: 7px 18px;
+    font-size:12px; font-weight:700; color:var(--green);
+  }
+  .dot-live {
+    width:8px; height:8px; border-radius:50%; background:var(--green);
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.45;transform:scale(1.35)} }
+
+  /* ── MAIN ───────────────────────── */
+  .main { padding:36px 40px; max-width:1600px; margin:0 auto; }
+
+  .sec-label {
+    font-size:11px; font-weight:700; letter-spacing:2px;
+    text-transform:uppercase; color:var(--muted);
+    margin-bottom:20px; display:flex; align-items:center; gap:10px;
+  }
+  .sec-label::before {
+    content:''; width:4px; height:16px; border-radius:3px;
+    background: linear-gradient(var(--blue),var(--cyan));
+  }
+
+  /* ── KPI 2-wide ──────────────────── */
+  .kpi-grid {
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:20px;
+    margin-bottom:36px;
+  }
+  .kpi-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius:20px;
+    padding: 32px 36px;
+    display:flex; align-items:center; gap:28px;
+    position:relative; overflow:hidden;
+    transition: transform .2s, box-shadow .2s;
+  }
+  .kpi-card:hover { transform:translateY(-4px); box-shadow:0 12px 40px rgba(0,0,0,.5); }
+  .kpi-card::after {
+    content:''; position:absolute; top:-40px; right:-40px;
+    width:150px; height:150px; border-radius:50%; opacity:.07;
+  }
+  .kpi-card.blue::after  { background:var(--blue);  }
+  .kpi-card.green::after { background:var(--green); }
+  .kpi-card.teal::after  { background:var(--cyan);  }
+  .kpi-card.red::after   { background:var(--red);   }
+
+  .kpi-glow {
+    width:70px; height:70px; border-radius:18px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center; font-size:32px;
+  }
+  .kpi-card.blue  .kpi-glow { background:rgba(59,130,246,.15);  box-shadow:0 0 20px rgba(59,130,246,.3); }
+  .kpi-card.green .kpi-glow { background:rgba(16,185,129,.15); box-shadow:0 0 20px rgba(16,185,129,.3); }
+  .kpi-card.teal  .kpi-glow { background:rgba(6,182,212,.15);  box-shadow:0 0 20px rgba(6,182,212,.3); }
+  .kpi-card.red   .kpi-glow { background:rgba(239,68,68,.15);   box-shadow:0 0 20px rgba(239,68,68,.3); }
+
+  .kpi-body { flex:1; }
+  .kpi-label { font-size:12px; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.8px; margin-bottom:10px; }
+  .kpi-value { font-size:42px; font-weight:900; color:#fff; line-height:1; letter-spacing:-1px; }
+  .kpi-unit  { font-size:16px; font-weight:500; color:var(--muted); margin-top:4px; }
+  .kpi-plan  { font-size:12px; color:var(--muted); margin-top:6px; }
+  .kpi-badge {
+    display:inline-flex; align-items:center; gap:5px;
+    font-size:13px; font-weight:700; border-radius:8px; padding:4px 12px; margin-top:10px;
+  }
+  .kpi-badge.green  { background:rgba(16,185,129,.15); color:var(--green); }
+  .kpi-badge.red    { background:rgba(239,68,68,.15);  color:var(--red);   }
+  .kpi-badge.yellow { background:rgba(245,158,11,.15); color:var(--yellow);}
+
+  /* ── ALERT ───────────────────────── */
+  .alert {
+    background: linear-gradient(135deg,rgba(239,68,68,.1),rgba(239,68,68,.04));
+    border: 1px solid rgba(239,68,68,.4);
+    border-radius:18px; padding:24px 28px;
+    margin-bottom:36px; display:flex; gap:18px; align-items:flex-start;
+  }
+  .alert-icon { font-size:32px; flex-shrink:0; }
+  .alert h3   { font-size:16px; font-weight:800; color:var(--red); margin-bottom:8px; }
+  .alert p    { font-size:14px; color:#fca5a5; line-height:1.8; }
+  .alert strong { color:#fff; }
+
+  /* ── CHARTS ──────────────────────── */
+  .charts-grid {
+    display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:36px;
+  }
+  .chart-card {
+    background: var(--card); border:1px solid var(--border);
+    border-radius:20px; padding:28px 28px 24px;
+  }
+  .chart-title { font-size:15px; font-weight:700; color:#fff; margin-bottom:4px; }
+  .chart-desc  { font-size:12px; color:var(--muted); margin-bottom:22px; }
+  .chart-wrap  { position:relative; height:270px; }
+
+  /* ── BRANCH ──────────────────────── */
+  .branch-grid { display:grid; grid-template-columns:1fr 1fr; gap:22px; margin-bottom:36px; }
+  .branch-card { background:var(--card); border:1px solid var(--border); border-radius:20px; padding:28px; }
+  .branch-head {
+    display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:26px;
+    padding-bottom:18px; border-bottom:1px solid var(--border);
+  }
+  .branch-name  { font-size:17px; font-weight:800; color:#fff; }
+  .branch-role  { font-size:11px; color:var(--muted); margin-top:4px; }
+  .branch-score { font-size:34px; font-weight:900; line-height:1; }
+  .score-green  { background:linear-gradient(135deg,var(--green),var(--cyan)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+
+  .row {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:14px 0; border-bottom:1px solid rgba(28,42,64,.8);
+  }
+  .row:last-child { border-bottom:none; }
+  .row-label  { font-size:14px; color:var(--muted); }
+  .row-right  { display:flex; align-items:center; gap:10px; }
+  .row-val    { font-size:15px; font-weight:700; color:#fff; }
+  .tag {
+    font-size:11px; font-weight:700; border-radius:6px; padding:3px 10px;
+    display:inline-flex; align-items:center; gap:4px;
+  }
+  .tag.ok     { background:rgba(16,185,129,.15); color:var(--green); }
+  .tag.warn   { background:rgba(245,158,11,.15); color:var(--yellow); }
+  .tag.danger { background:rgba(239,68,68,.15);  color:var(--red);   }
+
+  /* ── ACTIONS ──────────────────────── */
+  .action-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:36px; }
+  .action-card {
+    background:var(--card); border:1px solid var(--border); border-radius:18px;
+    padding:22px 24px; display:flex; gap:16px;
+  }
+  .a-num {
+    width:36px; height:36px; border-radius:10px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    font-size:16px; font-weight:900;
+  }
+  .a-num.r { background:rgba(239,68,68,.18);  color:var(--red);   }
+  .a-num.y { background:rgba(245,158,11,.18); color:var(--yellow);}
+  .a-num.b { background:rgba(59,130,246,.18); color:var(--blue);  }
+  .a-title { font-size:14px; font-weight:700; color:#fff; margin-bottom:6px; }
+  .a-desc  { font-size:12px; color:var(--muted); line-height:1.7; }
+
+  /* ── FOOTER ───────────────────────── */
+  .footer { text-align:center; padding:28px; color:var(--muted); font-size:11px; border-top:1px solid var(--border); }
+
+  @media(max-width:1100px) {
+    .kpi-grid,.charts-grid,.branch-grid,.action-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">
+    <div class="logo-icon">💧</div>
+    <div>
+      <div class="logo-title">TAWACO Analytics Dashboard</div>
+      <div class="logo-sub">Bảng Điều Khiển Chỉ Tiêu Kinh Doanh • Quý 1 / 2026</div>
+    </div>
+  </div>
+  <div class="live-badge"><div class="dot-live"></div> Cập nhật: 11:20 25/03/2026</div>
+</div>
+
+<div class="main">
+
+  <!-- KPI CARDS -->
+  <div class="sec-label">📊 Tổng Quan KPI – Toàn Công Ty</div>
+  <div class="kpi-grid">
+
+    <div class="kpi-card blue">
+      <div class="kpi-glow">💧</div>
+      <div class="kpi-body">
+        <div class="kpi-label">Sản Lượng Nước</div>
+        <div class="kpi-value">15.897.087</div>
+        <div class="kpi-unit">m³</div>
+        <div class="kpi-plan">Kế hoạch: 15.367.000 m³</div>
+        <div class="kpi-badge green">🚀 Đạt 103.45% KH</div>
+      </div>
+    </div>
+
+    <div class="kpi-card green">
+      <div class="kpi-glow">💰</div>
+      <div class="kpi-body">
+        <div class="kpi-label">Doanh Thu Thực Thu</div>
+        <div class="kpi-value">173.5 Tỷ</div>
+        <div class="kpi-unit">VNĐ</div>
+        <div class="kpi-plan">Kế hoạch: 167.3 Tỷ VNĐ</div>
+        <div class="kpi-badge green">🚀 Đạt 103.70% KH</div>
+      </div>
+    </div>
+
+    <div class="kpi-card teal">
+      <div class="kpi-glow">💵</div>
+      <div class="kpi-body">
+        <div class="kpi-label">Tỷ Lệ Thu Tiền</div>
+        <div class="kpi-value">87.04%</div>
+        <div class="kpi-unit">Thực thu / Doanh thu</div>
+        <div class="kpi-plan">Chỉ tiêu Quý: 80%</div>
+        <div class="kpi-badge green">✅ Vượt +7.04%</div>
+      </div>
+    </div>
+
+    <div class="kpi-card red">
+      <div class="kpi-glow">⚠️</div>
+      <div class="kpi-body">
+        <div class="kpi-label">Tỷ Lệ Hóa Đơn 0m³</div>
+        <div class="kpi-value">6.53%</div>
+        <div class="kpi-unit">Toàn hệ thống</div>
+        <div class="kpi-plan">Mức trần cho phép: 6.48%</div>
+        <div class="kpi-badge red">🔴 VƯỢT TRẦN</div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ALERT -->
+  <div class="alert">
+    <div class="alert-icon">🚨</div>
+    <div>
+      <h3>CẢNH BÁO ĐỎ: Tỷ lệ Hóa Đơn 0m³ vượt Mức Trần</h3>
+      <p><strong>Toàn Công Ty:</strong> 6.53% &nbsp;(Trần: 6.48%) &nbsp;|&nbsp;
+        <strong>Chi nhánh QLKH1:</strong> 7.03% &nbsp;(Trần: 6.93%) &nbsp;|&nbsp;
+        <strong>Chi nhánh QLKH2:</strong> 6.12% &nbsp;(Trần: 6.11%)</p>
+    </div>
+  </div>
+
+  <!-- CHARTS -->
+  <div class="sec-label">📈 Biểu Đồ Phân Tích</div>
+  <div class="charts-grid">
+
+    <div class="chart-card">
+      <div class="chart-title">Thực Hiện vs Kế Hoạch (%)</div>
+      <div class="chart-desc">So sánh % hoàn thành KH của Sản lượng &amp; Doanh thu theo từng đơn vị</div>
+      <div class="chart-wrap"><canvas id="chartPerf"></canvas></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Tỷ Lệ Hóa Đơn 0m³ – Ngưỡng Cảnh Báo</div>
+      <div class="chart-desc">Đường vàng = mức trần. Cột đỏ vượt đường = vi phạm quy định</div>
+      <div class="chart-wrap"><canvas id="chartZero"></canvas></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Cơ Cấu Đóng Góp Doanh Thu (Tỷ VNĐ)</div>
+      <div class="chart-desc">Tỷ trọng thực thu của 2 Chi nhánh trên tổng 173.5 Tỷ</div>
+      <div class="chart-wrap"><canvas id="chartPie"></canvas></div>
+    </div>
+
+    <div class="chart-card">
+      <div class="chart-title">Giá Bán Bình Quân – GBBQ (đ/m³)</div>
+      <div class="chart-desc">So sánh giá bán thực tế vs kế hoạch của từng đơn vị</div>
+      <div class="chart-wrap"><canvas id="chartGBBQ"></canvas></div>
+    </div>
+
+  </div>
+
+  <!-- BRANCH DETAIL -->
+  <div class="sec-label">🏢 Chi Tiết Từng Chi Nhánh</div>
+  <div class="branch-grid">
+
+    <div class="branch-card">
+      <div class="branch-head">
+        <div>
+          <div class="branch-name">🏆 Chi Nhánh QLKH 1</div>
+          <div class="branch-role">Đầu tàu kéo doanh thu toàn Công ty</div>
+        </div>
+        <div class="branch-score score-green">105.52%</div>
+      </div>
+      <div class="row">
+        <div class="row-label">💧 Sản lượng nước</div>
+        <div class="row-right">
+          <div class="row-val">7.188.199 m³</div>
+          <div class="tag ok">105.22% ✅</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-label">💰 Doanh thu</div>
+        <div class="row-right">
+          <div class="row-val">78.9 Tỷ VNĐ</div>
+          <div class="tag ok">105.82% ✅</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-label">🏷️ Giá bán bình quân</div>
+        <div class="row-right">
+          <div class="row-val">10.975 đ/m³</div>
+          <div class="tag ok">ĐẠT ✅</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-label">💵 Tỷ lệ thu tiền</div>
+        <div class="row-right">
+          <div class="row-val">85.97%</div>
+          <div class="tag ok">ĐẠT ✅</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-label">🔴 Hóa đơn 0m³</div>
+        <div class="row-right">
+          <div class="row-val">7.03%</div>
+          <div class="tag danger">⚠️ VƯỢT TRẦN 6.93%</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="branch-card">
+      <div class="branch-head">
+        <div>
+          <div class="branch-name">📋 Chi Nhánh QLKH 2</div>
+          <div class="branch-role">Đóng góp sản lượng lớn nhất Công ty</div>
+        </div>
+        <div class="branch-score score-green">102.01%</div>
+      </div>
+      <div class="row">
+        <div class="row-label">💧 Sản lượng nước</div>
+        <div class="row-right">
+          <div class="row-val">8.708.888 m³</div>
+          <div class="tag ok">102.03% ✅</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-label">💰 Doanh thu</div>
+        <div class="row-right">
+          <div class="row-val">94.6 Tỷ VNĐ</div>
+          <div class="tag ok">101.99% ✅</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-label">🏷️ Giá bán bình quân</div>
+        <div class="row-right">
+          <div class="row-val">10.865 đ/m³</div>
+          <div class="tag warn">⚠️ CẢNH BÁO VÀNG</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-label">💵 Tỷ lệ thu tiền</div>
+        <div class="row-right">
+          <div class="row-val">87.94%</div>
+          <div class="tag ok">ĐẠT ✅</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row-label">🔴 Hóa đơn 0m³</div>
+        <div class="row-right">
+          <div class="row-val">6.12%</div>
+          <div class="tag danger">⚠️ VƯỢT TRẦN 6.11%</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ANALYSIS SECTION -->
+  <div class="sec-label">🔍 Phân Tích Chỉ Tiêu Không Đạt</div>
+  <div style="margin-bottom:36px;">
+    
+<div class="analysis-block" style="background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.3);border-radius:16px;padding:20px 24px;margin-top:14px;">
+  <div style="font-size:14px;font-weight:800;color:#f59e0b;margin-bottom:12px;">🔴 Tỷ Lệ Hóa Đơn 0m³ Vượt Mức Trần – Toàn Công ty</div>
+  <div style="font-size:12px;color:#94a3b8;margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;">Dự kiến nguyên nhân:</div>
+  <ul style="margin:8px 0 12px 18px;font-size:13px;color:#cbd5e1;line-height:1.9;">
+    <li>Đồng hồ hỏng hoặc kẹt kim không đọc được số thực</li>
+    <li>Nhân viên đọc số ghi sai (0 thay vì số thực) hoặc ước lượng bừa</li>
+    <li>Đồng hồ đặt ở vị trí khó tiếp cận, nhân viên bỏ qua không đọc</li>
+    <li>KH bỏ trống (nhà vắng người, cơ sở đóng cửa) chưa được cắt hợp đồng</li>
+    <li>Lỗi phần mềm tính sản lượng khiến chu kỳ ghi-0 không được phát hiện</li>
+  </ul>
+  <div style="font-size:13px;color:#fbbf24;font-weight:700;border-top:1px solid rgba(245,158,11,.2);padding-top:10px;">→ In danh sách KH 0m³ liên tiếp ≥ 2 tháng. Phân công đội thực địa xác minh trong tuần này.</div>
+  <div style="font-size:11px;color:#64748b;margin-top:8px;">Thực tế: <b style="color:#fff">6.53%</b> &nbsp;/&nbsp; Kế hoạch: <b style="color:#fff">6.48%</b> &nbsp;|&nbsp; Đạt: <b style="color:#ef4444">NaN%</b></div>
+</div>
+<div class="analysis-block" style="background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.3);border-radius:16px;padding:20px 24px;margin-top:14px;">
+  <div style="font-size:14px;font-weight:800;color:#f59e0b;margin-bottom:12px;">🔴 Tỷ Lệ Hóa Đơn 0m³ Vượt Mức Trần – CN QLKH1</div>
+  <div style="font-size:12px;color:#94a3b8;margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;">Dự kiến nguyên nhân:</div>
+  <ul style="margin:8px 0 12px 18px;font-size:13px;color:#cbd5e1;line-height:1.9;">
+    <li>Đồng hồ hỏng hoặc kẹt kim không đọc được số thực</li>
+    <li>Nhân viên đọc số ghi sai (0 thay vì số thực) hoặc ước lượng bừa</li>
+    <li>Đồng hồ đặt ở vị trí khó tiếp cận, nhân viên bỏ qua không đọc</li>
+    <li>KH bỏ trống (nhà vắng người, cơ sở đóng cửa) chưa được cắt hợp đồng</li>
+    <li>Lỗi phần mềm tính sản lượng khiến chu kỳ ghi-0 không được phát hiện</li>
+  </ul>
+  <div style="font-size:13px;color:#fbbf24;font-weight:700;border-top:1px solid rgba(245,158,11,.2);padding-top:10px;">→ In danh sách KH 0m³ liên tiếp ≥ 2 tháng. Phân công đội thực địa xác minh trong tuần này.</div>
+  <div style="font-size:11px;color:#64748b;margin-top:8px;">Thực tế: <b style="color:#fff">7.03%</b> &nbsp;/&nbsp; Kế hoạch: <b style="color:#fff">6.93%</b> &nbsp;|&nbsp; Đạt: <b style="color:#ef4444">NaN%</b></div>
+</div>
+<div class="analysis-block" style="background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.3);border-radius:16px;padding:20px 24px;margin-top:14px;">
+  <div style="font-size:14px;font-weight:800;color:#f59e0b;margin-bottom:12px;">🟡 Giá Bán Bình Quân Dưới Kế Hoạch – CN QLKH2</div>
+  <div style="font-size:12px;color:#94a3b8;margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;">Dự kiến nguyên nhân:</div>
+  <ul style="margin:8px 0 12px 18px;font-size:13px;color:#cbd5e1;line-height:1.9;">
+    <li>Tỷ trọng khách hàng sinh hoạt bậc thấp (bậc 1–2) chiếm đa số (giá rẻ nhất)</li>
+    <li>Khách hàng doanh nghiệp / SX lớn (giá cao) tiêu thụ ít hơn kỳ trước</li>
+    <li>Hoá đơn điều chỉnh giảm hoặc chiết khấu làm giảm GBBQ thực tế</li>
+    <li>Cơ cấu khách hàng dịch vụ thương mại chưa tăng đủ</li>
+    <li>Các hộ dùng nhiều nước (bậc 4–6) cắt giảm sử dụng</li>
+  </ul>
+  <div style="font-size:13px;color:#fbbf24;font-weight:700;border-top:1px solid rgba(245,158,11,.2);padding-top:10px;">→ Phân tích cơ cấu khách hàng theo nhóm giá. Tập trung phát triển khách doanh nghiệp.</div>
+  <div style="font-size:11px;color:#64748b;margin-top:8px;">Thực tế: <b style="color:#fff">10.865 đ/m³</b> &nbsp;/&nbsp; Kế hoạch: <b style="color:#fff">10.870 đ/m³</b> &nbsp;|&nbsp; Đạt: <b style="color:#ef4444">NaN%</b></div>
+</div>
+<div class="analysis-block" style="background:rgba(245,158,11,.06);border:1px solid rgba(245,158,11,.3);border-radius:16px;padding:20px 24px;margin-top:14px;">
+  <div style="font-size:14px;font-weight:800;color:#f59e0b;margin-bottom:12px;">🔴 Tỷ Lệ Hóa Đơn 0m³ Vượt Mức Trần – CN QLKH2</div>
+  <div style="font-size:12px;color:#94a3b8;margin-bottom:4px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;">Dự kiến nguyên nhân:</div>
+  <ul style="margin:8px 0 12px 18px;font-size:13px;color:#cbd5e1;line-height:1.9;">
+    <li>Đồng hồ hỏng hoặc kẹt kim không đọc được số thực</li>
+    <li>Nhân viên đọc số ghi sai (0 thay vì số thực) hoặc ước lượng bừa</li>
+    <li>Đồng hồ đặt ở vị trí khó tiếp cận, nhân viên bỏ qua không đọc</li>
+    <li>KH bỏ trống (nhà vắng người, cơ sở đóng cửa) chưa được cắt hợp đồng</li>
+    <li>Lỗi phần mềm tính sản lượng khiến chu kỳ ghi-0 không được phát hiện</li>
+  </ul>
+  <div style="font-size:13px;color:#fbbf24;font-weight:700;border-top:1px solid rgba(245,158,11,.2);padding-top:10px;">→ In danh sách KH 0m³ liên tiếp ≥ 2 tháng. Phân công đội thực địa xác minh trong tuần này.</div>
+  <div style="font-size:11px;color:#64748b;margin-top:8px;">Thực tế: <b style="color:#fff">6.12%</b> &nbsp;/&nbsp; Kế hoạch: <b style="color:#fff">6.11%</b> &nbsp;|&nbsp; Đạt: <b style="color:#ef4444">NaN%</b></div>
+</div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="sec-label">⚡ Lệnh Hành Động Khẩn Cấp</div>
+  <div class="action-grid">
+    <div class="action-card">
+      <div class="a-num r">1</div>
+      <div>
+        <div class="a-title">Phòng QLKH – Chấn Chỉnh Hóa Đơn 0m³</div>
+        <div class="a-desc">Hóa đơn 0m³ vượt trần toàn hệ thống. Xuất danh sách KH và phân công kiểm tra thực địa để khắc phục ngay.</div>
+      </div>
+    </div>
+    <div class="action-card">
+      <div class="a-num r">2</div>
+      <div>
+        <div class="a-title">Đội SCADA – Bảo Trì Cảm Biến TA1035</div>
+        <div class="a-desc">Trạm TA1035 báo áp lực 0m nhưng vẫn có lưu lượng 194 m³/h. Kiểm tra và sửa cảm biến áp lực gấp.</div>
+      </div>
+    </div>
+    <div class="action-card">
+      <div class="a-num y">3</div>
+      <div>
+        <div class="a-title">Đội Dò Rỉ – Phân Tích MNF Đêm Qua</div>
+        <div class="a-desc">TA1016 (683 m³/h) &amp; TA1010 (542 m³/h) lưu lượng cực cao. Trích xuất biểu đồ MNF 2h–4h sáng để xác nhận rò rỉ.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    🔒 Dữ liệu nội bộ TAWACO – Chỉ tiêu đã được Ban Giám Đốc kiểm duyệt &nbsp;|&nbsp; TAWACO Analytics System &nbsp;|&nbsp; 11:20 25/03/2026
+  </div>
+
+</div><!-- /main -->
+
+<script>
+const gridColor = 'rgba(28,42,64,0.9)';
+const muted     = '#64748b';
+Chart.defaults.color      = muted;
+Chart.defaults.font.family= 'Inter';
+Chart.defaults.font.size  = 12;
+
+/* Chart 1 – Performance */
+new Chart(document.getElementById('chartPerf'), {
+  type:'bar',
+  data:{
+    labels:['Toàn Cty\nSản lượng','Toàn Cty\nDoanh thu','QLKH1\nSản lượng','QLKH1\nDoanh thu','QLKH2\nSản lượng','QLKH2\nDoanh thu'],
+    datasets:[
+      { label:'% Đạt KH', data:[103.45,103.70,105.22,105.82,102.03,101.99],
+        backgroundColor:['rgba(59,130,246,.8)','rgba(6,182,212,.8)','rgba(16,185,129,.8)','rgba(16,185,129,.8)','rgba(99,102,241,.8)','rgba(99,102,241,.8)'],
+        borderRadius:8, barThickness:30 },
+      { label:'Ngưỡng KH (100%)', data:[100,100,100,100,100,100], type:'line',
+        borderColor:'rgba(239,68,68,.7)', borderWidth:2, borderDash:[6,4], pointRadius:0, fill:false }
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ position:'bottom', labels:{ boxWidth:12, padding:16 } },
+      tooltip:{ callbacks:{ label:function(c){ return ' ' + c.dataset.label + ': ' + c.parsed.y + '%'; } } } },
+    scales:{
+      y:{ min:95, max:110, grid:{color:gridColor}, ticks:{callback:v=>v+'%'} },
+      x:{ grid:{display:false} }
+    }
+  }
+});
+
+/* Chart 2 – Zero meter */
+new Chart(document.getElementById('chartZero'), {
+  type:'bar',
+  data:{
+    labels:['Toàn Công Ty','Chi Nhánh QLKH1','Chi Nhánh QLKH2'],
+    datasets:[
+      { label:'Tỷ lệ HĐ 0m³ (%)', data:[6.53,7.03,6.12],
+        backgroundColor:'rgba(239,68,68,.75)', borderRadius:10, barThickness:60 },
+      { label:'Mức Trần Cho Phép', data:[6.48,6.93,6.11], type:'line',
+        borderColor:'rgba(245,158,11,1)', borderWidth:2.5, borderDash:[6,4],
+        pointBackgroundColor:'rgba(245,158,11,1)', pointRadius:6, fill:false }
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ position:'bottom', labels:{ boxWidth:12, padding:16 } },
+      tooltip:{ callbacks:{ label:function(c){ return ' ' + c.dataset.label + ': ' + c.parsed.y + '%'; } } } },
+    scales:{
+      y:{ min:5, max:8.5, grid:{color:gridColor}, ticks:{callback:v=>v+'%'} },
+      x:{ grid:{display:false} }
+    }
+  }
+});
+
+/* Chart 3 – Donut */
+new Chart(document.getElementById('chartPie'), {
+  type:'doughnut',
+  data:{
+    labels:['Chi Nhánh QLKH1 (78.9 Tỷ)','Chi Nhánh QLKH2 (94.6 Tỷ)'],
+    datasets:[{
+      data:[78.89,94.62],
+      backgroundColor:['rgba(16,185,129,.8)','rgba(59,130,246,.8)'],
+      borderColor:['rgba(16,185,129,1)','rgba(59,130,246,1)'],
+      borderWidth:2, hoverOffset:8
+    }]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false, cutout:'62%',
+    plugins:{ legend:{ position:'bottom', labels:{ boxWidth:12, padding:18 } },
+      tooltip:{ callbacks:{ label:function(c){ return ' ' + c.label + ': ' + c.parsed + ' Ty VND'; } } } }
+  }
+});
+
+/* Chart 4 – GBBQ */
+new Chart(document.getElementById('chartGBBQ'), {
+  type:'bar',
+  data:{
+    labels:['Toàn Công Ty','Chi Nhánh 1','Chi Nhánh 2'],
+    datasets:[
+      { label:'GBBQ Thực Tế (đ/m³)', data:[10915,10975,10865],
+        backgroundColor:['rgba(6,182,212,.8)','rgba(16,185,129,.8)','rgba(245,158,11,.8)'],
+        borderRadius:10, barThickness:55 },
+      { label:'GBBQ Kế Hoạch', data:[10889,10913,10870], type:'line',
+        borderColor:'rgba(239,68,68,.8)', borderWidth:2.5, borderDash:[5,4],
+        pointRadius:5, pointBackgroundColor:'rgba(239,68,68,1)', fill:false }
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{ position:'bottom', labels:{ boxWidth:12, padding:16 } },
+      tooltip:{ callbacks:{ label:function(c){ return ' ' + c.dataset.label + ': ' + c.parsed.y.toLocaleString('vi-VN') + ' d/m3'; } } } },
+    scales:{
+      y:{ min:10500, grid:{color:gridColor}, ticks:{callback:function(v){ return v.toLocaleString('vi-VN'); }} },
+      x:{ grid:{display:false} }
+    }
+  }
+});
+</script>
+</body>
+</html>
