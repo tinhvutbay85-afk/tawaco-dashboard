@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAWACO - Cảnh Báo Tiêu Thụ Bất Thường</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #3a7bd5;
+            --danger: #ff416c;
+            --warning: #fdbb2d;
+            --dark: #0f2027;
+            --text-light: #ffffff;
+            --text-muted: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--dark), #203a43, #2c5364);
+            background-attachment: fixed;
+            color: var(--text-light);
+            min-height: 100vh;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: -webkit-linear-gradient(left, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .glass-panel:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.4);
+        }
+
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            padding: 1rem;
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .icon-danger { color: var(--danger); }
+        .icon-warning { color: var(--warning); }
+
+        .stat-info h3 {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        .stat-info .number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-top: 5px;
+        }
+
+        .tables-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .tables-container { grid-template-columns: 1fr; }
+        }
+
+        .table-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 1rem;
+        }
+
+        .table-header.danger { color: #ff6b81; }
+        .table-header.warning { color: #fbc531; }
+
+        .custom-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            text-align: left;
+        }
+
+        .custom-table th, .custom-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .custom-table th {
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .custom-table tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        .custom-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .badge-up {
+            background: rgba(255, 65, 108, 0.2);
+            color: #ff6b81;
+        }
+
+        .badge-down {
+            background: rgba(253, 187, 45, 0.2);
+            color: #fbc531;
+        }
+        
+        .update-time {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: #a0a0a0;
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Loading Spinner */
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 200px;
+            width: 100%;
+        }
+        .loader {
+            border: 4px solid rgba(255,255,255,0.1);
+            border-left-color: var(--primary);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+
+    <div style="display: flex; gap: 15px; margin-bottom: 2rem; justify-content: center;">
+        <a href="index.html" style="text-decoration:none; padding: 12px 25px; background: rgba(255,255,255,0.1); color: white; border-radius: 10px; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'"><i class="fa-solid fa-chart-line"></i> Bảng Sản Lượng</a>
+        <a href="#" style="text-decoration:none; padding: 12px 25px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);"><i class="fa-solid fa-triangle-exclamation"></i> Cảnh Báo Bất Thường</a>
+    </div>
+
+    <div class="header">
+        <h1>TAWACO - Dữ Liệu Bất Thường</h1>
+        <p>Hệ thống cảnh báo tự động sản lượng nước tiêu thụ</p>
+        <div class="update-time" id="lastUpdated">Đang tải dữ liệu...</div>
+    </div>
+
+    <div id="loading" class="loader-container">
+        <div class="loader"></div>
+    </div>
+
+    <div id="dashboard" style="display: none;">
+        <div class="stats-container">
+            <div class="glass-panel stat-card">
+                <div class="stat-icon icon-danger">
+                    <i class="fa-solid fa-droplet-slash"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Nghi ngờ Rò Rỉ / Vỡ Ống</h3>
+                    <div class="number" id="leakCount">0</div>
+                    <p style="font-size: 0.8rem; color: #ff6b81;"><i class="fa-solid fa-arrow-trend-up"></i> Tăng > 300% & > 15m³</p>
+                </div>
+            </div>
+
+            <div class="glass-panel stat-card">
+                <div class="stat-icon icon-warning">
+                    <i class="fa-solid fa-gauge-simple"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Nghi ngờ Kẹt Cơ / Sai Số</h3>
+                    <div class="number" id="stuckCount">0</div>
+                    <p style="font-size: 0.8rem; color: #fbc531;"><i class="fa-solid fa-arrow-trend-down"></i> Giảm > 75% & > 15m³</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="tables-container">
+            <div class="glass-panel">
+                <div class="table-header danger">
+                    <i class="fa-solid fa-triangle-exclamation"></i> Danh sách Rò Rỉ Cao Nhất
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Danh Bộ</th>
+                                <th>Kỳ Trước</th>
+                                <th>Kỳ Hiện Tại</th>
+                                <th>Chênh Lệch</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leakTableBody">
+                            <!-- Data injected via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="glass-panel">
+                <div class="table-header warning">
+                    <i class="fa-solid fa-circle-exclamation"></i> Danh sách Giảm Sâu Nhất
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>Danh Bộ</th>
+                                <th>Kỳ Trước</th>
+                                <th>Kỳ Hiện Tại</th>
+                                <th>Chênh Lệch</th>
+                            </tr>
+                        </thead>
+                        <tbody id="stuckTableBody">
+                            <!-- Data injected via JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function loadData() {
+            try {
+                // Thêm timestamp để vô hiệu hóa cache trình duyệt web
+                const response = await fetch('data_tieu_thu.json?t=' + new Date().getTime());
+                
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                
+                const data = await response.json();
+                
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                
+                // Update stats
+                let leakCountEl = document.getElementById('leakCount');
+                let stuckCountEl = document.getElementById('stuckCount');
+                animateValue(leakCountEl, 0, data.leakCount, 1500);
+                animateValue(stuckCountEl, 0, data.stuckCount, 1500);
+                
+                document.getElementById('lastUpdated').innerHTML = `<i class="fa-regular fa-clock"></i> Cập nhật lần cuối: ${data.lastUpdated}`;
+
+                // Populate Leak Table
+                const leakBody = document.getElementById('leakTableBody');
+                data.leakTop.forEach(item => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td style="font-weight: 600;">${item.Danhba}</td>
+                        <td>${item.KyTruoc}</td>
+                        <td>${item.KyHienTai}</td>
+                        <td><span class="badge badge-up">+${item.KhoiLuongTang} m³</span></td>
+                    `;
+                    leakBody.appendChild(tr);
+                });
+
+                // Populate Stuck Table
+                const stuckBody = document.getElementById('stuckTableBody');
+                data.stuckTop.forEach(item => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td style="font-weight: 600;">${item.Danhba}</td>
+                        <td>${item.KyTruoc}</td>
+                        <td>${item.KyHienTai}</td>
+                        <td><span class="badge badge-down">-${item.KhoiLuongGiam} m³</span></td>
+                    `;
+                    stuckBody.appendChild(tr);
+                });
+
+            } catch (error) {
+                console.error("Lỗi khi tải dữ liệu JSON:", error);
+                document.getElementById('loading').innerHTML = `
+                    <div style="text-align:center; color:#ff6b81;">
+                        <i class="fa-solid fa-triangle-exclamation" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <p>Không thể tải dữ liệu. Vui lòng chạy file fetch_abnormal_data.js trước!</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Tạo hiệu ứng số nhảy
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                // Easing function outQuart
+                const easeOut = 1 - Math.pow(1 - progress, 4);
+                obj.innerHTML = Math.floor(easeOut * (end - start) + start).toLocaleString('vi-VN');
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>

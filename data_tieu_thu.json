@@ -1,0 +1,609 @@
+﻿{
+    "leakTop":  [
+                    {
+                        "Danhba":  "15042000651",
+                        "KhoiLuongTang":  1830,
+                        "KyTruoc":  20,
+                        "KyHienTai":  1850
+                    },
+                    {
+                        "Danhba":  "15031920076",
+                        "KhoiLuongTang":  1207,
+                        "KyTruoc":  324,
+                        "KyHienTai":  1531
+                    },
+                    {
+                        "Danhba":  "22043312872",
+                        "KhoiLuongTang":  1084,
+                        "KyTruoc":  69,
+                        "KyHienTai":  1153
+                    },
+                    {
+                        "Danhba":  "15150005004",
+                        "KhoiLuongTang":  996,
+                        "KyTruoc":  4,
+                        "KyHienTai":  1000
+                    },
+                    {
+                        "Danhba":  "15062137351",
+                        "KhoiLuongTang":  776,
+                        "KyTruoc":  5,
+                        "KyHienTai":  781
+                    },
+                    {
+                        "Danhba":  "22113421535",
+                        "KhoiLuongTang":  583,
+                        "KyTruoc":  29,
+                        "KyHienTai":  612
+                    },
+                    {
+                        "Danhba":  "22043310289",
+                        "KhoiLuongTang":  578,
+                        "KyTruoc":  20,
+                        "KyHienTai":  598
+                    },
+                    {
+                        "Danhba":  "22043301959",
+                        "KhoiLuongTang":  398,
+                        "KyTruoc":  103,
+                        "KyHienTai":  501
+                    },
+                    {
+                        "Danhba":  "15052162130",
+                        "KhoiLuongTang":  381,
+                        "KyTruoc":  7,
+                        "KyHienTai":  388
+                    },
+                    {
+                        "Danhba":  "22033275655",
+                        "KhoiLuongTang":  380,
+                        "KyTruoc":  2,
+                        "KyHienTai":  382
+                    },
+                    {
+                        "Danhba":  "22053291429",
+                        "KhoiLuongTang":  370,
+                        "KyTruoc":  50,
+                        "KyHienTai":  420
+                    },
+                    {
+                        "Danhba":  "22063326146",
+                        "KhoiLuongTang":  354,
+                        "KyTruoc":  68,
+                        "KyHienTai":  422
+                    },
+                    {
+                        "Danhba":  "15031710197",
+                        "KhoiLuongTang":  350,
+                        "KyTruoc":  39,
+                        "KyHienTai":  389
+                    },
+                    {
+                        "Danhba":  "22113421425",
+                        "KhoiLuongTang":  344,
+                        "KyTruoc":  43,
+                        "KyHienTai":  387
+                    },
+                    {
+                        "Danhba":  "22053323154",
+                        "KhoiLuongTang":  306,
+                        "KyTruoc":  57,
+                        "KyHienTai":  363
+                    },
+                    {
+                        "Danhba":  "22033277682",
+                        "KhoiLuongTang":  291,
+                        "KyTruoc":  37,
+                        "KyHienTai":  328
+                    },
+                    {
+                        "Danhba":  "22043301083",
+                        "KhoiLuongTang":  287,
+                        "KyTruoc":  58,
+                        "KyHienTai":  345
+                    },
+                    {
+                        "Danhba":  "22043301353",
+                        "KhoiLuongTang":  286,
+                        "KyTruoc":  46,
+                        "KyHienTai":  332
+                    },
+                    {
+                        "Danhba":  "15052168685",
+                        "KhoiLuongTang":  279,
+                        "KyTruoc":  22,
+                        "KyHienTai":  301
+                    },
+                    {
+                        "Danhba":  "22043305567",
+                        "KhoiLuongTang":  258,
+                        "KyTruoc":  34,
+                        "KyHienTai":  292
+                    },
+                    {
+                        "Danhba":  "22083369742",
+                        "KhoiLuongTang":  252,
+                        "KyTruoc":  31,
+                        "KyHienTai":  283
+                    },
+                    {
+                        "Danhba":  "15122860857",
+                        "KhoiLuongTang":  249,
+                        "KyTruoc":  3,
+                        "KyHienTai":  252
+                    },
+                    {
+                        "Danhba":  "22033271556",
+                        "KhoiLuongTang":  234,
+                        "KyTruoc":  37,
+                        "KyHienTai":  271
+                    },
+                    {
+                        "Danhba":  "22043311829",
+                        "KhoiLuongTang":  232,
+                        "KyTruoc":  37,
+                        "KyHienTai":  269
+                    },
+                    {
+                        "Danhba":  "22063324539",
+                        "KhoiLuongTang":  230,
+                        "KyTruoc":  34,
+                        "KyHienTai":  264
+                    },
+                    {
+                        "Danhba":  "15082510035",
+                        "KhoiLuongTang":  230,
+                        "KyTruoc":  62,
+                        "KyHienTai":  292
+                    },
+                    {
+                        "Danhba":  "15122889907",
+                        "KhoiLuongTang":  225,
+                        "KyTruoc":  5,
+                        "KyHienTai":  230
+                    },
+                    {
+                        "Danhba":  "22103412227",
+                        "KhoiLuongTang":  222,
+                        "KyTruoc":  60,
+                        "KyHienTai":  282
+                    },
+                    {
+                        "Danhba":  "22043300946",
+                        "KhoiLuongTang":  215,
+                        "KyTruoc":  23,
+                        "KyHienTai":  238
+                    },
+                    {
+                        "Danhba":  "15062141195",
+                        "KhoiLuongTang":  210,
+                        "KyTruoc":  23,
+                        "KyHienTai":  233
+                    },
+                    {
+                        "Danhba":  "22053299081",
+                        "KhoiLuongTang":  201,
+                        "KyTruoc":  53,
+                        "KyHienTai":  254
+                    },
+                    {
+                        "Danhba":  "22073240024",
+                        "KhoiLuongTang":  200,
+                        "KyTruoc":  15,
+                        "KyHienTai":  215
+                    },
+                    {
+                        "Danhba":  "22063323853",
+                        "KhoiLuongTang":  198,
+                        "KyTruoc":  1,
+                        "KyHienTai":  199
+                    },
+                    {
+                        "Danhba":  "15173436980",
+                        "KhoiLuongTang":  188,
+                        "KyTruoc":  29,
+                        "KyHienTai":  217
+                    },
+                    {
+                        "Danhba":  "15102742769",
+                        "KhoiLuongTang":  175,
+                        "KyTruoc":  42,
+                        "KyHienTai":  217
+                    },
+                    {
+                        "Danhba":  "15031710196",
+                        "KhoiLuongTang":  168,
+                        "KyTruoc":  41,
+                        "KyHienTai":  209
+                    },
+                    {
+                        "Danhba":  "15052170001",
+                        "KhoiLuongTang":  166,
+                        "KyTruoc":  30,
+                        "KyHienTai":  196
+                    },
+                    {
+                        "Danhba":  "22033332903",
+                        "KhoiLuongTang":  165,
+                        "KyTruoc":  3,
+                        "KyHienTai":  168
+                    },
+                    {
+                        "Danhba":  "22053320116",
+                        "KhoiLuongTang":  164,
+                        "KyTruoc":  2,
+                        "KyHienTai":  166
+                    },
+                    {
+                        "Danhba":  "22053321606",
+                        "KhoiLuongTang":  163,
+                        "KyTruoc":  14,
+                        "KyHienTai":  177
+                    },
+                    {
+                        "Danhba":  "15082505004",
+                        "KhoiLuongTang":  151,
+                        "KyTruoc":  42,
+                        "KyHienTai":  193
+                    },
+                    {
+                        "Danhba":  "15062141111",
+                        "KhoiLuongTang":  148,
+                        "KyTruoc":  23,
+                        "KyHienTai":  171
+                    },
+                    {
+                        "Danhba":  "22093216309",
+                        "KhoiLuongTang":  148,
+                        "KyTruoc":  25,
+                        "KyHienTai":  173
+                    },
+                    {
+                        "Danhba":  "22033274416",
+                        "KhoiLuongTang":  147,
+                        "KyTruoc":  21,
+                        "KyHienTai":  168
+                    },
+                    {
+                        "Danhba":  "22023247124",
+                        "KhoiLuongTang":  145,
+                        "KyTruoc":  24,
+                        "KyHienTai":  169
+                    },
+                    {
+                        "Danhba":  "22053327503",
+                        "KhoiLuongTang":  145,
+                        "KyTruoc":  15,
+                        "KyHienTai":  160
+                    },
+                    {
+                        "Danhba":  "22073340504",
+                        "KhoiLuongTang":  143,
+                        "KyTruoc":  30,
+                        "KyHienTai":  173
+                    },
+                    {
+                        "Danhba":  "15141931610",
+                        "KhoiLuongTang":  143,
+                        "KyTruoc":  12,
+                        "KyHienTai":  155
+                    },
+                    {
+                        "Danhba":  "22103390602",
+                        "KhoiLuongTang":  141,
+                        "KyTruoc":  25,
+                        "KyHienTai":  166
+                    },
+                    {
+                        "Danhba":  "15052166313",
+                        "KhoiLuongTang":  140,
+                        "KyTruoc":  25,
+                        "KyHienTai":  165
+                    }
+                ],
+    "stuckCount":  1487,
+    "lastUpdated":  "16:17:14 30/03/2026",
+    "leakCount":  470,
+    "stuckTop":  [
+                     {
+                         "Danhba":  "22063311810",
+                         "KhoiLuongGiam":  4230,
+                         "KyTruoc":  5261,
+                         "KyHienTai":  1031
+                     },
+                     {
+                         "Danhba":  "22103413144",
+                         "KhoiLuongGiam":  2957,
+                         "KyTruoc":  3740,
+                         "KyHienTai":  783
+                     },
+                     {
+                         "Danhba":  "22013221675",
+                         "KhoiLuongGiam":  2862,
+                         "KyTruoc":  3026,
+                         "KyHienTai":  164
+                     },
+                     {
+                         "Danhba":  "15062130382",
+                         "KhoiLuongGiam":  2547,
+                         "KyTruoc":  2730,
+                         "KyHienTai":  183
+                     },
+                     {
+                         "Danhba":  "22063323893",
+                         "KhoiLuongGiam":  2144,
+                         "KyTruoc":  2144,
+                         "KyHienTai":  0
+                     },
+                     {
+                         "Danhba":  "22013215641",
+                         "KhoiLuongGiam":  1947,
+                         "KyTruoc":  1954,
+                         "KyHienTai":  7
+                     },
+                     {
+                         "Danhba":  "22043311251",
+                         "KhoiLuongGiam":  1553,
+                         "KyTruoc":  1553,
+                         "KyHienTai":  0
+                     },
+                     {
+                         "Danhba":  "22083369741",
+                         "KhoiLuongGiam":  1419,
+                         "KyTruoc":  1466,
+                         "KyHienTai":  47
+                     },
+                     {
+                         "Danhba":  "22113421651",
+                         "KhoiLuongGiam":  1263,
+                         "KyTruoc":  1287,
+                         "KyHienTai":  24
+                     },
+                     {
+                         "Danhba":  "22083350928",
+                         "KhoiLuongGiam":  1227,
+                         "KyTruoc":  1289,
+                         "KyHienTai":  62
+                     },
+                     {
+                         "Danhba":  "22093380984",
+                         "KhoiLuongGiam":  1197,
+                         "KyTruoc":  1343,
+                         "KyHienTai":  146
+                     },
+                     {
+                         "Danhba":  "22073340538",
+                         "KhoiLuongGiam":  1190,
+                         "KyTruoc":  1190,
+                         "KyHienTai":  0
+                     },
+                     {
+                         "Danhba":  "22023246455",
+                         "KhoiLuongGiam":  1019,
+                         "KyTruoc":  1058,
+                         "KyHienTai":  39
+                     },
+                     {
+                         "Danhba":  "15173425054",
+                         "KhoiLuongGiam":  923,
+                         "KyTruoc":  941,
+                         "KyHienTai":  18
+                     },
+                     {
+                         "Danhba":  "15141960031",
+                         "KhoiLuongGiam":  882,
+                         "KyTruoc":  882,
+                         "KyHienTai":  0
+                     },
+                     {
+                         "Danhba":  "22053300958",
+                         "KhoiLuongGiam":  782,
+                         "KyTruoc":  791,
+                         "KyHienTai":  9
+                     },
+                     {
+                         "Danhba":  "22103396680",
+                         "KhoiLuongGiam":  750,
+                         "KyTruoc":  774,
+                         "KyHienTai":  24
+                     },
+                     {
+                         "Danhba":  "15062132435",
+                         "KhoiLuongGiam":  743,
+                         "KyTruoc":  861,
+                         "KyHienTai":  118
+                     },
+                     {
+                         "Danhba":  "15141943492",
+                         "KhoiLuongGiam":  719,
+                         "KyTruoc":  737,
+                         "KyHienTai":  18
+                     },
+                     {
+                         "Danhba":  "22023230407",
+                         "KhoiLuongGiam":  661,
+                         "KyTruoc":  661,
+                         "KyHienTai":  0
+                     },
+                     {
+                         "Danhba":  "15112822894",
+                         "KhoiLuongGiam":  648,
+                         "KyTruoc":  688,
+                         "KyHienTai":  40
+                     },
+                     {
+                         "Danhba":  "22033277441",
+                         "KhoiLuongGiam":  604,
+                         "KyTruoc":  642,
+                         "KyHienTai":  38
+                     },
+                     {
+                         "Danhba":  "15072443174",
+                         "KhoiLuongGiam":  573,
+                         "KyTruoc":  688,
+                         "KyHienTai":  115
+                     },
+                     {
+                         "Danhba":  "22083369392",
+                         "KhoiLuongGiam":  555,
+                         "KyTruoc":  574,
+                         "KyHienTai":  19
+                     },
+                     {
+                         "Danhba":  "22063319550",
+                         "KhoiLuongGiam":  551,
+                         "KyTruoc":  593,
+                         "KyHienTai":  42
+                     },
+                     {
+                         "Danhba":  "22053327812",
+                         "KhoiLuongGiam":  544,
+                         "KyTruoc":  684,
+                         "KyHienTai":  140
+                     },
+                     {
+                         "Danhba":  "15092643185",
+                         "KhoiLuongGiam":  510,
+                         "KyTruoc":  514,
+                         "KyHienTai":  4
+                     },
+                     {
+                         "Danhba":  "22013223154",
+                         "KhoiLuongGiam":  509,
+                         "KyTruoc":  509,
+                         "KyHienTai":  0
+                     },
+                     {
+                         "Danhba":  "15052171174",
+                         "KhoiLuongGiam":  508,
+                         "KyTruoc":  508,
+                         "KyHienTai":  0
+                     },
+                     {
+                         "Danhba":  "15052161067",
+                         "KhoiLuongGiam":  487,
+                         "KyTruoc":  493,
+                         "KyHienTai":  6
+                     },
+                     {
+                         "Danhba":  "22063311917",
+                         "KhoiLuongGiam":  486,
+                         "KyTruoc":  538,
+                         "KyHienTai":  52
+                     },
+                     {
+                         "Danhba":  "22043307850",
+                         "KhoiLuongGiam":  469,
+                         "KyTruoc":  551,
+                         "KyHienTai":  82
+                     },
+                     {
+                         "Danhba":  "15052162517",
+                         "KhoiLuongGiam":  467,
+                         "KyTruoc":  613,
+                         "KyHienTai":  146
+                     },
+                     {
+                         "Danhba":  "22093220671",
+                         "KhoiLuongGiam":  466,
+                         "KyTruoc":  492,
+                         "KyHienTai":  26
+                     },
+                     {
+                         "Danhba":  "22043290252",
+                         "KhoiLuongGiam":  458,
+                         "KyTruoc":  486,
+                         "KyHienTai":  28
+                     },
+                     {
+                         "Danhba":  "22013214310",
+                         "KhoiLuongGiam":  454,
+                         "KyTruoc":  584,
+                         "KyHienTai":  130
+                     },
+                     {
+                         "Danhba":  "15112861515",
+                         "KhoiLuongGiam":  436,
+                         "KyTruoc":  516,
+                         "KyHienTai":  80
+                     },
+                     {
+                         "Danhba":  "22043312039",
+                         "KhoiLuongGiam":  417,
+                         "KyTruoc":  420,
+                         "KyHienTai":  3
+                     },
+                     {
+                         "Danhba":  "22043306295",
+                         "KhoiLuongGiam":  407,
+                         "KyTruoc":  419,
+                         "KyHienTai":  12
+                     },
+                     {
+                         "Danhba":  "22073242049",
+                         "KhoiLuongGiam":  397,
+                         "KyTruoc":  520,
+                         "KyHienTai":  123
+                     },
+                     {
+                         "Danhba":  "22053323116",
+                         "KhoiLuongGiam":  381,
+                         "KyTruoc":  408,
+                         "KyHienTai":  27
+                     },
+                     {
+                         "Danhba":  "22063328146",
+                         "KhoiLuongGiam":  358,
+                         "KyTruoc":  379,
+                         "KyHienTai":  21
+                     },
+                     {
+                         "Danhba":  "15092640252",
+                         "KhoiLuongGiam":  355,
+                         "KyTruoc":  408,
+                         "KyHienTai":  53
+                     },
+                     {
+                         "Danhba":  "15062138249",
+                         "KhoiLuongGiam":  351,
+                         "KyTruoc":  455,
+                         "KyHienTai":  104
+                     },
+                     {
+                         "Danhba":  "22053311305",
+                         "KhoiLuongGiam":  336,
+                         "KyTruoc":  409,
+                         "KyHienTai":  73
+                     },
+                     {
+                         "Danhba":  "15052160920",
+                         "KhoiLuongGiam":  324,
+                         "KyTruoc":  348,
+                         "KyHienTai":  24
+                     },
+                     {
+                         "Danhba":  "22083368911",
+                         "KhoiLuongGiam":  310,
+                         "KyTruoc":  401,
+                         "KyHienTai":  91
+                     },
+                     {
+                         "Danhba":  "22013222614",
+                         "KhoiLuongGiam":  308,
+                         "KyTruoc":  352,
+                         "KyHienTai":  44
+                     },
+                     {
+                         "Danhba":  "15122840241",
+                         "KhoiLuongGiam":  308,
+                         "KyTruoc":  342,
+                         "KyHienTai":  34
+                     },
+                     {
+                         "Danhba":  "22053323937",
+                         "KhoiLuongGiam":  299,
+                         "KyTruoc":  322,
+                         "KyHienTai":  23
+                     }
+                 ]
+}
