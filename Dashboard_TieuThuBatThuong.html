@@ -6,6 +6,8 @@
     <title>TAWACO - Cảnh Báo Tiêu Thụ Bất Thường</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Dữ liệu được tạo tự động bởi fetch_abnormal_data.js từ SQL Server -->
+    <script src="data_tieu_thu.js"></script>
     <style>
         :root {
             --primary: #00d2ff;
@@ -224,6 +226,7 @@
         <h1>TAWACO - Dữ Liệu Bất Thường</h1>
         <p>Hệ thống cảnh báo tự động sản lượng nước tiêu thụ</p>
         <div class="update-time" id="lastUpdated">Đang tải dữ liệu...</div>
+        <div class="update-time" id="nguonDuLieu" style="margin-top:6px; color: #00d2ff; font-weight:600;"></div>
     </div>
 
     <div id="loading" class="loader-container">
@@ -239,7 +242,10 @@
                 <div class="stat-info">
                     <h3>Nghi ngờ Rò Rỉ / Vỡ Ống</h3>
                     <div class="number" id="leakCount">0</div>
-                    <p style="font-size: 0.8rem; color: #ff6b81;"><i class="fa-solid fa-arrow-trend-up"></i> Tăng > 300% & > 15m³</p>
+                    <p style="font-size: 0.8rem; color: #ff6b81;"><i class="fa-solid fa-arrow-trend-up"></i> Tăng &gt;300% &amp; &gt;15m³ so kỳ trước</p>
+                    <p style="margin-top: 8px; display: inline-block; background: rgba(255,65,108,0.2); border: 1px solid rgba(255,65,108,0.5); color: #ff6b81; font-size: 0.8rem; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;">
+                        <i class="fa-solid fa-bell"></i> Cần cảnh báo khách hàng
+                    </p>
                 </div>
             </div>
 
@@ -250,7 +256,18 @@
                 <div class="stat-info">
                     <h3>Nghi ngờ Kẹt Cơ / Sai Số</h3>
                     <div class="number" id="stuckCount">0</div>
-                    <p style="font-size: 0.8rem; color: #fbc531;"><i class="fa-solid fa-arrow-trend-down"></i> Giảm > 75% & > 15m³</p>
+                    <p style="font-size: 0.8rem; color: #fbc531;"><i class="fa-solid fa-arrow-trend-down"></i> Giảm &gt;75% &amp; &gt;15m³ so kỳ trước</p>
+                </div>
+            </div>
+
+            <div class="glass-panel stat-card">
+                <div class="stat-icon" style="color:#00d2ff;">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Tổng KH Trong Kỳ</h3>
+                    <div class="number" id="tongKH" style="color:#00d2ff;">0</div>
+                    <p style="font-size: 0.8rem; color: #a0a0a0;"><i class="fa-solid fa-table"></i> Bảng SANLUONG – SQL Server</p>
                 </div>
             </div>
         </div>
@@ -265,9 +282,10 @@
                         <thead>
                             <tr>
                                 <th>Danh Bộ</th>
-                                <th>Kỳ Trước</th>
-                                <th>Kỳ Hiện Tại</th>
-                                <th>Chênh Lệch</th>
+                                <th>Kỳ Trước (m³)</th>
+                                <th>Kỳ Hiện Tại (m³)</th>
+                                <th>Tăng Thêm</th>
+                                <th>% Tăng</th>
                             </tr>
                         </thead>
                         <tbody id="leakTableBody">
@@ -286,9 +304,10 @@
                         <thead>
                             <tr>
                                 <th>Danh Bộ</th>
-                                <th>Kỳ Trước</th>
-                                <th>Kỳ Hiện Tại</th>
-                                <th>Chênh Lệch</th>
+                                <th>Kỳ Trước (m³)</th>
+                                <th>Kỳ Hiện Tại (m³)</th>
+                                <th>Giảm Đi</th>
+                                <th>% Giảm</th>
                             </tr>
                         </thead>
                         <tbody id="stuckTableBody">
@@ -301,63 +320,74 @@
     </div>
 
     <script>
-        async function loadData() {
-            try {
-                // Thêm timestamp để vô hiệu hóa cache trình duyệt web
-                const response = await fetch('data_tieu_thu.json?t=' + new Date().getTime());
-                
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                
-                const data = await response.json();
-                
-                document.getElementById('loading').style.display = 'none';
-                document.getElementById('dashboard').style.display = 'block';
-                
-                // Update stats
-                let leakCountEl = document.getElementById('leakCount');
-                let stuckCountEl = document.getElementById('stuckCount');
-                animateValue(leakCountEl, 0, data.leakCount, 1500);
-                animateValue(stuckCountEl, 0, data.stuckCount, 1500);
-                
-                document.getElementById('lastUpdated').innerHTML = `<i class="fa-regular fa-clock"></i> Cập nhật lần cuối: ${data.lastUpdated}`;
-
-                // Populate Leak Table
-                const leakBody = document.getElementById('leakTableBody');
-                data.leakTop.forEach(item => {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td style="font-weight: 600;">${item.Danhba}</td>
-                        <td>${item.KyTruoc}</td>
-                        <td>${item.KyHienTai}</td>
-                        <td><span class="badge badge-up">+${item.KhoiLuongTang} m³</span></td>
-                    `;
-                    leakBody.appendChild(tr);
-                });
-
-                // Populate Stuck Table
-                const stuckBody = document.getElementById('stuckTableBody');
-                data.stuckTop.forEach(item => {
-                    const tr = document.createElement('tr');
-                    tr.innerHTML = `
-                        <td style="font-weight: 600;">${item.Danhba}</td>
-                        <td>${item.KyTruoc}</td>
-                        <td>${item.KyHienTai}</td>
-                        <td><span class="badge badge-down">-${item.KhoiLuongGiam} m³</span></td>
-                    `;
-                    stuckBody.appendChild(tr);
-                });
-
-            } catch (error) {
-                console.error("Lỗi khi tải dữ liệu JSON:", error);
+        function loadData() {
+            // Dữ liệu được nạp từ data_tieu_thu.js (biến toàn cục TAWACO_BATTHUONG)
+            if (typeof TAWACO_BATTHUONG === 'undefined') {
                 document.getElementById('loading').innerHTML = `
-                    <div style="text-align:center; color:#ff6b81;">
-                        <i class="fa-solid fa-triangle-exclamation" style="font-size: 2rem; margin-bottom: 10px;"></i>
-                        <p>Không thể tải dữ liệu. Vui lòng chạy file fetch_abnormal_data.js trước!</p>
+                    <div style="text-align:center; color:#ff6b81; padding: 40px;">
+                        <i class="fa-solid fa-triangle-exclamation" style="font-size: 3rem; margin-bottom: 15px; display:block;"></i>
+                        <p style="font-size:1.1rem; margin-bottom:10px;">Chưa có dữ liệu!</p>
+                        <p style="color:#a0a0a0;">Vui lòng chạy <strong style="color:#00d2ff;">fetch_abnormal_data.js</strong> để lấy dữ liệu từ SQL Server rồi mở lại trang.</p>
                     </div>
                 `;
+                return;
             }
+
+            const data = TAWACO_BATTHUONG;
+
+            document.getElementById('loading').style.display = 'none';
+            document.getElementById('dashboard').style.display = 'block';
+
+            // Thông tin cập nhật
+            document.getElementById('lastUpdated').innerHTML =
+                `<i class="fa-regular fa-clock"></i> Cập nhật lần cuối: ${data.lastUpdated}`;
+
+            // Nguồn dữ liệu – Kỳ / Năm
+            if (data.nguonDuLieu) {
+                document.getElementById('nguonDuLieu').innerHTML =
+                    `<i class="fa-solid fa-database"></i> Nguồn: ${data.nguonDuLieu}`;
+            }
+            if (data.ky && data.nam) {
+                document.querySelector('.header p').innerHTML =
+                    `Hệ thống cảnh báo tự động &nbsp;|&nbsp; <strong style="color:#00d2ff;">Kỳ ${data.ky} – Năm ${data.nam}</strong>`;
+            }
+
+            // Số liệu tổng hợp
+            animateValue(document.getElementById('leakCount'),  0, data.leakCount,  1500);
+            animateValue(document.getElementById('stuckCount'), 0, data.stuckCount, 1500);
+            if (data.tongSoKH) {
+                animateValue(document.getElementById('tongKH'), 0, data.tongSoKH, 1800);
+            }
+
+            // Bảng Rò Rỉ
+            const leakBody = document.getElementById('leakTableBody');
+            data.leakTop.forEach(item => {
+                const pct = item.PhanTramTang ? Number(item.PhanTramTang).toFixed(1) + '%' : '--';
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="font-weight:700; font-family:monospace; color:#fff;">${item.Danhba}</td>
+                    <td style="color:#a0a0a0;">${(item.KyTruoc || 0).toLocaleString('vi-VN')}</td>
+                    <td style="color:#fff; font-weight:600;">${(item.KyHienTai || 0).toLocaleString('vi-VN')}</td>
+                    <td><span class="badge badge-up">+${(item.KhoiLuongTang || 0).toLocaleString('vi-VN')} m³</span></td>
+                    <td style="color:#ff6b81; font-weight:700;">↑ ${pct}</td>
+                `;
+                leakBody.appendChild(tr);
+            });
+
+            // Bảng Kẹt Cơ
+            const stuckBody = document.getElementById('stuckTableBody');
+            data.stuckTop.forEach(item => {
+                const pct = item.PhanTramGiam ? Number(item.PhanTramGiam).toFixed(1) + '%' : '--';
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="font-weight:700; font-family:monospace; color:#fff;">${item.Danhba}</td>
+                    <td style="color:#a0a0a0;">${(item.KyTruoc || 0).toLocaleString('vi-VN')}</td>
+                    <td style="color:#fff; font-weight:600;">${(item.KyHienTai || 0).toLocaleString('vi-VN')}</td>
+                    <td><span class="badge badge-down">-${(item.KhoiLuongGiam || 0).toLocaleString('vi-VN')} m³</span></td>
+                    <td style="color:#fbc531; font-weight:700;">↓ ${pct}</td>
+                `;
+                stuckBody.appendChild(tr);
+            });
         }
 
         // Tạo hiệu ứng số nhảy
@@ -366,12 +396,9 @@
             const step = (timestamp) => {
                 if (!startTimestamp) startTimestamp = timestamp;
                 const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                // Easing function outQuart
                 const easeOut = 1 - Math.pow(1 - progress, 4);
                 obj.innerHTML = Math.floor(easeOut * (end - start) + start).toLocaleString('vi-VN');
-                if (progress < 1) {
-                    window.requestAnimationFrame(step);
-                }
+                if (progress < 1) window.requestAnimationFrame(step);
             };
             window.requestAnimationFrame(step);
         }
