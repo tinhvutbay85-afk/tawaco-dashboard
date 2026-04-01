@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAWACO - Biến Động Sản Lượng KH Lớn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="data_churn.js?v=1"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #3b82f6;
+            --accent-cyan: #06b6d4;
+            --alert-red: #ef4444;
+            --alert-yellow: #f59e0b;
+            --border-color: rgba(148, 163, 184, 0.1);
+            --hover-bg: rgba(255, 255, 255, 0.05);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+        }
+
+        .header {
+            padding: 1.5rem 2rem;
+            background: rgba(15, 23, 42, 0.8);
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .header-title h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #60a5fa, #38bdf8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .btn-back {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            transition: all 0.2s;
+            font-size: 0.875rem;
+        }
+        
+        .btn-back:hover {
+            color: white;
+            background: rgba(59, 130, 246, 0.2);
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .container {
+            flex: 1;
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover { transform: translateY(-3px); }
+
+        .stat-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .stat-info h3 {
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-info p {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: white;
+            font-family: inherit;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+            width: 18px;
+            height: 18px;
+        }
+
+        .table-container {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background: rgba(15, 23, 42, 0.6);
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 0.875rem;
+            white-space: nowrap;
+        }
+
+        tbody tr {
+            transition: background 0.2s;
+        }
+
+        tbody tr:hover {
+            background: var(--hover-bg);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .badge.red { background: rgba(239, 68, 68, 0.15); color: #fca5a5; border: 1px solid rgba(239,68,68,0.3); }
+        .badge.yellow { background: rgba(245, 158, 11, 0.15); color: #fcd34d; border: 1px solid rgba(245,158,11,0.3); }
+
+        .vol-drop {
+            color: #fca5a5;
+            font-weight: 600;
+        }
+
+        .vol-val {
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: #e2e8f0;
+        }
+
+        .mono {
+            font-family: monospace;
+            color: #93c5fd;
+        }
+
+        @media (max-width: 768px) {
+            .header { padding: 1rem; flex-direction: column; gap: 1rem; align-items: flex-start; }
+            .container { padding: 1rem; }
+            .table-container { overflow-x: auto; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="header-title">
+            <i data-lucide="trending-down" style="color: #60a5fa; width: 28px; height: 28px;"></i>
+            <h1>Biến Động Sản Lượng KH Lớn (Churn Warning)</h1>
+        </div>
+        <a href="index.html" class="btn-back">
+            <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i> Quay lại Dashboard
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="summary-grid">
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa;">
+                    <i data-lucide="users" style="width: 24px; height: 24px;"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Khách Hàng Cảnh Báo</h3>
+                    <p id="t-kh">0</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(239, 68, 68, 0.15); color: #f87171;">
+                    <i data-lucide="droplet-off" style="width: 24px; height: 24px;"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Tổng M³ Sụt Giảm</h3>
+                    <p id="t-m3">0</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background: rgba(6, 182, 212, 0.15); color: #22d3ee;">
+                    <i data-lucide="clock" style="width: 24px; height: 24px;"></i>
+                </div>
+                <div class="stat-info">
+                    <h3>Cập Nhật Gần Nhất</h3>
+                    <p id="t-time" style="font-size: 1.1rem; padding-top: 0.25rem;">--/--/----</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="search-box">
+                <i data-lucide="search"></i>
+                <input type="text" id="searchInput" placeholder="Tìm kiếm theo Danh bộ, DMA..." onkeyup="filterTable()">
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Khách Hàng</th>
+                        <th>Danh Bộ</th>
+                        <th>Mã DMA</th>
+                        <th>Kỳ Trước (m³)</th>
+                        <th>Kỳ Mới (m³)</th>
+                        <th>Sụt Giảm</th>
+                        <th>Cảnh Báo</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr><td colspan="8" style="text-align:center; padding: 2rem;">Đang tải dữ liệu...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        lucide.createIcons();
+
+        let currentData = [];
+
+        function init() {
+            if (typeof TAWACO_CHURN_DATA === 'undefined') {
+                document.getElementById('tableBody').innerHTML = '<tr><td colspan="8" style="text-align:center; color:#ef4444;">Không tìm thấy dữ liệu m³ (data_churn.js). Vui lòng kiểm tra lại.</td></tr>';
+                return;
+            }
+
+            const D = TAWACO_CHURN_DATA;
+            currentData = D.danhSach;
+
+            document.getElementById('t-kh').innerText = D.tongKH.toLocaleString('vi-VN');
+            document.getElementById('t-m3').innerText = D.tongM3Mat.toLocaleString('vi-VN');
+            document.getElementById('t-time').innerText = D.lastUpdated;
+
+            renderTable(currentData);
+        }
+
+        function renderTable(data) {
+            const tbody = document.getElementById('tableBody');
+            if (data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align:center; padding: 2rem; color: #94a3b8;">Hoan hô! Không phát hiện sụt giảm bất thường nào.</td></tr>';
+                return;
+            }
+
+            let html = '';
+            data.forEach((r, idx) => {
+                const badgeClass = r.Level === 'RED' ? 'badge red' : 'badge yellow';
+                const badgeText  = r.Level === 'RED' ? 'Giảm Sâu (>50%)' : 'Đáng Chú Ý';
+
+                html += `
+                    <tr>
+                        <td style="color:#94a3b8">${idx + 1}</td>
+                        <td style="font-weight:500">${r.TenKH}</td>
+                        <td class="mono">${r.Danhba}</td>
+                        <td>${r.MaDMA || '-'}</td>
+                        <td class="vol-val">${r.SL_K2}</td>
+                        <td class="vol-val">${r.SL_K3}</td>
+                        <td class="vol-drop">
+                            -${r.M3_Giam} m³ <br>
+                            <span style="font-size:0.75rem; color:#94a3b8">(-${r.TyLe_Giam}%)</span>
+                        </td>
+                        <td>
+                            <span class="${badgeClass}">${badgeText}</span>
+                        </td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = html;
+        }
+
+        function filterTable() {
+            const txt = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = currentData.filter(r => 
+                r.Danhba.toLowerCase().includes(txt) || 
+                (r.TenKH || '').toLowerCase().includes(txt) ||
+                (r.MaDMA || '').toLowerCase().includes(txt)
+            );
+            renderTable(filtered);
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>
