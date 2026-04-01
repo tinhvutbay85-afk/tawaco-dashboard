@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 13:36:05 1/4/2026
+// TAWACO – Biến động KH Lớn – 13:59:56 1/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "13:36:05 1/4/2026",
+  "lastUpdated": "13:59:56 1/4/2026",
   "kyRange": "K2 -> K3/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 149,
-  "tongM3Mat": 89794,
+  "tongKH": 105,
+  "tongM3Mat": 83221,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -130,20 +130,6 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 1296,
       "TyLe_Giam": 73.8,
       "Level": "RED"
-    },
-    {
-      "Danhba": "22073339999",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TA.1",
-      "MaPhuong": "26773",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 23617,
-      "SL_K3": 22343,
-      "M3_Giam": 1274,
-      "TyLe_Giam": 5.39,
-      "Level": "YELLOW"
     },
     {
       "Danhba": "22033278723",
@@ -370,34 +356,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "15122888855",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "12.1",
-      "MaPhuong": "26882",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 8170,
-      "SL_K3": 7588,
-      "M3_Giam": 582,
-      "TyLe_Giam": 7.12,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15132028864",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "13.1",
-      "MaPhuong": "26882",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 13220,
-      "SL_K3": 12640,
-      "M3_Giam": 580,
-      "TyLe_Giam": 4.39,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22103410788",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -468,6 +426,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22053329415",
+      "TenKH": "Khách hàng Lớn",
+      "DiaChi": "N/A",
+      "MaDMA": "TL_1_1",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 999,
+      "SL_K3": 471,
+      "M3_Giam": 528,
+      "TyLe_Giam": 52.85,
+      "Level": "RED"
+    },
+    {
       "Danhba": "22053328585",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -494,20 +466,6 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 528,
       "TyLe_Giam": 27.54,
       "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22053329415",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TL_1_1",
-      "MaPhuong": "26767",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 999,
-      "SL_K3": 471,
-      "M3_Giam": 528,
-      "TyLe_Giam": 52.85,
-      "Level": "RED"
     },
     {
       "Danhba": "22073342636",
@@ -563,20 +521,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 912,
       "M3_Giam": 492,
       "TyLe_Giam": 35.04,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22103413165",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TTN.2",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 6313,
-      "SL_K3": 5840,
-      "M3_Giam": 473,
-      "TyLe_Giam": 7.49,
       "Level": "YELLOW"
     },
     {
@@ -675,20 +619,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 598,
       "M3_Giam": 376,
       "TyLe_Giam": 38.6,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22053327281",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TL.2",
-      "MaPhuong": "26767",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 4088,
-      "SL_K3": 3715,
-      "M3_Giam": 373,
-      "TyLe_Giam": 9.12,
       "Level": "YELLOW"
     },
     {
@@ -832,20 +762,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
-      "Danhba": "22043313087",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26773",
-      "MaGia": "59",
-      "SL_K1": 0,
-      "SL_K2": 3305,
-      "SL_K3": 2992,
-      "M3_Giam": 313,
-      "TyLe_Giam": 9.47,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22103411389",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -874,20 +790,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "15150005003",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TX.1",
-      "MaPhuong": "26878",
-      "MaGia": "57",
-      "SL_K1": 0,
-      "SL_K2": 2500,
-      "SL_K3": 2211,
-      "M3_Giam": 289,
-      "TyLe_Giam": 11.56,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "15052162355",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -902,17 +804,17 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22043313088",
+      "Danhba": "15150005003",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26773",
-      "MaGia": "51",
+      "MaDMA": "TX.1",
+      "MaPhuong": "26878",
+      "MaGia": "57",
       "SL_K1": 0,
-      "SL_K2": 2873,
-      "SL_K3": 2588,
-      "M3_Giam": 285,
-      "TyLe_Giam": 9.92,
+      "SL_K2": 2500,
+      "SL_K3": 2211,
+      "M3_Giam": 289,
+      "TyLe_Giam": 11.56,
       "Level": "YELLOW"
     },
     {
@@ -1028,20 +930,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "15132028202",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "13.1",
-      "MaPhuong": "26882",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 2707,
-      "SL_K3": 2474,
-      "M3_Giam": 233,
-      "TyLe_Giam": 8.61,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "15072443255",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -1126,20 +1014,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22043313092",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26773",
-      "MaGia": "59",
-      "SL_K1": 0,
-      "SL_K2": 2101,
-      "SL_K3": 1907,
-      "M3_Giam": 194,
-      "TyLe_Giam": 9.23,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22063302240",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -1165,20 +1039,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1294,
       "M3_Giam": 189,
       "TyLe_Giam": 12.74,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22043313091",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26773",
-      "MaGia": "59",
-      "SL_K1": 0,
-      "SL_K2": 1993,
-      "SL_K3": 1806,
-      "M3_Giam": 187,
-      "TyLe_Giam": 9.38,
       "Level": "YELLOW"
     },
     {
@@ -1350,20 +1210,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22033278689",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26782",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1646,
-      "SL_K3": 1514,
-      "M3_Giam": 132,
-      "TyLe_Giam": 8.02,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22083368023",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -1420,20 +1266,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22083350165",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "HT-TTH.1",
-      "MaPhuong": "26782",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 1833,
-      "SL_K3": 1712,
-      "M3_Giam": 121,
-      "TyLe_Giam": 6.6,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "15052162363",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -1462,34 +1294,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "15052128220",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "5.1",
-      "MaPhuong": "26876",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 1247,
-      "SL_K3": 1128,
-      "M3_Giam": 119,
-      "TyLe_Giam": 9.54,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22093371700",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.5",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 13327,
-      "SL_K3": 13208,
-      "M3_Giam": 119,
-      "TyLe_Giam": 0.89,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "15072444513",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -1501,62 +1305,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 863,
       "M3_Giam": 117,
       "TyLe_Giam": 11.94,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15141939802",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "14.1",
-      "MaPhuong": "26882",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1514,
-      "SL_K3": 1398,
-      "M3_Giam": 116,
-      "TyLe_Giam": 7.66,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22103413032",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TTN.1_MR",
-      "MaPhuong": "26791",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 2258,
-      "SL_K3": 2149,
-      "M3_Giam": 109,
-      "TyLe_Giam": 4.83,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22093370130",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.1",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1501,
-      "SL_K3": 1392,
-      "M3_Giam": 109,
-      "TyLe_Giam": 7.26,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15052128219",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "5.1",
-      "MaPhuong": "26876",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 1170,
-      "SL_K3": 1064,
-      "M3_Giam": 106,
-      "TyLe_Giam": 9.06,
       "Level": "YELLOW"
     },
     {
@@ -1574,20 +1322,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22023249509",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TCH.5",
-      "MaPhuong": "26785",
-      "MaGia": "31",
-      "SL_K1": 0,
-      "SL_K2": 1617,
-      "SL_K3": 1514,
-      "M3_Giam": 103,
-      "TyLe_Giam": 6.37,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22103413312",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -1599,20 +1333,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 486,
       "M3_Giam": 102,
       "TyLe_Giam": 17.35,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22053321820",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TL.2",
-      "MaPhuong": "26767",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 670,
-      "SL_K3": 570,
-      "M3_Giam": 100,
-      "TyLe_Giam": 14.93,
       "Level": "YELLOW"
     },
     {
@@ -1630,6 +1350,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22053321820",
+      "TenKH": "Khách hàng Lớn",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 670,
+      "SL_K3": 570,
+      "M3_Giam": 100,
+      "TyLe_Giam": 14.93,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22103411385",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -1644,62 +1378,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22103413145",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TTN.2",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 7380,
-      "SL_K3": 7287,
-      "M3_Giam": 93,
-      "TyLe_Giam": 1.26,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22073330003",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TA.2",
-      "MaPhuong": "26773",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1183,
-      "SL_K3": 1093,
-      "M3_Giam": 90,
-      "TyLe_Giam": 7.61,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22103399993",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TTN.2",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 2253,
-      "SL_K3": 2164,
-      "M3_Giam": 89,
-      "TyLe_Giam": 3.95,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15141939511",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26882",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1555,
-      "SL_K3": 1466,
-      "M3_Giam": 89,
-      "TyLe_Giam": 5.72,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22083367928",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -1711,34 +1389,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 434,
       "M3_Giam": 89,
       "TyLe_Giam": 17.02,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15151900357",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "15.1",
-      "MaPhuong": "26878",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1181,
-      "SL_K3": 1093,
-      "M3_Giam": 88,
-      "TyLe_Giam": 7.45,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22063324953",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "APD.1",
-      "MaPhuong": "26767",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1383,
-      "SL_K3": 1296,
-      "M3_Giam": 87,
-      "TyLe_Giam": 6.29,
       "Level": "YELLOW"
     },
     {
@@ -1812,20 +1462,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "15151900274",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "15.1",
-      "MaPhuong": "26878",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1803,
-      "SL_K3": 1740,
-      "M3_Giam": 63,
-      "TyLe_Giam": 3.49,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22013210049",
       "TenKH": "Khách hàng Lớn",
       "DiaChi": "N/A",
@@ -1837,258 +1473,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 498,
       "M3_Giam": 59,
       "TyLe_Giam": 10.59,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15112829084",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "11.1",
-      "MaPhuong": "26898",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 656,
-      "SL_K3": 598,
-      "M3_Giam": 58,
-      "TyLe_Giam": 8.84,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15072444411",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "17.7.1",
-      "MaPhuong": "26890",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 811,
-      "SL_K3": 754,
-      "M3_Giam": 57,
-      "TyLe_Giam": 7.03,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15102740120",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "10.1.2",
-      "MaPhuong": "26884",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 1257,
-      "SL_K3": 1204,
-      "M3_Giam": 53,
-      "TyLe_Giam": 4.22,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22043308567",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26773",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 512,
-      "SL_K3": 477,
-      "M3_Giam": 35,
-      "TyLe_Giam": 6.84,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15031728639",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26890",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 3863,
-      "SL_K3": 3830,
-      "M3_Giam": 33,
-      "TyLe_Giam": 0.85,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22073330004",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TA.2",
-      "MaPhuong": "26773",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1205,
-      "SL_K3": 1174,
-      "M3_Giam": 31,
-      "TyLe_Giam": 2.57,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15102720020",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "10.2",
-      "MaPhuong": "26884",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 808,
-      "SL_K3": 777,
-      "M3_Giam": 31,
-      "TyLe_Giam": 3.84,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22103410215",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TTN.1_MR",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 2623,
-      "SL_K3": 2594,
-      "M3_Giam": 29,
-      "TyLe_Giam": 1.11,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22033277676",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "HT.3",
-      "MaPhuong": "26782",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1314,
-      "SL_K3": 1287,
-      "M3_Giam": 27,
-      "TyLe_Giam": 2.05,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22013221062",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TMT.2",
-      "MaPhuong": "26785",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 511,
-      "SL_K3": 490,
-      "M3_Giam": 21,
-      "TyLe_Giam": 4.11,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15141939801",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "14.1",
-      "MaPhuong": "26882",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1566,
-      "SL_K3": 1546,
-      "M3_Giam": 20,
-      "TyLe_Giam": 1.28,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15141930255",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26882",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 555,
-      "SL_K3": 540,
-      "M3_Giam": 15,
-      "TyLe_Giam": 2.7,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15141949737",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "13.1",
-      "MaPhuong": "26882",
-      "MaGia": "31",
-      "SL_K1": 0,
-      "SL_K2": 763,
-      "SL_K3": 749,
-      "M3_Giam": 14,
-      "TyLe_Giam": 1.83,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15112840530",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "",
-      "MaPhuong": "26898",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 1535,
-      "SL_K3": 1525,
-      "M3_Giam": 10,
-      "TyLe_Giam": 0.65,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22103412860",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TTN.2",
-      "MaPhuong": "26791",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 727,
-      "SL_K3": 722,
-      "M3_Giam": 5,
-      "TyLe_Giam": 0.69,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22033278404",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "HT.3",
-      "MaPhuong": "26782",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1238,
-      "SL_K3": 1235,
-      "M3_Giam": 3,
-      "TyLe_Giam": 0.24,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22093370140",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.1",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1310,
-      "SL_K3": 1308,
-      "M3_Giam": 2,
-      "TyLe_Giam": 0.15,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "22103399999",
-      "TenKH": "Khách hàng Lớn",
-      "DiaChi": "N/A",
-      "MaDMA": "TTN.2",
-      "MaPhuong": "26791",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 1735,
-      "SL_K3": 1733,
-      "M3_Giam": 2,
-      "TyLe_Giam": 0.12,
       "Level": "YELLOW"
     }
   ]
