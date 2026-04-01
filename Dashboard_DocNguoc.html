@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TAWACO – Phát Hiện Chỉ Số Đọc Ngược & Bất Khả Thi</title>
+<meta name="description" content="SK-12: Dashboard phát hiện lỗi chỉ số đồng hồ nước – đọc ngược, bất khả thi, đột ngột 0 – TAWACO Q2/2026">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="data_doc_nguoc.js"></script>
+<style>
+  :root {
+    --bg:      #07090f;
+    --card:    #0d1422;
+    --card2:   #0f1825;
+    --border:  #1c2a40;
+    --red:     #ef4444;
+    --orange:  #f97316;
+    --yellow:  #eab308;
+    --blue:    #3b82f6;
+    --cyan:    #06b6d4;
+    --green:   #10b981;
+    --muted:   #64748b;
+    --text:    #e2e8f0;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    background-image:
+      radial-gradient(ellipse at 15% 15%, rgba(239,68,68,0.07) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 85%, rgba(249,115,22,0.06) 0%, transparent 55%);
+  }
+
+  /* ── HEADER ──────────────────────────────────────── */
+  .header {
+    background: linear-gradient(135deg, #0a1020 0%, #140d0d 100%);
+    border-bottom: 1px solid rgba(239,68,68,0.25);
+    padding: 20px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 100;
+    backdrop-filter: blur(20px);
+  }
+  .logo { display: flex; align-items: center; gap: 16px; }
+  .logo-icon {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: linear-gradient(135deg, #ef4444, #f97316);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px;
+    box-shadow: 0 0 28px rgba(239,68,68,0.45), 0 0 56px rgba(239,68,68,0.15);
+  }
+  .logo-title {
+    font-size: 18px; font-weight: 800;
+    background: linear-gradient(90deg, #fca5a5, #fdba74);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .logo-sub { font-size: 11px; color: var(--muted); margin-top: 3px; letter-spacing: 0.5px; }
+
+  .header-right { display: flex; align-items: center; gap: 12px; }
+  .back-btn {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: var(--muted);
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    border-radius: 10px; padding: 8px 16px; font-size: 13px; font-weight: 600;
+    transition: all 0.2s;
+  }
+  .back-btn:hover { background: rgba(255,255,255,0.08); color: var(--text); border-color: rgba(255,255,255,0.2); }
+
+  .badge-live {
+    display: flex; align-items: center; gap: 7px;
+    background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.35);
+    border-radius: 20px; padding: 7px 16px;
+    font-size: 12px; font-weight: 700; color: #fca5a5;
+  }
+  .dot-live {
+    width: 8px; height: 8px; border-radius: 50%; background: #ef4444;
+    animation: pulse 1.5s infinite;
+  }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(1.4)} }
+
+  /* ── MAIN ────────────────────────────────────────── */
+  .main { padding: 40px 48px; max-width: 1500px; margin: 0 auto; }
+
+  /* ── HERO TAG ────────────────────────────────────── */
+  .page-hero {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    margin-bottom: 36px; flex-wrap: wrap; gap: 20px;
+  }
+  .page-title {
+    font-size: 32px; font-weight: 900; color: #fff;
+    line-height: 1.2; letter-spacing: -0.8px;
+  }
+  .page-title span {
+    background: linear-gradient(90deg, #ef4444, #f97316, #eab308);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .page-sub { font-size: 14px; color: var(--muted); margin-top: 8px; line-height: 1.6; }
+  .meta-chips { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+  .chip {
+    font-size: 11px; font-weight: 700; border-radius: 6px;
+    padding: 4px 12px; border: 1px solid;
+    text-transform: uppercase; letter-spacing: 0.8px;
+  }
+  .chip-ky  { background: rgba(59,130,246,0.1); border-color: rgba(59,130,246,0.4); color: #93c5fd; }
+  .chip-ts  { background: rgba(16,185,129,0.1); border-color: rgba(16,185,129,0.4); color: #6ee7b7; }
+  .chip-upd { background: rgba(100,116,139,0.1); border-color: rgba(100,116,139,0.4); color: #94a3b8; }
+
+  .definition-box {
+    background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.2);
+    border-radius: 14px; padding: 20px 24px; max-width: 520px;
+  }
+  .def-title { font-size: 13px; font-weight: 700; color: #fca5a5; margin-bottom: 12px; }
+  .def-item { display: flex; gap: 10px; margin-bottom: 8px; font-size: 12px; line-height: 1.5; }
+  .def-item:last-child { margin-bottom: 0; }
+  .def-badge { flex-shrink: 0; width: 20px; height: 20px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 800; }
+  .def-badge.red    { background: rgba(239,68,68,0.3); color: #fca5a5; }
+  .def-badge.orange { background: rgba(249,115,22,0.3); color: #fdba74; }
+  .def-badge.yellow { background: rgba(234,179,8,0.3);  color: #fde047; }
+
+  /* ── KPI CARDS ───────────────────────────────────── */
+  .kpi-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px; margin-bottom: 36px;
+  }
+  .kpi-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 18px; padding: 24px 20px;
+    display: flex; align-items: center; gap: 16px;
+    transition: transform 0.25s, box-shadow 0.25s;
+    animation: fadeUp 0.5s ease both;
+  }
+  .kpi-card:hover { transform: translateY(-4px); }
+  .kpi-icon {
+    width: 54px; height: 54px; border-radius: 14px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center; font-size: 24px;
+  }
+  .kpi-icon.red    { background: rgba(239,68,68,0.15);  box-shadow: 0 0 20px rgba(239,68,68,0.2);  }
+  .kpi-icon.orange { background: rgba(249,115,22,0.15); box-shadow: 0 0 20px rgba(249,115,22,0.2); }
+  .kpi-icon.yellow { background: rgba(234,179,8,0.15);  box-shadow: 0 0 20px rgba(234,179,8,0.2);  }
+  .kpi-icon.blue   { background: rgba(59,130,246,0.15); box-shadow: 0 0 20px rgba(59,130,246,0.2); }
+  .kpi-label { font-size: 12px; color: var(--muted); font-weight: 500; margin-bottom: 4px; }
+  .kpi-val   { font-size: 28px; font-weight: 900; color: #fff; }
+  .kpi-val.red    { color: #fca5a5; }
+  .kpi-val.orange { color: #fdba74; }
+  .kpi-val.yellow { color: #fde047; }
+  .kpi-val.blue   { color: #93c5fd; }
+  .kpi-sub   { font-size: 11px; color: var(--muted); margin-top: 3px; }
+  .kpi-card.red:hover    { box-shadow: 0 16px 40px rgba(239,68,68,0.2);  border-color: rgba(239,68,68,0.4);  }
+  .kpi-card.orange:hover { box-shadow: 0 16px 40px rgba(249,115,22,0.2); border-color: rgba(249,115,22,0.4); }
+  .kpi-card.yellow:hover { box-shadow: 0 16px 40px rgba(234,179,8,0.2);  border-color: rgba(234,179,8,0.4);  }
+  .kpi-card.blue:hover   { box-shadow: 0 16px 40px rgba(59,130,246,0.2); border-color: rgba(59,130,246,0.4); }
+
+  /* ── SECTION TABS ────────────────────────────────── */
+  .tab-bar {
+    display: flex; gap: 4px; margin-bottom: 24px;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 6px;
+  }
+  .tab-btn {
+    flex: 1; padding: 10px 16px; font-size: 13px; font-weight: 700;
+    border: none; border-radius: 10px; cursor: pointer;
+    background: transparent; color: var(--muted); transition: all 0.2s;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .tab-btn.active-red    { background: linear-gradient(135deg,rgba(239,68,68,0.25),rgba(239,68,68,0.1)); color:#fca5a5; border: 1px solid rgba(239,68,68,0.35); }
+  .tab-btn.active-orange { background: linear-gradient(135deg,rgba(249,115,22,0.25),rgba(249,115,22,0.1)); color:#fdba74; border: 1px solid rgba(249,115,22,0.35); }
+  .tab-btn.active-yellow { background: linear-gradient(135deg,rgba(234,179,8,0.25),rgba(234,179,8,0.1)); color:#fde047; border: 1px solid rgba(234,179,8,0.35); }
+  .tab-btn:not([class*="active"]):hover { background: rgba(255,255,255,0.05); color: var(--text); }
+  .tab-count {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 22px; height: 22px; border-radius: 6px; font-size: 11px; font-weight: 900; padding: 0 6px;
+  }
+  .tab-count.red    { background: rgba(239,68,68,0.3);  color: #fca5a5; }
+  .tab-count.orange { background: rgba(249,115,22,0.3); color: #fdba74; }
+  .tab-count.yellow { background: rgba(234,179,8,0.3);  color: #fde047; }
+
+  /* ── TABLE PANEL ─────────────────────────────────── */
+  .panel {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 20px; overflow: hidden;
+    animation: fadeUp 0.4s ease both;
+  }
+  .panel-header {
+    padding: 20px 24px; border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+  }
+  .panel-title {
+    font-size: 16px; font-weight: 800; display: flex; align-items: center; gap: 10px;
+  }
+  .panel-badge {
+    font-size: 11px; font-weight: 800; border-radius: 8px; padding: 4px 12px;
+    border: 1px solid;
+  }
+  .panel-badge.red    { background: rgba(239,68,68,0.15);  border-color: rgba(239,68,68,0.4);  color: #fca5a5; }
+  .panel-badge.orange { background: rgba(249,115,22,0.15); border-color: rgba(249,115,22,0.4); color: #fdba74; }
+  .panel-badge.yellow { background: rgba(234,179,8,0.15);  border-color: rgba(234,179,8,0.4);  color: #fde047; }
+
+  .search-box {
+    display: flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    border-radius: 10px; padding: 8px 14px; font-size: 13px; color: var(--text);
+    transition: border-color 0.2s;
+  }
+  .search-box input {
+    background: none; border: none; outline: none; color: var(--text);
+    font-family: 'Inter', sans-serif; font-size: 13px; width: 220px;
+  }
+  .search-box input::placeholder { color: var(--muted); }
+  .search-box:focus-within { border-color: rgba(239,68,68,0.5); }
+
+  /* ── TABLE ───────────────────────────────────────── */
+  .tbl-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr { border-bottom: 1px solid var(--border); }
+  thead th {
+    padding: 12px 16px; font-size: 11px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.8px; color: var(--muted); text-align: left; white-space: nowrap;
+  }
+  tbody tr { border-bottom: 1px solid rgba(255,255,255,0.03); transition: background 0.15s; }
+  tbody tr:hover { background: rgba(255,255,255,0.04); }
+  tbody td { padding: 12px 16px; font-size: 13px; white-space: nowrap; }
+  .td-danhba { font-weight: 700; font-family: 'Courier New', monospace; color: #fff; font-size: 14px; }
+  .td-dma    { color: var(--cyan); font-weight: 600; font-size: 12px; }
+  .td-status { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 700; border-radius: 6px; padding: 3px 10px; }
+  .td-status.dsd { background: rgba(16,185,129,0.1); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.3); }
+  .td-status.other { background: rgba(100,116,139,0.1); color: #94a3b8; border: 1px solid rgba(100,116,139,0.3); }
+  .td-num-norm  { color: #94a3b8; }
+  .td-num-bad   { color: #fca5a5; font-weight: 700; }
+  .td-num-warn  { color: #fdba74; font-weight: 700; }
+  .td-num-yell  { color: #fde047; font-weight: 700; }
+  .val-badge {
+    display: inline-flex; align-items: center; justify-content: center;
+    border-radius: 8px; padding: 4px 10px; font-size: 12px; font-weight: 800; border: 1px solid;
+  }
+  .val-badge.red    { background: rgba(239,68,68,0.15);  border-color: rgba(239,68,68,0.4);  color: #fca5a5; }
+  .val-badge.orange { background: rgba(249,115,22,0.15); border-color: rgba(249,115,22,0.4); color: #fdba74; }
+  .val-badge.yellow { background: rgba(234,179,8,0.15);  border-color: rgba(234,179,8,0.4);  color: #fde047; }
+
+  .rank-dot {
+    width: 24px; height: 24px; border-radius: 7px; display: inline-flex;
+    align-items: center; justify-content: center; font-size: 11px; font-weight: 900; color: #fff;
+  }
+  .rank-dot.r1 { background: #ef4444; }
+  .rank-dot.r2 { background: #f97316; }
+  .rank-dot.r3 { background: #eab308; }
+  .rank-dot.rn { background: rgba(255,255,255,0.1); color: var(--muted); }
+
+  /* ── DMA SUMMARY ─────────────────────────────────── */
+  .dma-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px; padding: 24px;
+  }
+  .dma-card {
+    background: var(--card2); border: 1px solid var(--border);
+    border-radius: 12px; padding: 16px; transition: all 0.2s;
+  }
+  .dma-card:hover { border-color: rgba(239,68,68,0.4); transform: translateY(-2px); }
+  .dma-name { font-size: 12px; color: var(--cyan); font-weight: 700; margin-bottom: 10px; }
+  .dma-bars { display: flex; flex-direction: column; gap: 5px; }
+  .dma-bar-row { display: flex; align-items: center; justify-content: space-between; font-size: 11px; }
+  .dma-bar-label { color: var(--muted); }
+  .dma-bar-val { font-weight: 700; }
+  .dma-bar-val.red    { color: #fca5a5; }
+  .dma-bar-val.orange { color: #fdba74; }
+  .dma-bar-val.yellow { color: #fde047; }
+  .dma-total { font-size: 14px; font-weight: 900; color: #fff; margin-bottom: 8px; }
+
+  /* ── EMPTY / LOADING ─────────────────────────────── */
+  .empty-state {
+    text-align: center; padding: 60px 20px; color: var(--muted);
+  }
+  .empty-icon { font-size: 48px; margin-bottom: 16px; opacity: 0.4; }
+  .empty-text { font-size: 15px; font-weight: 600; margin-bottom: 8px; color: #94a3b8; }
+  .empty-sub  { font-size: 13px; color: var(--muted); }
+  .no-data-warning {
+    background: rgba(239,68,68,0.08); border: 1px solid rgba(239,68,68,0.25);
+    border-radius: 14px; padding: 32px; text-align: center; margin: 0;
+  }
+  .no-data-warning h3 { color: #fca5a5; font-size: 18px; margin-bottom: 12px; }
+  .no-data-warning p  { color: var(--muted); font-size: 13px; line-height: 1.7; }
+  .no-data-warning code {
+    background: rgba(239,68,68,0.15); border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 6px; padding: 4px 10px; color: #fca5a5; font-size: 13px;
+  }
+
+  /* ── FOOTER ──────────────────────────────────────── */
+  .footer {
+    text-align: center; padding: 24px 48px;
+    color: var(--muted); font-size: 11px;
+    border-top: 1px solid var(--border); margin-top: 40px;
+  }
+
+  /* ── ANIMATIONS ──────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .kpi-card:nth-child(1) { animation-delay: 0.05s; }
+  .kpi-card:nth-child(2) { animation-delay: 0.10s; }
+  .kpi-card:nth-child(3) { animation-delay: 0.15s; }
+  .kpi-card:nth-child(4) { animation-delay: 0.20s; }
+
+  /* ── SECTION HIDE ────────────────────────────────── */
+  .section { display: none; }
+  .section.active { display: block; }
+
+  /* ── RESPONSIVE ──────────────────────────────────── */
+  @media (max-width: 1024px) {
+    .kpi-row { grid-template-columns: repeat(2, 1fr); }
+    .main    { padding: 28px 20px; }
+    .header  { padding: 16px 20px; }
+    .page-hero { flex-direction: column; }
+    .tab-btn span:not(.tab-count) { display: none; }
+  }
+  @media (max-width: 600px) {
+    .kpi-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">
+    <div class="logo-icon">🔍</div>
+    <div>
+      <div class="logo-title">Phát Hiện Chỉ Số Đọc Ngược & Bất Khả Thi</div>
+      <div class="logo-sub">TAWACO • SK-12 • Chất Lượng Dữ Liệu • Q2/2026</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <a href="index.html" class="back-btn">← Trang Chủ</a>
+    <div class="badge-live">
+      <div class="dot-live"></div>
+      Cảnh Báo Lỗi Dữ Liệu
+    </div>
+  </div>
+</div>
+
+<div class="main" id="mainContent">
+  <!-- Will be populated by JS -->
+</div>
+
+<div class="footer">
+  🔒 Dữ liệu nội bộ TAWACO &nbsp;|&nbsp; SK-12: Phát Hiện Chỉ Số Đọc Ngược / Bất Khả Thi &nbsp;|&nbsp; Q2 / 2026
+</div>
+
+<script>
+// ─────────────────────────────────────────────────────
+//  HELPERS
+// ─────────────────────────────────────────────────────
+function fmt(n) {
+  if (n === null || n === undefined) return '—';
+  return Number(n).toLocaleString('vi-VN');
+}
+function animateVal(el, end, duration = 1400) {
+  let start = null;
+  const step = (ts) => {
+    if (!start) start = ts;
+    const p = Math.min((ts - start) / duration, 1);
+    const ease = 1 - Math.pow(1 - p, 4);
+    el.textContent = Math.floor(ease * end).toLocaleString('vi-VN');
+    if (p < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+// ─────────────────────────────────────────────────────
+//  RENDER NO-DATA STATE
+// ─────────────────────────────────────────────────────
+function renderNoData(main) {
+  main.innerHTML = `
+    <div class="no-data-warning">
+      <h3>⚠️ Chưa Có Dữ Liệu</h3>
+      <p>
+        Vui lòng chạy script lấy dữ liệu từ SQL Server trước:<br><br>
+        <code>node fetch_doc_nguoc.js</code><br><br>
+        File <strong>data_doc_nguoc.js</strong> sẽ được tạo tự động.<br>
+        Sau đó mở lại trang này để xem kết quả.
+      </p>
+    </div>
+  `;
+}
+
+// ─────────────────────────────────────────────────────
+//  RENDER TABLE ROWS
+// ─────────────────────────────────────────────────────
+function makeDocNguocRow(item, idx) {
+  const rankClass = idx === 0 ? 'r1' : idx === 1 ? 'r2' : idx === 2 ? 'r3' : 'rn';
+  const ts = item.TinhTrang === 'DSD'
+    ? `<span class="td-status dsd">● DSD</span>`
+    : `<span class="td-status other">${item.TinhTrang || '--'}</span>`;
+  return `
+    <tr>
+      <td><span class="rank-dot ${rankClass}">${idx + 1}</span></td>
+      <td class="td-danhba">${item.Danhba || '--'}</td>
+      <td class="td-dma">${item.MaDMA || '--'}</td>
+      <td>${ts}</td>
+      <td class="td-num-norm">${fmt(item.ChiSoCu)}</td>
+      <td class="td-num-bad">${fmt(item.ChiSoMoi)}</td>
+      <td><span class="val-badge red">⬇ ${fmt(item.GiaTriAm)} m³</span></td>
+    </tr>`;
+}
+
+function makeBatKhaThiRow(item, idx) {
+  const rankClass = idx === 0 ? 'r1' : idx === 1 ? 'r2' : idx === 2 ? 'r3' : 'rn';
+  const ts = item.TinhTrang === 'DSD'
+    ? `<span class="td-status dsd">● DSD</span>`
+    : `<span class="td-status other">${item.TinhTrang || '--'}</span>`;
+  const tyLe = item.TyLeTang ? `${Number(item.TyLeTang).toFixed(1)}x` : '--';
+  const pct  = item.PhanTramTang ? `${fmt(item.PhanTramTang)}%` : '--';
+  return `
+    <tr>
+      <td><span class="rank-dot ${rankClass}">${idx + 1}</span></td>
+      <td class="td-danhba">${item.Danhba || '--'}</td>
+      <td class="td-dma">${item.MaDMA || '--'}</td>
+      <td>${ts}</td>
+      <td class="td-num-norm">${fmt(item.ChiSoCu)}</td>
+      <td class="td-num-warn">${fmt(item.ChiSoMoi)}</td>
+      <td><span class="val-badge orange">↑ ${fmt(item.KhoiLuongThem)} m³</span></td>
+      <td style="color:#fb923c;font-weight:800;font-size:15px;">🔴 ${tyLe}</td>
+      <td class="td-num-warn">+${pct}</td>
+    </tr>`;
+}
+
+function makeDotNgot0Row(item, idx) {
+  const rankClass = idx === 0 ? 'r1' : idx === 1 ? 'r2' : idx === 2 ? 'r3' : 'rn';
+  const ts = item.TinhTrang === 'DSD'
+    ? `<span class="td-status dsd">● DSD</span>`
+    : `<span class="td-status other">${item.TinhTrang || '--'}</span>`;
+  return `
+    <tr>
+      <td><span class="rank-dot ${rankClass}">${idx + 1}</span></td>
+      <td class="td-danhba">${item.Danhba || '--'}</td>
+      <td class="td-dma">${item.MaDMA || '--'}</td>
+      <td>${ts}</td>
+      <td class="td-num-yell">${fmt(item.ChiSoCu)}</td>
+      <td style="color:#64748b;">0</td>
+      <td><span class="val-badge yellow">Mất ${fmt(item.KhoiLuongMat)} m³</span></td>
+    </tr>`;
+}
+
+// ─────────────────────────────────────────────────────
+//  RENDER DMA STATS
+// ─────────────────────────────────────────────────────
+function renderDMASummary(phanBoDMA) {
+  if (!phanBoDMA || phanBoDMA.length === 0) {
+    return '<div class="empty-state"><div class="empty-icon">📍</div><div class="empty-text">Không có dữ liệu DMA</div></div>';
+  }
+  const top = phanBoDMA.slice(0, 20);
+  const cards = top.map(d => `
+    <div class="dma-card">
+      <div class="dma-name">📍 ${d.dma}</div>
+      <div class="dma-total">${d.tong} lỗi</div>
+      <div class="dma-bars">
+        <div class="dma-bar-row">
+          <span class="dma-bar-label">🔴 Đọc Ngược</span>
+          <span class="dma-bar-val red">${d.docNguoc}</span>
+        </div>
+        <div class="dma-bar-row">
+          <span class="dma-bar-label">🟠 Bất Khả Thi</span>
+          <span class="dma-bar-val orange">${d.batKhaThi}</span>
+        </div>
+        <div class="dma-bar-row">
+          <span class="dma-bar-label">🟡 Đột Ngột 0</span>
+          <span class="dma-bar-val yellow">${d.dotNgot0}</span>
+        </div>
+      </div>
+    </div>`).join('');
+  return `<div class="dma-grid">${cards}</div>`;
+}
+
+// ─────────────────────────────────────────────────────
+//  SETUP SEARCH FILTER
+// ─────────────────────────────────────────────────────
+function setupSearch(inputId, tbodyId) {
+  const inp = document.getElementById(inputId);
+  const tbl = document.getElementById(tbodyId);
+  if (!inp || !tbl) return;
+  inp.addEventListener('input', () => {
+    const q = inp.value.trim().toLowerCase();
+    Array.from(tbl.querySelectorAll('tr')).forEach(row => {
+      row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+    });
+  });
+}
+
+// ─────────────────────────────────────────────────────
+//  TAB SWITCHING
+// ─────────────────────────────────────────────────────
+function switchTab(tabId, btnId, activeClass) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.className = b.className.replace(/active-\w+/g, '').trim();
+  });
+  document.getElementById(tabId).classList.add('active');
+  document.getElementById(btnId).classList.add(activeClass);
+}
+
+// ─────────────────────────────────────────────────────
+//  MAIN RENDER
+// ─────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const main = document.getElementById('mainContent');
+
+  if (typeof TAWACO_DOC_NGUOC === 'undefined') {
+    renderNoData(main);
+    return;
+  }
+
+  const D = TAWACO_DOC_NGUOC;
+  const L = D.tongLoi || {};
+  const docList = D.docNguocList  || [];
+  const batList = D.batKhaThiList || [];
+  const dotList = D.dotNgot0List  || [];
+
+  main.innerHTML = `
+    <!-- PAGE HERO -->
+    <div class="page-hero">
+      <div>
+        <div class="page-title">Phát Hiện <span>Lỗi Chỉ Số</span><br>Đồng Hồ Nước</div>
+        <div class="page-sub">
+          Quét toàn bộ dữ liệu kỳ gần nhất — phát hiện đọc ngược, bất khả thi và đột ngột 0.
+        </div>
+        <div class="meta-chips">
+          <span class="chip chip-ky" id="chipKy">Kỳ --</span>
+          <span class="chip chip-ts" id="chipTS">-- KH</span>
+          <span class="chip chip-upd" id="chipUpd">⏱ --</span>
+        </div>
+      </div>
+      <div class="definition-box">
+        <div class="def-title">🔎 Định Nghĩa 3 Loại Lỗi Phát Hiện</div>
+        <div class="def-item">
+          <div class="def-badge red">1</div>
+          <div><strong style="color:#fca5a5">Đọc Ngược:</strong> Tiêu thụ kỳ này < 0 — chỉ số cuối &lt; chỉ số đầu. Lỗi nhập liệu hoặc thay đồng hồ không khai báo.</div>
+        </div>
+        <div class="def-item">
+          <div class="def-badge orange">2</div>
+          <div><strong style="color:#fdba74">Tăng Đột Biến:</strong> Tiêu thụ tăng ≥<span id="defTyLe">10</span>x so kỳ trước & tăng > <span id="defAbsM3">100</span> m³. Nghi ngờ nhập thêm số 0 thừa (ví: 15→150, 20→2000).</div>
+        </div>
+        <div class="def-item">
+          <div class="def-badge yellow">3</div>
+          <div><strong style="color:#fde047">Đột Ngột 0:</strong> Kỳ trước &gt;50 m³, kỳ này = 0 m³. Nghi ngờ đồng hồ kẹt hoặc đọc sai.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- KPI CARDS -->
+    <div class="kpi-row">
+      <div class="kpi-card red">
+        <div class="kpi-icon red">🔴</div>
+        <div>
+          <div class="kpi-label">ĐỌC NGƯỢC</div>
+          <div class="kpi-val red" id="kpiDocNguoc">0</div>
+          <div class="kpi-sub">Tiêu thụ âm (< 0 m³)</div>
+        </div>
+      </div>
+      <div class="kpi-card orange">
+        <div class="kpi-icon orange">🟠</div>
+        <div>
+          <div class="kpi-label">TĂNG ĐỘT BIẾN</div>
+          <div class="kpi-val orange" id="kpiBatKhaThi">0</div>
+          <div class="kpi-sub">≥<span id="kpiTyLe">10</span>x kỳ trước & >+<span id="kpiAbsM3">100</span>m³</div>
+        </div>
+      </div>
+      <div class="kpi-card yellow">
+        <div class="kpi-icon yellow">🟡</div>
+        <div>
+          <div class="kpi-label">ĐỘT NGỘT 0</div>
+          <div class="kpi-val yellow" id="kpiDotNgot0">0</div>
+          <div class="kpi-sub">Từ >50 m³ → 0 m³</div>
+        </div>
+      </div>
+      <div class="kpi-card blue">
+        <div class="kpi-icon blue">📊</div>
+        <div>
+          <div class="kpi-label">TỔNG LỖI</div>
+          <div class="kpi-val blue" id="kpiTotal">0</div>
+          <div class="kpi-sub">/ <span id="kpiTongKH">--</span> KH trong kỳ</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABS -->
+    <div class="tab-bar">
+      <button class="tab-btn" id="tabBtn1" onclick="switchTab('sec1','tabBtn1','active-red')">
+        🔴 <span>Đọc Ngược</span> <span class="tab-count red" id="cnt1">0</span>
+      </button>
+      <button class="tab-btn" id="tabBtn2" onclick="switchTab('sec2','tabBtn2','active-orange')">
+        🟠 <span>Tăng Đột Biến</span> <span class="tab-count orange" id="cnt2">0</span>
+      </button>
+      <button class="tab-btn" id="tabBtn3" onclick="switchTab('sec3','tabBtn3','active-yellow')">
+        🟡 <span>Đột Ngột 0</span> <span class="tab-count yellow" id="cnt3">0</span>
+      </button>
+      <button class="tab-btn" id="tabBtn4" onclick="switchTab('sec4','tabBtn4','active-red')">
+        📍 <span>Phân Vùng DMA</span>
+      </button>
+    </div>
+
+    <!-- SECTION 1: ĐỌC NGƯỢC -->
+    <div class="section active" id="sec1">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title" style="color:#fca5a5">🔴 Danh Sách Chỉ Số Đọc Ngược</div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <span class="panel-badge red" id="badgeDocNguoc">0 trường hợp</span>
+            <div class="search-box">
+              🔍 <input type="text" id="searchDocNguoc" placeholder="Tìm danh bộ, DMA...">
+            </div>
+          </div>
+        </div>
+        <div class="tbl-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th><th>Danh Bộ</th><th>Mã DMA</th><th>Tình Trạng</th>
+                <th>Kỳ Trước (m³)</th><th>Kỳ Này (m³)</th><th>Chênh Lệch</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyDocNguoc"></tbody>
+          </table>
+          <div id="emptyDocNguoc" class="empty-state" style="display:none">
+            <div class="empty-icon">✅</div>
+            <div class="empty-text">Không có trường hợp đọc ngược</div>
+            <div class="empty-sub">Chất lượng dữ liệu tốt ở loại lỗi này.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: BẤT KHẢ THI -->
+    <div class="section" id="sec2">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title" style="color:#fdba74">🟠 Danh Sách Tăng Đột Biến ≥ 10x</div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <span class="panel-badge orange" id="badgeBatKhaThi">0 trường hợp</span>
+            <div class="search-box">
+              🔍 <input type="text" id="searchBatKhaThi" placeholder="Tìm danh bộ, DMA...">
+            </div>
+          </div>
+        </div>
+        <div class="tbl-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th><th>Danh Bộ</th><th>Mã DMA</th><th>Tình Trạng</th>
+                <th>Kỳ Trước (m³)</th><th>Kỳ Này (m³)</th><th>Tăng Thêm</th>
+                <th>Tỷ Lệ x lần</th><th>% Tăng</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyBatKhaThi"></tbody>
+          </table>
+          <div id="emptyBatKhaThi" class="empty-state" style="display:none">
+            <div class="empty-icon">✅</div>
+            <div class="empty-text">Không có trường hợp bất khả thi</div>
+            <div class="empty-sub">Không có chỉ số nào vượt ngưỡng vật lý.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: ĐỘT NGỘT 0 -->
+    <div class="section" id="sec3">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title" style="color:#fde047">🟡 Danh Sách Đột Ngột 0</div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <span class="panel-badge yellow" id="badgeDotNgot0">0 trường hợp</span>
+            <div class="search-box">
+              🔍 <input type="text" id="searchDotNgot0" placeholder="Tìm danh bộ, DMA...">
+            </div>
+          </div>
+        </div>
+        <div class="tbl-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th><th>Danh Bộ</th><th>Mã DMA</th><th>Tình Trạng</th>
+                <th>Kỳ Trước (m³)</th><th>Kỳ Này (m³)</th><th>Sản Lượng Mất</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyDotNgot0"></tbody>
+          </table>
+          <div id="emptyDotNgot0" class="empty-state" style="display:none">
+            <div class="empty-icon">✅</div>
+            <div class="empty-text">Không có trường hợp đột ngột 0</div>
+            <div class="empty-sub">Dữ liệu ổn định.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 4: DMA -->
+    <div class="section" id="sec4">
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title" style="color:#67e8f9">📍 Phân Bổ Lỗi Theo DMA/Vùng</div>
+          <span class="panel-badge red" id="badgeDMA">0 DMA có lỗi</span>
+        </div>
+        <div id="dmaContent"></div>
+      </div>
+    </div>
+  `;
+
+  // ── Populate meta ──
+  document.getElementById('chipKy').textContent   = `Kỳ ${D.ky} / ${D.nam}`;
+  document.getElementById('chipTS').textContent   = `${(D.tongKH || 0).toLocaleString('vi-VN')} KH`;
+  document.getElementById('chipUpd').textContent  = `⏱ ${D.lastUpdated}`;
+  document.getElementById('defTyLe').textContent  = D.nguong_tyLe  || 10;
+  document.getElementById('defAbsM3').textContent  = D.nguong_absM3 || 100;
+  document.getElementById('kpiTyLe').textContent   = D.nguong_tyLe  || 10;
+  document.getElementById('kpiAbsM3').textContent  = D.nguong_absM3 || 100;
+
+  // ── Animate KPIs ──
+  animateVal(document.getElementById('kpiDocNguoc'),  L.docNguoc  || 0);
+  animateVal(document.getElementById('kpiBatKhaThi'), L.batKhaThi || 0);
+  animateVal(document.getElementById('kpiDotNgot0'),  L.dotNgot0  || 0);
+  animateVal(document.getElementById('kpiTotal'),     L.total     || 0);
+  document.getElementById('kpiTongKH').textContent = (D.tongKH || 0).toLocaleString('vi-VN');
+
+  // ── Tab counts ──
+  document.getElementById('cnt1').textContent = L.docNguoc  || 0;
+  document.getElementById('cnt2').textContent = L.batKhaThi || 0;
+  document.getElementById('cnt3').textContent = L.dotNgot0  || 0;
+
+  // ── Badges ──
+  document.getElementById('badgeDocNguoc').textContent  = `${L.docNguoc  || 0} trường hợp`;
+  document.getElementById('badgeBatKhaThi').textContent = `${L.batKhaThi || 0} trường hợp`;
+  document.getElementById('badgeDotNgot0').textContent  = `${L.dotNgot0  || 0} trường hợp`;
+  document.getElementById('badgeDMA').textContent        = `${(D.phanBoDMA || []).length} DMA có lỗi`;
+
+  // ── Render tables ──
+  const tbody1 = document.getElementById('tbodyDocNguoc');
+  if (docList.length > 0) {
+    tbody1.innerHTML = docList.map((r, i) => makeDocNguocRow(r, i)).join('');
+  } else {
+    document.getElementById('emptyDocNguoc').style.display = 'block';
+  }
+
+  const tbody2 = document.getElementById('tbodyBatKhaThi');
+  if (batList.length > 0) {
+    tbody2.innerHTML = batList.map((r, i) => makeBatKhaThiRow(r, i)).join('');
+  } else {
+    document.getElementById('emptyBatKhaThi').style.display = 'block';
+  }
+
+  const tbody3 = document.getElementById('tbodyDotNgot0');
+  if (dotList.length > 0) {
+    tbody3.innerHTML = dotList.map((r, i) => makeDotNgot0Row(r, i)).join('');
+  } else {
+    document.getElementById('emptyDotNgot0').style.display = 'block';
+  }
+
+  // ── Render DMA ──
+  document.getElementById('dmaContent').innerHTML = renderDMASummary(D.phanBoDMA);
+
+  // ── Search ──
+  setupSearch('searchDocNguoc',  'tbodyDocNguoc');
+  setupSearch('searchBatKhaThi', 'tbodyBatKhaThi');
+  setupSearch('searchDotNgot0',  'tbodyDotNgot0');
+
+  // ── Activate first tab ──
+  switchTab('sec1', 'tabBtn1', 'active-red');
+});
+</script>
+</body>
+</html>
