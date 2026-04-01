@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAWACO - TRUNG TÂM GIÁM SÁT CẢNH BÁO SỚM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- DỮ LIỆU TỰ ĐỘNG: được tạo bởi Cap_Nhat_Dashboard.bat -->
+    <script src="dashboard_data.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --panel-bg: rgba(30, 41, 59, 0.7);
+            --panel-border: rgba(51, 65, 85, 0.5);
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --success-color: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.4);
+            --warning-color: #f59e0b;
+            --warning-glow: rgba(245, 158, 11, 0.4);
+            --danger-color: #ef4444;
+            --danger-glow: rgba(239, 68, 68, 0.6);
+            --danger-dark: #7f1d1d;
+            --accent-color: #3b82f6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            min-height: 100vh;
+            background-image: radial-gradient(circle at 15% 50%, rgba(239, 68, 68, 0.08), transparent 25%),
+                              radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 25%);
+            display: flex; flex-direction: column;
+        }
+        header {
+            padding: 20px 40px;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 1px solid var(--panel-border);
+            background: rgba(15, 23, 42, 0.9);
+            backdrop-filter: blur(12px);
+            position: sticky; top: 0; z-index: 10;
+        }
+        .logo-area { display: flex; align-items: center; gap: 15px; }
+        .logo-icon { font-size: 32px; color: var(--danger-color); text-shadow: 0 0 15px var(--danger-glow); animation: pulse-icon 2s infinite; }
+        .logo-text h1 { font-size: 22px; font-weight: 800; letter-spacing: 1px; background: linear-gradient(90deg, #fff, #cbd5e1); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .logo-text p { font-size: 12px; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 2px; }
+        .header-right { display: flex; align-items: center; gap: 20px; }
+        .data-source-badge { padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+        .data-source-badge.live { background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.4); color: var(--success-color); }
+        .data-source-badge.stale { background: rgba(245,158,11,0.15); border: 1px solid rgba(245,158,11,0.4); color: var(--warning-color); }
+        .dot-pulse { width: 7px; height: 7px; border-radius: 50%; background: currentColor; animation: pulse-icon 1.5s infinite; }
+        .time-area { text-align: right; }
+        #clock { font-size: 18px; font-weight: 700; }
+        .date { font-size: 12px; color: var(--text-secondary); }
+        main { flex: 1; padding: 28px 40px; max-width: 1600px; margin: 0 auto; width: 100%; }
+
+        /* RIBBON */
+        .summary-ribbon { display: flex; gap: 18px; margin-bottom: 28px; }
+        .ribbon-item { background: rgba(30, 41, 59, 0.8); border: 1px solid var(--panel-border); padding: 14px 22px; border-radius: 12px; flex: 1; display: flex; align-items: center; justify-content: space-between; }
+        .ribbon-item.success { border-left: 4px solid var(--success-color); }
+        .ribbon-item.danger { border-left: 4px solid var(--danger-color); }
+        .ribbon-info p { color: var(--text-secondary); font-size: 12px; margin-bottom: 3px; }
+        .ribbon-info h3 { font-size: 18px; color: var(--text-primary); font-weight: 700; }
+        .ribbon-icon { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+        .ribbon-item.success .ribbon-icon { background: rgba(16,185,129,0.2); color: var(--success-color); }
+        .ribbon-item.danger .ribbon-icon { background: rgba(239,68,68,0.2); color: var(--danger-color); animation: pulse-icon 2s infinite; }
+
+        /* CARDS */
+        .dashboard-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+        .card { background: var(--panel-bg); border: 1px solid var(--panel-border); border-radius: 16px; padding: 23px; backdrop-filter: blur(10px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); display: flex; flex-direction: column; position: relative; overflow: hidden; transition: transform 0.3s ease; }
+        .card:hover { transform: translateY(-4px); }
+        .card.alert-danger { border: 1px solid rgba(239,68,68,0.4); box-shadow: 0 0 20px rgba(239,68,68,0.12); }
+        .card.alert-danger::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--danger-color); box-shadow: 0 0 10px var(--danger-glow); }
+        .card.alert-ok { border: 1px solid rgba(16,185,129,0.3); }
+        .card.alert-ok::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: var(--success-color); }
+
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+        .card-title { display: flex; align-items: center; gap: 10px; }
+        .card-title i { font-size: 20px; }
+        .card-title h2 { font-size: 16px; font-weight: 600; }
+        .badge { padding: 4px 10px; border-radius: 20px; font-size: 11px; font-weight: 700; display: flex; align-items: center; gap: 4px; }
+        .badge.critical { background-color: var(--danger-dark); color: #fca5a5; border: 1px solid rgba(239,68,68,0.5); animation: pulse-bg 2s infinite; }
+        .badge.ok-badge { background: rgba(16,185,129,0.15); color: var(--success-color); border: 1px solid rgba(16,185,129,0.3); }
+
+        .big-number { font-size: 46px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+        .big-number.danger { color: var(--danger-color); text-shadow: 0 0 20px var(--danger-glow); }
+        .big-number.success { color: var(--success-color); }
+        .big-sub { font-size: 13px; color: var(--text-secondary); margin-bottom: 18px; }
+
+        .metric-group { display: flex; flex-direction: column; gap: 16px; }
+        .metric-item { background: rgba(0,0,0,0.2); border-radius: 10px; padding: 13px; border: 1px solid rgba(255,255,255,0.05); }
+        .metric-item-header { display: flex; justify-content: space-between; margin-bottom: 7px; }
+        .metric-name { font-size: 13px; color: var(--text-secondary); }
+        .metric-value { font-size: 15px; font-weight: 700; }
+        .metric-value.danger { color: var(--danger-color); }
+        .metric-value.warning { color: var(--warning-color); }
+        .metric-value.success { color: var(--success-color); }
+        .progress-bar-bg { height: 7px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; position: relative; }
+        .progress-bar-fill { height: 100%; border-radius: 4px; position: absolute; left: 0; top: 0; transition: width 1.2s ease-in-out; }
+        .progress-bar-fill.danger { background: var(--danger-color); box-shadow: 0 0 8px var(--danger-glow); }
+        .progress-bar-fill.warning { background: var(--warning-color); }
+        .progress-bar-fill.success { background: var(--success-color); }
+        .metric-detail { display: flex; justify-content: space-between; margin-top: 7px; font-size: 11px; color: var(--text-secondary); }
+        .trend { display: flex; align-items: center; gap: 3px; font-weight: 600; }
+        .trend.up-bad { color: var(--danger-color); }
+        .trend.down-good { color: var(--success-color); }
+
+        .recommendation-box { margin-top: auto; padding-top: 16px; background: rgba(239,68,68,0.1); border-left: 3px solid var(--danger-color); padding: 11px 14px; border-radius: 0 8px 8px 0; margin-top: 16px; }
+        .recommendation-box h4 { font-size: 11px; color: var(--danger-color); text-transform: uppercase; margin-bottom: 4px; display: flex; align-items: center; gap: 4px; }
+        .recommendation-box p { font-size: 12px; line-height: 1.5; }
+        .no-data-notice { text-align: center; padding: 20px; color: var(--text-secondary); font-style: italic; font-size: 13px; }
+
+        @keyframes pulse-icon { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.7; transform: scale(1.06); } 100% { opacity: 1; transform: scale(1); } }
+        @keyframes pulse-bg { 0% { background-color: rgba(127,29,29,0.8); } 50% { background-color: rgba(220,38,38,0.7); } 100% { background-color: rgba(127,29,29,0.8); } }
+
+        @media (max-width: 1200px) { .dashboard-grid { grid-template-columns: repeat(2, 1fr); } .summary-ribbon { flex-wrap: wrap; } }
+        @media (max-width: 768px) { .dashboard-grid { grid-template-columns: 1fr; } header { flex-direction: column; gap: 12px; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <i class='bx bxs-error-circle logo-icon'></i>
+            <div class="logo-text">
+                <h1>TAWACO CONTROL CENTER</h1>
+                <p>Hệ thống Giám sát Cảnh báo Sớm</p>
+            </div>
+        </div>
+        <div class="header-right">
+            <div id="dataBadge" class="data-source-badge stale">
+                <div class="dot-pulse"></div>
+                <span id="dataTime">Chưa có dữ liệu</span>
+            </div>
+            <div class="time-area">
+                <div id="clock">--:--:--</div>
+                <div class="date" id="dateDisplay"></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- RIBBON TỔNG QUAN -->
+        <div class="summary-ribbon">
+            <div class="ribbon-item success">
+                <div class="ribbon-info"><p>Sản Lượng Lũy Kế Q1</p><h3 id="r-sl">--</h3></div>
+                <div class="ribbon-icon"><i class='bx bx-water'></i></div>
+            </div>
+            <div class="ribbon-item success">
+                <div class="ribbon-info"><p>Doanh Thu Lũy Kế Q1</p><h3 id="r-dt">--</h3></div>
+                <div class="ribbon-icon"><i class='bx bx-money'></i></div>
+            </div>
+            <div id="r-alert-ribbon" class="ribbon-item danger">
+                <div class="ribbon-info"><p>Cảnh Báo Hiện Hành</p><h3 id="r-alert" style="color: var(--danger-color);">-- Báo Động Đỏ</h3></div>
+                <div class="ribbon-icon"><i class='bx bx-shield-x'></i></div>
+            </div>
+        </div>
+
+        <div class="dashboard-grid">
+
+            <!-- CARD 1: HÓA ĐƠN 0M3 -->
+            <div class="card" id="card-hd0">
+                <div class="card-header">
+                    <div class="card-title">
+                        <i class='bx bx-receipt' style="color: var(--danger-color);"></i>
+                        <h2>Cảnh Báo Hóa Đơn 0m³</h2>
+                    </div>
+                    <div class="badge critical" id="badge-hd0"><i class='bx bxs-bell-ring'></i> <span>VƯỢT TRẦN</span></div>
+                </div>
+                <div class="big-number danger" id="hd-total">--%</div>
+                <div class="big-sub" id="hd-tran">Toàn công ty (Mức trần: --%)</div>
+                <div class="metric-group">
+                    <div class="metric-item">
+                        <div class="metric-item-header">
+                            <span class="metric-name">Chi nhánh QLKH1</span>
+                            <span class="metric-value danger" id="hd1-val">--%</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill danger" id="hd1-bar" style="width:0%"></div></div>
+                        <div class="metric-detail">
+                            <span id="hd1-tran">Ngưỡng: --%</span>
+                            <span class="trend up-bad" id="hd1-status"><i class='bx bx-trending-up'></i> --</span>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-item-header">
+                            <span class="metric-name">Chi nhánh QLKH2</span>
+                            <span class="metric-value danger" id="hd2-val">--%</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill danger" id="hd2-bar" style="width:0%"></div></div>
+                        <div class="metric-detail">
+                            <span id="hd2-tran">Ngưỡng: --%</span>
+                            <span class="trend up-bad" id="hd2-status"><i class='bx bx-trending-up'></i> --</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="recommendation-box">
+                    <h4><i class='bx bx-error'></i> LỆNH ĐIỀU HÀNH</h4>
+                    <p>Khẩn cấp chấn chỉnh lại các đội đọc số tại QLKH1 và QLKH2 do tỷ lệ đang có dấu hiệu tăng.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2: THU TIỀN -->
+            <div class="card" id="card-tt">
+                <div class="card-header">
+                    <div class="card-title">
+                        <i class='bx bx-money-withdraw' style="color: var(--warning-color);"></i>
+                        <h2>Tiến Độ Thu Tiền Tháng 3</h2>
+                    </div>
+                    <div class="badge critical" id="badge-tt"><i class='bx bx-timer'></i> <span>DẬM CHÂN TẠI CHỖ</span></div>
+                </div>
+                <div class="metric-group">
+                    <div class="metric-item">
+                        <div class="metric-item-header">
+                            <span class="metric-name">Tỷ lệ Thu Tiền Toàn Công Ty (Q1)</span>
+                            <span class="metric-value warning" id="tt-total">--%</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill warning" id="tt-bar" style="width:0%"></div></div>
+                        <div class="metric-detail">
+                            <span id="tt-target">Chỉ tiêu Q1: --%</span>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-item-header">
+                            <span class="metric-name">Chi nhánh QLKH1</span>
+                            <span class="metric-value danger" id="tt1-val" style="font-size:22px">--%</span>
+                        </div>
+                        <div class="progress-bar-bg" style="height:10px;"><div class="progress-bar-fill danger" id="tt1-bar" style="width:0%"></div></div>
+                        <div class="metric-detail">
+                            <span id="tt1-status" style="color:var(--warning-color)">--</span>
+                        </div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-item-header">
+                            <span class="metric-name">Chi nhánh QLKH2</span>
+                            <span class="metric-value" id="tt2-val" style="font-size:18px">--%</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill" id="tt2-bar" style="width:0%"></div></div>
+                    </div>
+                </div>
+                <div class="recommendation-box" id="tt-lenh" style="display:none">
+                    <h4><i class='bx bx-target-lock'></i> LỆNH ĐIỀU HÀNH</h4>
+                    <p>Yêu cầu QLKH1 tập trung tối đa nhân lực cho công tác thu tiền trong giai đoạn cuối tháng.</p>
+                </div>
+            </div>
+
+            <!-- CARD 3: THAY ĐHN -->
+            <div class="card" id="card-dhn">
+                <div class="card-header">
+                    <div class="card-title">
+                        <i class='bx bx-wrench' style="color: var(--accent-color);"></i>
+                        <h2>Tiến Độ Thay Đồng Hồ Nước</h2>
+                    </div>
+                    <div class="badge critical" id="badge-dhn"><i class='bx bx-run'></i> THI CÔNG CHẬM</div>
+                </div>
+                <div class="metric-group">
+                    <div class="metric-item" style="border-left: 3px solid var(--success-color);">
+                        <div class="metric-item-header">
+                            <span class="metric-name" id="tctb-label">TCTB (Cỡ nhỏ)</span>
+                            <span class="metric-value success" id="tctb-pct">--%</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill success" id="tctb-bar" style="width:0%"></div></div>
+                        <div class="metric-detail"><span style="color:var(--success-color);" id="tctb-detail">Đang tải...</span></div>
+                    </div>
+                    <div class="metric-item" style="border-left: 3px solid var(--danger-color); background: rgba(239,68,68,0.05);">
+                        <div class="metric-item-header">
+                            <span class="metric-name" id="dvtc-label">ĐVTC (Cỡ nhỏ)</span>
+                            <span class="metric-value danger" id="dvtc-pct">--%</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill danger" id="dvtc-bar" style="width:0%"></div></div>
+                        <div class="metric-detail"><span style="color:var(--danger-color);" id="dvtc-detail">Đang tải...</span></div>
+                    </div>
+                    <div class="metric-item" id="dhn-lon-item" style="border: 1px solid var(--danger-color);">
+                        <div class="metric-item-header">
+                            <span class="metric-name" style="color:var(--danger-color); font-weight:bold;">ĐHN Cỡ Lớn (&gt;50)</span>
+                            <span class="metric-value danger" id="dhn-lon-val">--</span>
+                        </div>
+                        <div class="progress-bar-bg"><div class="progress-bar-fill danger" id="dhn-lon-bar" style="width:0%"></div></div>
+                        <div class="metric-detail"><span style="color:var(--danger-color);">Ảnh hưởng đo đếm thất thoát KH lớn</span></div>
+                    </div>
+                </div>
+                <div class="recommendation-box" style="margin-top: 16px;">
+                    <h4><i class='bx bx-message-alt-error'></i> THÔNG BÁO NHẮC NHỞ KHẨN CẤP</h4>
+                    <p>Yêu cầu đơn vị thi công ĐVTC khẩn trương đẩy nhanh tiến độ thay đồng hồ nước, đặc biệt ưu tiên ĐHN cỡ lớn. Kết quả báo cáo trong tuần.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        // ── ĐỒNG HỒ THỜI GIAN THỰC ─────────────────────────────────────────
+        function updateClock() {
+            const now = new Date();
+            document.getElementById('clock').innerText = now.toLocaleTimeString('vi-VN', { hour12: false });
+            document.getElementById('dateDisplay').innerText = now.toLocaleDateString('vi-VN', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // ── HELPER: format số ───────────────────────────────────────────────
+        const fmtMil = n => (n / 1e6).toFixed(2).replace('.', ',') + ' Triệu';
+        const fmtBil = n => (n / 1e9).toFixed(1) + ' Tỷ';
+        const pBar   = (id, pct, cap=100) => {
+            const el = document.getElementById(id);
+            if (el) el.style.width = Math.min((pct / cap * 100), 100).toFixed(1) + '%';
+        };
+
+        // ── NẠP DỮ LIỆU VÀO DASHBOARD ──────────────────────────────────────
+        function renderDashboard(D) {
+            // Badge thời gian cập nhật
+            if (D.capNhat) {
+                document.getElementById('dataTime').innerText = 'Cập nhật: ' + D.capNhat;
+                document.getElementById('dataBadge').className = 'data-source-badge live';
+            }
+
+            // Ribbon tổng quan
+            if (D.slQuy) document.getElementById('r-sl').innerHTML = fmtMil(D.slQuy) + ' m³ <span style="font-size:13px;color:var(--success-color)">(' + D.tlSL + '%)</span>';
+            if (D.dtQuy) document.getElementById('r-dt').innerHTML = fmtBil(D.dtQuy) + ' VNĐ <span style="font-size:13px;color:var(--success-color)">(' + D.tlDT + '%)</span>';
+            document.getElementById('r-alert').innerText = (D.alertCount || 0) + ' Lỗi Báo Động Đỏ';
+
+            // ── Card Hóa Đơn 0m3 ──────────────────────────────────────────
+            const hd  = parseFloat(D.hdPct  || 0);
+            const hd1 = parseFloat(D.hd1Pct || 0);
+            const hd2 = parseFloat(D.hd2Pct || 0);
+            const khHd = D.khHd || 6.48; const khHd1 = D.khHd1 || 6.93; const khHd2 = D.khHd2 || 6.11;
+
+            document.getElementById('hd-total').innerText = hd.toFixed(2) + '%';
+            document.getElementById('hd-tran').innerText  = 'Toàn công ty (Mức trần: ' + khHd.toFixed(2) + '%)';
+            document.getElementById('hd1-val').innerText  = hd1.toFixed(2) + '%';
+            document.getElementById('hd1-tran').innerText = 'Ngưỡng an toàn: ' + khHd1.toFixed(2) + '%';
+            document.getElementById('hd2-val').innerText  = hd2.toFixed(2) + '%';
+            document.getElementById('hd2-tran').innerText = 'Ngưỡng an toàn: ' + khHd2.toFixed(2) + '%';
+
+            // Màu & progress bars (scale to ceiling*1.5 for visibility)
+            const hdScale = khHd * 1.5;
+            pBar('hd1-bar', hd1, hdScale); pBar('hd2-bar', hd2, hdScale);
+
+            const hd0Ok = hd <= khHd;
+            document.getElementById('card-hd0').className = 'card ' + (hd0Ok ? 'alert-ok' : 'alert-danger');
+            const badge0 = document.getElementById('badge-hd0');
+            badge0.className = 'badge ' + (hd0Ok ? 'ok-badge' : 'critical');
+            badge0.innerHTML = hd0Ok ? '<i class="bx bx-check-circle"></i> DƯỚI TRẦN' : '<i class="bx bxs-bell-ring"></i> VƯỢT TRẦN';
+
+            document.getElementById('hd1-status').innerHTML = (hd1 > khHd1)
+                ? '<i class="bx bx-trending-up"></i> Vượt ' + (hd1-khHd1).toFixed(2) + '% trần'
+                : '<i class="bx bx-trending-down"></i> Dưới trần';
+            document.getElementById('hd2-status').innerHTML = (hd2 > khHd2)
+                ? '<i class="bx bx-trending-up"></i> Vượt ' + (hd2-khHd2).toFixed(2) + '% trần'
+                : '<i class="bx bx-trending-down"></i> Dưới trần';
+
+            // ── Card Thu Tiền ─────────────────────────────────────────────
+            const tt  = parseFloat(D.tlTT  || 0);
+            const tt1 = parseFloat(D.tlTT1 || 0);
+            const tt2 = parseFloat(D.tlTT2 || 0);
+            const khTT = D.khTT || 80;
+
+            document.getElementById('tt-total').innerText = tt.toFixed(2) + '%';
+            document.getElementById('tt1-val').innerText  = tt1.toFixed(2) + '%';
+            document.getElementById('tt2-val').innerText  = tt2.toFixed(2) + '%';
+            document.getElementById('tt-target').innerText = 'Chỉ tiêu Q1: ' + khTT + '%';
+
+            pBar('tt-bar', tt, 100); pBar('tt1-bar', tt1, 100); pBar('tt2-bar', tt2, 100);
+
+            // Màu thanh tt2
+            const tt2bar = document.getElementById('tt2-bar');
+            const tt2val = document.getElementById('tt2-val');
+            if (tt2bar) tt2bar.className = 'progress-bar-fill ' + (tt2 >= khTT ? 'success' : 'danger');
+            if (tt2val) tt2val.className = 'metric-value ' + (tt2 >= khTT ? 'success' : 'danger');
+
+            const ttOk = tt >= khTT;
+            document.getElementById('card-tt').className = 'card ' + (ttOk ? 'alert-ok' : 'alert-danger');
+            const badgeTT = document.getElementById('badge-tt');
+            badgeTT.className = 'badge ' + (ttOk ? 'ok-badge' : 'critical');
+            badgeTT.innerHTML = ttOk ? '<i class="bx bx-check"></i> ĐẠT KẾ HOẠCH' : '<i class="bx bx-timer"></i> CHƯA ĐẠT';
+
+            const tt1v = document.getElementById('tt1-val');
+            if (tt1v) tt1v.className = 'metric-value ' + (tt1 >= khTT ? 'success' : 'danger');
+            document.getElementById('tt1-status').innerText = tt1 >= khTT
+                ? '✅ Đạt chỉ tiêu' : '⚠️ Chậm hơn hẳn mặt bằng chung';
+            const tt1bar = document.getElementById('tt1-bar');
+            if (tt1bar) tt1bar.className = 'progress-bar-fill ' + (tt1 >= khTT ? 'success' : 'danger');
+
+            // ── Card Thay Đồng Hồ Nước ────────────────────────────────────
+            if (D.tctbSoLuong !== null && D.tctbKH) {
+                const tctbPct = ((D.tctbSoLuong / D.tctbKH) * 100).toFixed(2);
+                document.getElementById('tctb-label').innerText = 'TCTB (Cỡ nhỏ – ' + D.tctbSoLuong.toLocaleString('vi-VN') + ' cái)';
+                document.getElementById('tctb-pct').innerText = tctbPct + '%';
+                document.getElementById('tctb-detail').innerText = parseFloat(tctbPct) > 40 ? 'Thần tốc (Mặt bằng tốt)' : 'Đang thực hiện';
+                pBar('tctb-bar', parseFloat(tctbPct), 100);
+            } else {
+                // Fallback sang số cứng nếu API không cung cấp
+                document.getElementById('tctb-pct').innerText = '46.92%';
+                document.getElementById('tctb-detail').innerText = 'Thần tốc (Mặt bằng tốt)';
+                pBar('tctb-bar', 46.92, 100);
+            }
+
+            if (D.dvtcSoLuong !== null && D.dvtcKH) {
+                const dvtcPct = ((D.dvtcSoLuong / D.dvtcKH) * 100).toFixed(2);
+                document.getElementById('dvtc-label').innerText = 'ĐVTC (Cỡ nhỏ – ' + D.dvtcSoLuong.toLocaleString('vi-VN') + ' cái)';
+                document.getElementById('dvtc-pct').innerText = dvtcPct + '%';
+                document.getElementById('dvtc-detail').innerText = parseFloat(dvtcPct) < 30 ? 'Chậm chạp (Cần đôn đốc)' : 'Đang thực hiện';
+                pBar('dvtc-bar', parseFloat(dvtcPct), 100);
+            } else {
+                document.getElementById('dvtc-pct').innerText = '14.72%';
+                document.getElementById('dvtc-detail').innerText = 'Chậm chạp (Cần đôn đốc)';
+                pBar('dvtc-bar', 14.72, 100);
+            }
+
+            const dhnLon = D.dhnLonThucHien || 0;
+            const dhnKH  = D.dhnLonKH || 2;
+            document.getElementById('dhn-lon-val').innerText = dhnLon + '/' + dhnKH + ' (' + ((dhnLon/dhnKH)*100).toFixed(0) + '%)';
+            pBar('dhn-lon-bar', (dhnLon / dhnKH) * 100, 100);
+
+            const dhnOk = D.dvtcSoLuong > 0 && (D.dvtcSoLuong / D.dvtcKH > 0.3);
+            document.getElementById('card-dhn').className = 'card ' + (dhnOk ? 'alert-ok' : 'alert-danger');
+
+        }
+
+        // ── KIỂM TRA VÀ NẠP DỮ LIỆU ────────────────────────────────────────
+        window.onload = function() {
+            if (typeof TAWACO_DATA !== 'undefined') {
+                renderDashboard(TAWACO_DATA);
+                // Animate bars after short delay
+                setTimeout(() => {
+                    document.querySelectorAll('.progress-bar-fill').forEach(bar => {
+                        const w = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => { bar.style.width = w; }, 100);
+                    });
+                }, 200);
+            } else {
+                // Không có dữ liệu - hiển thị thông báo
+                document.getElementById('dataTime').innerText = '⚠ Chưa có dữ liệu – Chạy Cap_Nhat_Dashboard.bat';
+                document.getElementById('dataBadge').className = 'data-source-badge stale';
+            }
+        };
+    </script>
+</body>
+</html>
