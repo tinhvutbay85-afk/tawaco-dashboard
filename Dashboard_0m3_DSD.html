@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAWACO – 0m³ Liên Tiếp – Ưu Tiên Theo Số Kỳ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="data_0m3_dsd.js"></script>
+    <style>
+        :root {
+            --bg:#0a0f1e; --panel:rgba(18,28,52,.9); --border:rgba(255,255,255,.07);
+            --red:#ff416c; --blue:#00b4d8; --green:#00c897; --orange:#ff8c00;
+            --yellow:#ffd60a; --text:#f0f4ff; --muted:#8898aa;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
+        body{background:var(--bg);color:var(--text);min-height:100vh;padding:26px 32px;
+            background-image:radial-gradient(ellipse at 15% 30%,rgba(255,65,108,.07) 0,transparent 45%),
+                             radial-gradient(ellipse at 85% 70%,rgba(0,180,216,.05) 0,transparent 45%);}
+
+        .nav{display:flex;gap:10px;margin-bottom:22px;flex-wrap:wrap;}
+        .nav a{padding:8px 16px;border-radius:9px;font-size:12px;font-weight:600;
+               text-decoration:none;color:var(--muted);border:1px solid var(--border);transition:.2s;}
+        .nav a:hover{color:#fff;background:rgba(255,255,255,.08);}
+        .nav a.active{background:rgba(255,65,108,.15);border-color:rgba(255,65,108,.4);color:var(--red);}
+
+        .hdr{display:flex;align-items:center;gap:14px;margin-bottom:22px;}
+        .hdr-icon{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;
+                  justify-content:center;font-size:24px;color:var(--red);flex-shrink:0;
+                  background:rgba(255,65,108,.15);border:1px solid rgba(255,65,108,.35);
+                  animation:glow 2s infinite;}
+        @keyframes glow{0%,100%{box-shadow:0 0 16px rgba(255,65,108,.2);}50%{box-shadow:0 0 32px rgba(255,65,108,.45);}}
+        .hdr-text h1{font-size:20px;font-weight:800;}
+        .hdr-text h1 em{color:var(--red);font-style:normal;}
+        .hdr-text p{font-size:12px;color:var(--muted);margin-top:3px;}
+        .hdr-meta{margin-left:auto;text-align:right;}
+        .hdr-meta .upd{font-size:11px;color:var(--muted);}
+        .hdr-meta .badge{margin-top:5px;display:inline-block;padding:4px 14px;
+            background:rgba(255,65,108,.15);border:1px solid rgba(255,65,108,.4);
+            color:var(--red);border-radius:20px;font-size:14px;font-weight:800;}
+
+        .sumrow{display:flex;gap:14px;margin-bottom:18px;flex-wrap:wrap;}
+        .scard{flex:1;min-width:160px;background:var(--panel);border:1px solid var(--border);
+               border-radius:13px;padding:16px 18px;backdrop-filter:blur(10px);}
+        .scard.main{border-color:rgba(255,65,108,.35);}
+        .scard p{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin-bottom:6px;}
+        .scard .n{font-size:28px;font-weight:800;color:var(--red);}
+        .scard .n.blue{color:var(--blue);}
+        .scard .sub{font-size:11px;color:var(--muted);margin-top:4px;}
+
+        /* ============================================================
+           PHÂN BỔ KỲ LIÊN TIẾP – hiển thị TÍCH LŨY (>= N kỳ)
+           ≥ 3 kỳ = TOÀN BỘ (6,864)
+           ≥ 13 kỳ = CHỈ NHÓM CAO NHẤT (346)
+           ============================================================ */
+        .dist-section{margin-bottom:22px;}
+        .dist-title{font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;
+                    letter-spacing:.8px;margin-bottom:10px;}
+        .dist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px;}
+        .dist-card{background:var(--panel);border:1px solid var(--border);border-radius:10px;
+                   padding:12px 14px;cursor:pointer;transition:.2s;position:relative;overflow:hidden;}
+        .dist-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+                          background:var(--clr,var(--red));}
+        .dist-card:hover{transform:translateY(-2px);border-color:var(--clr,var(--red));
+                         box-shadow:0 4px 20px rgba(0,0,0,.4);}
+        .dist-card.active-f{border-color:var(--clr,var(--red)) !important;
+                            box-shadow:0 0 0 2px var(--clr,var(--red)) inset;}
+        .dist-card .ky-lbl{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;}
+        .dist-card .ky-val{font-size:22px;font-weight:800;color:var(--clr,var(--red));margin:4px 0 2px;}
+        .dist-card .ky-exact{font-size:10px;color:var(--muted);}
+
+        .ctrl{display:flex;align-items:center;gap:10px;margin-bottom:14px;flex-wrap:wrap;}
+        .search{position:relative;flex:1;min-width:220px;}
+        .search i{position:absolute;left:10px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:12px;}
+        .search input{width:100%;background:rgba(255,255,255,.06);border:1px solid var(--border);
+            color:#fff;padding:9px 10px 9px 30px;border-radius:9px;font-size:13px;outline:none;transition:.2s;}
+        .search input:focus{border-color:rgba(255,65,108,.5);}
+        .search input::placeholder{color:var(--muted);}
+        select{background:rgba(255,255,255,.07);border:1px solid var(--border);color:#fff;
+               padding:9px 12px;border-radius:9px;font-size:12px;cursor:pointer;}
+        .rcnt{font-size:12px;color:var(--muted);white-space:nowrap;}
+        .rcnt b{color:#fff;}
+        .csvbtn{padding:9px 15px;background:rgba(0,180,100,.15);border:1px solid rgba(0,180,100,.35);
+            color:#00c864;border-radius:9px;font-size:12px;font-weight:600;cursor:pointer;transition:.2s;}
+        .csvbtn:hover{background:rgba(0,180,100,.28);}
+        .clrbtn{padding:9px 12px;background:rgba(255,140,0,.12);border:1px solid rgba(255,140,0,.3);
+            color:var(--orange);border-radius:9px;font-size:12px;font-weight:600;cursor:pointer;
+            transition:.2s;display:none;}
+        .clrbtn.show{display:inline-block;}
+
+        .twrap{background:var(--panel);border:1px solid var(--border);border-radius:15px;
+               overflow:hidden;backdrop-filter:blur(10px);}
+        table{width:100%;border-collapse:collapse;}
+        thead{background:rgba(255,65,108,.07);}
+        th{padding:11px 14px;text-align:left;font-size:10px;font-weight:700;
+           color:var(--muted);text-transform:uppercase;letter-spacing:.8px;
+           border-bottom:1px solid var(--border);}
+        tbody tr{transition:.15s;}
+        tbody tr:hover{background:rgba(255,65,108,.04);}
+        td{padding:9px 14px;font-size:13px;border-bottom:1px solid rgba(255,255,255,.03);}
+        tbody tr:last-child td{border-bottom:none;}
+
+        .stt{color:var(--muted);font-size:11px;}
+        .db{font-family:monospace;font-weight:700;color:#fff;letter-spacing:.3px;}
+        .dma-tag{display:inline-block;padding:2px 9px;border-radius:5px;font-size:11px;
+                 font-weight:600;background:rgba(0,180,216,.1);border:1px solid rgba(0,180,216,.25);color:var(--blue);}
+        .zero{display:inline-block;padding:2px 8px;border-radius:5px;font-size:11px;font-weight:700;
+              background:rgba(255,65,108,.2);border:1px solid rgba(255,65,108,.4);color:var(--red);}
+
+        .lt-badge{display:inline-flex;align-items:center;gap:5px;padding:4px 10px;
+                  border-radius:20px;font-size:12px;font-weight:800;border:1px solid;}
+        .lt-hi{background:rgba(255,65,108,.2);border-color:rgba(255,65,108,.5);color:var(--red);}
+        .lt-md{background:rgba(255,140,0,.2);border-color:rgba(255,140,0,.45);color:var(--orange);}
+        .lt-lo{background:rgba(255,214,10,.15);border-color:rgba(255,214,10,.4);color:var(--yellow);}
+        .lt-vl{background:rgba(0,200,151,.12);border-color:rgba(0,200,151,.35);color:var(--green);}
+
+        .pg{display:flex;align-items:center;justify-content:space-between;
+            padding:13px 18px;border-top:1px solid var(--border);flex-wrap:wrap;gap:8px;}
+        .pgi{font-size:11px;color:var(--muted);}
+        .pgi b{color:#fff;}
+        .pgb{display:flex;gap:5px;flex-wrap:wrap;}
+        .pgb button{background:rgba(255,255,255,.06);border:1px solid var(--border);
+            color:var(--muted);padding:5px 11px;border-radius:7px;cursor:pointer;font-size:12px;transition:.2s;}
+        .pgb button:hover{color:#fff;background:rgba(255,255,255,.12);}
+        .pgb button.act{background:rgba(255,65,108,.2);border-color:rgba(255,65,108,.5);
+            color:var(--red);font-weight:700;}
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="Dashboard_CanhBao.html"><i class="fa-solid fa-chart-line"></i> Dashboard Chính</a>
+    <a href="Dashboard_TieuThuBatThuong.html"><i class="fa-solid fa-triangle-exclamation"></i> Bất Thường</a>
+    <a href="#" class="active"><i class="fa-solid fa-circle-xmark"></i> 0m³ Liên Tiếp 2026</a>
+</div>
+
+<div class="hdr">
+    <div class="hdr-icon"><i class="fa-solid fa-droplet-slash"></i></div>
+    <div class="hdr-text">
+        <h1>KH <em>0m³ Liên Tiếp</em> – Sắp Xếp Ưu Tiên</h1>
+        <p>K1 + K2 + K3 / 2026 &nbsp;|&nbsp; Chỉ tính <strong style="color:#00c897">Đang Sử Dụng (DSD)</strong> &nbsp;|&nbsp;
+        Sắp xếp từ <strong style="color:var(--red)">cao → thấp</strong> &nbsp;|&nbsp;
+        Tối đa <strong style="color:var(--yellow)">13 kỳ</strong> liên tiếp (K2/2025 → K3/2026)</p>
+    </div>
+    <div class="hdr-meta">
+        <div class="upd" id="updTime">--</div>
+        <div class="badge" id="totalBadge">-- KH</div>
+    </div>
+</div>
+
+<!-- SUMMARY CARDS -->
+<div class="sumrow">
+    <div class="scard main">
+        <p>Tổng đồng hồ 0m³ cả 3 kỳ</p>
+        <div class="n" id="sTotal">0</div>
+        <div class="sub">Đã loại CH / DTG / KXD và KH chưa dùng nước</div>
+    </div>
+    <div class="scard">
+        <p>Ưu Tiên Cao (≥ 10 kỳ)</p>
+        <div class="n" id="sCao" style="color:var(--red);">0</div>
+        <div class="sub" id="sCaoSub">Cần kiểm tra ngay</div>
+    </div>
+    <div class="scard" id="cardQLKH1" onclick="filterQLKH(1)" style="cursor:pointer;transition:.2s;"
+         onmouseover="this.style.borderColor='rgba(0,180,216,.5)'" onmouseout="this.style.borderColor=''">
+        <p>&#x1F3E2; QLKH1 – Danh Bộ đầu 15</p>
+        <div class="n blue" id="sQLKH1">0</div>
+        <div class="sub" id="sQLKH1Sub">Click để lọc QLKH1</div>
+    </div>
+    <div class="scard" id="cardQLKH2" onclick="filterQLKH(2)" style="cursor:pointer;transition:.2s;"
+         onmouseover="this.style.borderColor='rgba(0,200,151,.5)'" onmouseout="this.style.borderColor=''">
+        <p>&#x1F3E2; QLKH2 – Danh Bộ đầu 22</p>
+        <div class="n green" id="sQLKH2">0</div>
+        <div class="sub" id="sQLKH2Sub">Click để lọc QLKH2</div>
+    </div>
+</div>
+
+<!-- PHÂN BỐ KỲ LIÊN TIẾP (TÍCH LŨY) -->
+<div class="dist-section">
+    <div class="dist-title">
+        <i class="fa-solid fa-filter" style="margin-right:6px;color:var(--red);"></i>
+        Phân Bố Tích Lũy – "≥ N kỳ" = số đồng hồ có ÍT NHẤT N kỳ 0m³ liên tiếp
+        &nbsp;<span style="font-size:10px;color:var(--muted);font-weight:400;">(click để lọc bảng)</span>
+    </div>
+    <div class="dist-grid" id="distGrid"></div>
+</div>
+
+<!-- CONTROLS -->
+<div class="ctrl">
+    <div class="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="srch" placeholder="Tìm danh bộ hoặc mã ĐMA..." oninput="doSearch()">
+    </div>
+    <select id="fDMA" onchange="doSearch()"><option value="">Tất cả ĐMA</option></select>
+    <button class="clrbtn" id="clrBtn" onclick="clearFilter()">
+        <i class="fa-solid fa-xmark"></i> Bỏ lọc kỳ
+    </button>
+    <span class="rcnt">Hiển thị: <b id="rcnt">0</b> KH</span>
+    <button class="csvbtn" onclick="exportCSV()"><i class="fa-solid fa-download"></i> Xuất CSV</button>
+</div>
+
+<!-- TABLE -->
+<div class="twrap">
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Danh Bộ</th>
+                <th>Mã ĐMA</th>
+                <th style="text-align:center;">Kỳ 0m³ LT ↓</th>
+                <th>SL Gần Nhất</th>
+                <th>K1/2026</th>
+                <th>K2/2026</th>
+                <th>K3/2026</th>
+                <th>Ưu Tiên</th>
+            </tr>
+        </thead>
+        <tbody id="tb"></tbody>
+    </table>
+    <div class="pg">
+        <div class="pgi">Trang <b id="pgc">1</b> / <b id="pgt">1</b></div>
+        <div class="pgb" id="pgb"></div>
+    </div>
+</div>
+
+<script>
+// ================================================================
+// LOGIC TÍNH KỲ LIÊN TIẾP 0m³
+// Chuẩn hiện tại: K3/2026 (tháng 3/2026)
+// Ví dụ: KyCoSL = "2025/K2"
+//   → lần cuối có SL là K2/2025
+//   → bắt đầu 0m³ từ K3/2025
+//   → K3→K12/2025 = 10 kỳ, K1→K3/2026 = 3 kỳ → TỔNG = 13 kỳ
+// Công thức: lienTiep = (2026×12+3) - (năm×12+kỳ)
+//   Tối thiểu 3 (= K1+K2+K3/2026), tối đa 13
+// ================================================================
+var END_IDX = 2026*12 + 3; // K3/2026
+
+function calcLienTiep(kyCoSL) {
+    if (!kyCoSL) return 3;
+    var m = kyCoSL.match(/(\d{4})\/K(\d+)/);
+    if (!m) return 3;
+    var lastIdx = parseInt(m[1])*12 + parseInt(m[2]);
+    var diff = END_IDX - lastIdx;
+    return Math.max(3, Math.min(diff, 13));
+}
+
+function kyColor(lt) {
+    if (lt >= 12) return '#ff416c';
+    if (lt >= 10) return '#ff8c00';
+    if (lt >= 7)  return '#ffd60a';
+    return '#00c897';
+}
+
+function kyBadgeClass(lt) {
+    if (lt >= 12) return 'lt-hi';
+    if (lt >= 10) return 'lt-md';
+    if (lt >= 7)  return 'lt-lo';
+    return 'lt-vl';
+}
+
+function kyLabel(lt) {
+    if (lt >= 13) return {txt:'Khẩn Cấp', icon:'🔴'};
+    if (lt >= 10) return {txt:'Rất Cao',   icon:'🟠'};
+    if (lt >= 7)  return {txt:'Cao',        icon:'🟡'};
+    return         {txt:'Trung Bình',       icon:'🟢'};
+}
+
+function animN(el, v, d) {
+    d = d || 900;
+    var s = performance.now();
+    (function t(n) {
+        var p = Math.min((n-s)/d, 1), e = 1-Math.pow(1-p,4);
+        el.textContent = Math.round(e*v).toLocaleString('vi-VN');
+        if (p < 1) requestAnimationFrame(t);
+    })(s);
+}
+
+var all = [], flt = [], cur = 1, kyMin = null;
+var PG = 100;
+
+function doSearch(newKyMin) {
+    if (newKyMin !== undefined) kyMin = newKyMin;
+    var q  = document.getElementById('srch').value.trim().toLowerCase();
+    var dm = document.getElementById('fDMA').value;
+    flt = all.filter(function(d) {
+        var okKy  = (kyMin === null) || (d.lienTiep >= kyMin);
+        var okDma = (!dm) || (d.MaDMA === dm);
+        var okQ   = (!q) || (d.Danhba && d.Danhba.includes(q)) || (d.MaDMA && d.MaDMA.toLowerCase().includes(q));
+        // Lọc theo QLKH: prefix của Danhba
+        var okKH  = (qlkhFilter === null) ||
+                    (qlkhFilter === 1 && d.Danhba && d.Danhba.startsWith('15')) ||
+                    (qlkhFilter === 2 && d.Danhba && d.Danhba.startsWith('22'));
+        return okKy && okDma && okQ && okKH;
+    });
+    document.getElementById('clrBtn').className = 'clrbtn' + ((kyMin !== null || qlkhFilter !== null) ? ' show' : '');
+    cur = 1;
+    renderT();
+}
+
+function clearFilter() {
+    kyMin = null;
+    qlkhFilter = null;
+    document.getElementById('cardQLKH1').style.outline = '';
+    document.getElementById('cardQLKH2').style.outline = '';
+    document.querySelectorAll('.dist-card').forEach(function(c) {
+        c.classList.remove('active-f');
+    });
+    doSearch();
+}
+
+function renderT() {
+    var pg = flt.slice((cur-1)*PG, cur*PG);
+    var tb = document.getElementById('tb');
+    tb.innerHTML = '';
+    pg.forEach(function(d, i) {
+        var sl = (d.SLTruoc != null)
+            ? '<b style="color:#fff">'+d.SLTruoc+'m³</b> <span style="color:var(--muted);font-size:10px;">('+d.KyCoSL+')</span>'
+            : '<span style="color:var(--muted)">–</span>';
+        var lbl = kyLabel(d.lienTiep);
+        var bc  = kyBadgeClass(d.lienTiep);
+        var clr = kyColor(d.lienTiep);
+        tb.innerHTML += '<tr>' +
+            '<td class="stt">' + ((cur-1)*PG+i+1) + '</td>' +
+            '<td><span class="db">' + d.Danhba + '</span></td>' +
+            '<td>' + (d.MaDMA ? '<span class="dma-tag">'+d.MaDMA+'</span>' : '<span style="color:var(--muted)">–</span>') + '</td>' +
+            '<td style="text-align:center;"><span class="lt-badge '+bc+'"><i class="fa-solid fa-fire" style="font-size:10px;"></i> '+d.lienTiep+' kỳ</span></td>' +
+            '<td>' + sl + '</td>' +
+            '<td><span class="zero">0 m³</span></td>' +
+            '<td><span class="zero">0 m³</span></td>' +
+            '<td><span class="zero">0 m³</span></td>' +
+            '<td>'+lbl.icon+' <span style="font-size:12px;font-weight:700;color:'+clr+'">'+lbl.txt+'</span></td>' +
+            '</tr>';
+    });
+    document.getElementById('rcnt').textContent = flt.length.toLocaleString('vi-VN');
+    document.getElementById('pgc').textContent = cur;
+    document.getElementById('pgt').textContent = Math.max(1, Math.ceil(flt.length/PG));
+    renderPg();
+}
+
+function renderPg() {
+    var tot = Math.ceil(flt.length/PG);
+    var pg = document.getElementById('pgb');
+    pg.innerHTML = '';
+    if (tot <= 1) return;
+    function mk(l, p) {
+        var b = document.createElement('button');
+        b.textContent = l;
+        if (p === cur) b.classList.add('act');
+        b.onclick = function() { cur = p; renderT(); scrollTo(0,0); };
+        pg.appendChild(b);
+    }
+    if (cur > 1) mk('←', cur-1);
+    var lo = Math.max(1, cur-2), hi = Math.min(tot, cur+2);
+    if (lo > 1) mk(1, 1);
+    for (var p = lo; p <= hi; p++) mk(p, p);
+    if (hi < tot) mk(tot, tot);
+    if (cur < tot) mk('→', cur+1);
+}
+
+function exportCSV() {
+    var hdr = 'STT,Danhba,MaDMA,Ky_LienTiep_0m3,SLTruoc,KyCoSL,K1_2026,K2_2026,K3_2026\n';
+    var rows = flt.map(function(d, i) {
+        return (i+1)+','+d.Danhba+','+(d.MaDMA||'')+','+d.lienTiep+','+(d.SLTruoc!=null?d.SLTruoc:'')
+               +','+(d.KyCoSL||'')+',0,0,0';
+    }).join('\n');
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob(['\uFEFF'+hdr+rows], {type:'text/csv;charset=utf-8'}));
+    a.download = 'TAWACO_0m3_LienTiep_UuTien_'+new Date().toLocaleDateString('vi-VN').replace(/\//g,'-')+'.csv';
+    a.click();
+}
+
+window.addEventListener('DOMContentLoaded', function() {
+    if (typeof TAWACO_0M3_DSD === 'undefined') {
+        document.body.innerHTML += '<div style="text-align:center;padding:60px;color:#ff416c;">⚠ Chưa có dữ liệu – Chạy <b>quet_0m3_dsd.js</b></div>';
+        return;
+    }
+    var D = TAWACO_0M3_DSD;
+
+    // 1. TÍNH lienTiep cho mỗi KH → sort cao → thấp
+    all = (D.danhSach || []).map(function(d) {
+        return Object.assign({}, d, { lienTiep: calcLienTiep(d.KyCoSL) });
+    }).sort(function(a, b) { return b.lienTiep - a.lienTiep; });
+
+    flt = all;
+
+    // 2. Hiển thị header
+    document.getElementById('updTime').textContent = '🕐 ' + D.lastUpdated;
+    document.getElementById('totalBadge').textContent = D.tongKH.toLocaleString('vi-VN') + ' Đồng Hồ';
+    animN(document.getElementById('sTotal'), D.tongKH);
+
+    // 3. Ưu tiên cao >= 10 kỳ
+    var soCao = all.filter(function(d) { return d.lienTiep >= 10; }).length;
+    animN(document.getElementById('sCao'), soCao);
+    document.getElementById('sCaoSub').textContent =
+        (soCao/D.tongKH*100).toFixed(1) + '% – ưu tiên kiểm tra ngay';
+
+    // 4. Thống kê QLKH1 / QLKH2 theo đầu số Danhba
+    var soQLKH1 = all.filter(function(d) { return d.Danhba && d.Danhba.startsWith('15'); }).length;
+    var soQLKH2 = all.filter(function(d) { return d.Danhba && d.Danhba.startsWith('22'); }).length;
+    animN(document.getElementById('sQLKH1'), soQLKH1);
+    animN(document.getElementById('sQLKH2'), soQLKH2);
+    document.getElementById('sQLKH1Sub').textContent = (soQLKH1/D.tongKH*100).toFixed(1)+'% tổng | Click để lọc';
+    document.getElementById('sQLKH2Sub').textContent = (soQLKH2/D.tongKH*100).toFixed(1)+'% tổng | Click để lọc';
+
+    // 5. Dropdown ĐMA
+    var sel = document.getElementById('fDMA');
+    (D.phanBoDMA || []).forEach(function(p) {
+        var o = document.createElement('option');
+        o.value = p.dma;
+        o.textContent = p.dma + ' (' + p.soKH + ' KH)';
+        sel.appendChild(o);
+    });
+
+    // 6. XÂY DỰNG PHÂN BỐ TÍCH LŨY
+    //    distExact[k] = số KH có ĐÚNG k kỳ liên tiếp
+    //    distCum[k]   = số KH có >= k kỳ liên tiếp (tích lũy)
+    //
+    //    Ví dụ với tổng 6864:
+    //    - distExact = {13:346, 12:181, 11:230, ..., 3:1815}
+    //    - distCum[3] = 346+181+230+...+1815 = 6864
+    //    - distCum[13] = 346
+    var distExact = {};
+    all.forEach(function(d) {
+        distExact[d.lienTiep] = (distExact[d.lienTiep] || 0) + 1;
+    });
+
+    var distCum = {};
+    for (var k = 3; k <= 13; k++) {
+        distCum[k] = 0;
+        for (var j = k; j <= 13; j++) {
+            distCum[k] += (distExact[j] || 0);
+        }
+    }
+    // Kết quả: distCum[3] = tổng toàn bộ = 6864; distCum[13] = 346
+
+    // 7. Vẽ các thẻ phân bố (từ 13 xuống 3)
+    var grid = document.getElementById('distGrid');
+    grid.innerHTML = '';
+    for (var k = 13; k >= 3; k--) {
+        var cum  = distCum[k] || 0;
+        var exact = distExact[k] || 0;
+        if (cum === 0) continue;
+        var pct  = (cum / D.tongKH * 100).toFixed(1);
+        var clr  = kyColor(k);
+        var card = document.createElement('div');
+        card.className = 'dist-card';
+        card.style.setProperty('--clr', clr);
+        card.dataset.kyMin = k;
+        card.innerHTML =
+            '<div class="ky-lbl">&#8805; ' + k + ' k&#7923; li&ecirc;n ti&#7871;p</div>' +
+            '<div class="ky-val">' + cum.toLocaleString('vi-VN') + '</div>' +
+            '<div class="ky-exact">' + pct + '% &nbsp;|&nbsp; Đúng ' + k + ' kỳ: ' + exact.toLocaleString('vi-VN') + '</div>';
+        (function(card, k) {
+            card.addEventListener('click', function() {
+                if (kyMin === k) {
+                    clearFilter();
+                } else {
+                    kyMin = k;
+                    document.querySelectorAll('.dist-card').forEach(function(c) { c.classList.remove('active-f'); });
+                    card.classList.add('active-f');
+                    doSearch(k);
+                }
+            });
+        })(card, k);
+        grid.appendChild(card);
+    }
+
+    // 8. Render bảng
+    renderT();
+});
+</script>
+</body>
+</html>
