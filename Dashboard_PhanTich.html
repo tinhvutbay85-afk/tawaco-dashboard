@@ -238,10 +238,24 @@
         phuongCounts[pt] = (phuongCounts[pt] || 0) + 1;
     }
 
-    churnData.danhSach.forEach(item => addPhuong(item.MaPhuong));
-    zeroData.danhSach.forEach(item => addPhuong(item.Phuong || item.MaPhuong));
-    abnormalData.danhSach.forEach(item => addPhuong(item.MaPhuong));
-    invertData.danhSach.forEach(item => addPhuong(item.MaPhuong));
+    if(churnData && churnData.danhSach) {
+        churnData.danhSach.forEach(item => addPhuong(item.MaPhuong));
+    }
+    if(zeroData && zeroData.danhSach) {
+        zeroData.danhSach.forEach(item => addPhuong(item.Phuong || item.MaPhuong));
+    }
+    if(abnormalData && abnormalData.leakTop) {
+        abnormalData.leakTop.forEach(item => addPhuong(item.MaPhuong));
+    }
+    if(abnormalData && abnormalData.stuckTop) {
+        abnormalData.stuckTop.forEach(item => addPhuong(item.MaPhuong));
+    }
+    if(invertData && invertData.docNguocList) {
+        invertData.docNguocList.forEach(item => addPhuong(item.MaPhuong));
+    }
+    if(invertData && invertData.batKhaThiList) {
+        invertData.batKhaThiList.forEach(item => addPhuong(item.MaPhuong));
+    }
 
     // Sắp xếp Phường
     const sortedPhuong = Object.keys(phuongCounts).map(k => ({ phuong: k, count: phuongCounts[k] })).sort((a,b)=>b.count - a.count);
