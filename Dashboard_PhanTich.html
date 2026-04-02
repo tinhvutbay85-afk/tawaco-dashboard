@@ -10,6 +10,7 @@
     <script src="data_0m3_dsd.js"></script>
     <script src="data_doc_nguoc.js"></script>
     <script src="data_tieu_thu.js"></script>
+    <script src="data_hanhchinh.js"></script>
     <style>
         :root {
             --bg-body: #0f172a;
@@ -214,6 +215,14 @@
     const zeroData = (typeof TAWACO_0M3_DSD !== 'undefined') ? TAWACO_0M3_DSD : { danhSach: [], tongKH: 0 };
     const abnormalData = (typeof TAWACO_BATTHUONG !== 'undefined') ? TAWACO_BATTHUONG : { danhSach: [] };
     const invertData = (typeof TAWACO_DOC_NGUOC !== 'undefined') ? TAWACO_DOC_NGUOC : { danhSach: [] };
+    const hanhChinhData = (typeof TAWACO_HANHCHINH !== 'undefined') ? TAWACO_HANHCHINH : {};
+
+    // Lấy tên phường từ mã
+    function getTenPhuong(ma) {
+        if (!ma) return "CXĐ";
+        const m = ma.trim();
+        return hanhChinhData[m] || "Phường " + m;
+    }
 
     // TÍNH TOÁN RỦI RO DOANH THU
     const avgPrice = 10900;
@@ -262,15 +271,15 @@
     const top10Phuong = sortedPhuong.slice(0, 10);
     
     if(top10Phuong.length > 0) {
-        document.getElementById('valHotspot').innerText = "Phường " + top10Phuong[0].phuong;
+        document.getElementById('valHotspot').innerText = getTenPhuong(top10Phuong[0].phuong);
     }
 
     // --- AI MESSAGE ---
-    const topPhuongText = top10Phuong.length > 0 ? top10Phuong[0].phuong : 'N/A';
+    const topPhuongText = top10Phuong.length > 0 ? getTenPhuong(top10Phuong[0].phuong) : 'N/A';
     document.getElementById('aiMessage').innerHTML = `
         Tổng giá trị doanh thu có nguy cơ thất thoát ước tính là <span class="ai-bold">${(totalRiskVND/1000000).toLocaleString('vi-VN')} Triệu VNĐ</span>. <br>
         1. Phần lớn sự hao hụt nằm ở nhóm <span class="ai-bold">Khách Hàng Lớn (Churn)</span>. Nếu không trực tiếp khảo sát nguyên nhân giảm, con số hao hụt sẽ tiếp diễn trong các tháng tới.<br>
-        2. Về mặt địa bàn, <span class="ai-bold">Phường ${topPhuongText}</span> đang là Điểm Nóng (Hotspot) có tần suất xuất hiện cảnh báo cao nhất. Rất khuyến nghị cắt cử đội hiện trường tập trung rà soát toàn bộ các danh bạ bất thường / 0m³ tại Phường này trong tuần làm việc tới.
+        2. Về mặt địa bàn, <span class="ai-bold">${topPhuongText}</span> đang là Điểm Nóng (Hotspot) có tần suất xuất hiện cảnh báo cao nhất. Rất khuyến nghị cắt cử đội hiện trường tập trung rà soát toàn bộ các danh bạ bất thường / 0m³ tại khu vực này trong tuần làm việc tới.
     `;
 
     // --- THIẾT KẾ CHART UI ---
@@ -282,7 +291,7 @@
     new Chart(document.getElementById('barHotspot'), {
         type: 'bar',
         data: {
-            labels: top10Phuong.map(x => 'Phường ' + x.phuong),
+            labels: top10Phuong.map(x => getTenPhuong(x.phuong)),
             datasets: [{
                 label: 'Số ca Cảnh Báo Tổng Hợp',
                 data: top10Phuong.map(x => x.count),
