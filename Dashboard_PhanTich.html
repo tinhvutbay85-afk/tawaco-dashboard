@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAWACO - Phân Tích Chuyên Sâu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="data_churn.js"></script>
+    <script src="data_0m3_dsd.js"></script>
+    <script src="data_doc_nguoc.js"></script>
+    <script src="data_tieu_thu.js"></script>
+    <style>
+        :root {
+            --bg-body: #0f172a;
+            --bg-card: rgba(30, 41, 59, 0.7);
+            --border: rgba(30, 41, 59, 0.8);
+            --primary: #3b82f6;
+            --secondary: #0ea5e9;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --success: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #8b5cf6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-body);
+            background-image: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 40%),
+                              radial-gradient(circle at bottom left, rgba(139, 92, 246, 0.08), transparent 40%);
+            color: var(--text-main);
+            min-height: 100vh;
+        }
+
+        .container { padding: 40px; max-width: 1600px; margin: 0 auto; }
+
+        header {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 40px; border-bottom: 1px solid var(--border); padding-bottom: 24px;
+        }
+
+        .title-area h1 { font-size: 28px; font-weight: 800; background: linear-gradient(90deg, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .title-area p { font-size: 14px; color: var(--text-muted); margin-top: 6px; letter-spacing: 0.5px; }
+
+        .back-badge {
+            background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4);
+            padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; color: var(--warning);
+            cursor: default;
+        }
+
+        /* SUMMARY CARDS */
+        .summary-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--bg-card); backdrop-filter: blur(12px);
+            border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+            position: relative; overflow: hidden; transition: 0.3s ease;
+        }
+
+        .stat-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.5); border-color: rgba(59, 130, 246, 0.5); }
+
+        .stat-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            opacity: 0; transition: 0.3s;
+        }
+        .stat-card:hover::before { opacity: 1; }
+
+        .stat-icon {
+            width: 48px; height: 48px; border-radius: 14px; display: flex; align-items: center; justify-content: center;
+            font-size: 24px; margin-bottom: 20px;
+        }
+
+        .bg-red { background: rgba(239, 68, 68, 0.15); color: var(--danger); box-shadow: 0 0 15px rgba(239, 68, 68, 0.2); }
+        .bg-yellow { background: rgba(245, 158, 11, 0.15); color: var(--warning); box-shadow: 0 0 15px rgba(245, 158, 11, 0.2); }
+        .bg-blue { background: rgba(59, 130, 246, 0.15); color: var(--primary); box-shadow: 0 0 15px rgba(59, 130, 246, 0.2); }
+        .bg-purple { background: rgba(139, 92, 246, 0.15); color: var(--accent); box-shadow: 0 0 15px rgba(139, 92, 246, 0.2); }
+
+        .stat-title { font-size: 13px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+        .stat-val { font-size: 32px; font-weight: 800; color: #fff; line-height: 1.1; }
+        .stat-sub { font-size: 12px; color: var(--text-muted); margin-top: 8px; font-weight: 500; }
+
+        /* CHARTS SECTION */
+        .chart-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin-bottom: 24px; }
+        .chart-grid-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px; }
+
+        .chart-card {
+            background: var(--bg-card); backdrop-filter: blur(12px);
+            border: 1px solid var(--border); border-radius: 24px; padding: 28px;
+        }
+
+        .chart-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+        .chart-header h3 { font-size: 16px; font-weight: 700; color: #fff; }
+        .chart-header p { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+        
+        .chart-wrap { position: relative; height: 320px; width: 100%; }
+
+        /* AI INFO BLOCK */
+        .ai-insight {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.02));
+            border: 1px solid rgba(16, 185, 129, 0.3); border-left: 4px solid var(--success);
+            padding: 20px 24px; border-radius: 16px; display: flex; gap: 16px; align-items: flex-start;
+        }
+        .ai-icon { font-size: 28px; animation: float 3s ease-in-out infinite; }
+        .ai-title { font-size: 15px; font-weight: 800; color: var(--success); margin-bottom: 6px; }
+        .ai-msg { font-size: 14px; color: #cbd5e1; line-height: 1.6; }
+        .ai-bold { color: #fff; font-weight: 700; }
+
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+        @media (max-width: 1200px) {
+            .summary-grid { grid-template-columns: repeat(2, 1fr); }
+            .chart-grid, .chart-grid-bottom { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <div class="title-area">
+            <h1>Phân Tích Cảnh Báo Tổng Hợp</h1>
+            <p>Phân tích rủi ro thất thoát doanh thu từ các Module: Churn, 0m³, Đọc ngược, Rò rỉ</p>
+        </div>
+        <div class="back-badge" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.4); color: var(--success); cursor: pointer;" onclick="window.location.href='index.html'">
+            &larr; Trở về Hệ Sinh Thái
+        </div>
+    </header>
+
+    <!-- KẾT QUẢ TỔNG HỢP (AI Tính Toán) -->
+    <div class="summary-grid">
+        <div class="stat-card">
+            <div class="stat-icon bg-red">💰</div>
+            <div class="stat-title">Rủi Ro Doanh Thu (Ước tính)</div>
+            <div class="stat-val" id="valLoss">0 Triệu</div>
+            <div class="stat-sub">Thất thoát từ KH lớn giảm & suy đoán 0m³ (Tạm tính GBBQ = 10,900đ)</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon bg-yellow">📉</div>
+            <div class="stat-title">Tổng m³ Suy Giảm (Churn)</div>
+            <div class="stat-val" id="valChurn">0</div>
+            <div class="stat-sub">Sản lượng hụt ở phân khúc KH ≥ 500m³</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon bg-purple">⏱️</div>
+            <div class="stat-title">Điểm Nóng 0m³ Kéo Dài</div>
+            <div class="stat-val" id="val0m3">0</div>
+            <div class="stat-sub">Khách hàng bị 0m³ liên tiếp nhiều kỳ chưa xử lý</div>
+        </div>
+
+        <div class="stat-card">
+            <div class="stat-icon bg-blue">📍</div>
+            <div class="stat-title">Khu Vực Báo Động (Phường)</div>
+            <div class="stat-val" id="valHotspot">--</div>
+            <div class="stat-sub">Địa bàn tập trung nhiều ca bất thường nhất toàn mạng</div>
+        </div>
+    </div>
+
+    <!-- KHU VỰC BIỂU ĐỒ -->
+    <div class="chart-grid">
+        <div class="chart-card">
+            <div class="chart-header">
+                <div>
+                    <h3>📍 Bản Đồ Nhiệt Cảnh Báo - Theo Phường</h3>
+                    <p>Số lượng Cảnh báo (0m³, Churn, Bất thường) tập trung tại 10 Phường lớn nhất</p>
+                </div>
+            </div>
+            <div class="chart-wrap">
+                <canvas id="barHotspot"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-header">
+                <div>
+                    <h3>🏢 Cơ Cấu Khách Hàng Lớn Suy Giảm</h3>
+                    <p>Phân bổ khối lượng suy giảm m³ theo mục đích sử dụng (Mã Giá)</p>
+                </div>
+            </div>
+            <div class="chart-wrap">
+                <canvas id="pieMaGia"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <!-- NHẬN ĐỊNH CỦA AI -->
+    <div class="chart-grid-bottom" style="grid-template-columns: 1fr;">
+        <div class="chart-card" style="padding: 0; background: transparent; border: none;">
+            <div class="ai-insight">
+                <div class="ai-icon">💡</div>
+                <div>
+                    <div class="ai-title">Nhận Định Thông Minh Trí Tuệ Nhân Tạo (AI)</div>
+                    <div class="ai-msg" id="aiMessage">
+                        Đang phân tích dữ liệu...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // --- LOAD VARIABLES SAFELY ---
+    const churnData = (typeof TAWACO_CHURN_DATA !== 'undefined') ? TAWACO_CHURN_DATA : { danhSach: [], tongM3Mat: 0 };
+    const zeroData = (typeof TAWACO_0M3_DSD !== 'undefined') ? TAWACO_0M3_DSD : { danhSach: [], tongKH: 0 };
+    const abnormalData = (typeof TAWACO_BATTHUONG !== 'undefined') ? TAWACO_BATTHUONG : { danhSach: [] };
+    const invertData = (typeof TAWACO_DOC_NGUOC !== 'undefined') ? TAWACO_DOC_NGUOC : { danhSach: [] };
+
+    // TÍNH TOÁN RỦI RO DOANH THU
+    const avgPrice = 10900;
+    const totalChurnLoss = churnData.tongM3Mat * avgPrice;
+    
+    // Ước lượng rủi ro 0m3: trung bình 1 hộ dùng 10m3/kỳ
+    const est0m3Loss = (zeroData.tongKH || zeroData.danhSach.length) * 10 * avgPrice;
+    
+    const totalRiskVND = totalChurnLoss + est0m3Loss;
+    
+    // Format hiển thị
+    document.getElementById('valLoss').innerText = (totalRiskVND / 1000000).toLocaleString('vi-VN', {maximumFractionDigits:1}) + " Tr";
+    document.getElementById('valChurn').innerText = churnData.tongM3Mat.toLocaleString('vi-VN') + " m³";
+    document.getElementById('val0m3').innerText = (zeroData.tongKH || zeroData.danhSach.length).toLocaleString('vi-VN') + " KH";
+
+    // --- XỬ LÝ PHÂN TÍCH HOTSPOT THEO PHƯỜNG ---
+    const phuongCounts = {};
+
+    function addPhuong(p) {
+        if(!p || p.trim() === '') return;
+        const pt = p.trim().substring(0, 5); // Lấy mã ngắn nếu cần
+        phuongCounts[pt] = (phuongCounts[pt] || 0) + 1;
+    }
+
+    churnData.danhSach.forEach(item => addPhuong(item.MaPhuong));
+    zeroData.danhSach.forEach(item => addPhuong(item.Phuong || item.MaPhuong));
+    abnormalData.danhSach.forEach(item => addPhuong(item.MaPhuong));
+    invertData.danhSach.forEach(item => addPhuong(item.MaPhuong));
+
+    // Sắp xếp Phường
+    const sortedPhuong = Object.keys(phuongCounts).map(k => ({ phuong: k, count: phuongCounts[k] })).sort((a,b)=>b.count - a.count);
+    const top10Phuong = sortedPhuong.slice(0, 10);
+    
+    if(top10Phuong.length > 0) {
+        document.getElementById('valHotspot').innerText = "Phường " + top10Phuong[0].phuong;
+    }
+
+    // --- AI MESSAGE ---
+    const topPhuongText = top10Phuong.length > 0 ? top10Phuong[0].phuong : 'N/A';
+    document.getElementById('aiMessage').innerHTML = `
+        Tổng giá trị doanh thu có nguy cơ thất thoát ước tính là <span class="ai-bold">${(totalRiskVND/1000000).toLocaleString('vi-VN')} Triệu VNĐ</span>. <br>
+        1. Phần lớn sự hao hụt nằm ở nhóm <span class="ai-bold">Khách Hàng Lớn (Churn)</span>. Nếu không trực tiếp khảo sát nguyên nhân giảm, con số hao hụt sẽ tiếp diễn trong các tháng tới.<br>
+        2. Về mặt địa bàn, <span class="ai-bold">Phường ${topPhuongText}</span> đang là Điểm Nóng (Hotspot) có tần suất xuất hiện cảnh báo cao nhất. Rất khuyến nghị cắt cử đội hiện trường tập trung rà soát toàn bộ các danh bạ bất thường / 0m³ tại Phường này trong tuần làm việc tới.
+    `;
+
+    // --- THIẾT KẾ CHART UI ---
+    Chart.defaults.color = "#94a3b8";
+    Chart.defaults.font.family = "'Outfit', sans-serif";
+    const gridConfig = { color: 'rgba(30, 41, 59, 0.8)' };
+
+    // 1. BAR CHART: Hotspot
+    new Chart(document.getElementById('barHotspot'), {
+        type: 'bar',
+        data: {
+            labels: top10Phuong.map(x => 'Phường ' + x.phuong),
+            datasets: [{
+                label: 'Số ca Cảnh Báo Tổng Hợp',
+                data: top10Phuong.map(x => x.count),
+                backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                borderRadius: 8,
+                barThickness: 25
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false } },
+            scales: {
+                y: { grid: gridConfig, beginAtZero: true },
+                x: { grid: { display: false } }
+            }
+        }
+    });
+
+    // --- PHÂN TÍCH THEO MÃ GIÁ (CHURN) ---
+    // Gom nhóm:
+    // Sinh hoạt (11, 31, 51)
+    // Sản xuất & Kinh doanh (33, 53, 58, 32, 52...)
+    let m3SinhHoat = 0;
+    let m3SanXuat = 0;
+    let m3HanhChinh = 0;
+
+    churnData.danhSach.forEach(item => {
+        const mg = item.MaGia ? item.MaGia.toString().trim() : '';
+        const m3 = item.M3_Giam || 0;
+        if(mg === '11' || mg === '31' || mg === '51') {
+            m3SinhHoat += m3;
+        } else if(mg === '32' || mg === '52') {
+            m3HanhChinh += m3;
+        } else {
+            m3SanXuat += m3; // Gom các mục đích dịch vụ, sản xuất kinh doanh
+        }
+    });
+
+    const totalKHM3 = m3SinhHoat + m3SanXuat + m3HanhChinh;
+
+    // 2. PIE CHART: Mã Giá
+    new Chart(document.getElementById('pieMaGia'), {
+        type: 'doughnut',
+        data: {
+            labels: ['Sản Xuất / Kinh Doanh', 'Hành Chính Dịch Vụ', 'Sinh Hoạt'],
+            datasets: [{
+                data: [m3SanXuat, m3HanhChinh, m3SinhHoat],
+                backgroundColor: [
+                    'rgba(245, 158, 11, 0.9)', // Vàng (Sản xuất)
+                    'rgba(16, 185, 129, 0.9)', // Xanh lục (Hành chính)
+                    'rgba(59, 130, 246, 0.9)'  // Xanh lam (Sinh hoạt)
+                ],
+                borderColor: 'var(--bg-card)',
+                borderWidth: 3,
+                hoverOffset: 8
+            }]
+        },
+        options: {
+            responsive: true, maintainAspectRatio: false, cutout: '65%',
+            plugins: {
+                legend: { position: 'bottom', labels: { padding: 20, usePointStyle: true, boxWidth: 8 } }
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
