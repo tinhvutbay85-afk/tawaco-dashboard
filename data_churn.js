@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 09:00:37 2/4/2026
+// TAWACO – Biến động KH Lớn – 09:38:44 2/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:00:37 2/4/2026",
+  "lastUpdated": "09:38:44 2/4/2026",
   "kyRange": "K2 -> K3/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 105,
   "tongM3Mat": 83221,
@@ -287,7 +287,7 @@ const TAWACO_CHURN_DATA = {
     },
     {
       "Danhba": "22033279325",
-      "TenKH": "Khách hàng Lớn",
+      "TenKH": "CONG TY TNHH MAY SHIN DONG",
       "DiaChi": "N/A",
       "MaDMA": "HT.3",
       "MaPhuong": "26782",
@@ -329,7 +329,7 @@ const TAWACO_CHURN_DATA = {
     },
     {
       "Danhba": "22033278858",
-      "TenKH": "Khách hàng Lớn",
+      "TenKH": "CONG TY TNHH WOOYANG VINA II",
       "DiaChi": "N/A",
       "MaDMA": "HT.3",
       "MaPhuong": "26782",
@@ -483,7 +483,7 @@ const TAWACO_CHURN_DATA = {
     },
     {
       "Danhba": "15062131275",
-      "TenKH": "Khách hàng Lớn",
+      "TenKH": "TRUONG DAI HOC CONG NGHIEP THANH PHO HO CHI MINH",
       "DiaChi": "N/A",
       "MaDMA": "6.1.2",
       "MaPhuong": "26876",
@@ -651,7 +651,7 @@ const TAWACO_CHURN_DATA = {
     },
     {
       "Danhba": "15112840534",
-      "TenKH": "Khách hàng Lớn",
+      "TenKH": "CTY TNHH MERCEDES BENZ VN",
       "DiaChi": "N/A",
       "MaDMA": "",
       "MaPhuong": "26898",
@@ -665,7 +665,7 @@ const TAWACO_CHURN_DATA = {
     },
     {
       "Danhba": "15112829183",
-      "TenKH": "Khách hàng Lớn",
+      "TenKH": "CONG TY TNHH NUOC UONG TINH KHIET  SAI GON",
       "DiaChi": "N/A",
       "MaDMA": "",
       "MaPhuong": "26898",
@@ -777,7 +777,7 @@ const TAWACO_CHURN_DATA = {
     },
     {
       "Danhba": "22103412339",
-      "TenKH": "Khách hàng Lớn",
+      "TenKH": "TRUNG TAM QUAN LY NHA VA GIAM DINH XAY DUNG",
       "DiaChi": "N/A",
       "MaDMA": "TTN.1_MR",
       "MaPhuong": "26791",
@@ -1085,7 +1085,7 @@ const TAWACO_CHURN_DATA = {
     },
     {
       "Danhba": "22103413712",
-      "TenKH": "Khách hàng Lớn",
+      "TenKH": "TRUONG TIEU HOC - TRUNG HOC CO SO TAI NANG TRE CHAU A",
       "DiaChi": "N/A",
       "MaDMA": "TTN.1_MR",
       "MaPhuong": "26791",
@@ -1141,7 +1141,7 @@ const TAWACO_CHURN_DATA = {
     },
     {
       "Danhba": "22103412776",
-      "TenKH": "Khách hàng Lớn",
+      "TenKH": "CONG TY CP GD LM BACH KHOA",
       "DiaChi": "N/A",
       "MaDMA": "TTN.1_MR",
       "MaPhuong": "26791",
