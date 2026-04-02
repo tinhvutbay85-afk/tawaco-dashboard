@@ -70,7 +70,7 @@
         }
         .hero-title span {
             background: linear-gradient(135deg, #60a5fa, #06b6d4);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
         }
         .hero-desc {
             color: #94a3b8; font-size: 14px; max-width: 500px; margin: 0 auto 32px; line-height: 1.6;
@@ -252,8 +252,10 @@
                 <p class="card-desc">
                     Theo dõi tự động các khách hàng ≥ 500m³/tháng có dấu hiệu giảm sản lượng so với kỳ trước. Cảnh báo sớm để CSKH chủ động liên hệ giữ chân khách hàng.
                 </p>
-                <div class="card-tags" style="visibility: hidden;"> <!-- Placeholder to keep height consistent -->
-                    <span class="card-tag">Cảnh báo</span>
+                <div class="card-tags"> 
+                    <span class="card-tag">Giảm ≥ 10%</span>
+                    <span class="card-tag">≥ 500m³</span>
+                    <span class="card-tag">Định danh KH</span>
                 </div>
                 <div class="card-btn">Xem Dashboard &rarr;</div>
             </a>
