@@ -6,7 +6,8 @@
     <title>TAWACO – 0m³ Liên Tiếp – Ưu Tiên Theo Số Kỳ</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="data_0m3_dsd.js"></script>
+    <script src="data_0m3_dsd.js?v=2"></script>
+    <script src="data_0m3_dsd_prev.js?v=1"></script>
     <style>
         :root {
             --bg:#0a0f1e; --panel:rgba(18,28,52,.9); --border:rgba(255,255,255,.07);
@@ -23,6 +24,10 @@
                text-decoration:none;color:var(--muted);border:1px solid var(--border);transition:.2s;}
         .nav a:hover{color:#fff;background:rgba(255,255,255,.08);}
         .nav a.active{background:rgba(255,65,108,.15);border-color:rgba(255,65,108,.4);color:var(--red);}
+
+        .toggle-btn { background: transparent; border: none; color: var(--muted); padding: 8px 14px; font-weight: 600; font-size: 12px; cursor: pointer; transition: 0.2s; }
+        .toggle-btn.active { background: rgba(0, 180, 216, 0.2); color: #fff; }
+        .toggle-btn:hover:not(.active) { background: rgba(255, 255, 255, 0.05); color: #fff; }
 
         .hdr{display:flex;align-items:center;gap:14px;margin-bottom:22px;}
         .hdr-icon{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;
@@ -138,9 +143,9 @@
     <div class="hdr-icon"><i class="fa-solid fa-droplet-slash"></i></div>
     <div class="hdr-text">
         <h1>KH <em>0m³ Liên Tiếp</em> – Sắp Xếp Ưu Tiên</h1>
-        <p>K1 + K2 + K3 / 2026 &nbsp;|&nbsp; Chỉ tính <strong style="color:#00c897">Đang Sử Dụng (DSD)</strong> &nbsp;|&nbsp;
+        <p><span id="ky-subtitle">K1 + K2 + K3 / 2026</span> &nbsp;|&nbsp; Chỉ tính <strong style="color:#00c897">Đang Sử Dụng (DSD)</strong> &nbsp;|&nbsp;
         Sắp xếp từ <strong style="color:var(--red)">cao → thấp</strong> &nbsp;|&nbsp;
-        Tối đa <strong style="color:var(--yellow)">13 kỳ</strong> liên tiếp (K2/2025 → K3/2026)</p>
+        Tối đa <strong style="color:var(--yellow)">13 kỳ</strong> liên tiếp (K2/2025 → Hiện tại)</p>
     </div>
     <div class="hdr-meta">
         <div class="upd" id="updTime">--</div>
@@ -186,6 +191,10 @@
 
 <!-- CONTROLS -->
 <div class="ctrl">
+    <div style="display:flex; background:var(--panel); border:1px solid var(--border); border-radius:8px; overflow:hidden;">
+        <button id="btn-current" class="toggle-btn active" onclick="switchData('current')">Kỳ Gần Nhất</button>
+        <button id="btn-prev" class="toggle-btn" onclick="switchData('prev')">Tháng Trước</button>
+    </div>
     <div class="search">
         <i class="fa-solid fa-magnifying-glass"></i>
         <input type="text" id="srch" placeholder="Tìm danh bộ hoặc mã ĐMA..." oninput="doSearch()">
@@ -208,9 +217,10 @@
                 <th>Mã ĐMA</th>
                 <th style="text-align:center;">Kỳ 0m³ LT ↓</th>
                 <th>SL Gần Nhất</th>
-                <th>K1/2026</th>
-                <th>K2/2026</th>
-                <th>K3/2026</th>
+                <th id="hdrTh1">K1/2026</th>
+                <th id="hdrTh2">K2/2026</th>
+                <th id="hdrTh3">K3/2026</th>
+                <th id="hdrThLive" style="color:var(--primary);">K4/2026</th>
                 <th>Ưu Tiên</th>
             </tr>
         </thead>
@@ -224,16 +234,9 @@
 
 <script>
 // ================================================================
-// LOGIC TÍNH KỲ LIÊN TIẾP 0m³
-// Chuẩn hiện tại: K3/2026 (tháng 3/2026)
-// Ví dụ: KyCoSL = "2025/K2"
-//   → lần cuối có SL là K2/2025
-//   → bắt đầu 0m³ từ K3/2025
-//   → K3→K12/2025 = 10 kỳ, K1→K3/2026 = 3 kỳ → TỔNG = 13 kỳ
-// Công thức: lienTiep = (2026×12+3) - (năm×12+kỳ)
-//   Tối thiểu 3 (= K1+K2+K3/2026), tối đa 13
+// LOGIC TÍNH KỲ LIÊN TIẾP 0m³ (ĐƯỢC CẬP NHẬT ĐỘNG THEO JSON)
 // ================================================================
-var END_IDX = 2026*12 + 3; // K3/2026
+var END_IDX = 2026*12 + 4; // Mặc định K4/2026
 
 function calcLienTiep(kyCoSL) {
     if (!kyCoSL) return 3;
@@ -275,7 +278,7 @@ function animN(el, v, d) {
     })(s);
 }
 
-var all = [], flt = [], cur = 1, kyMin = null;
+var all = [], flt = [], cur = 1, kyMin = null, qlkhFilter = null;
 var PG = 100;
 
 function doSearch(newKyMin) {
@@ -319,15 +322,25 @@ function renderT() {
         var lbl = kyLabel(d.lienTiep);
         var bc  = kyBadgeClass(d.lienTiep);
         var clr = kyColor(d.lienTiep);
+        function getColor(val) {
+            if (val === undefined || val === null) return 'var(--muted)';
+            return val > 0 ? '#fff' : 'var(--red)';
+        }
+
         tb.innerHTML += '<tr>' +
             '<td class="stt">' + ((cur-1)*PG+i+1) + '</td>' +
             '<td><span class="db">' + d.Danhba + '</span></td>' +
             '<td>' + (d.MaDMA ? '<span class="dma-tag">'+d.MaDMA+'</span>' : '<span style="color:var(--muted)">–</span>') + '</td>' +
             '<td style="text-align:center;"><span class="lt-badge '+bc+'"><i class="fa-solid fa-fire" style="font-size:10px;"></i> '+d.lienTiep+' kỳ</span></td>' +
             '<td>' + sl + '</td>' +
-            '<td><span class="zero">0 m³</span></td>' +
-            '<td><span class="zero">0 m³</span></td>' +
-            '<td><span class="zero">0 m³</span></td>' +
+            '<td><span class="zero">' + (d.Roll1 !== undefined ? d.Roll1 : 0) + ' m³</span></td>' +
+            '<td><span class="zero">' + (d.Roll2 !== undefined ? d.Roll2 : 0) + ' m³</span></td>' +
+            '<td><span class="zero">' + (d.Roll3 !== undefined ? d.Roll3 : 0) + ' m³</span></td>' +
+            '<td style="background:rgba(59,130,246,0.1); border-radius:6px;">' +
+                 '<span class="zero" style="color:var(--blue); border-color:var(--blue); background:transparent;">' + 
+                 (d.RollLive !== undefined ? d.RollLive : '--') + ' m³' +
+                 '</span>' +
+            '</td>' +
             '<td>'+lbl.icon+' <span style="font-size:12px;font-weight:700;color:'+clr+'">'+lbl.txt+'</span></td>' +
             '</tr>';
     });
@@ -358,10 +371,12 @@ function renderPg() {
 }
 
 function exportCSV() {
-    var hdr = 'STT,Danhba,MaDMA,Ky_LienTiep_0m3,SLTruoc,KyCoSL,K1_2026,K2_2026,K3_2026\n';
+    var L = window.CurrentData && window.CurrentData.kyLabels ? window.CurrentData.kyLabels : ['Roll_1', 'Roll_2', 'Roll_3', 'Roll_Live'];
+    var hdr = 'STT,Danhba,MaDMA,Ky_LienTiep_0m3,SLTruoc,KyCoSL,'+L[0]+','+L[1]+','+L[2]+','+L[3]+'\n';
     var rows = flt.map(function(d, i) {
         return (i+1)+','+d.Danhba+','+(d.MaDMA||'')+','+d.lienTiep+','+(d.SLTruoc!=null?d.SLTruoc:'')
-               +','+(d.KyCoSL||'')+',0,0,0';
+               +','+(d.KyCoSL||'')+','+(d.Roll1!==undefined?d.Roll1:0)+','+(d.Roll2!==undefined?d.Roll2:0)
+               +','+(d.Roll3!==undefined?d.Roll3:0)+','+(d.RollLive!==undefined?d.RollLive:'');
     }).join('\n');
     var a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob(['\uFEFF'+hdr+rows], {type:'text/csv;charset=utf-8'}));
@@ -370,11 +385,27 @@ function exportCSV() {
 }
 
 window.addEventListener('DOMContentLoaded', function() {
-    if (typeof TAWACO_0M3_DSD === 'undefined') {
-        document.body.innerHTML += '<div style="text-align:center;padding:60px;color:#ff416c;">⚠ Chưa có dữ liệu – Chạy <b>quet_0m3_dsd.js</b></div>';
-        return;
+    switchData('current');
+});
+
+function switchData(type) {
+    var D;
+    if (type === 'current') {
+        if (typeof TAWACO_0M3_DSD === 'undefined') return;
+        D = TAWACO_0M3_DSD;
+        document.getElementById('btn-current').classList.add('active');
+        document.getElementById('btn-prev').classList.remove('active');
+        document.body.style.background = '';
+    } else {
+        if (typeof TAWACO_0M3_DSD_PREV === 'undefined') return;
+        D = TAWACO_0M3_DSD_PREV;
+        document.getElementById('btn-prev').classList.add('active');
+        document.getElementById('btn-current').classList.remove('active');
+        document.body.style.background = '#1e1b4b';
     }
-    var D = TAWACO_0M3_DSD;
+
+    window.CurrentData = D;
+    if (D.endIdx) END_IDX = D.endIdx;
 
     // 1. TÍNH lienTiep cho mỗi KH → sort cao → thấp
     all = (D.danhSach || []).map(function(d) {
@@ -387,6 +418,15 @@ window.addEventListener('DOMContentLoaded', function() {
     document.getElementById('updTime').textContent = '🕐 ' + D.lastUpdated;
     document.getElementById('totalBadge').textContent = D.tongKH.toLocaleString('vi-VN') + ' Đồng Hồ';
     animN(document.getElementById('sTotal'), D.tongKH);
+
+    // Cập nhật nhãn rolling
+    if (D.kyLabels && D.kyLabels.length === 4) {
+        document.getElementById('hdrTh1').innerText = D.kyLabels[0] + '/2026';
+        document.getElementById('hdrTh2').innerText = D.kyLabels[1] + '/2026';
+        document.getElementById('hdrTh3').innerText = D.kyLabels[2] + '/2026';
+        document.getElementById('hdrThLive').innerText = D.kyLabels[3] + '/2026 (Live)';
+        document.getElementById('ky-subtitle').innerText = 'Rolling: ' + D.kyLabels.join(' + ');
+    }
 
     // 3. Ưu tiên cao >= 10 kỳ
     var soCao = all.filter(function(d) { return d.lienTiep >= 10; }).length;
@@ -467,7 +507,19 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // 8. Render bảng
     renderT();
-});
+}
+
+function filterQLKH(type) {
+    if (qlkhFilter === type) {
+        qlkhFilter = null;
+        document.getElementById('cardQLKH' + type).style.outline = '';
+    } else {
+        qlkhFilter = type;
+        document.getElementById('cardQLKH1').style.outline = type === 1 ? '2px solid var(--blue)' : '';
+        document.getElementById('cardQLKH2').style.outline = type === 2 ? '2px solid var(--green)' : '';
+    }
+    doSearch();
+}
 </script>
 </body>
 </html>
