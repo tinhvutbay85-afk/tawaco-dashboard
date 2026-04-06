@@ -126,28 +126,21 @@
                     </div>
                 </div>
 
-                <!-- Card 5: Tiêu thụ Bất thường (Rò rỉ) -->
-                <div class="kpi-card" style="border-color: rgba(239, 68, 68, 0.3);">
-                    <div class="kpi-icon" style="background-color: rgba(239, 68, 68, 0.1); color: #ef4444;"><span class="material-symbols-outlined">water_drop</span></div>
+                <!-- Card 5: Tiêu thụ Bất thường (Gom Rò rỉ & Kẹt cơ) -->
+                <div class="kpi-card" style="border-color: rgba(139, 92, 246, 0.3);" onclick="window.location.href='Dashboard_TieuThuBatThuong.html'" style="cursor: pointer;">
+                    <div class="kpi-icon" style="background-color: rgba(139, 92, 246, 0.1); color: #c084fc;"><span class="material-symbols-outlined">troubleshoot</span></div>
                     <div class="kpi-details" style="width: 100%;">
                         <span class="kpi-label">Tiêu thụ Bất thường</span>
-                        <h2 class="kpi-value" id="val-tieuthu" style="color: #ef4444;">Đang tải...</h2>
-                        <div class="kpi-trend">
-                            <span class="material-symbols-outlined">troubleshoot</span>
-                            <span>Rò rỉ / Tăng đột biến</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 6: Cảnh báo Kẹt cơ -->
-                <div class="kpi-card" style="border-color: rgba(245, 158, 11, 0.3);">
-                    <div class="kpi-icon" style="background-color: rgba(245, 158, 11, 0.1); color: #f59e0b;"><span class="material-symbols-outlined">speed</span></div>
-                    <div class="kpi-details" style="width: 100%;">
-                        <span class="kpi-label">Cảnh báo Kẹt cơ</span>
-                        <h2 class="kpi-value" id="val-ketco" style="color: #f59e0b;">Đang tải...</h2>
-                        <div class="kpi-trend">
-                            <span class="material-symbols-outlined">arrow_downward</span>
-                            <span>Giảm sâu</span>
+                        <h2 class="kpi-value" id="val-tieuthu">Đang tải...</h2>
+                        <div style="display: flex; gap: 15px; margin-top: 8px; justify-content: flex-start; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05);">
+                            <div style="display: flex; align-items: center; gap: 4px; color: #ef4444; font-size: 0.85rem; font-weight: 500;">
+                                <span class="material-symbols-outlined" style="font-size: 16px;">water_drop</span>
+                                <span id="val-sub-rori">--</span> Rò rỉ
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 4px; color: #f59e0b; font-size: 0.85rem; font-weight: 500;">
+                                <span class="material-symbols-outlined" style="font-size: 16px;">speed</span>
+                                <span id="val-sub-ketco">--</span> Kẹt cơ
+                            </div>
                         </div>
                     </div>
                 </div>
