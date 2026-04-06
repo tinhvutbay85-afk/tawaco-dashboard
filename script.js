@@ -382,27 +382,28 @@ function renderTableView(type) {
     viewTable.style.display = 'flex';
 
     const iframe = document.getElementById('module-iframe');
+    const ts = new Date().getTime();
     
     if (type === 'sk12') {
         setActiveNav('nav-sk12');
-        iframe.src = 'Dashboard_DocNguoc.html';
+        iframe.src = 'Dashboard_DocNguoc.html?v=' + ts;
     } else if (type === '0m3') {
         setActiveNav('nav-0m3');
-        iframe.src = 'Dashboard_0m3_DSD.html';
+        iframe.src = 'Dashboard_0m3_DSD.html?v=' + ts;
     } else if (type === 'khlon') {
         setActiveNav('nav-khlon');
-        iframe.src = 'Dashboard_Churn.html';
+        iframe.src = 'Dashboard_Churn.html?v=' + ts;
     } else if (type === 'phantich') {
         // Phân tích cảnh báo tổng hợp (thẻ Tụt doanh thu) không có mục trên sidebar, chỉ gỡ active
         document.querySelectorAll('.nav-item').forEach(el => el.classList.remove('active'));
-        iframe.src = 'Dashboard_PhanTich.html';
+        iframe.src = 'Dashboard_PhanTich.html?v=' + ts;
     } else if (type === 'kinhdoanh') {
         // Module Bảng ĐK Kinh Doanh mới
         setActiveNav('nav-kinhdoanh');
-        iframe.src = 'analytics.html';
+        iframe.src = 'analytics.html?v=' + ts;
     } else if (type === 'tieuthu') {
         setActiveNav('nav-tieuthu');
-        iframe.src = 'Dashboard_TieuThuBatThuong.html';
+        iframe.src = 'Dashboard_TieuThuBatThuong.html?v=' + ts;
     }
 }
 
