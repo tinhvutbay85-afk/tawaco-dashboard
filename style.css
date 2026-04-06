@@ -588,3 +588,66 @@ body.dark-theme {
 #data-table tbody tr:hover {
     background-color: rgba(255, 255, 255, 0.03);
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .nav-menu {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 8px 16px;
+        gap: 8px;
+        white-space: nowrap;
+    }
+    
+    .nav-item {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    
+    /* Hide some elements on mobile to save space */
+    .nav-section, .user-profile {
+        display: none;
+    }
+    
+    .top-header {
+        padding: 16px;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .header-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .kpi-grid, .charts-grid {
+        grid-template-columns: 1fr;
+        padding: 16px;
+        gap: 16px;
+    }
+    
+    .chart-card.wide, .log-card {
+        grid-column: span 1;
+    }
+    
+    .kpi-card {
+        padding: 16px;
+    }
+    
+    .kpi-value {
+        font-size: 1.5rem;
+    }
+}
