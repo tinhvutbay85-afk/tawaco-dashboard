@@ -3,300 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TAWACO - Hệ Sinh Thái Dashboard Phân Tích</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #07090f;
-            --card: #121826;
-            --border: #1e293b;
-            --red: #ef4444;
-            --blue: #3b82f6;
-            --yellow: #f59e0b;
-            --cyan: #06b6d4;
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg);
-            color: #e2e8f0;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* HEADER */
-        .header {
-            display: flex; justify-content: space-between; align-items: center;
-            padding: 20px 40px; border-bottom: 1px solid var(--border);
-            background: rgba(7, 9, 15, 0.8); backdrop-filter: blur(12px);
-            position: sticky; top: 0; z-index: 100;
-        }
-        .header-left { display: flex; align-items: center; gap: 32px; }
-        
-        .logo-img {
-            height: 100px;
-            object-fit: contain;
-        }
-
-        .logo-text h1 { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
-        .logo-text p { font-size: 13px; color: #64748b; }
-        
-        .header-right .status-badge {
-            display: flex; align-items: center; gap: 8px;
-            background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.2);
-            padding: 6px 14px; border-radius: 20px;
-            font-size: 11px; font-weight: 700; color: #10b981; text-transform: uppercase;
-        }
-        .status-dot { width: 6px; height: 6px; border-radius: 50%; background: #10b981; animation: pulse 1.5s infinite; }
-        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-
-        /* HERO SECTION */
-        .hero { text-align: center; padding: 80px 20px 60px; }
-        
-        .hero-pill {
-            display: inline-flex; align-items: center; gap: 6px;
-            background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.25);
-            color: #60a5fa; font-size: 10px; font-weight: 800; letter-spacing: 1px;
-            text-transform: uppercase; padding: 6px 16px; border-radius: 20px;
-            margin-bottom: 20px;
-        }
-
-        .hero-title {
-            font-size: 48px; font-weight: 900; color: #fff; line-height: 1.1;
-            letter-spacing: -1.5px; margin-bottom: 16px;
-        }
-        .hero-title span {
-            background: linear-gradient(135deg, #60a5fa, #06b6d4);
-            -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
-        }
-        .hero-desc {
-            color: #94a3b8; font-size: 14px; max-width: 500px; margin: 0 auto 32px; line-height: 1.6;
-            font-weight: 400;
-        }
-
-        /* GRID SECTION */
-        .main-content { padding: 0 20px 80px; flex: 1; }
-        .grid-container {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
-            max-width: 1100px; margin: 0 auto;
-        }
-
-        .card {
-            position: relative; overflow: hidden;
-            background: var(--card); border: 1px solid var(--border); border-radius: 20px;
-            padding: 24px; text-decoration: none; display: flex; flex-direction: column;
-            transition: all 0.3s ease; min-height: 380px;
-        }
-        .card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.15); box-shadow: 0 20px 40px rgba(0,0,0,0.6); }
-
-        .card::before {
-            content: ''; position: absolute; top: -120px; left: -120px;
-            width: 250px; height: 250px; border-radius: 50%; opacity: 0.12; filter: blur(45px);
-            pointer-events: none; transition: opacity 0.3s;
-        }
-        .card:hover::before { opacity: 0.25; }
-        
-        .card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; border-radius: 20px 20px 0 0; }
-
-        .card.red::before { background: var(--red); }
-        .card.red::after { background: linear-gradient(90deg, var(--red), transparent 70%); }
-        
-        .card.blue::before { background: var(--blue); }
-        .card.blue::after { background: linear-gradient(90deg, var(--blue), transparent 70%); }
-        
-        .card.yellow::before { background: var(--yellow); }
-        .card.yellow::after { background: linear-gradient(90deg, var(--yellow), transparent 70%); }
-        
-        .card.cyan::before { background: var(--cyan); }
-        .card.cyan::after { background: linear-gradient(90deg, var(--cyan), transparent 70%); }
-
-        .card-image {
-            width: 100%;
-            height: 180px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 2;
-            border: 1px solid rgba(255,255,255,0.05);
-            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
-        }
-
-        .card-content {
-            display: flex; flex-direction: column; flex: 1; position: relative; z-index: 2;
-        }
-
-        .card-header-inner { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-        
-        .card-icon {
-            width: 32px; height: 32px; border-radius: 8px; display: inline-flex; align-items: center; justify-content: center;
-            font-size: 14px; font-weight: 800;
-        }
-        .card.red .card-icon { background: rgba(239, 68, 68, 0.15); color: var(--red); }
-        .card.blue .card-icon { background: rgba(59, 130, 246, 0.15); color: var(--blue); }
-        .card.yellow .card-icon { background: rgba(245, 158, 11, 0.15); color: var(--yellow); }
-        .card.cyan .card-icon { background: rgba(6, 182, 212, 0.15); color: var(--cyan); }
-
-        .card-title { font-size: 18px; font-weight: 800; color: #fff; }
-        .card-desc { font-size: 13px; color: #94a3b8; line-height: 1.6; margin-bottom: 20px; flex: 1; }
-
-        .card-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
-        .card-tag {
-            background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); color: #cbd5e1;
-            font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 6px; display: inline-flex; align-items: center;
-        }
-
-        .card-btn {
-            background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
-            color: #fff; font-size: 12px; font-weight: 700; width: fit-content; padding: 8px 18px; border-radius: 8px;
-            display: flex; align-items: center; gap: 8px; transition: 0.2s;
-        }
-        .card:hover .card-btn { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); }
-
-        @media (max-width: 900px) {
-            .grid-container { grid-template-columns: 1fr; }
-            .hero-title { font-size: 36px; }
-        }
-    </style>
+    <title>TAWACO Smart Monitor - Sáng Kiến 2026</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body>
-
-    <!-- HEADER -->
-    <header class="header">
-        <div class="header-left">
-            <img src="images/logo_tawaco.png" class="logo-img" alt="TAWACO Logo">
-            <div class="logo-text">
-                <h1>Hệ sinh thái Dashboard phân tích và cảnh báo tự động <span style="font-size: 1.4em; line-height: 1;">💧</span></h1>
-                <p>TAWACO Water Analytics Platform • Quý 2 / 2026</p>
+<body class="dark-theme">
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="brand">
+                <span class="material-symbols-outlined logo-icon">water_drop</span>
+                <span class="brand-name">TAWACO <span class="badge">PRO</span></span>
             </div>
-        </div>
-        <div class="header-right">
-            <div class="status-badge">
-                <div class="status-dot"></div> Hệ thống hoạt động
+            
+            <nav class="nav-menu">
+                <div class="nav-section">Dashboard Tích hợp</div>
+                <a href="#" class="nav-item active" id="nav-dashboard">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span>Trung tâm Điều hành</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-kinhdoanh">
+                    <span class="material-symbols-outlined">analytics</span>
+                    <span>Bảng ĐK Kinh Doanh</span>
+                    <span class="alert-badge" style="background-color: #10b981;">KPI</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-sk12">
+                    <span class="material-symbols-outlined">warning</span>
+                    <span>Cảnh báo SK-12</span>
+                    <span class="alert-badge">...</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-0m3">
+                    <span class="material-symbols-outlined">not_interested</span>
+                    <span>Giám sát 0m³</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-khlon">
+                    <span class="material-symbols-outlined">business</span>
+                    <span>Giám sát Khách hàng lớn</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-tieuthu">
+                    <span class="material-symbols-outlined">troubleshoot</span>
+                    <span>Tiêu thụ Bất thường</span>
+                    <span class="alert-badge" style="background-color: #c084fc;" id="badge-tieuthu">--</span>
+                </a>
+
+
+                <div class="nav-section mt-auto">Hệ thống</div>
+                <a href="#" class="nav-item">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span>Cấu hình Ngưỡng</span>
+                </a>
+            </nav>
+            
+            <div class="user-profile">
+                <div class="avatar" style="color: white;">TVB</div>
+                <div class="user-info">
+                    <div class="user-name">Admin</div>
+                    <div class="user-role">Phòng Kỹ Thuật</div>
+                </div>
             </div>
-        </div>
-    </header>
+        </aside>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <div class="hero-pill">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 2-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-            Trung tâm điều hành thông minh
-        </div>
-        <h2 class="hero-title">Chọn <span>Dashboard</span><br>bạn muốn xem</h2>
-        <p class="hero-desc">
-            Tất cả dữ liệu vận hành theo thời gian thực – từ sản lượng, doanh thu đến cảnh báo bất thường – tập trung tại một nơi.
-        </p>
-    </section>
-
-    <!-- GRID CARDS -->
-    <main class="main-content">
-        <div class="grid-container">
-
-            <!-- Card 1 -->
-            <a href="Dashboard_TieuThuBatThuong.html" class="card red">
-                <div class="card-image" style="background-image: url('images/img_card1.png');"></div>
-                <div class="card-content">
-                    <div class="card-header-inner">
-                        <div class="card-icon">1</div>
-                        <h3 class="card-title">Tiêu Thụ Bất Thường</h3>
-                    </div>
-                    <p class="card-desc">
-                        Phát hiện tự động các đồng hồ nước có tiêu thụ bất thường – tăng đột biến (rò rỉ) hoặc giảm sâu (kẹt cơ). Bản đồ nhiệt và danh sách phân công kiểm tra hiện trường.
-                    </p>
-                    <div class="card-tags">
-                        <span class="card-tag">Rò rỉ</span>
-                        <span class="card-tag">Kẹt cơ</span>
-                        <span class="card-tag">Phân công KT</span>
-                    </div>
-                    <div class="card-btn">Xem Dashboard &rarr;</div>
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-header">
+                <div class="header-title">
+                    <h1>Hệ Sinh Thái Giám Sát Rủi Ro & Thất Thoát Tự Động</h1>
+                    <p class="subtitle">Cập nhật lúc: <span id="current-time"></span> | Trạng thái: <span class="status-indicator online">Online</span></p>
                 </div>
-            </a>
-
-            <!-- Card 2 -->
-            <a href="Dashboard_0m3_DSD.html" class="card blue">
-                <div class="card-image" style="background-image: url('images/img_card2.png');"></div>
-                <div class="card-content">
-                    <div class="card-header-inner">
-                        <div class="card-icon">2</div>
-                        <h3 class="card-title">0m³ Liên Tiếp</h3>
-                    </div>
-                    <p class="card-desc">
-                        Giám sát đồng hồ có số đọc 0m³ trong nhiều kỳ liên tiếp. Ưu tiên kiểm tra đồng hồ hỏng, dừng sử dụng, hoặc nghi ngờ gian lận đo đếm tại các hộ DSD.
-                    </p>
-                    <div class="card-tags">
-                        <span class="card-tag">0m³ DSD</span>
-                        <span class="card-tag">Liên tiếp nhiều kỳ</span>
-                        <span class="card-tag">Ưu tiên kiểm tra</span>
-                    </div>
-                    <div class="card-btn">Xem Dashboard &rarr;</div>
+                <div class="header-actions">
+                    <button class="action-btn">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <div class="pulse-ring"></div>
+                    </button>
+                    <button class="action-btn primary-btn">
+                        <span class="material-symbols-outlined">share</span> Báo cáo
+                    </button>
                 </div>
-            </a>
+            </header>
 
-            <!-- Card 3 -->
-            <a href="Dashboard_Churn.html" class="card yellow">
-                <div class="card-image" style="background-image: url('images/img_card3.png');"></div>
-                <div class="card-content">
-                    <div class="card-header-inner">
-                        <div class="card-icon">3</div>
-                        <h3 class="card-title">Biến Động Khách Hàng Lớn</h3>
+            <!-- KPI Cards -->
+            <div class="kpi-grid">
+                <!-- Card 1: 0m3 -->
+                <div class="kpi-card danger">
+                    <div class="kpi-icon"><span class="material-symbols-outlined">water_do</span></div>
+                    <div class="kpi-details">
+                        <span class="kpi-label">Đồng hồ 0m³ Bất thường</span>
+                        <h2 class="kpi-value" id="val-0m3">Đang tải... <span class="kpi-unit"></span></h2>
+                        <div class="kpi-trend">
+                            <span class="material-symbols-outlined">calendar_month</span>
+                            <span>K1 + K2 + K3 / 2026 | Chỉ DSD</span>
+                        </div>
                     </div>
-                    <p class="card-desc">
-                        Theo dõi tự động các khách hàng ≥ 500m³/tháng có dấu hiệu giảm sản lượng so với kỳ trước. Cảnh báo sớm để CSKH chủ động liên hệ giữ chân khách hàng.
-                    </p>
-                    <div class="card-tags"> 
-                        <span class="card-tag">Giảm ≥ 10%</span>
-                        <span class="card-tag">≥ 500m³</span>
-                        <span class="card-tag">Định danh KH</span>
-                    </div>
-                    <div class="card-btn">Xem Dashboard &rarr;</div>
                 </div>
-            </a>
 
-            <!-- Card 4 -->
-            <a href="analytics.html" class="card cyan">
-                <div class="card-image" style="background-image: url('images/img_card4.png');"></div>
-                <div class="card-content">
-                    <div class="card-header-inner">
-                        <div class="card-icon">4</div>
-                        <h3 class="card-title">TAWACO Analytics Dashboard Quý 2</h3>
+                <!-- Card 2: SK-12 -->
+                <div class="kpi-card warning">
+                    <div class="kpi-icon"><span class="material-symbols-outlined">speed</span></div>
+                    <div class="kpi-details">
+                        <span class="kpi-label">Cảnh báo Thiết bị SK-12</span>
+                        <h2 class="kpi-value" id="val-sk12">Đang tải... <span class="kpi-unit"></span></h2>
+                        <div class="kpi-trend">
+                            <span>(Chủ yếu lỗi quay lùi)</span>
+                        </div>
                     </div>
-                    <p class="card-desc">
-                        Bảng điều khiển KPI tổng hợp: sản lượng, doanh thu, tỷ lệ thu tiền, hóa đơn 0m³ và biểu đồ phân tích chi tiết theo từng Chi nhánh QLKH1 & QLKH2.
-                    </p>
-                    <div class="card-tags" style="visibility: hidden;"> <!-- Placeholder to keep height consistent -->
-                        <span class="card-tag">KPI</span>
-                    </div>
-                    <div class="card-btn">Xem Dashboard &rarr;</div>
                 </div>
-            </a>
 
-            <!-- Card 5 (Deep Analysis) -->
-            <a href="Dashboard_PhanTich.html" class="card" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(139, 92, 246, 0.08), rgba(16, 185, 129, 0.05)); border-color: rgba(139, 92, 246, 0.3);">
-                <div class="card-image" style="background-image: url('images/img_card5.png'); height: 300px; border-color: rgba(139, 92, 246, 0.2);"></div>
-                <div class="card-content">
-                    <div class="card-header-inner">
-                        <div class="card-icon" style="background: rgba(139, 92, 246, 0.2); color: #c084fc;">★</div>
-                        <h3 class="card-title" style="color: #c084fc;">Phân Tích Bất Thường Chuyên Sâu</h3>
+                <!-- Card 3: Sản lượng giảm -->
+                <div class="kpi-card critical">
+                    <div class="kpi-icon"><span class="material-symbols-outlined">business</span></div>
+                    <div class="kpi-details">
+                        <span class="kpi-label">KH Lớn Rời bỏ & Tụt Sản lượng</span>
+                        <h2 class="kpi-value" id="val-kh-lon">Đang tải... <span class="kpi-unit"></span></h2>
+                        <div class="kpi-trend down">
+                            <span class="material-symbols-outlined">arrow_downward</span>
+                            <span>Mất ~2.5% tổng sản lượng khối DN</span>
+                        </div>
                     </div>
-                    <p class="card-desc">
-                        Tổng hợp và nhận định tự động các Rủi ro thất thoát doanh thu (qua tính toán lượng hao hụt Churn & 0m³). Bản đồ nhiệt phát hiện Điểm nóng sự cố theo Phường và Mã Giá.
-                    </p>
-                    <div class="card-tags">
-                        <span class="card-tag">Rủi ro tài chính</span>
-                        <span class="card-tag">Hotspot</span>
-                        <span class="card-tag">Nhận định tổng hợp</span>
-                    </div>
-                    <div class="card-btn" style="background: rgba(139, 92, 246, 0.15); border-color: rgba(139, 92, 246, 0.4); color: #d8b4fe;">Khởi động Phân Tích &rarr;</div>
                 </div>
-            </a>
 
-        </div>
-    </main>
+                <!-- Card 5: Tiêu thụ Bất thường (Gom Rò rỉ & Kẹt cơ) -->
+                <div class="kpi-card" style="border-color: rgba(139, 92, 246, 0.3);">
+                    <div class="kpi-icon" style="background-color: rgba(139, 92, 246, 0.1); color: #c084fc;"><span class="material-symbols-outlined">troubleshoot</span></div>
+                    <div class="kpi-details" style="width: 100%;">
+                        <span class="kpi-label">Tiêu thụ Bất thường</span>
+                        <h2 class="kpi-value" id="val-tieuthu">Đang tải...</h2>
+                        <div style="display: flex; gap: 15px; margin-top: 8px; justify-content: flex-start; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05);">
+                            <div style="display: flex; align-items: center; gap: 4px; color: #ef4444; font-size: 0.85rem; font-weight: 500;">
+                                <span class="material-symbols-outlined" style="font-size: 16px;">water_drop</span>
+                                <span id="val-sub-rori">--</span> Rò rỉ
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 4px; color: #f59e0b; font-size: 0.85rem; font-weight: 500;">
+                                <span class="material-symbols-outlined" style="font-size: 16px;">speed</span>
+                                <span id="val-sub-ketco">--</span> Kẹt cơ
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Card 4: Doanh thu cứu vãn (Điểm nhấn Sáng kiến) -->
+                <div class="kpi-card success glow" id="card-doanh-thu">
+                    <div class="kpi-icon"><span class="material-symbols-outlined">monetization_on</span></div>
+                    <div class="kpi-details">
+                        <span class="kpi-label">Tụt giảm Doanh thu</span>
+                        <h2 class="kpi-value highlight-value" id="val-doanh-thu">Đang tải... <span class="kpi-unit"></span></h2>
+                        <div class="kpi-trend up">
+                            <span class="material-symbols-outlined">bolt</span>
+                            <span>Ước tính từ m³ mất mát</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Phân tích Kinh Doanh (Thẻ mới) -->
+                <div class="kpi-card" id="card-phantich" style="border-color: rgba(59, 130, 246, 0.3); cursor: pointer; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(59, 130, 246, 0.8)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(59, 130, 246, 0.3)';">
+                    <div class="kpi-icon" style="background-color: rgba(59, 130, 246, 0.1); color: #3b82f6;"><span class="material-symbols-outlined">analytics</span></div>
+                    <div class="kpi-details" style="width: 100%;">
+                        <span class="kpi-label" style="color: #93c5fd;">Bảng ĐK Kinh Doanh</span>
+                        <h2 class="kpi-value" style="font-size: 1.4rem;">Phân Tích KPI</h2>
+                        <div style="display: flex; gap: 15px; margin-top: 8px; justify-content: flex-start; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05);">
+                            <div style="display: flex; align-items: center; gap: 4px; color: #3b82f6; font-size: 0.85rem; font-weight: 500;">
+                                <span class="material-symbols-outlined" style="font-size: 16px;">travel_explore</span>
+                                Xem biểu đồ nội bộ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL TIẾN ĐỘ ĐỌC ĐỒNG HỒ KỲ HIỆN TẠI -->
+            <div id="progress-panel" style="
+                background: rgba(30,41,59,0.7); backdrop-filter: blur(12px);
+                border: 1px solid rgba(99,102,241,0.3); border-radius: 20px;
+                padding: 20px 28px; margin-bottom: 24px;
+                display: flex; align-items: center; gap: 32px; flex-wrap: wrap;
+            ">
+                <!-- Icon + Tiêu đề -->
+                <div style="display:flex; align-items:center; gap:12px; min-width:220px;">
+                    <div style="
+                        width:44px; height:44px; border-radius:12px;
+                        background: rgba(99,102,241,0.15); color:#818cf8;
+                        display:flex; align-items:center; justify-content:center; font-size:22px;
+                        box-shadow: 0 0 15px rgba(99,102,241,0.2);
+                    ">
+                        <span class="material-symbols-outlined">speed</span>
+                    </div>
+                    <div>
+                        <div style="font-size:11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:1px;">Tiến Độ Đọc Đồng Hồ</div>
+                        <div style="font-size:13px; color:#94a3b8; margin-top:2px;" id="progress-ky-label">Kỳ hiện tại — đang tải...</div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar + Numbers -->
+                <div style="flex:1; min-width:260px;">
+                    <div style="display:flex; justify-content:space-between; margin-bottom:8px; align-items:baseline;">
+                        <span style="font-size:22px; font-weight:800; color:#fff;">
+                            <span id="progress-da-doc">--</span>
+                            <span style="font-size:13px; color:#94a3b8; font-weight:500;"> / </span>
+                            <span id="progress-tong" style="font-size:16px; color:#94a3b8; font-weight:600;">--</span>
+                            <span style="font-size:12px; color:#64748b; margin-left:4px;">đồng hồ</span>
+                        </span>
+                        <span id="progress-pct" style="font-size:24px; font-weight:900; color:#818cf8;">--%</span>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.06); border-radius:999px; height:10px; overflow:hidden;">
+                        <div id="progress-bar" style="
+                            height:100%; border-radius:999px; width:0%;
+                            background: linear-gradient(90deg, #6366f1, #8b5cf6, #06b6d4);
+                            transition: width 1.2s ease;
+                        "></div>
+                    </div>
+                    <div style="display:flex; gap:24px; margin-top:10px; flex-wrap:wrap;">
+                        <span style="font-size:12px; color:#10b981;">
+                            <span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle;">check_circle</span>
+                            Đã đọc: <b id="progress-da-doc-2">--</b>
+                        </span>
+                        <span style="font-size:12px; color:#f59e0b;">
+                            <span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle;">pending</span>
+                            Chưa đọc: <b id="progress-chua-doc">--</b>
+                        </span>
+                        <span style="font-size:12px; color:#64748b;">
+                            <span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle;">update</span>
+                            Cập nhật: <b id="progress-update-time">--</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Charts Section (View 1) -->
+            <div class="charts-grid" id="view-dashboard">
+                <div class="chart-card wide">
+                    <div class="chart-header">
+                        <h3>Xu Hướng Cảnh Báo Hệ Thống (30 Ngày)</h3>
+                        <div class="chart-controls">
+                            <span class="active">Tháng này</span>
+                            <span>Tháng trước</span>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Phân Bổ Lỗi Thiết Bị SK-12</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="doughnutChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h3>Top Khu Vực Cảnh Báo (Điểm Nóng)</h3>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Realtime Logger -->
+                <div class="chart-card log-card">
+                    <div class="chart-header">
+                        <h3>Nhật Ký Cảnh Báo Thời Gian Thực</h3>
+                        <div class="live-indicator">LIVE</div>
+                    </div>
+                    <div class="log-list" id="logList">
+                        <!-- Logs sẽ được render bởi JS -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- iframe Section (View 2) -->
+            <div class="table-view" id="view-table" style="display: none; flex: 1; padding: 0;">
+                <iframe id="module-iframe" src="" style="width: 100%; height: 100%; border: none; border-radius: 20px;"></iframe>
+            </div>
+        </main>
+    </div>
+    <script src="data_tieu_thu.js"></script>
+    <script src="data_0m3_dsd.js"></script>
+    <script src="data_churn.js"></script>
+    <script src="data_doc_nguoc.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
