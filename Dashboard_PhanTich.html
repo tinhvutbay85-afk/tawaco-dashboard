@@ -138,9 +138,9 @@
     <div class="summary-grid">
         <div class="stat-card">
             <div class="stat-icon bg-red">💰</div>
-            <div class="stat-title">Thất Thoát Doanh Thu Churn</div>
+            <div class="stat-title">Rủi Ro Doanh Thu (Ước tính)</div>
             <div class="stat-val" id="valLoss">0 Triệu</div>
-            <div class="stat-sub">Được tính tự động bằng giá biểu chính xác của từng đối tượng KH do sụt giảm</div>
+            <div class="stat-sub">Thất thoát từ KH lớn giảm & suy đoán 0m³ (Tạm tính GBBQ = 10,900đ)</div>
         </div>
 
         <div class="stat-card">
@@ -224,71 +224,17 @@
         return hanhChinhData[m] || "Phường " + m;
     }
 
-    // HÀM PHÂN LOẠI MÃ GIÁ VÀ ĐỊNH GIÁ (Update theo bảng biểu Giá chuẩn)
-    function categorizePrice(mg, tenKH) {
-        mg = mg ? mg.toString().trim().toUpperCase() : '';
-        
-        // 1. Sinh hoạt thuần túy / đặc biệt:
-        if (['10', '11', '17', '21', '27', '51', '57'].includes(mg)) return { type: 'SH', price: 10049 };
-        // 2. Sản xuất thuần túy:
-        if (['12', '22', '32', '52'].includes(mg)) return { type: 'SX', price: 11931 };
-        // 3. Dịch vụ thuần túy:
-        if (['13', '23', '33', '53', '5S', '68'].includes(mg)) return { type: 'DV', price: 21239 };
-        // 4. Hành chính / Cơ quan / Sự nghiệp:
-        if (['31', '54'].includes(mg)) return { type: 'HC', price: 12999 };
-
-        // 5. Tỷ lệ hỗn hợp (Quy về nhóm có giá trị cao nhất nếu không có % chi tiết)
-        // Hỗn hợp có Dịch Vụ:
-        if (['15', '16', '19', '25', '26', '29', '35', '36', '39', '5D', '59'].includes(mg)) return { type: 'DV', price: 21239 };
-        // Hỗn hợp có Sản Xuất:
-        if (['14', '24', '34', '55', '58'].includes(mg)) return { type: 'SX', price: 11931 };
-        // Hỗn hợp có Hành Chính:
-        if (['18', '28', '38', '5H'].includes(mg)) return { type: 'HC', price: 12999 };
-
-        // 6. Nếu rỗng (Mất mã giá do DB) -> Suy luận từ Tên khách hàng (Dùng cho các khách hàng lớn ≥ 500m³)
-        const tn = (tenKH || '').toUpperCase();
-        if (tn.includes("SUNTORY") || tn.includes("HEINEKEN") || tn.includes("SẢN XUẤT") || tn.includes("NHÀ MÁY") || tn.includes("CÔNG TY CỔ PHẦN CẤP NƯỚC") || tn.includes("MAY ") || tn.includes("CHẾ BIẾN")) {
-            return { type: 'SX', price: 11931 };
-        }
-        if (tn.includes("DỊCH VỤ") || tn.includes("THƯƠNG MẠI") || tn.includes("NHÀ HÀNG") || tn.includes("KHÁCH SẠN") || tn.includes("CỬA HÀNG") || tn.includes("SIÊU THỊ")) {
-            return { type: 'DV', price: 21239 };
-        }
-        if (tn.includes("UBND") || tn.includes("BỆNH VIỆN") || tn.includes("TRƯỜNG") || tn.includes("TRUNG TÂM") || tn.includes("CÔNG AN") || tn.includes("SỞ ") || tn.includes("ỦY BAN")) {
-            return { type: 'HC', price: 12999 };
-        }
-
-        // Mặc định đối với các đơn vị sụt giảm hàng trăm m³: Quy về Sản xuất hoặc Dịch vụ (ở đây lấy Sản xuất)
-        return { type: 'SX', price: 11931 };
-    }
-
-    // TÍNH TOÁN RỦI RO DOANH THU & PHÂN BỔ MÃ GIÁ CHURN
-    let totalChurnLoss = 0;
+    // TÍNH TOÁN RỦI RO DOANH THU
+    const avgPrice = 10900;
+    const totalChurnLoss = churnData.tongM3Mat * avgPrice;
     
-    let m3SinhHoat = 0;
-    let m3SanXuat = 0;
-    let m3HanhChinh = 0;
-    let m3DichVu = 0;
-
-    churnData.danhSach.forEach(item => {
-        const m3 = item.M3_Giam || 0;
-        const info = categorizePrice(item.MaGia, item.TenKH);
-        
-        totalChurnLoss += (m3 * info.price);
-
-        if (info.type === 'SH') m3SinhHoat += m3;
-        else if (info.type === 'SX') m3SanXuat += m3;
-        else if (info.type === 'HC') m3HanhChinh += m3;
-        else if (info.type === 'DV') m3DichVu += m3;
-    });
+    // Ước lượng rủi ro 0m3: trung bình 1 hộ dùng 10m3/kỳ
+    const est0m3Loss = (zeroData.tongKH || zeroData.danhSach.length) * 10 * avgPrice;
     
-    // Không cộng 0m3 vào để tránh nhiễu loạn báo cáo (4800 hộ x 10m3 sẽ ra số ảo quá lớn so với thực tế Churn)
-    const totalRiskVND = totalChurnLoss;
+    const totalRiskVND = totalChurnLoss + est0m3Loss;
     
     // Format hiển thị
     document.getElementById('valLoss').innerText = (totalRiskVND / 1000000).toLocaleString('vi-VN', {maximumFractionDigits:1}) + " Tr";
-    // Thay đổi chú thích bên dưới thẻ nếu có
-    const subLoss = document.getElementById('valLoss').nextElementSibling;
-    if (subLoss) subLoss.innerText = "Thất thoát thực tế chỉ từ số lượng khách lớn đã giảm";
     document.getElementById('valChurn').innerText = churnData.tongM3Mat.toLocaleString('vi-VN') + " m³";
     document.getElementById('val0m3').innerText = (zeroData.tongKH || zeroData.danhSach.length).toLocaleString('vi-VN') + " KH";
 
@@ -331,9 +277,8 @@
     // --- AI MESSAGE ---
     const topPhuongText = top10Phuong.length > 0 ? getTenPhuong(top10Phuong[0].phuong) : 'N/A';
     document.getElementById('aiMessage').innerHTML = `
-        1. Việc tính toán Doanh thu đã được phân mảnh theo 4 loại: <span class="ai-bold">Hành chính (13k), Sản xuất (12k), Dịch vụ (21k), Sinh hoạt (10k)</span>. <br>
-        2. Phần lớn sự hao hụt nằm ở nhóm <span class="ai-bold">Khách Hàng Lớn (Churn)</span>. Nếu không xử lý, hao hụt sẽ tiếp diễn.<br>
-        3. Điểm Nóng (Hotspot) tần suất xuất hiện cảnh báo cao nhất: <span class="ai-bold">${topPhuongText}</span>.
+        1. Phần lớn sự hao hụt nằm ở nhóm <span class="ai-bold">Khách Hàng Lớn (Churn)</span>. Nếu không trực tiếp khảo sát nguyên nhân giảm, con số hao hụt sẽ tiếp diễn trong các tháng tới.<br>
+        2. Về mặt địa bàn, <span class="ai-bold">${topPhuongText}</span> đang là Điểm Nóng (Hotspot) có tần suất xuất hiện cảnh báo cao nhất.
     `;
 
     // --- THIẾT KẾ CHART UI ---
@@ -364,16 +309,37 @@
         }
     });
 
+    // --- PHÂN TÍCH THEO MÃ GIÁ (CHURN) ---
+    // Gom nhóm:
+    // Sinh hoạt (11, 31, 51)
+    // Sản xuất & Kinh doanh (33, 53, 58, 32, 52...)
+    let m3SinhHoat = 0;
+    let m3SanXuat = 0;
+    let m3HanhChinh = 0;
+
+    churnData.danhSach.forEach(item => {
+        const mg = item.MaGia ? item.MaGia.toString().trim() : '';
+        const m3 = item.M3_Giam || 0;
+        if(mg === '11' || mg === '31' || mg === '51') {
+            m3SinhHoat += m3;
+        } else if(mg === '32' || mg === '52') {
+            m3HanhChinh += m3;
+        } else {
+            m3SanXuat += m3; // Gom các mục đích dịch vụ, sản xuất kinh doanh
+        }
+    });
+
+    const totalKHM3 = m3SinhHoat + m3SanXuat + m3HanhChinh;
+
     // 2. PIE CHART: Mã Giá
     new Chart(document.getElementById('pieMaGia'), {
         type: 'doughnut',
         data: {
-            labels: ['Sản Xuất', 'Dịch Vụ', 'Hành Chính', 'Sinh Hoạt'],
+            labels: ['Sản Xuất / Kinh Doanh', 'Hành Chính Dịch Vụ', 'Sinh Hoạt'],
             datasets: [{
-                data: [m3SanXuat, m3DichVu, m3HanhChinh, m3SinhHoat],
+                data: [m3SanXuat, m3HanhChinh, m3SinhHoat],
                 backgroundColor: [
                     'rgba(245, 158, 11, 0.9)', // Vàng (Sản xuất)
-                    'rgba(236, 72, 153, 0.9)', // Hồng (Dịch vụ)
                     'rgba(16, 185, 129, 0.9)', // Xanh lục (Hành chính)
                     'rgba(59, 130, 246, 0.9)'  // Xanh lam (Sinh hoạt)
                 ],
