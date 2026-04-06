@@ -105,17 +105,16 @@ function loadRealData() {
         // Vẽ biểu đồ với dữ liệu cập nhật
         initCharts(tong0m3, tongSK12, tongKHLon, phanBoSK12);
 
-        // 5. Tiêu thụ Bất thường (Gom Rò Rỉ và Kẹt Cơ vào 1 thẻ)
-        let abnormalTotal = 0;
+        // 5 & 6. Tiêu thụ Bất thường (Rò rỉ) và Cảnh báo Kẹt cơ
         if (typeof TAWACO_BATTHUONG !== 'undefined') {
             let leak = TAWACO_BATTHUONG.leakCount || 0;
             let stuck = TAWACO_BATTHUONG.stuckCount || 0;
-            abnormalTotal = leak + stuck;
             
-            document.getElementById('val-tieuthu').innerHTML = `${abnormalTotal.toLocaleString('vi-VN')} <span class="kpi-unit">ĐH</span>`;
-            document.getElementById('val-sub-rori').textContent = leak.toLocaleString('vi-VN');
-            document.getElementById('val-sub-ketco').textContent = stuck.toLocaleString('vi-VN');
-            document.getElementById('badge-tieuthu').textContent = abnormalTotal;
+            document.getElementById('val-tieuthu').innerHTML = `${leak.toLocaleString('vi-VN')} <span class="kpi-unit">ĐH</span>`;
+            if (document.getElementById('val-ketco')) {
+                document.getElementById('val-ketco').innerHTML = `${stuck.toLocaleString('vi-VN')} <span class="kpi-unit">ĐH</span>`;
+            }
+            document.getElementById('badge-tieuthu').textContent = leak + stuck;
         }
 
 
