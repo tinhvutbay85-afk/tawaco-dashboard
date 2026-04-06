@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Dữ liệu được tạo tự động bởi fetch_abnormal_data.js từ SQL Server -->
     <script src="data_tieu_thu.js"></script>
-    <script src="data_tieu_thu_prev.js"></script>
     <style>
         :root {
             --primary: #00d2ff;
@@ -146,10 +145,6 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .toggle-btn { background: transparent; border: none; color: var(--text-muted); padding: 10px 18px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: 0.2s; }
-        .toggle-btn.active { background: rgba(0, 210, 255, 0.2); color: #fff; }
-        .toggle-btn:hover:not(.active) { background: rgba(255, 255, 255, 0.05); color: #fff; }
-
         .custom-table th {
             color: var(--text-muted);
             font-weight: 600;
@@ -222,20 +217,14 @@
 </head>
 <body>
 
-    <div style="display: flex; gap: 15px; margin-bottom: 2rem; justify-content: space-between; align-items:flex-start;">
-        <div style="display: flex; gap: 15px;">
-            <a href="index.html" style="text-decoration:none; padding: 12px 25px; background: rgba(255,255,255,0.1); color: white; border-radius: 10px; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'"><i class="fa-solid fa-chart-line"></i> Dashboard Chính</a>
-            <a href="#" style="text-decoration:none; padding: 12px 25px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);"><i class="fa-solid fa-triangle-exclamation"></i> Cảnh Báo Bất Thường</a>
-        </div>
-        <div style="display:flex; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:8px; overflow:hidden;">
-            <button id="btn-current" class="toggle-btn active" onclick="switchData('current')">Tháng Này (Realtime)</button>
-            <button id="btn-prev" class="toggle-btn" onclick="switchData('prev')">Tháng Trước (Lịch sử)</button>
-        </div>
+    <div style="display: flex; gap: 15px; margin-bottom: 2rem; justify-content: center;">
+        <a href="index.html" style="text-decoration:none; padding: 12px 25px; background: rgba(255,255,255,0.1); color: white; border-radius: 10px; font-weight: 600; border: 1px solid rgba(255,255,255,0.2); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255, 255, 255, 0.2)'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)'"><i class="fa-solid fa-chart-line"></i> Bảng Sản Lượng</a>
+        <a href="#" style="text-decoration:none; padding: 12px 25px; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; border-radius: 10px; font-weight: 600; box-shadow: 0 4px 15px rgba(0, 210, 255, 0.3);"><i class="fa-solid fa-triangle-exclamation"></i> Cảnh Báo Bất Thường</a>
     </div>
 
-    <div class="header" id="mainHeader">
+    <div class="header">
         <h1>TAWACO - Dữ Liệu Bất Thường</h1>
-        <p id="kySub">Hệ thống cảnh báo tự động sản lượng nước tiêu thụ</p>
+        <p>Hệ thống cảnh báo tự động sản lượng nước tiêu thụ</p>
         <div class="update-time" id="lastUpdated">Đang tải dữ liệu...</div>
         <div class="update-time" id="nguonDuLieu" style="margin-top:6px; color: #00d2ff; font-weight:600;"></div>
     </div>
@@ -332,98 +321,73 @@
 
     <script>
         function loadData() {
-            switchData('current');
-        }
-
-        function switchData(type) {
-            let D;
-            if (type === 'current') {
-                if (typeof TAWACO_BATTHUONG === 'undefined') {
-                    showError('data_tieu_thu.js'); return;
-                }
-                D = TAWACO_BATTHUONG;
-                document.getElementById('btn-current').classList.add('active');
-                document.getElementById('btn-prev').classList.remove('active');
-                document.body.style.background = 'linear-gradient(135deg, var(--dark), #203a43, #2c5364)';
-            } else {
-                if (typeof TAWACO_ABNORMAL_DATA_PREV === 'undefined') {
-                    showError('data_tieu_thu_prev.js'); return;
-                }
-                D = TAWACO_ABNORMAL_DATA_PREV;
-                document.getElementById('btn-prev').classList.add('active');
-                document.getElementById('btn-current').classList.remove('active');
-                document.body.style.background = '#1e1b4b';
+            // Dữ liệu được nạp từ data_tieu_thu.js (biến toàn cục TAWACO_BATTHUONG)
+            if (typeof TAWACO_BATTHUONG === 'undefined') {
+                document.getElementById('loading').innerHTML = `
+                    <div style="text-align:center; color:#ff6b81; padding: 40px;">
+                        <i class="fa-solid fa-triangle-exclamation" style="font-size: 3rem; margin-bottom: 15px; display:block;"></i>
+                        <p style="font-size:1.1rem; margin-bottom:10px;">Chưa có dữ liệu!</p>
+                        <p style="color:#a0a0a0;">Vui lòng chạy <strong style="color:#00d2ff;">fetch_abnormal_data.js</strong> để lấy dữ liệu từ SQL Server rồi mở lại trang.</p>
+                    </div>
+                `;
+                return;
             }
+
+            const data = TAWACO_BATTHUONG;
 
             document.getElementById('loading').style.display = 'none';
             document.getElementById('dashboard').style.display = 'block';
 
-            // Gán dữ liệu tương thích adapter
-            const lC = D.leakCount || D.countRoRi || 0;
-            const sC = D.stuckCount || D.countKetCo || 0;
-            const lTop = D.leakTop || D.leaks || [];
-            const sTop = D.stuckTop || D.stucks || [];
-            const tongKH = D.tongSoKH || D.progTong || 0;
+            // Thông tin cập nhật
+            document.getElementById('lastUpdated').innerHTML =
+                `<i class="fa-regular fa-clock"></i> Cập nhật lần cuối: ${data.lastUpdated}`;
 
-            document.getElementById('lastUpdated').innerHTML = `<i class="fa-regular fa-clock"></i> Cập nhật lần cuối: ${D.lastUpdated}`;
-            
-            if (D.nguonDuLieu) {
-                document.getElementById('nguonDuLieu').innerHTML = `<i class="fa-solid fa-database"></i> Nguồn: ${D.nguonDuLieu}`;
-            } else {
-                document.getElementById('nguonDuLieu').innerHTML = `<i class="fa-solid fa-database"></i> Nguồn: DULIEU.dbo.SLDONGHOKHACHHANG2026`;
+            // Nguồn dữ liệu – Kỳ / Năm
+            if (data.nguonDuLieu) {
+                document.getElementById('nguonDuLieu').innerHTML =
+                    `<i class="fa-solid fa-database"></i> Nguồn: ${data.nguonDuLieu}`;
+            }
+            if (data.ky && data.nam) {
+                document.querySelector('.header p').innerHTML =
+                    `Hệ thống cảnh báo tự động &nbsp;|&nbsp; <strong style="color:#00d2ff;">Kỳ ${data.ky} – Năm ${data.nam}</strong>`;
             }
 
-            if (D.kyRange) {
-                document.getElementById('kySub').innerHTML = `Hệ thống cảnh báo tự động &nbsp;|&nbsp; <strong style="color:#00d2ff;">${D.kyRange}</strong>`;
-            } else if (D.ky && D.nam) {
-                document.getElementById('kySub').innerHTML = `Hệ thống cảnh báo tự động &nbsp;|&nbsp; <strong style="color:#00d2ff;">Kỳ ${D.ky} – Năm ${D.nam} (CẬP NHẬT THỜI GIAN THỰC)</strong>`;
+            // Số liệu tổng hợp
+            animateValue(document.getElementById('leakCount'),  0, data.leakCount,  1500);
+            animateValue(document.getElementById('stuckCount'), 0, data.stuckCount, 1500);
+            if (data.tongSoKH) {
+                animateValue(document.getElementById('tongKH'), 0, data.tongSoKH, 1800);
             }
 
-            animateValue(document.getElementById('leakCount'),  0, lC,  1500);
-            animateValue(document.getElementById('stuckCount'), 0, sC, 1500);
-            if (tongKH) animateValue(document.getElementById('tongKH'), 0, tongKH, 1800);
-
+            // Bảng Rò Rỉ
             const leakBody = document.getElementById('leakTableBody');
-            leakBody.innerHTML = '';
-            lTop.forEach(item => {
-                const pct = (item.PhanTramTang || item.PctTang) ? Number(item.PhanTramTang || item.PctTang).toFixed(1) + '%' : '--';
-                const khoiTang = item.KhoiLuongTang || item.KhoiTang || 0;
+            data.leakTop.forEach(item => {
+                const pct = item.PhanTramTang ? Number(item.PhanTramTang).toFixed(1) + '%' : '--';
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td style="font-weight:700; font-family:monospace; color:#fff;">${item.Danhba}</td>
                     <td style="color:#a0a0a0;">${(item.KyTruoc || 0).toLocaleString('vi-VN')}</td>
                     <td style="color:#fff; font-weight:600;">${(item.KyHienTai || 0).toLocaleString('vi-VN')}</td>
-                    <td><span class="badge badge-up">+${(khoiTang).toLocaleString('vi-VN')} m³</span></td>
+                    <td><span class="badge badge-up">+${(item.KhoiLuongTang || 0).toLocaleString('vi-VN')} m³</span></td>
                     <td style="color:#ff6b81; font-weight:700;">↑ ${pct}</td>
                 `;
                 leakBody.appendChild(tr);
             });
 
+            // Bảng Kẹt Cơ
             const stuckBody = document.getElementById('stuckTableBody');
-            stuckBody.innerHTML = '';
-            sTop.forEach(item => {
-                const pct = (item.PhanTramGiam || item.PctGiam) ? Number(item.PhanTramGiam || item.PctGiam).toFixed(1) + '%' : '--';
-                const khoiGiam = item.KhoiLuongGiam || item.KhoiGiam || 0;
+            data.stuckTop.forEach(item => {
+                const pct = item.PhanTramGiam ? Number(item.PhanTramGiam).toFixed(1) + '%' : '--';
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
                     <td style="font-weight:700; font-family:monospace; color:#fff;">${item.Danhba}</td>
                     <td style="color:#a0a0a0;">${(item.KyTruoc || 0).toLocaleString('vi-VN')}</td>
                     <td style="color:#fff; font-weight:600;">${(item.KyHienTai || 0).toLocaleString('vi-VN')}</td>
-                    <td><span class="badge badge-down">-${(khoiGiam).toLocaleString('vi-VN')} m³</span></td>
+                    <td><span class="badge badge-down">-${(item.KhoiLuongGiam || 0).toLocaleString('vi-VN')} m³</span></td>
                     <td style="color:#fbc531; font-weight:700;">↓ ${pct}</td>
                 `;
                 stuckBody.appendChild(tr);
             });
-        }
-
-        function showError(file) {
-            document.getElementById('loading').innerHTML = `
-                <div style="text-align:center; color:#ff6b81; padding: 40px;">
-                    <i class="fa-solid fa-triangle-exclamation" style="font-size: 3rem; margin-bottom: 15px; display:block;"></i>
-                    <p style="font-size:1.1rem; margin-bottom:10px;">Chưa có dữ liệu!</p>
-                    <p style="color:#a0a0a0;">Vui lòng chạy script sql để xuất ${file} rồi mở lại trang.</p>
-                </div>
-            `;
         }
 
         // Tạo hiệu ứng số nhảy
