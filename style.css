@@ -620,6 +620,12 @@ body.dark-theme {
     .nav-section, .user-profile {
         display: none;
     }
+
+    body.mobile-table-active .top-header,
+    body.mobile-table-active .brand,
+    body.mobile-table-active .sidebar-logo {
+        display: none !important;
+    }
     
     .top-header {
         padding: 16px;
