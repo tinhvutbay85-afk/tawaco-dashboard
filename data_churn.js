@@ -1,10 +1,38 @@
-// TAWACO – Biến động KH Lớn – 10:20:14 7/4/2026
+// TAWACO – Biến động KH Lớn – 11:20:14 7/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:14 7/4/2026",
+  "lastUpdated": "11:20:14 7/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 5,
-  "tongM3Mat": 2288,
+  "tongKH": 8,
+  "tongM3Mat": 12863,
   "danhSach": [
+    {
+      "Danhba": "22073342686",
+      "TenKH": "CONG TY TNHH NUOC GIAI KHAT SUNTORY PEPSICO VN",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.1",
+      "MaPhuong": "26773",
+      "MaGia": "58",
+      "SL_K1": 0,
+      "SL_K2": 6384,
+      "SL_K3": 416,
+      "M3_Giam": 5968,
+      "TyLe_Giam": 93.48,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "22073342935",
+      "TenKH": "CONG TY TNHH NHA MAY BIA HEINEKEN VIET NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.1",
+      "MaPhuong": "26773",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 22695,
+      "SL_K3": 18779,
+      "M3_Giam": 3916,
+      "TyLe_Giam": 17.25,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "22033278722",
       "TenKH": "CONG TY CO PHAN DICH VU QUAN LY KHANG THINH PHAT",
@@ -18,6 +46,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 737,
       "TyLe_Giam": 35.71,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22073340538",
+      "TenKH": "CONG TY CP DAU TU SX NANG LUONG XANH",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.1",
+      "MaPhuong": "26773",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1131,
+      "SL_K3": 440,
+      "M3_Giam": 691,
+      "TyLe_Giam": 61.1,
+      "Level": "RED"
     },
     {
       "Danhba": "22033332982",
