@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "16:15:07 7/4/2026",
+  "lastUpdated": "16:22:29 7/4/2026",
   "nguonDuLieu": "SANLUONGDONGHOKHACHHANG – Kỳ 04 / Năm 2026",
   "nam": 2026,
   "ky": "04",
@@ -4474,5 +4474,11 @@
     "roRiM3": ">15m³",
     "ketCoPct": ">75%",
     "ketCoM3": ">15m³"
+  },
+  "tienDo": {
+    "tongDH": 246859,
+    "daDoc": 69023,
+    "chuaDoc": 177836,
+    "pct": 28
   }
 }
