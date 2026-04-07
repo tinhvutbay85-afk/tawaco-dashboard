@@ -419,6 +419,7 @@ function showDashboard() {
     setActiveNav('nav-dashboard');
     viewDashboard.style.display = 'block';
     viewTable.style.display = 'none';
+    document.body.classList.remove('mobile-table-active');
 }
 
 document.getElementById('nav-dashboard').addEventListener('click', (e) => { e.preventDefault(); showDashboard(); });
@@ -456,6 +457,7 @@ if (document.getElementById('card-phantich')) {
 function renderTableView(type) {
     viewDashboard.style.display = 'none';
     viewTable.style.display = 'flex';
+    document.body.classList.add('mobile-table-active');
     
     // Đảm bảo cuộn lên đầu khi mở module trên mobile
     document.querySelector('.main-content').scrollTop = 0;
