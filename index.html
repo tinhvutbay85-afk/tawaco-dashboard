@@ -50,6 +50,11 @@
                     <span>Tiêu thụ Bất thường</span>
                     <span class="alert-badge" style="background-color: #c084fc;" id="badge-tieuthu">--</span>
                 </a>
+                <a href="#" class="nav-item" id="nav-biendong">
+                    <span class="material-symbols-outlined">swap_vert</span>
+                    <span>Biến động Khối lượng</span>
+                    <span class="alert-badge" style="background-color: #06b6d4;" id="badge-biendong">--</span>
+                </a>
 
                 <div class="sidebar-logo" style="margin: auto 0; display: flex; justify-content: center; padding: 15px 0;">
                     <img src="images/logo_tawaco.png" alt="TAWACO Logo" style="width: 220px; opacity: 1; filter: drop-shadow(0 0 15px rgba(59,130,246,0.5)); transform: scale(1.1);">
@@ -143,6 +148,25 @@
                             <div style="display: flex; align-items: center; gap: 4px; color: #f59e0b; font-size: 0.85rem; font-weight: 500;">
                                 <span class="material-symbols-outlined" style="font-size: 16px;">speed</span>
                                 <span id="val-sub-ketco">--</span> Kẹt cơ
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Biến động Khối lượng -->
+                <div class="kpi-card" id="card-biendong" style="border-color: rgba(6, 182, 212, 0.3);">
+                    <div class="kpi-icon" style="background-color: rgba(6, 182, 212, 0.1); color: #06b6d4;"><span class="material-symbols-outlined">swap_vert</span></div>
+                    <div class="kpi-details" style="width: 100%;">
+                        <span class="kpi-label">Biến động Sản lượng</span>
+                        <h2 class="kpi-value" id="val-biendong-net">Đang tải...</h2>
+                        <div style="display: flex; gap: 15px; margin-top: 8px; justify-content: flex-start; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05);">
+                            <div style="display: flex; align-items: center; gap: 4px; color: #10b981; font-size: 0.85rem; font-weight: 500;">
+                                <span class="material-symbols-outlined" style="font-size: 16px;">trending_up</span>
+                                <span id="val-bd-tang">--</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 4px; color: #ef4444; font-size: 0.85rem; font-weight: 500;">
+                                <span class="material-symbols-outlined" style="font-size: 16px;">trending_down</span>
+                                <span id="val-bd-giam">--</span>
                             </div>
                         </div>
                     </div>
@@ -268,6 +292,26 @@
                     </div>
                 </div>
 
+                <div class="chart-card wide" id="chart-biendong-container">
+                    <div class="chart-header">
+                        <h3>Cấu trúc Biến động Khối lượng theo Giá biểu</h3>
+                    </div>
+                    <div class="chart-container" style="display: flex; gap: 20px; min-height: 280px; align-items: center;">
+                        <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                            <h4 style="font-size: 0.9rem; color: #10b981; margin-bottom: 12px; font-weight: 600;">Phân bổ Khối lượng Tăng</h4>
+                            <div style="position: relative; width: 100%; height: 220px;">
+                                <canvas id="doughnutChartTang"></canvas>
+                            </div>
+                        </div>
+                        <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
+                            <h4 style="font-size: 0.9rem; color: #ef4444; margin-bottom: 12px; font-weight: 600;">Phân bổ Khối lượng Giảm</h4>
+                            <div style="position: relative; width: 100%; height: 220px;">
+                                <canvas id="doughnutChartGiam"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Realtime Logger -->
                 <div class="chart-card log-card">
                     <div class="chart-header">
@@ -290,6 +334,7 @@
     <script src="data_0m3_dsd.js"></script>
     <script src="data_churn.js"></script>
     <script src="data_doc_nguoc.js"></script>
+    <script src="data_tang_giam.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
