@@ -417,7 +417,7 @@ function setActiveNav(id) {
 
 function showDashboard() {
     setActiveNav('nav-dashboard');
-    viewDashboard.style.display = 'grid';
+    viewDashboard.style.display = 'block';
     viewTable.style.display = 'none';
 }
 
