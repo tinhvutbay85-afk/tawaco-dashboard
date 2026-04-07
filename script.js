@@ -456,6 +456,9 @@ if (document.getElementById('card-phantich')) {
 function renderTableView(type) {
     viewDashboard.style.display = 'none';
     viewTable.style.display = 'flex';
+    
+    // Đảm bảo cuộn lên đầu khi mở module trên mobile
+    document.querySelector('.main-content').scrollTop = 0;
 
     const iframe = document.getElementById('module-iframe');
     const ts = new Date().getTime();
