@@ -124,8 +124,6 @@ function loadRealData() {
             const isPos = bd.netChange > 0;
             const netColor = isPos ? '#10b981' : '#ef4444';
             document.getElementById('val-biendong-net').innerHTML = `<span style="color: ${netColor}">${isPos ? '+' : ''}${bd.netChange.toLocaleString('vi-VN')}</span> <span class="kpi-unit">m³</span>`;
-            document.getElementById('val-bd-tang').innerHTML = `${bd.khoiLuongTang.toLocaleString('vi-VN')} m³`;
-            document.getElementById('val-bd-giam').innerHTML = `${bd.khoiLuongGiam.toLocaleString('vi-VN')} m³`;
             
             // Text cho bieu do
             const elTongTang = document.getElementById('chart-tong-tang');
