@@ -124,8 +124,8 @@ function loadRealData() {
             const isPos = bd.netChange > 0;
             const netColor = isPos ? '#10b981' : '#ef4444';
             document.getElementById('val-biendong-net').innerHTML = `<span style="color: ${netColor}">${isPos ? '+' : ''}${bd.netChange.toLocaleString('vi-VN')}</span> <span class="kpi-unit">m³</span>`;
-            document.getElementById('val-bd-tang').textContent = bd.khoiLuongTang.toLocaleString('vi-VN') + ' m³';
-            document.getElementById('val-bd-giam').textContent = bd.khoiLuongGiam.toLocaleString('vi-VN') + ' m³';
+            document.getElementById('val-bd-tang').innerHTML = `Tăng thêm <b>${bd.khoiLuongTang.toLocaleString('vi-VN')} m³</b>`;
+            document.getElementById('val-bd-giam').innerHTML = `Giảm bớt <b>${bd.khoiLuongGiam.toLocaleString('vi-VN')} m³</b>`;
             document.getElementById('badge-biendong').textContent = (isPos ? '+' : '') + Math.round(bd.netChange/1000) + 'k';
         }
 
