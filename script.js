@@ -118,6 +118,18 @@ function loadRealData() {
             document.getElementById('badge-tieuthu').textContent = abnormalTotal;
         }
 
+        // 6. Biến động Khối lượng
+        if (typeof TAWACO_BIENDONG !== 'undefined') {
+            const bd = TAWACO_BIENDONG.tongGieng;
+            const isPos = bd.netChange > 0;
+            const netColor = isPos ? '#10b981' : '#ef4444';
+            document.getElementById('val-biendong-net').innerHTML = `<span style="color: ${netColor}">${isPos ? '+' : ''}${bd.netChange.toLocaleString('vi-VN')}</span> <span class="kpi-unit">m³</span>`;
+            document.getElementById('val-bd-tang').textContent = bd.soKhachHangTang.toLocaleString('vi-VN') + ' ĐH';
+            document.getElementById('val-bd-giam').textContent = bd.soKhachHangGiam.toLocaleString('vi-VN') + ' ĐH';
+            document.getElementById('badge-biendong').textContent = (isPos ? '+' : '') + Math.round(bd.netChange/1000) + 'k';
+        }
+
+
 
         // === RENDER PANEL TIẾN ĐỘ ĐỌC ĐỒNG HỒ ===
         if (typeof TAWACO_BATTHUONG !== 'undefined' && TAWACO_BATTHUONG.tienDo) {
@@ -278,6 +290,51 @@ function initCharts(val0m3, valSk12, valKhm, phanBoSK12) {
         }
     });
 
+    // 4. Biểu đồ Doughnut Kép: Biến động Sản lượng (Tăng / Giảm)
+    if (typeof TAWACO_BIENDONG !== 'undefined') {
+        const labels = TAWACO_BIENDONG.chiTiet.map(c => c.loai);
+        
+        // Chart Tăng
+        const ctxTang = document.getElementById('doughnutChartTang');
+        if (ctxTang) {
+            new Chart(ctxTang.getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: TAWACO_BIENDONG.chiTiet.map(c => c.khoiLuongTang),
+                        backgroundColor: ['#10b981', '#3b82f6', '#f59e0b', '#8b5cf6'],
+                        borderWidth: 0, hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false, cutout: '70%',
+                    plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: {size: 11} } } }
+                }
+            });
+        }
+
+        // Chart Giảm
+        const ctxGiam = document.getElementById('doughnutChartGiam');
+        if (ctxGiam) {
+            new Chart(ctxGiam.getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        data: TAWACO_BIENDONG.chiTiet.map(c => c.khoiLuongGiam),
+                        backgroundColor: ['#ef4444', '#ec4899', '#f97316', '#a855f7'],
+                        borderWidth: 0, hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false, cutout: '70%',
+                    plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, font: {size: 11} } } }
+                }
+            });
+        }
+    }
+
 }
 
 // Kích hoạt load dữ liệu
@@ -364,6 +421,13 @@ document.getElementById('nav-0m3').addEventListener('click', (e) => { e.preventD
 document.getElementById('nav-khlon').addEventListener('click', (e) => { e.preventDefault(); renderTableView('khlon'); });
 document.getElementById('nav-tieuthu').addEventListener('click', (e) => { e.preventDefault(); renderTableView('tieuthu'); });
 document.getElementById('nav-kinhdoanh').addEventListener('click', (e) => { e.preventDefault(); renderTableView('kinhdoanh'); });
+if (document.getElementById('nav-biendong')) {
+    document.getElementById('nav-biendong').addEventListener('click', (e) => { 
+        e.preventDefault(); 
+        showDashboard(); 
+        document.getElementById('chart-biendong-container').scrollIntoView({ behavior: 'smooth' }); 
+    });
+}
 
 // Gán click luôn cho các thẻ KPI
 document.getElementById('val-sk12').parentElement.parentElement.addEventListener('click', () => renderTableView('sk12'));
@@ -371,6 +435,12 @@ document.getElementById('val-0m3').parentElement.parentElement.addEventListener(
 document.getElementById('val-kh-lon').parentElement.parentElement.addEventListener('click', () => renderTableView('khlon'));
 document.getElementById('val-doanh-thu').parentElement.parentElement.addEventListener('click', () => renderTableView('phantich')); // Trả lại về thẻ Tụt Giảm Doanh Thu
 document.getElementById('val-tieuthu').parentElement.parentElement.addEventListener('click', () => renderTableView('tieuthu'));
+if (document.getElementById('val-biendong-net')) {
+    document.getElementById('val-biendong-net').parentElement.parentElement.addEventListener('click', () => {
+        showDashboard();
+        document.getElementById('chart-biendong-container').scrollIntoView({ behavior: 'smooth' });
+    });
+}
 
 // Gán click cho thẻ 6 mới (Bảng Điều Khiển Kinh Doanh)
 if (document.getElementById('card-phantich')) {
