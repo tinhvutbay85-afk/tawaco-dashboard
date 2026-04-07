@@ -1,10 +1,38 @@
-// TAWACO – Biến động KH Lớn – 16:38:48 6/4/2026
+// TAWACO – Biến động KH Lớn – 09:06:33 7/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "16:38:48 6/4/2026",
+  "lastUpdated": "09:06:33 7/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 3,
-  "tongM3Mat": 1010,
+  "tongKH": 5,
+  "tongM3Mat": 2288,
   "danhSach": [
+    {
+      "Danhba": "22033278722",
+      "TenKH": "CONG TY CO PHAN DICH VU QUAN LY KHANG THINH PHAT",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.3",
+      "MaPhuong": "26782",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2064,
+      "SL_K3": 1327,
+      "M3_Giam": 737,
+      "TyLe_Giam": 35.71,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22033332982",
+      "TenKH": "CONG TY CO PHAN HTKT VA XNK SAVIMEX",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1919,
+      "SL_K3": 1378,
+      "M3_Giam": 541,
+      "TyLe_Giam": 28.19,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "22103413032",
       "TenKH": "CONG TY CP ETERNAL PROWESS VIET NAM",
