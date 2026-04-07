@@ -123,7 +123,8 @@ function loadRealData() {
             const bd = TAWACO_BIENDONG.tongGieng;
             const isPos = bd.netChange > 0;
             const netColor = isPos ? '#10b981' : '#ef4444';
-            document.getElementById('val-biendong-net').innerHTML = `<span style="color: ${netColor}">${isPos ? '+' : ''}${bd.netChange.toLocaleString('vi-VN')}</span> <span class="kpi-unit">m³</span>`;
+            const elNet = document.getElementById('val-biendong-net');
+            if (elNet) elNet.innerHTML = `<span style="color: ${netColor}">${isPos ? '+' : ''}${bd.netChange.toLocaleString('vi-VN')}</span> <span class="kpi-unit">m³</span>`;
             
             // Text cho bieu do
             const elTongTang = document.getElementById('chart-tong-tang');
