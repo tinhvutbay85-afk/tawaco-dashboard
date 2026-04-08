@@ -134,7 +134,7 @@
 <body>
 
 <div class="nav">
-    <a href="Dashboard_CanhBao.html"><i class="fa-solid fa-chart-line"></i> Dashboard Chính</a>
+    <a href="#" onclick="if(window.parent && window.parent.showDashboard) { window.parent.showDashboard(); return false; } else { window.location.href='index.html'; return false; }"><i class="fa-solid fa-chart-line"></i> Dashboard Chính</a>
     <a href="Dashboard_TieuThuBatThuong.html"><i class="fa-solid fa-triangle-exclamation"></i> Bất Thường</a>
     <a href="#" class="active"><i class="fa-solid fa-circle-xmark"></i> 0m³ Liên Tiếp 2026</a>
 </div>
