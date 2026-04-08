@@ -335,7 +335,7 @@
     </div>
   </div>
   <div class="header-right">
-    <a href="index.html" class="back-btn">← Trang Chủ</a>
+    <a href="#" onclick="if(window.parent && window.parent.showDashboard) { window.parent.showDashboard(); return false; } else { window.location.href='index.html'; return false; }" class="back-btn">← Trang Chủ</a>
     <div class="badge-live">
       <div class="dot-live"></div>
       Cảnh Báo Lỗi Dữ Liệu
