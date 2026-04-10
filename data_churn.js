@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 08:42:27 10/4/2026
+// TAWACO – Biến động KH Lớn – 09:20:14 10/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "08:42:27 10/4/2026",
+  "lastUpdated": "09:20:14 10/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 12,
-  "tongM3Mat": 14025,
+  "tongKH": 15,
+  "tongM3Mat": 15448,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -60,6 +60,34 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 691,
       "TyLe_Giam": 61.1,
       "Level": "RED"
+    },
+    {
+      "Danhba": "15141939512",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1955,
+      "SL_K3": 1351,
+      "M3_Giam": 604,
+      "TyLe_Giam": 30.9,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15141939212",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1364,
+      "SL_K3": 813,
+      "M3_Giam": 551,
+      "TyLe_Giam": 40.4,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "22083369741",
@@ -143,6 +171,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 791,
       "M3_Giam": 272,
       "TyLe_Giam": 25.59,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15102748463",
+      "TenKH": "SU DOAN 370 - PHONG HAU CAN",
+      "DiaChi": "N/A",
+      "MaDMA": "10.1.2",
+      "MaPhuong": "26884",
+      "MaGia": "38",
+      "SL_K1": 0,
+      "SL_K2": 1175,
+      "SL_K3": 907,
+      "M3_Giam": 268,
+      "TyLe_Giam": 22.81,
       "Level": "YELLOW"
     },
     {
