@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 11:20:57 14/4/2026
+// TAWACO – Biến động KH Lớn – 12:20:14 14/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "11:20:57 14/4/2026",
+  "lastUpdated": "12:20:14 14/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 18,
-  "tongM3Mat": 16815,
+  "tongKH": 21,
+  "tongM3Mat": 17929,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -73,6 +73,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 440,
       "M3_Giam": 691,
       "TyLe_Giam": 61.1,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "22063310070",
+      "TenKH": "UBND PHUONG AN PHU DONG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.1",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 998,
+      "SL_K3": 387,
+      "M3_Giam": 611,
+      "TyLe_Giam": 61.22,
       "Level": "RED"
     },
     {
@@ -160,6 +174,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22083362469",
+      "TenKH": "DOI CANH SAT THI HANH AN HINH SU VA HTTP",
+      "DiaChi": "N/A",
+      "MaDMA": "HT-TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 1619,
+      "SL_K3": 1266,
+      "M3_Giam": 353,
+      "TyLe_Giam": 21.8,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15112840331",
       "TenKH": "CONG AN THANH PHO HO CHI MINH",
       "DiaChi": "N/A",
@@ -213,6 +241,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 907,
       "M3_Giam": 268,
       "TyLe_Giam": 22.81,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22083354999",
+      "TenKH": "CONG AN THANH PHO HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "HT-TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 598,
+      "SL_K3": 448,
+      "M3_Giam": 150,
+      "TyLe_Giam": 25.08,
       "Level": "YELLOW"
     },
     {
