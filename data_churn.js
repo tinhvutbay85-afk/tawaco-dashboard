@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 08:19:29 14/4/2026
+// TAWACO – Biến động KH Lớn – 09:20:14 14/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "08:19:29 14/4/2026",
+  "lastUpdated": "09:20:14 14/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 17,
-  "tongM3Mat": 15858,
+  "tongKH": 18,
+  "tongM3Mat": 16815,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -32,6 +32,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 3916,
       "TyLe_Giam": 17.25,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15031920076",
+      "TenKH": "CÔNG TY CP PHỤC VỤ MẶT ĐẤT SÀI GÒN",
+      "DiaChi": "N/A",
+      "MaDMA": "3.1.1",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1760,
+      "SL_K3": 803,
+      "M3_Giam": 957,
+      "TyLe_Giam": 54.38,
+      "Level": "RED"
     },
     {
       "Danhba": "22033278722",
