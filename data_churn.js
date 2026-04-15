@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 07:53:48 15/4/2026
+// TAWACO – Biến động KH Lớn – 09:20:15 15/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "07:53:48 15/4/2026",
+  "lastUpdated": "09:20:15 15/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 21,
-  "tongM3Mat": 17929,
+  "tongKH": 24,
+  "tongM3Mat": 19678,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -32,6 +32,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 3916,
       "TyLe_Giam": 17.25,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15132045700",
+      "TenKH": "TT VAN HOA Q.GO VAP",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26878",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 2026,
+      "SL_K3": 936,
+      "M3_Giam": 1090,
+      "TyLe_Giam": 53.8,
+      "Level": "RED"
     },
     {
       "Danhba": "15031920076",
@@ -146,6 +160,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15150005002",
+      "TenKH": "MAI VAN VIEN",
+      "DiaChi": "N/A",
+      "MaDMA": "TX.1",
+      "MaPhuong": "26878",
+      "MaGia": "57",
+      "SL_K1": 0,
+      "SL_K2": 1747,
+      "SL_K3": 1243,
+      "M3_Giam": 504,
+      "TyLe_Giam": 28.85,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22073343455",
       "TenKH": "CÔNG TY CỔ PHẦN TẬP ĐOÀN KTN VIỆT NAM",
       "DiaChi": "N/A",
@@ -241,6 +269,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 907,
       "M3_Giam": 268,
       "TyLe_Giam": 22.81,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15041988247",
+      "TenKH": "TRUNG TAM NUOI DUONG BAO TRO TRE EM GO VAP",
+      "DiaChi": "N/A",
+      "MaDMA": "4.1",
+      "MaPhuong": "26890",
+      "MaGia": "21",
+      "SL_K1": 0,
+      "SL_K2": 842,
+      "SL_K3": 687,
+      "M3_Giam": 155,
+      "TyLe_Giam": 18.41,
       "Level": "YELLOW"
     },
     {
