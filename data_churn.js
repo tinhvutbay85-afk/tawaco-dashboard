@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:16 16/4/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 16/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:16 16/4/2026",
+  "lastUpdated": "11:20:15 16/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 25,
-  "tongM3Mat": 20042,
+  "tongKH": 28,
+  "tongM3Mat": 22864,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -34,6 +34,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22023251243",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN PHAT TRIEN CONG VIEN PHAN MEM QUANG TRUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "TCH.3",
+      "MaPhuong": "26785",
+      "MaGia": "52",
+      "SL_K1": 0,
+      "SL_K2": 3383,
+      "SL_K3": 1571,
+      "M3_Giam": 1812,
+      "TyLe_Giam": 53.56,
+      "Level": "RED"
+    },
+    {
       "Danhba": "15132045700",
       "TenKH": "TT VAN HOA Q.GO VAP",
       "DiaChi": "N/A",
@@ -60,6 +74,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 957,
       "TyLe_Giam": 54.38,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22013215003",
+      "TenKH": "TRUNG TAM CONG NGHE SINH HOC",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.2",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 2156,
+      "SL_K3": 1392,
+      "M3_Giam": 764,
+      "TyLe_Giam": 35.44,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "22033278722",
@@ -283,6 +311,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 907,
       "M3_Giam": 268,
       "TyLe_Giam": 22.81,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013222310",
+      "TenKH": "CONG TY CO PHAN PHIM THIEN NGAN",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.2",
+      "MaPhuong": "26785",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 519,
+      "SL_K3": 273,
+      "M3_Giam": 246,
+      "TyLe_Giam": 47.4,
       "Level": "YELLOW"
     },
     {
