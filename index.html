@@ -168,7 +168,7 @@
                 </div>
 
                 <!-- Card 6: Phân tích Kinh Doanh (Thẻ mới) -->
-                <div class="kpi-card" id="card-phantich" style="border-color: rgba(59, 130, 246, 0.3); cursor: pointer; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(59, 130, 246, 0.8)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(59, 130, 246, 0.3)';">
+                <div class="kpi-card" id="card-phantich" style="border-color: rgba(59, 130, 246, 0.3); cursor: pointer; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(59, 130, 246, 0.8)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(59, 130, 246, 0.3)';" onclick="openModule('analytics.html', this)">
                     <div class="kpi-icon" style="background-color: rgba(59, 130, 246, 0.1); color: #3b82f6;"><span class="material-symbols-outlined">analytics</span></div>
                     <div class="kpi-details" style="width: 100%;">
                         <span class="kpi-label" style="color: #93c5fd;">Bảng ĐK Kinh Doanh</span>
@@ -321,6 +321,21 @@
     <script src="data_doc_nguoc.js"></script>
     <script src="data_tang_giam.js"></script>
     <script src="script.js?v=0704v2"></script>
+    <script>
+        // Hàm mở module — mở tab mới (tránh lỗi file:// iframe)
+        function openModule(url, cardEl) {
+            window.open(url, '_blank');
+        }
+
+        // Gắn sự kiện cho nav-kinhdoanh để mở analytics.html
+        const navKD = document.getElementById('nav-kinhdoanh');
+        if (navKD) {
+            navKD.addEventListener('click', function(e) {
+                e.preventDefault();
+                window.open('analytics.html', '_blank');
+            });
+        }
+    </script>
 </body>
 </html>
 
