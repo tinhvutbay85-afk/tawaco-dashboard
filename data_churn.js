@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:14 17/4/2026
+// TAWACO – Biến động KH Lớn – 14:22:43 17/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:14 17/4/2026",
+  "lastUpdated": "14:22:43 17/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 35,
-  "tongM3Mat": 25730,
+  "tongM3Mat": 25219,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -144,20 +144,6 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 691,
       "TyLe_Giam": 61.1,
       "Level": "RED"
-    },
-    {
-      "Danhba": "22013221981",
-      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
-      "DiaChi": "N/A",
-      "MaDMA": "TMT.2",
-      "MaPhuong": "26785",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1983,
-      "SL_K3": 1340,
-      "M3_Giam": 643,
-      "TyLe_Giam": 32.43,
-      "Level": "YELLOW"
     },
     {
       "Danhba": "22063310070",
@@ -426,6 +412,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22053321821",
+      "TenKH": "HOP TAC XA GIA PHU",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 984,
+      "SL_K3": 852,
+      "M3_Giam": 132,
+      "TyLe_Giam": 13.41,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15102748474",
       "TenKH": "CONG TY TNHH MTV OM",
       "DiaChi": "N/A",
@@ -468,20 +468,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22013221531",
-      "TenKH": "CTY TNHH THUONG MAI DICH VU TRUNG MY TAY",
-      "DiaChi": "N/A",
-      "MaDMA": "TMT.1",
-      "MaPhuong": "26785",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 501,
-      "SL_K3": 432,
-      "M3_Giam": 69,
-      "TyLe_Giam": 13.77,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22113410001",
       "TenKH": "BAN QL CHUNG CU AN SUONG",
       "DiaChi": "N/A",
@@ -493,6 +479,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 472,
       "M3_Giam": 69,
       "TyLe_Giam": 12.75,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013221531",
+      "TenKH": "CTY TNHH THUONG MAI DICH VU TRUNG MY TAY",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.1",
+      "MaPhuong": "26785",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 501,
+      "SL_K3": 432,
+      "M3_Giam": 69,
+      "TyLe_Giam": 13.77,
       "Level": "YELLOW"
     }
   ]
