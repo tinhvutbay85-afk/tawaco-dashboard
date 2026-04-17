@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 16:20:15 16/4/2026
+// TAWACO – Biến động KH Lớn – 09:20:15 17/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "16:20:15 16/4/2026",
+  "lastUpdated": "09:20:15 17/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 28,
-  "tongM3Mat": 22864,
+  "tongKH": 34,
+  "tongM3Mat": 25454,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -76,6 +76,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "22013219997",
+      "TenKH": "TIEU DOAN TAC CHIEN DIEN TU 97/ BO THAM MUU QUAN KHU 7",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.2",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 1271,
+      "SL_K3": 463,
+      "M3_Giam": 808,
+      "TyLe_Giam": 63.57,
+      "Level": "RED"
+    },
+    {
       "Danhba": "22013215003",
       "TenKH": "TRUNG TAM CONG NGHE SINH HOC",
       "DiaChi": "N/A",
@@ -87,6 +101,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1392,
       "M3_Giam": 764,
       "TyLe_Giam": 35.44,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013221674",
+      "TenKH": "CHUNG CU NHA O XA HOI LUC LUONG VU TRANG QUAN KHU 7",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.2",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1899,
+      "SL_K3": 1158,
+      "M3_Giam": 741,
+      "TyLe_Giam": 39.02,
       "Level": "YELLOW"
     },
     {
@@ -116,6 +144,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 691,
       "TyLe_Giam": 61.1,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22013221981",
+      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.2",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1983,
+      "SL_K3": 1340,
+      "M3_Giam": 643,
+      "TyLe_Giam": 32.43,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "22063310070",
@@ -314,6 +356,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22093381213",
+      "TenKH": "CONG TY CO PHAN PHIM THIEN NGAN",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 507,
+      "SL_K3": 260,
+      "M3_Giam": 247,
+      "TyLe_Giam": 48.72,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22013222310",
       "TenKH": "CONG TY CO PHAN PHIM THIEN NGAN",
       "DiaChi": "N/A",
@@ -384,6 +440,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22013222647",
+      "TenKH": "CONG TY TNHH THUONG MAI DICH VU TRUNG MY TAY",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.1",
+      "MaPhuong": "26785",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 662,
+      "SL_K3": 580,
+      "M3_Giam": 82,
+      "TyLe_Giam": 12.39,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22113410001",
       "TenKH": "BAN QL CHUNG CU AN SUONG",
       "DiaChi": "N/A",
@@ -395,6 +465,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 472,
       "M3_Giam": 69,
       "TyLe_Giam": 12.75,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013221531",
+      "TenKH": "CTY TNHH THUONG MAI DICH VU TRUNG MY TAY",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.1",
+      "MaPhuong": "26785",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 501,
+      "SL_K3": 432,
+      "M3_Giam": 69,
+      "TyLe_Giam": 13.77,
       "Level": "YELLOW"
     }
   ]
