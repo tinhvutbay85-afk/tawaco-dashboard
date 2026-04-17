@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 14:22:43 17/4/2026
+// TAWACO – Biến động KH Lớn – 15:20:14 17/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "14:22:43 17/4/2026",
+  "lastUpdated": "15:20:14 17/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 35,
-  "tongM3Mat": 25219,
+  "tongKH": 36,
+  "tongM3Mat": 25306,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -440,6 +440,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22093221195",
+      "TenKH": "TRUNG TAM QUAN LY HA TANG KY THUAT THANH PHO HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.2",
+      "MaPhuong": "26791",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 570,
+      "SL_K3": 483,
+      "M3_Giam": 87,
+      "TyLe_Giam": 15.26,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22043311044",
       "TenKH": "TRUONG TIEU HOC NGUYEN VAN THE",
       "DiaChi": "N/A",
@@ -468,20 +482,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22113410001",
-      "TenKH": "BAN QL CHUNG CU AN SUONG",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.1",
-      "MaPhuong": "26791",
-      "MaGia": "59",
-      "SL_K1": 0,
-      "SL_K2": 541,
-      "SL_K3": 472,
-      "M3_Giam": 69,
-      "TyLe_Giam": 12.75,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22013221531",
       "TenKH": "CTY TNHH THUONG MAI DICH VU TRUNG MY TAY",
       "DiaChi": "N/A",
@@ -493,6 +493,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 432,
       "M3_Giam": 69,
       "TyLe_Giam": 13.77,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113410001",
+      "TenKH": "BAN QL CHUNG CU AN SUONG",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "59",
+      "SL_K1": 0,
+      "SL_K2": 541,
+      "SL_K3": 472,
+      "M3_Giam": 69,
+      "TyLe_Giam": 12.75,
       "Level": "YELLOW"
     }
   ]
