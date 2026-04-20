@@ -168,19 +168,31 @@
                 </div>
 
                 <!-- Card 6: Phân tích Kinh Doanh (Thẻ mới) -->
-                <div class="kpi-card" id="card-phantich" style="border-color: rgba(59, 130, 246, 0.3); cursor: pointer; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-4px)'; this.style.borderColor='rgba(59, 130, 246, 0.8)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='rgba(59, 130, 246, 0.3)';" onclick="openModule('analytics.html', this)">
-                    <div class="kpi-icon" style="background-color: rgba(59, 130, 246, 0.1); color: #3b82f6;"><span class="material-symbols-outlined">analytics</span></div>
+                <div class="kpi-card" id="card-phantich" style="border-color: rgba(59, 130, 246, 0.3); cursor: pointer; transition: all 0.3s;" onmouseover="this.style.borderColor='rgba(59, 130, 246, 0.8)';" onmouseout="this.style.borderColor='rgba(59, 130, 246, 0.3)';">
+                    <div class="kpi-icon" style="background-color: rgba(59, 130, 246, 0.1); color: #3b82f6;" onclick="openModule('analytics.html', this)"><span class="material-symbols-outlined">analytics</span></div>
                     <div class="kpi-details" style="width: 100%;">
                         <span class="kpi-label" style="color: #93c5fd;">Bảng ĐK Kinh Doanh</span>
-                        <h2 class="kpi-value" style="font-size: 1.4rem;">Phân Tích KPI</h2>
-                        <div style="display: flex; gap: 15px; margin-top: 8px; justify-content: flex-start; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05);">
-                            <div style="display: flex; align-items: center; gap: 4px; color: #3b82f6; font-size: 0.85rem; font-weight: 500;">
+                        <h2 class="kpi-value" style="font-size: 1.4rem; cursor:pointer;" onclick="openModule('analytics.html', this)">Phân Tích KPI</h2>
+                        <div style="display: flex; gap: 10px; margin-top: 8px; justify-content: flex-start; padding-top: 8px; border-top: 1px solid rgba(255,255,255,0.05); flex-wrap: wrap; align-items: center;">
+                            <div style="display: flex; align-items: center; gap: 4px; color: #3b82f6; font-size: 0.85rem; font-weight: 500; cursor:pointer;" onclick="openModule('analytics.html', this)">
                                 <span class="material-symbols-outlined" style="font-size: 16px;">travel_explore</span>
                                 Xem biểu đồ nội bộ
                             </div>
+                            <button id="btn-refresh-kpi" onclick="refreshKPI(event)" style="
+                                display: inline-flex; align-items: center; gap: 5px;
+                                background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.4);
+                                color: #10b981; border-radius: 8px; padding: 4px 10px;
+                                font-size: 0.8rem; font-weight: 600; cursor: pointer;
+                                transition: all 0.2s; font-family: inherit;
+                            " onmouseover="this.style.background='rgba(16,185,129,0.3)'" onmouseout="this.style.background='rgba(16,185,129,0.15)'">
+                                <span class="material-symbols-outlined" style="font-size:14px;">refresh</span>
+                                Cập Nhật Ngay
+                            </button>
                         </div>
+                        <div id="kpi-refresh-status" style="font-size:0.75rem; color:#64748b; margin-top:6px; min-height:14px;"></div>
                     </div>
                 </div>
+
             </div>
 
             <!-- PANEL TIẾN ĐỘ ĐỌC ĐỒNG HỒ KỲ HIỆN TẠI -->
@@ -335,7 +347,71 @@
                 window.open('analytics.html', '_blank');
             });
         }
+
+        // ── CẬP NHẬT PHÂN TÍCH KPI NGAY LẬP TỨC ────────────────────────
+        async function refreshKPI(event) {
+            event.stopPropagation(); // Không mở analytics.html khi click nút này
+            const btn    = document.getElementById('btn-refresh-kpi');
+            const status = document.getElementById('kpi-refresh-status');
+
+            btn.disabled = true;
+            btn.style.opacity = '0.6';
+            btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px;animation:spin 1s linear infinite;">refresh</span> Đang cập nhật...';
+            status.style.color = '#f59e0b';
+            status.textContent = '⏳ Đang kết nối tới capnuoctrungan.vn... (mất khoảng 30-60 giây)';
+
+            // Thêm CSS animation cho icon spin
+            if (!document.getElementById('spin-style')) {
+                const s = document.createElement('style');
+                s.id = 'spin-style';
+                s.textContent = '@keyframes spin { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }';
+                document.head.appendChild(s);
+            }
+
+            try {
+                const res = await fetch('http://127.0.0.1:8080/refresh-kpi', {
+                    method: 'GET',
+                    signal: AbortSignal.timeout(5000)
+                });
+                const data = await res.json();
+
+                if (data.status === 'started') {
+                    status.style.color = '#10b981';
+                    status.textContent = '🔄 Đang scrape dữ liệu mới từ server... Vui lòng chờ ~1 phút.';
+                    // Poll trạng thái mỗi 5 giây
+                    const pollInterval = setInterval(async () => {
+                        try {
+                            const r = await fetch('http://127.0.0.1:8080/kpi-status');
+                            const d = await r.json();
+                            if (!d.updating) {
+                                clearInterval(pollInterval);
+                                status.style.color = '#10b981';
+                                status.textContent = '✅ Cập nhật xong! Mở lại tab analytics để xem dữ liệu mới.';
+                                btn.disabled = false;
+                                btn.style.opacity = '1';
+                                btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px;">refresh</span> Cập Nhật Ngay';
+                                // Tự mở analytics.html với dữ liệu mới
+                                setTimeout(() => window.open('http://127.0.0.1:8080/analytics.html', '_blank'), 500);
+                            }
+                        } catch(e) {}
+                    }, 5000);
+                } else if (data.status === 'running') {
+                    status.textContent = '⏳ Đang cập nhật (đã bắt đầu từ trước), vui lòng đợi...';
+                    btn.disabled = false;
+                    btn.style.opacity = '1';
+                    btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px;">refresh</span> Cập Nhật Ngay';
+                }
+            } catch (err) {
+                // Server chưa chạy
+                status.style.color = '#ef4444';
+                status.innerHTML = '❌ Server chưa chạy. Hãy chạy <b>Mo_Dashboard.bat</b> để khởi động.';
+                btn.disabled = false;
+                btn.style.opacity = '1';
+                btn.innerHTML = '<span class="material-symbols-outlined" style="font-size:14px;">refresh</span> Cập Nhật Ngay';
+            }
+        }
     </script>
+
 </body>
 </html>
 
