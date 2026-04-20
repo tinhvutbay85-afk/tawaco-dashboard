@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 08:31:40 20/4/2026
+// TAWACO – Biến động KH Lớn – 09:20:15 20/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "08:31:40 20/4/2026",
+  "lastUpdated": "09:20:15 20/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 36,
-  "tongM3Mat": 25306,
+  "tongKH": 38,
+  "tongM3Mat": 25905,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -300,6 +300,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15072444491",
+      "TenKH": "CTY TNHH MTV BA SON",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1445,
+      "SL_K3": 1135,
+      "M3_Giam": 310,
+      "TyLe_Giam": 21.45,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22053291359",
       "TenKH": "CN CTY TNHH MTV TM THUY NGOC",
       "DiaChi": "N/A",
@@ -311,6 +325,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 681,
       "M3_Giam": 292,
       "TyLe_Giam": 30.01,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444490",
+      "TenKH": "CTY TNHH MTV BA SON",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1444,
+      "SL_K3": 1155,
+      "M3_Giam": 289,
+      "TyLe_Giam": 20.01,
       "Level": "YELLOW"
     },
     {
