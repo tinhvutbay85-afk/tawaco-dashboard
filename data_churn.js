@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 08:43:05 21/4/2026
+// TAWACO – Biến động KH Lớn – 10:29:54 21/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "08:43:05 21/4/2026",
+  "lastUpdated": "10:29:54 21/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 39,
-  "tongM3Mat": 26708,
+  "tongKH": 48,
+  "tongM3Mat": 29391,
   "danhSach": [
     {
       "Danhba": "22073342686",
@@ -160,6 +160,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "15072444413",
+      "TenKH": "KHU N01-2",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1443,
+      "SL_K3": 791,
+      "M3_Giam": 652,
+      "TyLe_Giam": 45.18,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22063310070",
       "TenKH": "UBND PHUONG AN PHU DONG",
       "DiaChi": "N/A",
@@ -258,6 +272,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "15072444415",
+      "TenKH": "KHU N06",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1097,
+      "SL_K3": 677,
+      "M3_Giam": 420,
+      "TyLe_Giam": 38.29,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22103413032",
       "TenKH": "CONG TY CP ETERNAL PROWESS VIET NAM",
       "DiaChi": "N/A",
@@ -286,6 +314,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "15072444430",
+      "TenKH": "KHU N07",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1217,
+      "SL_K3": 863,
+      "M3_Giam": 354,
+      "TyLe_Giam": 29.09,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22083362469",
       "TenKH": "DOI CANH SAT THI HANH AN HINH SU VA HTTP",
       "DiaChi": "N/A",
@@ -297,6 +339,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1266,
       "M3_Giam": 353,
       "TyLe_Giam": 21.8,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444433",
+      "TenKH": "KHU N08",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1191,
+      "SL_K3": 847,
+      "M3_Giam": 344,
+      "TyLe_Giam": 28.88,
       "Level": "YELLOW"
     },
     {
@@ -426,6 +482,48 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15072444427",
+      "TenKH": "KHU N04-1",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 891,
+      "SL_K3": 660,
+      "M3_Giam": 231,
+      "TyLe_Giam": 25.93,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444428",
+      "TenKH": "KHU N04-2",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 779,
+      "SL_K3": 550,
+      "M3_Giam": 229,
+      "TyLe_Giam": 29.4,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444422",
+      "TenKH": "KHU N02C-1",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 797,
+      "SL_K3": 608,
+      "M3_Giam": 189,
+      "TyLe_Giam": 23.71,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15041988247",
       "TenKH": "TRUNG TAM NUOI DUONG BAO TRO TRE EM GO VAP",
       "DiaChi": "N/A",
@@ -437,6 +535,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 687,
       "M3_Giam": 155,
       "TyLe_Giam": 18.41,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444443",
+      "TenKH": "KHU A3-7",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 508,
+      "SL_K3": 355,
+      "M3_Giam": 153,
+      "TyLe_Giam": 30.12,
       "Level": "YELLOW"
     },
     {
@@ -479,6 +591,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 397,
       "M3_Giam": 118,
       "TyLe_Giam": 22.91,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444411",
+      "TenKH": "Khách hàng Lớn",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 754,
+      "SL_K3": 643,
+      "M3_Giam": 111,
+      "TyLe_Giam": 14.72,
       "Level": "YELLOW"
     },
     {
