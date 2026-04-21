@@ -239,12 +239,12 @@
 var END_IDX = 2026*12 + 4; // Mặc định K4/2026
 
 function calcLienTiep(kyCoSL) {
-    if (!kyCoSL) return 3;
+    if (!kyCoSL) return 2;
     var m = kyCoSL.match(/(\d{4})\/K(\d+)/);
-    if (!m) return 3;
+    if (!m) return 2;
     var lastIdx = parseInt(m[1])*12 + parseInt(m[2]);
     var diff = END_IDX - lastIdx;
-    return Math.max(3, Math.min(diff, 13));
+    return Math.max(2, Math.min(diff, 13));
 }
 
 function kyColor(lt) {
@@ -465,18 +465,18 @@ function switchData(type) {
     });
 
     var distCum = {};
-    for (var k = 3; k <= 13; k++) {
+    for (var k = 2; k <= 13; k++) {
         distCum[k] = 0;
         for (var j = k; j <= 13; j++) {
             distCum[k] += (distExact[j] || 0);
         }
     }
-    // Kết quả: distCum[3] = tổng toàn bộ = 6864; distCum[13] = 346
+    // Kết quả: distCum[2] = tổng toàn bộ = 7283; distCum[13] = 346
 
-    // 7. Vẽ các thẻ phân bố (từ 13 xuống 3)
+    // 7. Vẽ các thẻ phân bố (từ 13 xuống 2)
     var grid = document.getElementById('distGrid');
     grid.innerHTML = '';
-    for (var k = 13; k >= 3; k--) {
+    for (var k = 13; k >= 2; k--) {
         var cum  = distCum[k] || 0;
         var exact = distExact[k] || 0;
         if (cum === 0) continue;
