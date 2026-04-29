@@ -435,10 +435,16 @@ if (document.getElementById('nav-biendong')) {
         document.getElementById('chart-biendong-container').scrollIntoView({ behavior: 'smooth' }); 
     });
 }
-if (document.getElementById('nav-gi\u00e0bi\u1ec3u')) {
-    document.getElementById('nav-gi\u00e0bi\u1ec3u').addEventListener('click', (e) => { 
+if (document.getElementById('nav-giabieutab')) {
+    document.getElementById('nav-giabieutab').addEventListener('click', (e) => { 
         e.preventDefault(); 
-        renderTableView('gi\u00e0bi\u1ec3u'); 
+        renderTableView('giabieutab'); 
+    });
+}
+if (document.getElementById('nav-kiemtragiabieutab')) {
+    document.getElementById('nav-kiemtragiabieutab').addEventListener('click', (e) => { 
+        e.preventDefault(); 
+        renderTableView('kiemtragiabieutab'); 
     });
 }
 
@@ -491,9 +497,12 @@ function renderTableView(type) {
     } else if (type === 'tieuthu') {
         setActiveNav('nav-tieuthu');
         iframe.src = 'Dashboard_TieuThuBatThuong.html?v=' + ts;
-    } else if (type === 'gi\u00e0bi\u1ec3u') {
-        setActiveNav('nav-gi\u00e0bi\u1ec3u');
+    } else if (type === 'giabieutab') {
+        setActiveNav('nav-giabieutab');
         iframe.src = 'Dashboard_GiaBieu.html?v=' + ts;
+    } else if (type === 'kiemtragiabieutab') {
+        setActiveNav('nav-kiemtragiabieutab');
+        iframe.src = 'Dashboard_SaiGiaBieu.html?v=' + ts;
     }
 }
 
