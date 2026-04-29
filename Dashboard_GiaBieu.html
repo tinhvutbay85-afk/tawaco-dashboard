@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Giá Biểu Nước TAWACO 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    min-height: 100vh;
+    padding: 24px;
+  }
+
+  /* ── Header ── */
+  .page-header {
+    display: flex; align-items: center; gap: 16px;
+    margin-bottom: 28px;
+  }
+  .page-header .icon-box {
+    width: 52px; height: 52px; border-radius: 14px;
+    background: rgba(168,85,247,0.15); color: #a855f7;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 26px; box-shadow: 0 0 20px rgba(168,85,247,0.25);
+  }
+  .page-header h1 { font-size: 1.5rem; font-weight: 800; color: #f1f5f9; }
+  .page-header p  { font-size: 0.82rem; color: #64748b; margin-top: 3px; }
+  .badge-2026 {
+    margin-left: auto;
+    background: rgba(168,85,247,0.2); border: 1px solid rgba(168,85,247,0.5);
+    color: #d8b4fe; border-radius: 20px; padding: 4px 14px;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 1px;
+  }
+
+  /* ── KPI Summary Cards ── */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px; margin-bottom: 28px;
+  }
+  .sum-card {
+    background: rgba(30,41,59,0.8);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px; padding: 18px 20px;
+    transition: border-color .25s;
+  }
+  .sum-card:hover { border-color: rgba(168,85,247,0.4); }
+  .sum-card .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: .8px; color: #64748b; font-weight: 700; margin-bottom: 8px; }
+  .sum-card .value { font-size: 1.45rem; font-weight: 800; }
+  .sum-card .sub   { font-size: 0.78rem; color: #94a3b8; margin-top: 4px; }
+  .color-sh  { color: #06b6d4; }
+  .color-sx  { color: #f59e0b; }
+  .color-dv  { color: #ec4899; }
+  .color-hc  { color: #10b981; }
+
+  /* ── Section title ── */
+  .section-title {
+    font-size: 0.9rem; font-weight: 700; color: #94a3b8;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 14px; display: flex; align-items: center; gap: 8px;
+  }
+  .section-title::after {
+    content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.07);
+  }
+
+  /* ── Main table ── */
+  .table-wrap {
+    background: rgba(30,41,59,0.8); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 20px; overflow: hidden; margin-bottom: 28px;
+  }
+  table { width: 100%; border-collapse: collapse; }
+  thead tr { background: rgba(168,85,247,0.12); }
+  th {
+    padding: 13px 16px; font-size: 0.75rem; font-weight: 700;
+    color: #94a3b8; text-transform: uppercase; letter-spacing: .8px;
+    text-align: left; white-space: nowrap;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  td {
+    padding: 11px 16px; font-size: 0.84rem; color: #cbd5e1;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    vertical-align: middle;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.03); }
+
+  .ma-gia-badge {
+    display: inline-block; background: rgba(168,85,247,0.15);
+    border: 1px solid rgba(168,85,247,0.3); color: #c084fc;
+    border-radius: 6px; padding: 2px 8px; font-size: 0.75rem;
+    font-weight: 700; font-family: monospace; margin: 1px;
+  }
+
+  .loai-badge {
+    display: inline-flex; align-items: center; gap: 5px;
+    border-radius: 20px; padding: 4px 12px; font-size: 0.78rem; font-weight: 700;
+  }
+  .loai-sh { background: rgba(6,182,212,0.12); color: #06b6d4; border: 1px solid rgba(6,182,212,0.3); }
+  .loai-sx { background: rgba(245,158,11,0.12); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+  .loai-dv { background: rgba(236,72,153,0.12); color: #ec4899; border: 1px solid rgba(236,72,153,0.3); }
+  .loai-hc { background: rgba(16,185,129,0.12); color: #10b981; border: 1px solid rgba(16,185,129,0.3); }
+  .loai-hh { background: rgba(139,92,246,0.12); color: #a78bfa; border: 1px solid rgba(139,92,246,0.3); }
+
+  .don-gia {
+    font-weight: 700; font-size: 0.92rem;
+  }
+
+  /* ── Biểu đồ so sánh giá đơn giản ── */
+  .price-compare-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px; margin-bottom: 28px;
+  }
+  .price-card {
+    background: rgba(30,41,59,0.8); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px; padding: 22px;
+  }
+  .price-card .pc-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: #64748b; margin-bottom: 6px; }
+  .price-card .pc-name  { font-size: 1rem; font-weight: 700; margin-bottom: 14px; }
+  .price-card .pc-price { font-size: 1.7rem; font-weight: 900; margin-bottom: 4px; }
+  .price-card .pc-unit  { font-size: 0.75rem; color: #94a3b8; }
+  .price-bar {
+    height: 6px; border-radius: 999px; margin-top: 14px;
+    background: rgba(255,255,255,0.07); overflow: hidden;
+  }
+  .price-bar-fill { height: 100%; border-radius: 999px; }
+
+  /* ── Note box ── */
+  .note-box {
+    background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.2);
+    border-radius: 14px; padding: 16px 20px; margin-bottom: 28px;
+    display: flex; gap: 12px; align-items: flex-start;
+  }
+  .note-box .mat { color: #a855f7; font-size: 22px; flex-shrink: 0; }
+  .note-box p { font-size: 0.82rem; color: #94a3b8; line-height: 1.6; }
+  .note-box strong { color: #c084fc; }
+
+  /* ── Footer ── */
+  .footer { text-align: center; font-size: 0.75rem; color: #334155; padding-top: 12px; }
+
+  @media (max-width: 600px) {
+    body { padding: 14px; }
+    th, td { padding: 9px 10px; font-size: 0.78rem; }
+    .ma-gia-badge { font-size: 0.7rem; padding: 1px 5px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ── Header ── -->
+<div class="page-header">
+  <div class="icon-box"><span class="material-symbols-outlined">price_check</span></div>
+  <div>
+    <h1>Giá Biểu Nước TAWACO</h1>
+    <p>Biểu giá nước áp dụng theo quyết định hiện hành — Cập nhật Kỳ 04/2026</p>
+  </div>
+  <div class="badge-2026">2026</div>
+</div>
+
+<!-- ── 4 KPI Cards tóm tắt giá ── -->
+<div class="summary-grid">
+  <div class="sum-card">
+    <div class="label">Sinh hoạt</div>
+    <div class="value color-sh">10.049 ₫</div>
+    <div class="sub">Đơn giá / m³ (bình quân bậc thang)</div>
+  </div>
+  <div class="sum-card">
+    <div class="label">Sản xuất</div>
+    <div class="value color-sx">11.931 ₫</div>
+    <div class="sub">Đơn giá / m³</div>
+  </div>
+  <div class="sum-card">
+    <div class="label">Dịch vụ</div>
+    <div class="value color-dv">21.239 ₫</div>
+    <div class="sub">Đơn giá / m³</div>
+  </div>
+  <div class="sum-card">
+    <div class="label">Hành chính / Sự nghiệp</div>
+    <div class="value color-hc">12.999 ₫</div>
+    <div class="sub">Đơn giá / m³</div>
+  </div>
+</div>
+
+<!-- ── So sánh giá trực quan ── -->
+<div class="section-title"><span class="material-symbols-outlined" style="font-size:16px">bar_chart</span> So Sánh Đơn Giá Theo Loại Khách Hàng</div>
+<div class="price-compare-grid">
+  <div class="price-card" style="border-color:rgba(6,182,212,0.25)">
+    <div class="pc-label">Mức giá 1</div>
+    <div class="pc-name color-sh">Sinh Hoạt</div>
+    <div class="pc-price color-sh">10.049<span style="font-size:1rem;font-weight:500"> ₫/m³</span></div>
+    <div class="pc-unit">Bình quân bậc thang (trước VAT)</div>
+    <div class="price-bar"><div class="price-bar-fill" style="width:47%;background:#06b6d4"></div></div>
+  </div>
+  <div class="price-card" style="border-color:rgba(245,158,11,0.25)">
+    <div class="pc-label">Mức giá 2</div>
+    <div class="pc-name color-sx">Sản Xuất</div>
+    <div class="pc-price color-sx">11.931<span style="font-size:1rem;font-weight:500"> ₫/m³</span></div>
+    <div class="pc-unit">Giá cố định (trước VAT)</div>
+    <div class="price-bar"><div class="price-bar-fill" style="width:56%;background:#f59e0b"></div></div>
+  </div>
+  <div class="price-card" style="border-color:rgba(16,185,129,0.25)">
+    <div class="pc-label">Mức giá 3</div>
+    <div class="pc-name color-hc">Hành Chính / SN</div>
+    <div class="pc-price color-hc">12.999<span style="font-size:1rem;font-weight:500"> ₫/m³</span></div>
+    <div class="pc-unit">Giá cố định (trước VAT)</div>
+    <div class="price-bar"><div class="price-bar-fill" style="width:61%;background:#10b981"></div></div>
+  </div>
+  <div class="price-card" style="border-color:rgba(236,72,153,0.25)">
+    <div class="pc-label">Mức giá 4</div>
+    <div class="pc-name color-dv">Dịch Vụ / Kinh Doanh</div>
+    <div class="pc-price color-dv">21.239<span style="font-size:1rem;font-weight:500"> ₫/m³</span></div>
+    <div class="pc-unit">Giá cố định (trước VAT)</div>
+    <div class="price-bar"><div class="price-bar-fill" style="width:100%;background:#ec4899"></div></div>
+  </div>
+</div>
+
+<!-- ── Bảng Giá Bậc Thang Sinh Hoạt ── -->
+<div class="section-title"><span class="material-symbols-outlined" style="font-size:16px">home</span> Bảng Giá Bậc Thang — Sinh Hoạt</div>
+<div class="table-wrap" style="margin-bottom:28px">
+  <table>
+    <thead>
+      <tr>
+        <th>Bậc</th>
+        <th>Lượng tiêu thụ (m³/hộ/tháng)</th>
+        <th>Đơn giá (₫/m³, chưa VAT)</th>
+        <th>Đơn giá (₫/m³, đã VAT 5%)</th>
+        <th>Ghi chú</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Bậc 1</strong></td>
+        <td>≤ 4 m³</td>
+        <td class="don-gia color-sh">5.973 ₫</td>
+        <td class="color-sh">6.272 ₫</td>
+        <td>Giá ưu đãi hộ nghèo</td>
+      </tr>
+      <tr>
+        <td><strong>Bậc 2</strong></td>
+        <td>4 – 6 m³</td>
+        <td class="don-gia color-sh">7.052 ₫</td>
+        <td class="color-sh">7.405 ₫</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Bậc 3</strong></td>
+        <td>6 – 10 m³</td>
+        <td class="don-gia color-sh">8.669 ₫</td>
+        <td class="color-sh">9.102 ₫</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Bậc 4</strong></td>
+        <td>10 – 16 m³</td>
+        <td class="don-gia color-sh">11.252 ₫</td>
+        <td class="color-sh">11.815 ₫</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Bậc 5</strong></td>
+        <td>16 – 22 m³</td>
+        <td class="don-gia color-sh">13.764 ₫</td>
+        <td class="color-sh">14.452 ₫</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><strong>Bậc 6</strong></td>
+        <td>> 22 m³</td>
+        <td class="don-gia color-sh">15.929 ₫</td>
+        <td class="color-sh">16.725 ₫</td>
+        <td>Mức tối đa</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ── Bảng Giá Kinh Doanh / SX / HC ── -->
+<div class="section-title"><span class="material-symbols-outlined" style="font-size:16px">business</span> Bảng Giá Phi Sinh Hoạt</div>
+<div class="table-wrap" style="margin-bottom:28px">
+  <table>
+    <thead>
+      <tr>
+        <th>Loại KH</th>
+        <th>Đơn giá (₫/m³, chưa VAT)</th>
+        <th>VAT</th>
+        <th>Đơn giá (₫/m³, đã VAT)</th>
+        <th>Mã giá áp dụng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="loai-badge loai-sx"><span class="material-symbols-outlined" style="font-size:14px">factory</span>Sản xuất</span></td>
+        <td class="don-gia color-sx">11.931 ₫</td>
+        <td>8%</td>
+        <td class="color-sx">12.885 ₫</td>
+        <td>
+          <span class="ma-gia-badge">12</span>
+          <span class="ma-gia-badge">22</span>
+          <span class="ma-gia-badge">32</span>
+          <span class="ma-gia-badge">52</span>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="loai-badge loai-dv"><span class="material-symbols-outlined" style="font-size:14px">store</span>Dịch vụ</span></td>
+        <td class="don-gia color-dv">21.239 ₫</td>
+        <td>8%</td>
+        <td class="color-dv">22.938 ₫</td>
+        <td>
+          <span class="ma-gia-badge">13</span>
+          <span class="ma-gia-badge">23</span>
+          <span class="ma-gia-badge">33</span>
+          <span class="ma-gia-badge">53</span>
+          <span class="ma-gia-badge">5S</span>
+          <span class="ma-gia-badge">68</span>
+        </td>
+      </tr>
+      <tr>
+        <td><span class="loai-badge loai-hc"><span class="material-symbols-outlined" style="font-size:14px">account_balance</span>Hành chính / SN</span></td>
+        <td class="don-gia color-hc">12.999 ₫</td>
+        <td>5%</td>
+        <td class="color-hc">13.649 ₫</td>
+        <td>
+          <span class="ma-gia-badge">31</span>
+          <span class="ma-gia-badge">54</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ── Bảng Mã Giá Hỗn Hợp ── -->
+<div class="section-title"><span class="material-symbols-outlined" style="font-size:16px">layers</span> Mã Giá Hỗn Hợp (Quy về loại giá cao nhất)</div>
+<div class="table-wrap" style="margin-bottom:28px">
+  <table>
+    <thead>
+      <tr>
+        <th>Mã giá</th>
+        <th>Diễn giải</th>
+        <th>Quy về loại giá</th>
+        <th>Đơn giá áp dụng</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <span class="ma-gia-badge">15</span><span class="ma-gia-badge">16</span><span class="ma-gia-badge">19</span>
+          <span class="ma-gia-badge">25</span><span class="ma-gia-badge">26</span><span class="ma-gia-badge">29</span>
+          <span class="ma-gia-badge">35</span><span class="ma-gia-badge">36</span><span class="ma-gia-badge">39</span>
+          <span class="ma-gia-badge">5D</span><span class="ma-gia-badge">59</span>
+        </td>
+        <td>Hỗn hợp có thành phần Dịch vụ</td>
+        <td><span class="loai-badge loai-dv">Dịch vụ</span></td>
+        <td class="don-gia color-dv">21.239 ₫/m³</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="ma-gia-badge">14</span><span class="ma-gia-badge">24</span>
+          <span class="ma-gia-badge">34</span><span class="ma-gia-badge">55</span><span class="ma-gia-badge">58</span>
+        </td>
+        <td>Hỗn hợp có thành phần Sản xuất</td>
+        <td><span class="loai-badge loai-sx">Sản xuất</span></td>
+        <td class="don-gia color-sx">11.931 ₫/m³</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="ma-gia-badge">18</span><span class="ma-gia-badge">28</span>
+          <span class="ma-gia-badge">38</span><span class="ma-gia-badge">5H</span>
+        </td>
+        <td>Hỗn hợp có thành phần Hành chính</td>
+        <td><span class="loai-badge loai-hc">Hành chính</span></td>
+        <td class="don-gia color-hc">12.999 ₫/m³</td>
+      </tr>
+      <tr>
+        <td>
+          <span class="ma-gia-badge">10</span><span class="ma-gia-badge">11</span><span class="ma-gia-badge">17</span>
+          <span class="ma-gia-badge">21</span><span class="ma-gia-badge">27</span>
+          <span class="ma-gia-badge">51</span><span class="ma-gia-badge">57</span>
+        </td>
+        <td>Sinh hoạt thuần túy / đặc biệt</td>
+        <td><span class="loai-badge loai-sh">Sinh hoạt</span></td>
+        <td class="don-gia color-sh">10.049 ₫/m³ (BQ)</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ── Ghi chú ── -->
+<div class="note-box">
+  <span class="material-symbols-outlined mat">info</span>
+  <p>
+    <strong>Lưu ý áp dụng:</strong> Đơn giá bình quân sinh hoạt <strong>10.049 ₫/m³</strong> là mức bình quân bậc thang dùng để ước tính thất thoát và phân tích biến động. 
+    Đơn giá chính xác từng hộ phụ thuộc vào mức tiêu thụ thực tế theo bậc thang. 
+    Mã giá hỗn hợp được quy về đơn giá thành phần <strong>cao nhất</strong> trong công thức ước tính doanh thu.
+    Tất cả đơn giá <strong>chưa bao gồm VAT</strong> trừ khi ghi rõ.
+  </p>
+</div>
+
+<!-- ── Bảng tóm tắt VAT ── -->
+<div class="section-title"><span class="material-symbols-outlined" style="font-size:16px">receipt_long</span> Thuế VAT Áp Dụng</div>
+<div class="table-wrap">
+  <table>
+    <thead>
+      <tr>
+        <th>Loại khách hàng</th>
+        <th>Thuế suất VAT</th>
+        <th>Căn cứ pháp lý</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="loai-badge loai-sh">Sinh hoạt</span></td>
+        <td style="color:#10b981;font-weight:700;">5%</td>
+        <td style="color:#64748b;font-size:0.8rem;">Nghị định 209/2013/NĐ-CP (hàng hoá thiết yếu)</td>
+      </tr>
+      <tr>
+        <td><span class="loai-badge loai-hc">Hành chính / SN</span></td>
+        <td style="color:#10b981;font-weight:700;">5%</td>
+        <td style="color:#64748b;font-size:0.8rem;">Nghị định 209/2013/NĐ-CP</td>
+      </tr>
+      <tr>
+        <td><span class="loai-badge loai-sx">Sản xuất</span></td>
+        <td style="color:#f59e0b;font-weight:700;">8%</td>
+        <td style="color:#64748b;font-size:0.8rem;">Theo quyết định gia hạn giảm thuế VAT hiện hành</td>
+      </tr>
+      <tr>
+        <td><span class="loai-badge loai-dv">Dịch vụ / Kinh doanh</span></td>
+        <td style="color:#f59e0b;font-weight:700;">8%</td>
+        <td style="color:#64748b;font-size:0.8rem;">Theo quyết định gia hạn giảm thuế VAT hiện hành</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="footer" style="margin-top:24px">
+  TAWACO Smart Monitor · Dữ liệu giá biểu theo quyết định hiện hành · Cập nhật Kỳ 04/2026
+</div>
+
+</body>
+</html>
