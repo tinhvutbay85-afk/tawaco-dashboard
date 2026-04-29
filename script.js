@@ -435,6 +435,12 @@ if (document.getElementById('nav-biendong')) {
         document.getElementById('chart-biendong-container').scrollIntoView({ behavior: 'smooth' }); 
     });
 }
+if (document.getElementById('nav-gi\u00e0bi\u1ec3u')) {
+    document.getElementById('nav-gi\u00e0bi\u1ec3u').addEventListener('click', (e) => { 
+        e.preventDefault(); 
+        renderTableView('gi\u00e0bi\u1ec3u'); 
+    });
+}
 
 // Gán click luôn cho các thẻ KPI
 document.getElementById('val-sk12').parentElement.parentElement.addEventListener('click', () => renderTableView('sk12'));
@@ -485,6 +491,9 @@ function renderTableView(type) {
     } else if (type === 'tieuthu') {
         setActiveNav('nav-tieuthu');
         iframe.src = 'Dashboard_TieuThuBatThuong.html?v=' + ts;
+    } else if (type === 'gi\u00e0bi\u1ec3u') {
+        setActiveNav('nav-gi\u00e0bi\u1ec3u');
+        iframe.src = 'Dashboard_GiaBieu.html?v=' + ts;
     }
 }
 
