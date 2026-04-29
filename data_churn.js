@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 13:58:51 29/4/2026
+// TAWACO – Biến động KH Lớn – 15:53:58 29/4/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "13:58:51 29/4/2026",
+  "lastUpdated": "15:53:58 29/4/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 48,
   "tongM3Mat": 29391,
@@ -650,20 +650,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22013221531",
-      "TenKH": "CTY TNHH THUONG MAI DICH VU TRUNG MY TAY",
-      "DiaChi": "N/A",
-      "MaDMA": "TMT.1",
-      "MaPhuong": "26785",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 501,
-      "SL_K3": 432,
-      "M3_Giam": 69,
-      "TyLe_Giam": 13.77,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22113410001",
       "TenKH": "BAN QL CHUNG CU AN SUONG",
       "DiaChi": "N/A",
@@ -675,6 +661,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 472,
       "M3_Giam": 69,
       "TyLe_Giam": 12.75,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013221531",
+      "TenKH": "CTY TNHH THUONG MAI DICH VU TRUNG MY TAY",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.1",
+      "MaPhuong": "26785",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 501,
+      "SL_K3": 432,
+      "M3_Giam": 69,
+      "TyLe_Giam": 13.77,
       "Level": "YELLOW"
     }
   ]
