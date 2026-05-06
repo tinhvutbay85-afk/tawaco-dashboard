@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:25 6/5/2026
+// TAWACO – Biến động KH Lớn – 11:20:16 6/5/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:25 6/5/2026",
+  "lastUpdated": "11:20:16 6/5/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 8,
-  "tongM3Mat": 2464,
+  "tongKH": 9,
+  "tongM3Mat": 2682,
   "danhSach": [
     {
       "Danhba": "22103410788",
@@ -59,6 +59,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 967,
       "M3_Giam": 246,
       "TyLe_Giam": 20.28,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22073238392",
+      "TenKH": "CONG TY TNHH XAY DUNG VO DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.1.1",
+      "MaPhuong": "26773",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1390,
+      "SL_K3": 1172,
+      "M3_Giam": 218,
+      "TyLe_Giam": 15.68,
       "Level": "YELLOW"
     },
     {
