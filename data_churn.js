@@ -1,10 +1,24 @@
-// TAWACO – Biến động KH Lớn – 15:20:16 5/5/2026
+// TAWACO – Biến động KH Lớn – 08:45:47 6/5/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "15:20:16 5/5/2026",
+  "lastUpdated": "08:45:47 6/5/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 4,
-  "tongM3Mat": 734,
+  "tongKH": 8,
+  "tongM3Mat": 2464,
   "danhSach": [
+    {
+      "Danhba": "22103410788",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.1_MR",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1700,
+      "SL_K3": 602,
+      "M3_Giam": 1098,
+      "TyLe_Giam": 64.59,
+      "Level": "RED"
+    },
     {
       "Danhba": "15112840534",
       "TenKH": "CTY TNHH MERCEDES BENZ VN",
@@ -20,6 +34,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22103412945",
+      "TenKH": "CONG TY TNHH JADE LUCK",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.1_MR",
+      "MaPhuong": "26791",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 556,
+      "SL_K3": 272,
+      "M3_Giam": 284,
+      "TyLe_Giam": 51.08,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "22103412052",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.1_MR",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1213,
+      "SL_K3": 967,
+      "M3_Giam": 246,
+      "TyLe_Giam": 20.28,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15112829084",
       "TenKH": "CONG TY TNHH NUOC UONG TINH KHIET SAI GON",
       "DiaChi": "N/A",
@@ -31,6 +73,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 638,
       "M3_Giam": 211,
       "TyLe_Giam": 24.85,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22103413394",
+      "TenKH": "CONG TY TNHH TAEHWA VINA",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.1_MR",
+      "MaPhuong": "26791",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 602,
+      "SL_K3": 500,
+      "M3_Giam": 102,
+      "TyLe_Giam": 16.94,
       "Level": "YELLOW"
     },
     {
