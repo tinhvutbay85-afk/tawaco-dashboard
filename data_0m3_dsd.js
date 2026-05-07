@@ -1,6 +1,6 @@
-// TAWACO – 0m³ >= 2 kỳ 2026 DSD – 14:20:14 7/5/2026
+// TAWACO – 0m³ >= 2 kỳ 2026 DSD – 15:20:14 7/5/2026
 const TAWACO_0M3_DSD = {
-  "lastUpdated": "14:20:14 7/5/2026",
+  "lastUpdated": "15:20:14 7/5/2026",
   "kyRange": "Rolling 0m³: K2 + K3 + K4 + K5 (Bao gồm dữ liệu K5 Live)",
   "ghiChu": "TINHTRANG=DSD | Đã có SL>0 trong quá khứ | Sắp xếp theo ĐMA",
   "kyLabels": [
@@ -10,11 +10,11 @@ const TAWACO_0M3_DSD = {
     "K5"
   ],
   "endIdx": 24317,
-  "tongKH": 10796,
+  "tongKH": 10794,
   "phanBoDMA": [
     {
       "dma": "null",
-      "soKH": 2340
+      "soKH": 2338
     },
     {
       "dma": "HT-TTH.1",
@@ -1803,16 +1803,6 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 3,
       "KyCoSL": "2026/K3"
-    },
-    {
-      "Danhba": "15112823750",
-      "MaDMA": "",
-      "Roll1": 0,
-      "Roll2": 0,
-      "Roll3": 0,
-      "RollLive": 0,
-      "SLTruoc": 1,
-      "KyCoSL": "2026/K1"
     },
     {
       "Danhba": "15112823756",
@@ -4563,16 +4553,6 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K3"
-    },
-    {
-      "Danhba": "15112868721",
-      "MaDMA": "",
-      "Roll1": 1,
-      "Roll2": 0,
-      "Roll3": 0,
-      "RollLive": 0,
-      "SLTruoc": 1,
-      "KyCoSL": "2026/K2"
     },
     {
       "Danhba": "15112868730",
