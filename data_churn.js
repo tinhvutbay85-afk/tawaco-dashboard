@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 17:20:16 6/5/2026
+// TAWACO – Biến động KH Lớn – 08:21:57 7/5/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "17:20:16 6/5/2026",
+  "lastUpdated": "08:21:57 7/5/2026",
   "kyRange": "K3 -> K4/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 9,
-  "tongM3Mat": 2682,
+  "tongKH": 11,
+  "tongM3Mat": 3577,
   "danhSach": [
     {
       "Danhba": "22103410788",
@@ -18,6 +18,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 1098,
       "TyLe_Giam": 64.59,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22103413146",
+      "TenKH": "CONG TY CO PHAN DAU TU SAI GON THANG LONG",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.2",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 4955,
+      "SL_K3": 4151,
+      "M3_Giam": 804,
+      "TyLe_Giam": 16.23,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "15112840534",
@@ -101,6 +115,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 500,
       "M3_Giam": 102,
       "TyLe_Giam": 16.94,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22103411389",
+      "TenKH": "BAN QUAN TRI CHUNG CU CAO TANG PHUONG TAN THOI NHAT",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.2",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 638,
+      "SL_K3": 547,
+      "M3_Giam": 91,
+      "TyLe_Giam": 14.26,
       "Level": "YELLOW"
     },
     {
