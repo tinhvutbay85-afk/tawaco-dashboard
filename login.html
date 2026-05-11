@@ -126,8 +126,8 @@
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
             const pass = document.getElementById('passwordInput').value;
-            // Password mac dinh la tawaco@2026
-            if (pass === 'tawaco@2026') {
+            // Password duoc cap nhat theo yeu cau cua user
+            if (pass === '753951') {
                 localStorage.setItem('tawaco_auth', 'true');
                 window.location.href = 'index.html';
             } else {
