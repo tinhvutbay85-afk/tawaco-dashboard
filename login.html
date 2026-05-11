@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TAWACO - Đăng Nhập</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <style>
+        :root {
+            --bg-dark: #0a0f19;
+            --panel-bg: rgba(16, 24, 39, 0.8);
+            --cyan: #00f3ff;
+            --cyan-glow: rgba(0, 243, 255, 0.4);
+            --text-main: #e2e8f0;
+            --border-color: rgba(0, 243, 255, 0.15);
+        }
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(0, 243, 255, 0.05), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(255, 51, 102, 0.05), transparent 25%);
+        }
+        .login-box {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .logo-icon {
+            font-size: 48px;
+            color: var(--cyan);
+            text-shadow: 0 0 15px var(--cyan-glow);
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-family: 'Orbitron', sans-serif;
+            margin: 0 0 20px 0;
+            color: #fff;
+            letter-spacing: 2px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 13px;
+            color: #8a9bb3;
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 15px;
+            outline: none;
+            transition: all 0.3s;
+            box-sizing: border-box;
+        }
+        input[type="password"]:focus {
+            border-color: var(--cyan);
+            box-shadow: 0 0 10px var(--cyan-glow);
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--cyan);
+            color: var(--cyan);
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        button:hover {
+            background: var(--cyan);
+            color: var(--bg-dark);
+            box-shadow: 0 0 15px var(--cyan-glow);
+        }
+        .error-msg {
+            color: #ff3366;
+            font-size: 13px;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <i class="fa-solid fa-shield-halved logo-icon"></i>
+        <h2>TAWACO PRO</h2>
+        <p style="color: #8a9bb3; font-size: 14px; margin-bottom: 30px;">Hệ Sinh Thái Giám Sát Rủi Ro & Thất Thoát Tự Động</p>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <input type="password" id="passwordInput" placeholder="Nhập mật khẩu truy cập..." required autofocus>
+            </div>
+            <button type="submit">Đăng Nhập</button>
+            <div id="errorMsg" class="error-msg"><i class="fa-solid fa-triangle-exclamation"></i> Mật khẩu không chính xác!</div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const pass = document.getElementById('passwordInput').value;
+            // Password mac dinh la tawaco@2026
+            if (pass === 'tawaco@2026') {
+                localStorage.setItem('tawaco_auth', 'true');
+                window.location.href = 'index.html';
+            } else {
+                document.getElementById('errorMsg').style.display = 'block';
+            }
+        });
+        
+        // Kiem tra neu da dang nhap roi thi vao luon
+        if (localStorage.getItem('tawaco_auth') === 'true') {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>
