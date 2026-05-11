@@ -13,6 +13,12 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="dark-theme">
+    <script>
+        // Kiem tra xac thuc
+        if (localStorage.getItem('tawaco_auth') !== 'true') {
+            window.location.href = 'login.html';
+        }
+    </script>
     <div class="app-container">
         <!-- Sidebar Navigation -->
         <aside class="sidebar">
@@ -76,14 +82,26 @@
                 </a>
             </nav>
             
-            <div class="user-profile">
-                <div class="avatar" style="color: white;">TVB</div>
-                <div class="user-info">
-                    <div class="user-name">Admin</div>
-                    <div class="user-role">Phòng Kỹ Thuật</div>
+            <div class="user-profile" style="display:flex; align-items:center; justify-content:space-between;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <div class="avatar" style="color: white;">TVB</div>
+                    <div class="user-info">
+                        <div class="user-name">Admin</div>
+                        <div class="user-role">Phòng Kỹ Thuật</div>
+                    </div>
                 </div>
+                <button onclick="logout()" style="background:transparent; border:none; color:var(--text-muted); cursor:pointer; padding:5px;" title="Đăng xuất">
+                    <span class="material-symbols-outlined">logout</span>
+                </button>
             </div>
         </aside>
+
+        <script>
+            function logout() {
+                localStorage.removeItem('tawaco_auth');
+                window.location.href = 'login.html';
+            }
+        </script>
 
         <!-- Main Content -->
         <main class="main-content">
