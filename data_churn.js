@@ -1,10 +1,24 @@
-// TAWACO – Biến động KH Lớn – 09:20:16 8/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:16 8/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:16 8/7/2026",
+  "lastUpdated": "10:20:16 8/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 8,
-  "tongM3Mat": 5104,
+  "tongKH": 12,
+  "tongM3Mat": 9959,
   "danhSach": [
+    {
+      "Danhba": "22073342935",
+      "TenKH": "CONG TY TNHH NHA MAY BIA HEINEKEN VIET NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26773",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 16909,
+      "SL_K3": 14312,
+      "M3_Giam": 2597,
+      "TyLe_Giam": 15.36,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "22103413711",
       "TenKH": "CONG TY CO PHAN QUAN LY DICH VU BAT DONG SAN PHU AN MINH",
@@ -32,6 +46,34 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 1737,
       "TyLe_Giam": 38.71,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22073340538",
+      "TenKH": "CONG TY CP DAU TU SX NANG LUONG XANH",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.1",
+      "MaPhuong": "26773",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1857,
+      "SL_K3": 565,
+      "M3_Giam": 1292,
+      "TyLe_Giam": 69.57,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "15112868242",
+      "TenKH": "CONG AN PHUONG 11-CONG AN THANH PHO HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26898",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 797,
+      "SL_K3": 33,
+      "M3_Giam": 764,
+      "TyLe_Giam": 95.86,
+      "Level": "RED"
     },
     {
       "Danhba": "22033278690",
@@ -74,6 +116,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 279,
       "TyLe_Giam": 50.27,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22073342580",
+      "TenKH": "CONG TY CO PHAN QUAN LY - VAN HANH - KHAI THAC BAT DONG SAN HA DO",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.2",
+      "MaPhuong": "26773",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1379,
+      "SL_K3": 1177,
+      "M3_Giam": 202,
+      "TyLe_Giam": 14.65,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "15112829084",
