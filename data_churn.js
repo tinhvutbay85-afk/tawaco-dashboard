@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:27:06 9/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:17 9/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:27:06 9/7/2026",
+  "lastUpdated": "10:20:17 9/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 12,
-  "tongM3Mat": 9959,
+  "tongKH": 13,
+  "tongM3Mat": 10120,
   "danhSach": [
     {
       "Danhba": "22073342935",
@@ -157,6 +157,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1593,
       "M3_Giam": 181,
       "TyLe_Giam": 10.2,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22043308362",
+      "TenKH": "CONG TY TNHH SAN XUAT VA THUONG MAI TAN DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "TX.1",
+      "MaPhuong": "26773",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 620,
+      "SL_K3": 459,
+      "M3_Giam": 161,
+      "TyLe_Giam": 25.97,
       "Level": "YELLOW"
     },
     {
