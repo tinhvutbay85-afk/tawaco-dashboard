@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:18 10/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:17 10/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:18 10/7/2026",
+  "lastUpdated": "10:20:17 10/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 13,
-  "tongM3Mat": 10120,
+  "tongKH": 18,
+  "tongM3Mat": 11308,
   "danhSach": [
     {
       "Danhba": "22073342935",
@@ -90,6 +90,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15141939802",
+      "TenKH": "CONG TY TNHH KY THUAT - DICH VU - QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "14.1",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2242,
+      "SL_K3": 1852,
+      "M3_Giam": 390,
+      "TyLe_Giam": 17.4,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22103413312",
+      "TenKH": "TRUONG TRUNG HOC CO SO TRAN PHU",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.3",
+      "MaPhuong": "26791",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 541,
+      "SL_K3": 169,
+      "M3_Giam": 372,
+      "TyLe_Giam": 68.76,
+      "Level": "RED"
+    },
+    {
       "Danhba": "22103412841",
       "TenKH": "BAN QUAN TRI CUM NHA CHUNG CU MOSCOW TOWER",
       "DiaChi": "N/A",
@@ -146,6 +174,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22033330519",
+      "TenKH": "TRUONG THPT VO TRUONG TOAN",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.2_1",
+      "MaPhuong": "26782",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 590,
+      "SL_K3": 408,
+      "M3_Giam": 182,
+      "TyLe_Giam": 30.85,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15062140569",
       "TenKH": "BAN QUAN TRI NHA CHUNG CU CCI - FELIX HOMES",
       "DiaChi": "N/A",
@@ -185,6 +227,34 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1368,
       "M3_Giam": 161,
       "TyLe_Giam": 10.53,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15141939801",
+      "TenKH": "CONG TY TNHH KY THUAT - DICH VU - QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "14.1",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1421,
+      "SL_K3": 1268,
+      "M3_Giam": 153,
+      "TyLe_Giam": 10.77,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22033334012",
+      "TenKH": "TRUNG TAM 286 BO TU LENH 86",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.2",
+      "MaPhuong": "26782",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 542,
+      "SL_K3": 451,
+      "M3_Giam": 91,
+      "TyLe_Giam": 16.79,
       "Level": "YELLOW"
     }
   ]
