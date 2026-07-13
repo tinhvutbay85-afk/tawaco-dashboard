@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:31:54 13/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:17 13/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:31:54 13/7/2026",
+  "lastUpdated": "10:20:17 13/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 18,
-  "tongM3Mat": 11308,
+  "tongKH": 33,
+  "tongM3Mat": 14144,
   "danhSach": [
     {
       "Danhba": "22073342935",
@@ -76,6 +76,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "22043309229",
+      "TenKH": "CONG TY TNHH THUONG MAI DICH VU XAY DUNG NANG LUONG VIET",
+      "DiaChi": "N/A",
+      "MaDMA": "TL_1",
+      "MaPhuong": "26773",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 752,
+      "SL_K3": 4,
+      "M3_Giam": 748,
+      "TyLe_Giam": 99.47,
+      "Level": "RED"
+    },
+    {
       "Danhba": "22033278690",
       "TenKH": "CONG TY TNHH DICH VU QUAN LY KHANG THINH PHAT",
       "DiaChi": "N/A",
@@ -118,6 +132,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "22113422357",
+      "TenKH": "TRUONG TRUNG HOC PHO THONG TRUONG CHINH",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 565,
+      "SL_K3": 242,
+      "M3_Giam": 323,
+      "TyLe_Giam": 57.17,
+      "Level": "RED"
+    },
+    {
       "Danhba": "22103412841",
       "TenKH": "BAN QUAN TRI CUM NHA CHUNG CU MOSCOW TOWER",
       "DiaChi": "N/A",
@@ -144,6 +172,62 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 279,
       "TyLe_Giam": 50.27,
       "Level": "RED"
+    },
+    {
+      "Danhba": "15141939512",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1518,
+      "SL_K3": 1241,
+      "M3_Giam": 277,
+      "TyLe_Giam": 18.25,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22083368023",
+      "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1064,
+      "SL_K3": 841,
+      "M3_Giam": 223,
+      "TyLe_Giam": 20.96,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113410834",
+      "TenKH": "CTTNHH MTV DV CONG ICH Q8",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1468,
+      "SL_K3": 1248,
+      "M3_Giam": 220,
+      "TyLe_Giam": 14.99,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15141939070",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1558,
+      "SL_K3": 1346,
+      "M3_Giam": 212,
+      "TyLe_Giam": 13.61,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "22073342580",
@@ -244,6 +328,62 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15102748463",
+      "TenKH": "SU DOAN 370 - PHONG HAU CAN",
+      "DiaChi": "N/A",
+      "MaDMA": "10.1.2",
+      "MaPhuong": "26884",
+      "MaGia": "38",
+      "SL_K1": 0,
+      "SL_K2": 1102,
+      "SL_K3": 957,
+      "M3_Giam": 145,
+      "TyLe_Giam": 13.16,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113422143",
+      "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 960,
+      "SL_K3": 837,
+      "M3_Giam": 123,
+      "TyLe_Giam": 12.81,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15141939212",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1215,
+      "SL_K3": 1093,
+      "M3_Giam": 122,
+      "TyLe_Giam": 10.04,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22093370060",
+      "TenKH": "CTPT VA KD NHA TP",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 540,
+      "SL_K3": 422,
+      "M3_Giam": 118,
+      "TyLe_Giam": 21.85,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22033334012",
       "TenKH": "TRUNG TAM 286 BO TU LENH 86",
       "DiaChi": "N/A",
@@ -255,6 +395,76 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 451,
       "M3_Giam": 91,
       "TyLe_Giam": 16.79,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113422144",
+      "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 779,
+      "SL_K3": 698,
+      "M3_Giam": 81,
+      "TyLe_Giam": 10.4,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22110005001",
+      "TenKH": "UBND PHUONG TAN HUNG THUAN",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 618,
+      "SL_K3": 550,
+      "M3_Giam": 68,
+      "TyLe_Giam": 11,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22083367928",
+      "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 513,
+      "SL_K3": 452,
+      "M3_Giam": 61,
+      "TyLe_Giam": 11.89,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22093370110",
+      "TenKH": "BAN QUAN TRI CHUNG CU AN SUONG",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 509,
+      "SL_K3": 449,
+      "M3_Giam": 60,
+      "TyLe_Giam": 11.79,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22093370020",
+      "TenKH": "BAN QUAN TRI CHUNG CU AN SUONG",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 531,
+      "SL_K3": 476,
+      "M3_Giam": 55,
+      "TyLe_Giam": 10.36,
       "Level": "YELLOW"
     }
   ]
