@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 16:20:18 13/7/2026
+// TAWACO – Biến động KH Lớn – 09:47:40 14/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "16:20:18 13/7/2026",
+  "lastUpdated": "09:47:40 14/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 33,
   "tongM3Mat": 14144,
