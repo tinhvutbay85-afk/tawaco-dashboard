@@ -1,10 +1,24 @@
-// TAWACO – Biến động KH Lớn – 09:47:40 14/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:21 14/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:47:40 14/7/2026",
+  "lastUpdated": "10:20:21 14/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 33,
-  "tongM3Mat": 14144,
+  "tongKH": 41,
+  "tongM3Mat": 20086,
   "danhSach": [
+    {
+      "Danhba": "15103428218",
+      "TenKH": "CONG TY TNHH MTV TONG CONG TY 28",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26884",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 28002,
+      "SL_K3": 23177,
+      "M3_Giam": 4825,
+      "TyLe_Giam": 17.23,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "22073342935",
       "TenKH": "CONG TY TNHH NHA MAY BIA HEINEKEN VIET NAM",
@@ -188,6 +202,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063324953",
+      "TenKH": "CONG TY CO PHAN DAU TU BAT DONG SAN HUNG VUONG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1208,
+      "SL_K3": 960,
+      "M3_Giam": 248,
+      "TyLe_Giam": 20.53,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15141944000",
+      "TenKH": "CTY CP DT VA PT DIA OC KHANG GIA",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2069,
+      "SL_K3": 1844,
+      "M3_Giam": 225,
+      "TyLe_Giam": 10.87,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22083368023",
       "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
       "DiaChi": "N/A",
@@ -227,6 +269,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1346,
       "M3_Giam": 212,
       "TyLe_Giam": 13.61,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15102720020",
+      "TenKH": "CTY CO PHAN 32",
+      "DiaChi": "N/A",
+      "MaDMA": "10.2",
+      "MaPhuong": "26884",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 937,
+      "SL_K3": 734,
+      "M3_Giam": 203,
+      "TyLe_Giam": 21.66,
       "Level": "YELLOW"
     },
     {
@@ -283,6 +339,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1593,
       "M3_Giam": 181,
       "TyLe_Giam": 10.2,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063319560",
+      "TenKH": "TRUONG THCS AN PHU DONG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 555,
+      "SL_K3": 387,
+      "M3_Giam": 168,
+      "TyLe_Giam": 30.27,
       "Level": "YELLOW"
     },
     {
@@ -384,6 +454,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15103428219",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN TONG CONG TY 28",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26884",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 702,
+      "SL_K3": 587,
+      "M3_Giam": 115,
+      "TyLe_Giam": 16.38,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22033334012",
       "TenKH": "TRUNG TAM 286 BO TU LENH 86",
       "DiaChi": "N/A",
@@ -395,6 +479,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 451,
       "M3_Giam": 91,
       "TyLe_Giam": 16.79,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063310070",
+      "TenKH": "UBND PHUONG AN PHU DONG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 502,
+      "SL_K3": 412,
+      "M3_Giam": 90,
+      "TyLe_Giam": 17.93,
       "Level": "YELLOW"
     },
     {
@@ -423,6 +521,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 550,
       "M3_Giam": 68,
       "TyLe_Giam": 11,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22083354999",
+      "TenKH": "CONG AN THANH PHO HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "HT-TTH.2_3",
+      "MaPhuong": "26782",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 614,
+      "SL_K3": 546,
+      "M3_Giam": 68,
+      "TyLe_Giam": 11.07,
       "Level": "YELLOW"
     },
     {
