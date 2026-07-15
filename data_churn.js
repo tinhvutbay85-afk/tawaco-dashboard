@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 09:20:18 15/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:17 15/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:18 15/7/2026",
+  "lastUpdated": "10:20:17 15/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 41,
   "tongM3Mat": 20086,
@@ -356,20 +356,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22043308362",
-      "TenKH": "CONG TY TNHH SAN XUAT VA THUONG MAI TAN DINH",
-      "DiaChi": "N/A",
-      "MaDMA": "TX.1",
-      "MaPhuong": "26773",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 620,
-      "SL_K3": 459,
-      "M3_Giam": 161,
-      "TyLe_Giam": 25.97,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22073330004",
       "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -381,6 +367,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1368,
       "M3_Giam": 161,
       "TyLe_Giam": 10.53,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22043308362",
+      "TenKH": "CONG TY TNHH SAN XUAT VA THUONG MAI TAN DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "TX.1",
+      "MaPhuong": "26773",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 620,
+      "SL_K3": 459,
+      "M3_Giam": 161,
+      "TyLe_Giam": 25.97,
       "Level": "YELLOW"
     },
     {
