@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:16 16/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 16/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:16 16/7/2026",
+  "lastUpdated": "10:20:15 16/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 41,
-  "tongM3Mat": 20086,
+  "tongKH": 46,
+  "tongM3Mat": 23434,
   "danhSach": [
     {
       "Danhba": "15103428218",
@@ -17,6 +17,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 23177,
       "M3_Giam": 4825,
       "TyLe_Giam": 17.23,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15041980021",
+      "TenKH": "TRUONG CD CONG NGHIEP IV",
+      "DiaChi": "N/A",
+      "MaDMA": "4.1",
+      "MaPhuong": "26890",
+      "MaGia": "38",
+      "SL_K1": 0,
+      "SL_K2": 8129,
+      "SL_K3": 5431,
+      "M3_Giam": 2698,
+      "TyLe_Giam": 33.19,
       "Level": "YELLOW"
     },
     {
@@ -258,6 +272,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063323899",
+      "TenKH": "CONG TY TNHH SAIGON VE WONG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.1",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1667,
+      "SL_K3": 1453,
+      "M3_Giam": 214,
+      "TyLe_Giam": 12.84,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15141939070",
       "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -297,6 +325,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1177,
       "M3_Giam": 202,
       "TyLe_Giam": 14.65,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063325117",
+      "TenKH": "TRUONG TIEU HOC VO THI THUA",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.1",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 637,
+      "SL_K3": 436,
+      "M3_Giam": 201,
+      "TyLe_Giam": 31.55,
       "Level": "YELLOW"
     },
     {
@@ -426,6 +468,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063318493",
+      "TenKH": "CONG TY TNHH BENH VIEN DA KHOA HONG DUC",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.1",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 909,
+      "SL_K3": 786,
+      "M3_Giam": 123,
+      "TyLe_Giam": 13.53,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15141939212",
       "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -465,6 +521,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 587,
       "M3_Giam": 115,
       "TyLe_Giam": 16.38,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15150005002",
+      "TenKH": "MAI VAN VIEN",
+      "DiaChi": "N/A",
+      "MaDMA": "TX.1",
+      "MaPhuong": "26878",
+      "MaGia": "57",
+      "SL_K1": 0,
+      "SL_K2": 936,
+      "SL_K3": 824,
+      "M3_Giam": 112,
+      "TyLe_Giam": 11.97,
       "Level": "YELLOW"
     },
     {
