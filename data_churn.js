@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 17/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:16 17/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 17/7/2026",
+  "lastUpdated": "10:20:16 17/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 46,
-  "tongM3Mat": 23434,
+  "tongKH": 57,
+  "tongM3Mat": 26063,
   "danhSach": [
     {
       "Danhba": "15103428218",
@@ -132,6 +132,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15151899273",
+      "TenKH": "BAN QUAN LY DAU TU XAY DUNG CONG TRINH GO VAP",
+      "DiaChi": "N/A",
+      "MaDMA": "15.2",
+      "MaPhuong": "26878",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 551,
+      "SL_K3": 156,
+      "M3_Giam": 395,
+      "TyLe_Giam": 71.69,
+      "Level": "RED"
+    },
+    {
       "Danhba": "15141939802",
       "TenKH": "CONG TY TNHH KY THUAT - DICH VU - QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -160,6 +174,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "22013221982",
+      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.4",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2594,
+      "SL_K3": 2226,
+      "M3_Giam": 368,
+      "TyLe_Giam": 14.19,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22113422357",
       "TenKH": "TRUONG TRUNG HOC PHO THONG TRUONG CHINH",
       "DiaChi": "N/A",
@@ -171,6 +199,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 242,
       "M3_Giam": 323,
       "TyLe_Giam": 57.17,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "22013222614",
+      "TenKH": "TRUNG TAM QUAN LY HA TANG KY THUAT THANH PHO HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.3",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 572,
+      "SL_K3": 274,
+      "M3_Giam": 298,
+      "TyLe_Giam": 52.1,
       "Level": "RED"
     },
     {
@@ -216,6 +258,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15151900357",
+      "TenKH": "LIEN HIEP HOP TAC XA THUONG MAI TP HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "15.2",
+      "MaPhuong": "26878",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1367,
+      "SL_K3": 1109,
+      "M3_Giam": 258,
+      "TyLe_Giam": 18.87,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22063324953",
       "TenKH": "CONG TY CO PHAN DAU TU BAT DONG SAN HUNG VUONG",
       "DiaChi": "N/A",
@@ -227,6 +283,34 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 960,
       "M3_Giam": 248,
       "TyLe_Giam": 20.53,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013221981",
+      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.4",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2363,
+      "SL_K3": 2120,
+      "M3_Giam": 243,
+      "TyLe_Giam": 10.28,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063325650",
+      "TenKH": "CONG TY TNHH ELITE INVESTMENT WORLDWIDE",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_1",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1270,
+      "SL_K3": 1043,
+      "M3_Giam": 227,
+      "TyLe_Giam": 17.87,
       "Level": "YELLOW"
     },
     {
@@ -300,6 +384,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22013210049",
+      "TenKH": "TRUONG CD GIAO THONG VAN TAI",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.1_1",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 738,
+      "SL_K3": 531,
+      "M3_Giam": 207,
+      "TyLe_Giam": 28.05,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15102720020",
       "TenKH": "CTY CO PHAN 32",
       "DiaChi": "N/A",
@@ -342,6 +440,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063326233",
+      "TenKH": "CONG TY TNHH ELITE INVESTMENT WORLDWIDE",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_1",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1271,
+      "SL_K3": 1074,
+      "M3_Giam": 197,
+      "TyLe_Giam": 15.5,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15112829084",
       "TenKH": "CONG TY TNHH NUOC UONG TINH KHIET SAI GON",
       "DiaChi": "N/A",
@@ -353,6 +465,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 676,
       "M3_Giam": 195,
       "TyLe_Giam": 22.39,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22093220809",
+      "TenKH": "TRUONG CAO DANG PHAT THANH -TRUYEN HINH II",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.8",
+      "MaPhuong": "26791",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 687,
+      "SL_K3": 503,
+      "M3_Giam": 184,
+      "TyLe_Giam": 26.78,
       "Level": "YELLOW"
     },
     {
@@ -398,20 +524,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22073330004",
-      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
-      "DiaChi": "N/A",
-      "MaDMA": "TA.2",
-      "MaPhuong": "26773",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1529,
-      "SL_K3": 1368,
-      "M3_Giam": 161,
-      "TyLe_Giam": 10.53,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22043308362",
       "TenKH": "CONG TY TNHH SAN XUAT VA THUONG MAI TAN DINH",
       "DiaChi": "N/A",
@@ -423,6 +535,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 459,
       "M3_Giam": 161,
       "TyLe_Giam": 25.97,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22073330004",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.2",
+      "MaPhuong": "26773",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1529,
+      "SL_K3": 1368,
+      "M3_Giam": 161,
+      "TyLe_Giam": 10.53,
       "Level": "YELLOW"
     },
     {
@@ -451,6 +577,34 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 957,
       "M3_Giam": 145,
       "TyLe_Giam": 13.16,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22053323517",
+      "TenKH": "HOP TAC XA GIA PHU",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1013,
+      "SL_K3": 885,
+      "M3_Giam": 128,
+      "TyLe_Giam": 12.64,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013210203",
+      "TenKH": "CTY CPTM NGK KHANH AN",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.3",
+      "MaPhuong": "26785",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 568,
+      "SL_K3": 444,
+      "M3_Giam": 124,
+      "TyLe_Giam": 21.83,
       "Level": "YELLOW"
     },
     {
