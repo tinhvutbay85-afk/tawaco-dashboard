@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:16 20/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:16 20/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:16 20/7/2026",
+  "lastUpdated": "10:20:16 20/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 57,
-  "tongM3Mat": 26063,
+  "tongKH": 60,
+  "tongM3Mat": 26937,
   "danhSach": [
     {
       "Danhba": "15103428218",
@@ -188,6 +188,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15052128219",
+      "TenKH": "CONG TY CO PHAN GIAO DUC QUOC TE VIET UC",
+      "DiaChi": "N/A",
+      "MaDMA": "5.1",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1245,
+      "SL_K3": 880,
+      "M3_Giam": 365,
+      "TyLe_Giam": 29.32,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22113422357",
       "TenKH": "TRUONG TRUNG HOC PHO THONG TRUONG CHINH",
       "DiaChi": "N/A",
@@ -258,6 +272,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15052128220",
+      "TenKH": "CONG TY CO PHAN GIAO DUC QUOC TE VIET UC",
+      "DiaChi": "N/A",
+      "MaDMA": "5.1",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 992,
+      "SL_K3": 718,
+      "M3_Giam": 274,
+      "TyLe_Giam": 27.62,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15151900357",
       "TenKH": "LIEN HIEP HOP TAC XA THUONG MAI TP HO CHI MINH",
       "DiaChi": "N/A",
@@ -297,6 +325,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 2120,
       "M3_Giam": 243,
       "TyLe_Giam": 10.28,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15151900273",
+      "TenKH": "BAN QUAN TRI NHA CHUNG CU OSIMI TOWER",
+      "DiaChi": "N/A",
+      "MaDMA": "15.1",
+      "MaPhuong": "26878",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1677,
+      "SL_K3": 1442,
+      "M3_Giam": 235,
+      "TyLe_Giam": 14.01,
       "Level": "YELLOW"
     },
     {
@@ -608,20 +650,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22113422143",
-      "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.1",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 960,
-      "SL_K3": 837,
-      "M3_Giam": 123,
-      "TyLe_Giam": 12.81,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22063318493",
       "TenKH": "CONG TY TNHH BENH VIEN DA KHOA HONG DUC",
       "DiaChi": "N/A",
@@ -633,6 +661,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 786,
       "M3_Giam": 123,
       "TyLe_Giam": 13.53,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113422143",
+      "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 960,
+      "SL_K3": 837,
+      "M3_Giam": 123,
+      "TyLe_Giam": 12.81,
       "Level": "YELLOW"
     },
     {
