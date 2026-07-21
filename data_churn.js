@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:16 21/7/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 21/7/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:16 21/7/2026",
+  "lastUpdated": "10:20:15 21/7/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 60,
-  "tongM3Mat": 26937,
+  "tongKH": 67,
+  "tongM3Mat": 28273,
   "danhSach": [
     {
       "Danhba": "15103428218",
@@ -132,6 +132,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15072448545",
+      "TenKH": "BAN QUAN TRI NHA CHUNG CU BA SON",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 772,
+      "SL_K3": 363,
+      "M3_Giam": 409,
+      "TyLe_Giam": 52.98,
+      "Level": "RED"
+    },
+    {
       "Danhba": "15151899273",
       "TenKH": "BAN QUAN LY DAU TU XAY DUNG CONG TRINH GO VAP",
       "DiaChi": "N/A",
@@ -241,6 +255,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1439,
       "M3_Giam": 296,
       "TyLe_Giam": 17.06,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22023230010",
+      "TenKH": "TRUONG DH LAO DONG XA HOI (CS)",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.1",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 864,
+      "SL_K3": 577,
+      "M3_Giam": 287,
+      "TyLe_Giam": 33.22,
       "Level": "YELLOW"
     },
     {
@@ -468,6 +496,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15173438568",
+      "TenKH": "TRƯỜNG SĨ QUAN KỸ THUẬT QUÂN SỰ",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26884",
+      "MaGia": "38",
+      "SL_K1": 0,
+      "SL_K2": 1237,
+      "SL_K3": 1035,
+      "M3_Giam": 202,
+      "TyLe_Giam": 16.33,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22063325117",
       "TenKH": "TRUONG TIEU HOC VO THI THUA",
       "DiaChi": "N/A",
@@ -566,20 +608,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22043308362",
-      "TenKH": "CONG TY TNHH SAN XUAT VA THUONG MAI TAN DINH",
-      "DiaChi": "N/A",
-      "MaDMA": "TX.1",
-      "MaPhuong": "26773",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 620,
-      "SL_K3": 459,
-      "M3_Giam": 161,
-      "TyLe_Giam": 25.97,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22073330004",
       "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -594,6 +622,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22043308362",
+      "TenKH": "CONG TY TNHH SAN XUAT VA THUONG MAI TAN DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "TX.1",
+      "MaPhuong": "26773",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 620,
+      "SL_K3": 459,
+      "M3_Giam": 161,
+      "TyLe_Giam": 25.97,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15141939801",
       "TenKH": "CONG TY TNHH KY THUAT - DICH VU - QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -605,6 +647,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1268,
       "M3_Giam": 153,
       "TyLe_Giam": 10.77,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052167640",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN CHE TAC VA KINH DOANH TRANG SUC PNJ",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 867,
+      "SL_K3": 719,
+      "M3_Giam": 148,
+      "TyLe_Giam": 17.07,
       "Level": "YELLOW"
     },
     {
@@ -706,6 +762,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15052171120",
+      "TenKH": "CONG TY TNHH MTV CHE TAC VA KINH DOANH TRANG SUC PNJ",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 748,
+      "SL_K3": 631,
+      "M3_Giam": 117,
+      "TyLe_Giam": 15.64,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15103428219",
       "TenKH": "CONG TY TNHH MOT THANH VIEN TONG CONG TY 28",
       "DiaChi": "N/A",
@@ -731,6 +801,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 824,
       "M3_Giam": 112,
       "TyLe_Giam": 11.97,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15173438274",
+      "TenKH": "TRUONG SI QUAN KY THUAT QUAN SU ( VINHEMPICH )",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1",
+      "MaPhuong": "26884",
+      "MaGia": "38",
+      "SL_K1": 0,
+      "SL_K2": 517,
+      "SL_K3": 412,
+      "M3_Giam": 105,
+      "TyLe_Giam": 20.31,
       "Level": "YELLOW"
     },
     {
@@ -801,6 +885,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 546,
       "M3_Giam": 68,
       "TyLe_Giam": 11.07,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22023245943",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN DONG HAI",
+      "DiaChi": "N/A",
+      "MaDMA": "TCH.4_2",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 598,
+      "SL_K3": 530,
+      "M3_Giam": 68,
+      "TyLe_Giam": 11.37,
       "Level": "YELLOW"
     },
     {
