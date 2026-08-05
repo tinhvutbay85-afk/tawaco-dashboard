@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:16 5/8/2026
+// TAWACO – Biến động KH Lớn – 10:20:17 5/8/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:16 5/8/2026",
+  "lastUpdated": "10:20:17 5/8/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 7,
-  "tongM3Mat": 3182,
+  "tongKH": 12,
+  "tongM3Mat": 4962,
   "danhSach": [
     {
       "Danhba": "15062140286",
@@ -17,6 +17,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1304,
       "M3_Giam": 1056,
       "TyLe_Giam": 44.75,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22103413032",
+      "TenKH": "CONG TY CP ETERNAL PROWESS VIET NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.1_MR",
+      "MaPhuong": "26791",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 2748,
+      "SL_K3": 1858,
+      "M3_Giam": 890,
+      "TyLe_Giam": 32.39,
       "Level": "YELLOW"
     },
     {
@@ -62,6 +76,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22103413394",
+      "TenKH": "CONG TY TNHH TAEHWA VINA",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.1_MR",
+      "MaPhuong": "26791",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 721,
+      "SL_K3": 322,
+      "M3_Giam": 399,
+      "TyLe_Giam": 55.34,
+      "Level": "RED"
+    },
+    {
       "Danhba": "15031710225",
       "TenKH": "BENH VIEN QUAN Y 175",
       "DiaChi": "N/A",
@@ -73,6 +101,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 789,
       "M3_Giam": 272,
       "TyLe_Giam": 25.64,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22033277945",
+      "TenKH": "CONG TY CO PHAN GIAY THIEN LOC",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.4",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1642,
+      "SL_K3": 1403,
+      "M3_Giam": 239,
+      "TyLe_Giam": 14.56,
       "Level": "YELLOW"
     },
     {
@@ -101,6 +143,34 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 421,
       "M3_Giam": 143,
       "TyLe_Giam": 25.35,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22103390137",
+      "TenKH": "CHUNG CU 5 TANG TIN PHONG",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.1_MR",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 963,
+      "SL_K3": 826,
+      "M3_Giam": 137,
+      "TyLe_Giam": 14.23,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22103412053",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.1_MR",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 931,
+      "SL_K3": 816,
+      "M3_Giam": 115,
+      "TyLe_Giam": 12.35,
       "Level": "YELLOW"
     }
   ]
