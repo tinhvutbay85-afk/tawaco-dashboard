@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:16 6/8/2026
+// TAWACO – Biến động KH Lớn – 10:20:16 6/8/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:16 6/8/2026",
+  "lastUpdated": "10:20:16 6/8/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 12,
-  "tongM3Mat": 4962,
+  "tongKH": 14,
+  "tongM3Mat": 6034,
   "danhSach": [
     {
       "Danhba": "15062140286",
@@ -17,6 +17,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1304,
       "M3_Giam": 1056,
       "TyLe_Giam": 44.75,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22103413145",
+      "TenKH": "CONG TY CO PHAN DAU TU SAI GON THANG LONG",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.2",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 8162,
+      "SL_K3": 7260,
+      "M3_Giam": 902,
+      "TyLe_Giam": 11.05,
       "Level": "YELLOW"
     },
     {
@@ -129,6 +143,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 478,
       "M3_Giam": 200,
       "TyLe_Giam": 29.5,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22073330003",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.2",
+      "MaPhuong": "26773",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1490,
+      "SL_K3": 1320,
+      "M3_Giam": 170,
+      "TyLe_Giam": 11.41,
       "Level": "YELLOW"
     },
     {
