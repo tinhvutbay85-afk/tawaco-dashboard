@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:17 10/8/2026
+// TAWACO – Biến động KH Lớn – 11:00:31 10/8/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:17 10/8/2026",
+  "lastUpdated": "11:00:31 10/8/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 15,
-  "tongM3Mat": 6709,
+  "tongKH": 19,
+  "tongM3Mat": 7984,
   "danhSach": [
     {
       "Danhba": "15062140286",
@@ -76,6 +76,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22103410732",
+      "TenKH": "CONG TY TNHH LTP VIET NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.4",
+      "MaPhuong": "26791",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1087,
+      "SL_K3": 483,
+      "M3_Giam": 604,
+      "TyLe_Giam": 55.57,
+      "Level": "RED"
+    },
+    {
       "Danhba": "15031728678",
       "TenKH": "BENH VIEN QUAN Y 175",
       "DiaChi": "N/A",
@@ -116,6 +130,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 399,
       "TyLe_Giam": 55.34,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22073241224",
+      "TenKH": "CHI NHANH 1 - CONG TY TNHH SAN XUAT KINH DOANH THUC PHAM CHAY AU LAC",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.3",
+      "MaPhuong": "26773",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1842,
+      "SL_K3": 1532,
+      "M3_Giam": 310,
+      "TyLe_Giam": 16.83,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "15031710225",
@@ -160,6 +188,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22033279019",
+      "TenKH": "TU VIEN VINH NGHIEM",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.2",
+      "MaPhuong": "26782",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 545,
+      "SL_K3": 346,
+      "M3_Giam": 199,
+      "TyLe_Giam": 36.51,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22073330003",
       "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -171,6 +213,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1320,
       "M3_Giam": 170,
       "TyLe_Giam": 11.41,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22033278723",
+      "TenKH": "CONG TY CO PHAN DICH VU QUAN LY NHA CHUNG CU BEE HOME",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.1_MR3",
+      "MaPhuong": "26782",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1497,
+      "SL_K3": 1335,
+      "M3_Giam": 162,
+      "TyLe_Giam": 10.82,
       "Level": "YELLOW"
     },
     {
