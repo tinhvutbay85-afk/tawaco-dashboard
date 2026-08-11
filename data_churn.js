@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:17 11/8/2026
+// TAWACO – Biến động KH Lớn – 10:20:17 11/8/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:17 11/8/2026",
+  "lastUpdated": "10:20:17 11/8/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 19,
-  "tongM3Mat": 7984,
+  "tongKH": 25,
+  "tongM3Mat": 9901,
   "danhSach": [
     {
       "Danhba": "15062140286",
@@ -90,6 +90,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "22113422674",
+      "TenKH": "CONG TY TNHH DICH VU THIEN HONG PHAT",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1017,
+      "SL_K3": 494,
+      "M3_Giam": 523,
+      "TyLe_Giam": 51.43,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "22083368724",
+      "TenKH": "XI NGHIEP CAO SU HOC MON",
+      "DiaChi": "N/A",
+      "MaDMA": "TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 2982,
+      "SL_K3": 2499,
+      "M3_Giam": 483,
+      "TyLe_Giam": 16.2,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15031728678",
       "TenKH": "BENH VIEN QUAN Y 175",
       "DiaChi": "N/A",
@@ -146,6 +174,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22043311044",
+      "TenKH": "TRUONG TIEU HOC NGUYEN VAN THE",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26773",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 936,
+      "SL_K3": 655,
+      "M3_Giam": 281,
+      "TyLe_Giam": 30.02,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15031710225",
       "TenKH": "BENH VIEN QUAN Y 175",
       "DiaChi": "N/A",
@@ -174,6 +216,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15141939803",
+      "TenKH": "CONG TY TNHH KY THUAT - DICH VU - QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "14.1",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1741,
+      "SL_K3": 1513,
+      "M3_Giam": 228,
+      "TyLe_Giam": 13.1,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15141939069",
+      "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1245,
+      "SL_K3": 1022,
+      "M3_Giam": 223,
+      "TyLe_Giam": 17.91,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15062131275",
       "TenKH": "TRUONG DAI HOC CONG NGHIEP THANH PHO HO CHI MINH",
       "DiaChi": "N/A",
@@ -199,6 +269,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 346,
       "M3_Giam": 199,
       "TyLe_Giam": 36.51,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113422143",
+      "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 837,
+      "SL_K3": 658,
+      "M3_Giam": 179,
+      "TyLe_Giam": 21.39,
       "Level": "YELLOW"
     },
     {
