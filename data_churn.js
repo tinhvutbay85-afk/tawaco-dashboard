@@ -1,10 +1,24 @@
-// TAWACO – Biến động KH Lớn – 09:20:16 12/8/2026
+// TAWACO – Biến động KH Lớn – 10:20:16 12/8/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:16 12/8/2026",
+  "lastUpdated": "10:20:16 12/8/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 25,
-  "tongM3Mat": 9901,
+  "tongKH": 29,
+  "tongM3Mat": 13785,
   "danhSach": [
+    {
+      "Danhba": "15103428218",
+      "TenKH": "CONG TY TNHH MTV TONG CONG TY 28",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26884",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 23177,
+      "SL_K3": 20034,
+      "M3_Giam": 3143,
+      "TyLe_Giam": 13.56,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "15062140286",
       "TenKH": "BAN QUAN TRI NHA CHUNG CU CCI - FELIX HOMES",
@@ -158,6 +172,34 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 399,
       "TyLe_Giam": 55.34,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22053290020",
+      "TenKH": "CTCP BEN BAI VAN TAI SAI GON",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.1",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 532,
+      "SL_K3": 191,
+      "M3_Giam": 341,
+      "TyLe_Giam": 64.1,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "15103421690",
+      "TenKH": "CONG TY TNHH MTV THONG TIN DIEN TU Z755",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26884",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 719,
+      "SL_K3": 392,
+      "M3_Giam": 327,
+      "TyLe_Giam": 45.48,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "22073241224",
@@ -353,6 +395,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 816,
       "M3_Giam": 115,
       "TyLe_Giam": 12.35,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22110005001",
+      "TenKH": "UBND PHUONG TAN HUNG THUAN",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 550,
+      "SL_K3": 477,
+      "M3_Giam": 73,
+      "TyLe_Giam": 13.27,
       "Level": "YELLOW"
     }
   ]
