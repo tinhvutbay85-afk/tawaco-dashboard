@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:17 17/8/2026
+// TAWACO – Biến động KH Lớn – 10:20:16 17/8/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:17 17/8/2026",
+  "lastUpdated": "10:20:16 17/8/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 30,
-  "tongM3Mat": 14136,
+  "tongKH": 32,
+  "tongM3Mat": 14623,
   "danhSach": [
     {
       "Danhba": "15103428218",
@@ -143,6 +143,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 863,
       "M3_Giam": 451,
       "TyLe_Giam": 34.32,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22093381795",
+      "TenKH": "Khách hàng Lớn",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.6_1",
+      "MaPhuong": "26791",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 2500,
+      "SL_K3": 2072,
+      "M3_Giam": 428,
+      "TyLe_Giam": 17.12,
       "Level": "YELLOW"
     },
     {
@@ -423,6 +437,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 477,
       "M3_Giam": 73,
       "TyLe_Giam": 13.27,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063325409",
+      "TenKH": "CONG TY TNHH OTO HYUNDAI MIEN NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_2",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 510,
+      "SL_K3": 451,
+      "M3_Giam": 59,
+      "TyLe_Giam": 11.57,
       "Level": "YELLOW"
     }
   ]
