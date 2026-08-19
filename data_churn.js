@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 19/8/2026
+// TAWACO – Biến động KH Lớn – 10:20:16 19/8/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 19/8/2026",
+  "lastUpdated": "10:20:16 19/8/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 32,
-  "tongM3Mat": 14623,
+  "tongKH": 37,
+  "tongM3Mat": 17787,
   "danhSach": [
     {
       "Danhba": "15103428218",
@@ -18,6 +18,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 3143,
       "TyLe_Giam": 13.56,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15150005004",
+      "TenKH": "TRAN MINH SANG",
+      "DiaChi": "N/A",
+      "MaDMA": "TX.1",
+      "MaPhuong": "26878",
+      "MaGia": "57",
+      "SL_K1": 0,
+      "SL_K2": 2811,
+      "SL_K3": 642,
+      "M3_Giam": 2169,
+      "TyLe_Giam": 77.16,
+      "Level": "RED"
     },
     {
       "Danhba": "15062140286",
@@ -116,6 +130,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 523,
       "TyLe_Giam": 51.43,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22053327281",
+      "TenKH": "CHUNG CU THANH LOC",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 4408,
+      "SL_K3": 3919,
+      "M3_Giam": 489,
+      "TyLe_Giam": 11.09,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "22083368724",
@@ -314,6 +342,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063302240",
+      "TenKH": "CHI NHANH 8 - CONG TY CO PHAN TAP DOAN GIA DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_2",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 990,
+      "SL_K3": 771,
+      "M3_Giam": 219,
+      "TyLe_Giam": 22.12,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22093220809",
+      "TenKH": "TRUONG CAO DANG PHAT THANH -TRUYEN HINH II",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.8",
+      "MaPhuong": "26791",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 503,
+      "SL_K3": 285,
+      "M3_Giam": 218,
+      "TyLe_Giam": 43.34,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15062131275",
       "TenKH": "TRUONG DAI HOC CONG NGHIEP THANH PHO HO CHI MINH",
       "DiaChi": "N/A",
@@ -437,6 +493,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 477,
       "M3_Giam": 73,
       "TyLe_Giam": 13.27,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22053299999",
+      "TenKH": "CO SO TU THIEN XH PHAT GIAO CHUA KY QUANG II",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 502,
+      "SL_K3": 433,
+      "M3_Giam": 69,
+      "TyLe_Giam": 13.75,
       "Level": "YELLOW"
     },
     {
