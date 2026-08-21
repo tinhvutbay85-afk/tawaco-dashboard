@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 21/8/2026
+// TAWACO – Biến động KH Lớn – 10:20:16 21/8/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 21/8/2026",
+  "lastUpdated": "10:20:16 21/8/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 37,
-  "tongM3Mat": 17787,
+  "tongKH": 42,
+  "tongM3Mat": 21413,
   "danhSach": [
     {
       "Danhba": "15103428218",
@@ -32,6 +32,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 2169,
       "TyLe_Giam": 77.16,
       "Level": "RED"
+    },
+    {
+      "Danhba": "15052171504",
+      "TenKH": "TRƯỜNG ĐẠI HỌC VĂN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 5331,
+      "SL_K3": 3516,
+      "M3_Giam": 1815,
+      "TyLe_Giam": 34.05,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "15062140286",
@@ -74,6 +88,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 890,
       "TyLe_Giam": 32.39,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052171610",
+      "TenKH": "TRƯỜNG ĐẠI HỌC VĂN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1445,
+      "SL_K3": 636,
+      "M3_Giam": 809,
+      "TyLe_Giam": 55.99,
+      "Level": "RED"
     },
     {
       "Danhba": "22073340539",
@@ -132,6 +160,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "15052171143",
+      "TenKH": "TRUONG DAI HOC VAN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 3482,
+      "SL_K3": 2987,
+      "M3_Giam": 495,
+      "TyLe_Giam": 14.22,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22053327281",
       "TenKH": "CHUNG CU THANH LOC",
       "DiaChi": "N/A",
@@ -171,6 +213,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 863,
       "M3_Giam": 451,
       "TyLe_Giam": 34.32,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444490",
+      "TenKH": "CTY TNHH MTV BA SON",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1440,
+      "SL_K3": 1000,
+      "M3_Giam": 440,
+      "TyLe_Giam": 30.56,
       "Level": "YELLOW"
     },
     {
@@ -507,6 +563,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 433,
       "M3_Giam": 69,
       "TyLe_Giam": 13.75,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052171120",
+      "TenKH": "CONG TY TNHH MTV CHE TAC VA KINH DOANH TRANG SUC PNJ",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 631,
+      "SL_K3": 564,
+      "M3_Giam": 67,
+      "TyLe_Giam": 10.62,
       "Level": "YELLOW"
     },
     {
