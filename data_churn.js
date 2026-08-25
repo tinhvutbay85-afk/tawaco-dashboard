@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 25/8/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 25/8/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 25/8/2026",
+  "lastUpdated": "10:20:15 25/8/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 43,
   "tongM3Mat": 21671,
@@ -289,7 +289,7 @@ const TAWACO_CHURN_DATA = {
       "Danhba": "22053290020",
       "TenKH": "CTCP BEN BAI VAN TAI SAI GON",
       "DiaChi": "N/A",
-      "MaDMA": "TMT.1",
+      "MaDMA": "",
       "MaPhuong": "26767",
       "MaGia": "33",
       "SL_K1": 0,
@@ -513,7 +513,7 @@ const TAWACO_CHURN_DATA = {
       "Danhba": "15031710125",
       "TenKH": "BENH VIEN QUAN Y 175",
       "DiaChi": "N/A",
-      "MaDMA": "5.1",
+      "MaDMA": "",
       "MaPhuong": "26890",
       "MaGia": "31",
       "SL_K1": 0,
