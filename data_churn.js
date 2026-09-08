@@ -1,10 +1,24 @@
-// TAWACO – Biến động KH Lớn – 09:20:14 8/9/2026
+// TAWACO – Biến động KH Lớn – 15:20:41 8/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:14 8/9/2026",
+  "lastUpdated": "15:20:41 8/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 10,
-  "tongM3Mat": 3833,
+  "tongKH": 14,
+  "tongM3Mat": 8390,
   "danhSach": [
+    {
+      "Danhba": "22103413145",
+      "TenKH": "CONG TY CO PHAN DAU TU SAI GON THANG LONG",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.2",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 7260,
+      "SL_K3": 3779,
+      "M3_Giam": 3481,
+      "TyLe_Giam": 47.95,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "22103413164",
       "TenKH": "CONG TY CO PHAN DAU TU SAI GON THANG LONG",
@@ -34,6 +48,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22033279053",
+      "TenKH": "CONG TY CO PHAN GIAY THIEN LOC",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.4",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 2351,
+      "SL_K3": 1822,
+      "M3_Giam": 529,
+      "TyLe_Giam": 22.5,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15082510480",
       "TenKH": "CONG TY TNHH O TO ISUZU VIET NAM",
       "DiaChi": "N/A",
@@ -59,6 +87,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1395,
       "M3_Giam": 408,
       "TyLe_Giam": 22.63,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22033332982",
+      "TenKH": "CONG TY CO PHAN HTKT VA XNK SAVIMEX",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1470,
+      "SL_K3": 1099,
+      "M3_Giam": 371,
+      "TyLe_Giam": 25.24,
       "Level": "YELLOW"
     },
     {
@@ -143,6 +185,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 746,
       "M3_Giam": 182,
       "TyLe_Giam": 19.61,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22033332983",
+      "TenKH": "CONG TY CO PHAN HTKT VA XNK SAVIMEX",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 894,
+      "SL_K3": 718,
+      "M3_Giam": 176,
+      "TyLe_Giam": 19.69,
       "Level": "YELLOW"
     }
   ]
