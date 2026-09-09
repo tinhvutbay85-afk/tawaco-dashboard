@@ -1,24 +1,10 @@
-// TAWACO – Biến động KH Lớn – 09:20:16 9/9/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 9/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:16 9/9/2026",
+  "lastUpdated": "10:20:15 9/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 14,
-  "tongM3Mat": 8390,
+  "tongKH": 17,
+  "tongM3Mat": 6288,
   "danhSach": [
-    {
-      "Danhba": "22103413145",
-      "TenKH": "CONG TY CO PHAN DAU TU SAI GON THANG LONG",
-      "DiaChi": "N/A",
-      "MaDMA": "TTN.2",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 7260,
-      "SL_K3": 3779,
-      "M3_Giam": 3481,
-      "TyLe_Giam": 47.95,
-      "Level": "YELLOW"
-    },
     {
       "Danhba": "22103413164",
       "TenKH": "CONG TY CO PHAN DAU TU SAI GON THANG LONG",
@@ -32,6 +18,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 888,
       "TyLe_Giam": 12.79,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15102742690",
+      "TenKH": "CTTNHH MTV DONG HAI",
+      "DiaChi": "N/A",
+      "MaDMA": "7.1.1",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 756,
+      "SL_K3": 139,
+      "M3_Giam": 617,
+      "TyLe_Giam": 81.61,
+      "Level": "RED"
     },
     {
       "Danhba": "15112829183",
@@ -74,6 +74,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 477,
       "TyLe_Giam": 18.37,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072448530",
+      "TenKH": "CONG TY TNHH DV NHA HANG HUONG PHO",
+      "DiaChi": "N/A",
+      "MaDMA": "7.1.1",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 577,
+      "SL_K3": 103,
+      "M3_Giam": 474,
+      "TyLe_Giam": 82.15,
+      "Level": "RED"
     },
     {
       "Danhba": "15112840530",
@@ -199,6 +213,34 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 718,
       "M3_Giam": 176,
       "TyLe_Giam": 19.69,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22073340538",
+      "TenKH": "CONG TY CP DAU TU SX NANG LUONG XANH",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.1",
+      "MaPhuong": "26773",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1022,
+      "SL_K3": 859,
+      "M3_Giam": 163,
+      "TyLe_Giam": 15.95,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22033277444",
+      "TenKH": "CONG TY TNHH MTV MT DO THI TPHCM",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.1_MR3",
+      "MaPhuong": "26782",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 512,
+      "SL_K3": 387,
+      "M3_Giam": 125,
+      "TyLe_Giam": 24.41,
       "Level": "YELLOW"
     }
   ]
