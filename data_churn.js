@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:14 10/9/2026
+// TAWACO – Biến động KH Lớn – 10:20:14 10/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:14 10/9/2026",
+  "lastUpdated": "10:20:14 10/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 17,
-  "tongM3Mat": 6288,
+  "tongKH": 19,
+  "tongM3Mat": 6521,
   "danhSach": [
     {
       "Danhba": "22103413164",
@@ -230,6 +230,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22083368023",
+      "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 816,
+      "SL_K3": 656,
+      "M3_Giam": 160,
+      "TyLe_Giam": 19.61,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22033277444",
       "TenKH": "CONG TY TNHH MTV MT DO THI TPHCM",
       "DiaChi": "N/A",
@@ -241,6 +255,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 387,
       "M3_Giam": 125,
       "TyLe_Giam": 24.41,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22083367928",
+      "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 500,
+      "SL_K3": 427,
+      "M3_Giam": 73,
+      "TyLe_Giam": 14.6,
       "Level": "YELLOW"
     }
   ]
