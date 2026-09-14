@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 14/9/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 14/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 14/9/2026",
+  "lastUpdated": "10:20:15 14/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 22,
-  "tongM3Mat": 7136,
+  "tongKH": 30,
+  "tongM3Mat": 9248,
   "danhSach": [
     {
       "Danhba": "22103413164",
@@ -48,6 +48,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15102741400",
+      "TenKH": "UBND P10 (TRU SO BAO VE DAN PHO)",
+      "DiaChi": "N/A",
+      "MaDMA": "10.3",
+      "MaPhuong": "26884",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 555,
+      "SL_K3": 8,
+      "M3_Giam": 547,
+      "TyLe_Giam": 98.56,
+      "Level": "RED"
+    },
+    {
       "Danhba": "22033279053",
       "TenKH": "CONG TY CO PHAN GIAY THIEN LOC",
       "DiaChi": "N/A",
@@ -88,6 +102,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 474,
       "TyLe_Giam": 82.15,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22063324953",
+      "TenKH": "CONG TY CO PHAN DAU TU BAT DONG SAN HUNG VUONG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1614,
+      "SL_K3": 1151,
+      "M3_Giam": 463,
+      "TyLe_Giam": 28.69,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "15112840530",
@@ -132,6 +160,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15103421200",
+      "TenKH": "CONG TY TNHH MTV THONG TIN DIEN TU Z755",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26884",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 813,
+      "SL_K3": 483,
+      "M3_Giam": 330,
+      "TyLe_Giam": 40.59,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15112840534",
       "TenKH": "CTY TNHH MERCEDES BENZ VN",
       "DiaChi": "N/A",
@@ -157,6 +199,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 363,
       "M3_Giam": 292,
       "TyLe_Giam": 44.58,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22053291024",
+      "TenKH": "TRUONG CAO DANG KINH TE CONG NGHE THANH PHO HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "TL_1_1",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 894,
+      "SL_K3": 621,
+      "M3_Giam": 273,
+      "TyLe_Giam": 30.54,
       "Level": "YELLOW"
     },
     {
@@ -199,6 +255,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1101,
       "M3_Giam": 203,
       "TyLe_Giam": 15.57,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15103428219",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN TONG CONG TY 28",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26884",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 597,
+      "SL_K3": 405,
+      "M3_Giam": 192,
+      "TyLe_Giam": 32.16,
       "Level": "YELLOW"
     },
     {
@@ -272,6 +342,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22083367508",
+      "TenKH": "TRUNG TAM QUAN LY HA TANG KY THUAT THANH PHO HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "HT-TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 502,
+      "SL_K3": 350,
+      "M3_Giam": 152,
+      "TyLe_Giam": 30.28,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22113410834",
       "TenKH": "CTTNHH MTV DV CONG ICH Q8",
       "DiaChi": "N/A",
@@ -300,6 +384,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15031708253",
+      "TenKH": "TRUONG DAI HOC GIA DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "3.1.2",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 526,
+      "SL_K3": 438,
+      "M3_Giam": 88,
+      "TyLe_Giam": 16.73,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22083367928",
       "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
       "DiaChi": "N/A",
@@ -311,6 +409,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 427,
       "M3_Giam": 73,
       "TyLe_Giam": 14.6,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063327381",
+      "TenKH": "HUYNH VAN THOI",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 576,
+      "SL_K3": 509,
+      "M3_Giam": 67,
+      "TyLe_Giam": 11.63,
       "Level": "YELLOW"
     }
   ]
