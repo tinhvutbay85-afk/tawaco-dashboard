@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 15/9/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 15/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 15/9/2026",
+  "lastUpdated": "10:20:15 15/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 30,
-  "tongM3Mat": 9248,
+  "tongKH": 35,
+  "tongM3Mat": 10358,
   "danhSach": [
     {
       "Danhba": "22103413164",
@@ -174,6 +174,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063326232",
+      "TenKH": "CONG TY TNHH LIEN DOANH VINH HUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1428,
+      "SL_K3": 1122,
+      "M3_Giam": 306,
+      "TyLe_Giam": 21.43,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15112840534",
       "TenKH": "CTY TNHH MERCEDES BENZ VN",
       "DiaChi": "N/A",
@@ -199,6 +213,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 363,
       "M3_Giam": 292,
       "TyLe_Giam": 44.58,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22053291359",
+      "TenKH": "CN CTY TNHH MTV TM THUY NGOC",
+      "DiaChi": "N/A",
+      "MaDMA": "TL_1",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 832,
+      "SL_K3": 547,
+      "M3_Giam": 285,
+      "TyLe_Giam": 34.25,
       "Level": "YELLOW"
     },
     {
@@ -241,6 +269,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1318,
       "M3_Giam": 222,
       "TyLe_Giam": 14.42,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22093370135",
+      "TenKH": "CTY CP DPDL PHARMEDIC",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.5",
+      "MaPhuong": "26791",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1887,
+      "SL_K3": 1669,
+      "M3_Giam": 218,
+      "TyLe_Giam": 11.55,
       "Level": "YELLOW"
     },
     {
@@ -314,6 +356,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22083362469",
+      "TenKH": "DOI CANH SAT THI HANH AN HINH SU VA HTTP",
+      "DiaChi": "N/A",
+      "MaDMA": "HT-TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 1425,
+      "SL_K3": 1257,
+      "M3_Giam": 168,
+      "TyLe_Giam": 11.79,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22073340538",
       "TenKH": "CONG TY CP DAU TU SX NANG LUONG XANH",
       "DiaChi": "N/A",
@@ -367,6 +423,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1147,
       "M3_Giam": 140,
       "TyLe_Giam": 10.88,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15031920076",
+      "TenKH": "CÔNG TY CP PHỤC VỤ MẶT ĐẤT SÀI GÒN",
+      "DiaChi": "N/A",
+      "MaDMA": "3.1.1",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 811,
+      "SL_K3": 678,
+      "M3_Giam": 133,
+      "TyLe_Giam": 16.4,
       "Level": "YELLOW"
     },
     {
