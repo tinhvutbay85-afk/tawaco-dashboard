@@ -183,8 +183,7 @@
 <div class="dist-section">
     <div class="dist-title">
         <i class="fa-solid fa-filter" style="margin-right:6px;color:var(--red);"></i>
-        Phân Bố Tích Lũy – "≥ N kỳ" = số đồng hồ có ÍT NHẤT N kỳ 0m³ liên tiếp
-        &nbsp;<span style="font-size:10px;color:var(--muted);font-weight:400;">(click để lọc bảng)</span>
+        Phân Bố Số Kỳ 0m³ Liên Tiếp – Click để lọc danh bộ có ĐÚNG N kỳ (Riêng thẻ 13 là ≥13 kỳ)
     </div>
     <div class="dist-grid" id="distGrid"></div>
 </div>
@@ -451,27 +450,25 @@ function switchData(type) {
         sel.appendChild(o);
     });
 
-    // 6. XÂY DỰNG PHÂN BỐ TÍCH LŨY
+    // 6. XÂY DỰNG PHÂN BỐ TÍCH LŨY – TỰ ĐỘNG PHÁT HIỆN SỐ KỲ TỐI ĐA
     //    distExact[k] = số KH có ĐÚNG k kỳ liên tiếp
     //    distCum[k]   = số KH có >= k kỳ liên tiếp (tích lũy)
-    //
-    //    Ví dụ với tổng 6864:
-    //    - distExact = {13:346, 12:181, 11:230, ..., 3:1815}
-    //    - distCum[3] = 346+181+230+...+1815 = 6864
-    //    - distCum[13] = 346
+    //    Ví dụ: distCum[2] = toàn bộ; distCum[18] = chỉ nhóm cao nhất
     var distExact = {};
+    var maxKy = 2;
     all.forEach(function(d) {
-        distExact[d.lienTiep] = (distExact[d.lienTiep] || 0) + 1;
+        var k = d.lienTiep;
+        distExact[k] = (distExact[k] || 0) + 1;
+        if (k > maxKy) maxKy = k;
     });
 
     var distCum = {};
-    for (var k = 2; k <= 13; k++) {
+    for (var k = 2; k <= maxKy; k++) {
         distCum[k] = 0;
-        for (var j = k; j <= 13; j++) {
+        for (var j = k; j <= maxKy; j++) {
             distCum[k] += (distExact[j] || 0);
         }
     }
-    // Kết quả: distCum[2] = tổng toàn bộ = 7283; distCum[13] = 346
 
     // 7. Vẽ các thẻ phân bố (từ 13 xuống 2)
     var grid = document.getElementById('distGrid');
