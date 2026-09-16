@@ -1,10 +1,24 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 16/9/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 16/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 16/9/2026",
+  "lastUpdated": "10:20:15 16/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 35,
-  "tongM3Mat": 10358,
+  "tongKH": 42,
+  "tongM3Mat": 12323,
   "danhSach": [
+    {
+      "Danhba": "15150005005",
+      "TenKH": "TRAN MINH SANG",
+      "DiaChi": "N/A",
+      "MaDMA": "TX.1",
+      "MaPhuong": "26878",
+      "MaGia": "57",
+      "SL_K1": 0,
+      "SL_K2": 2828,
+      "SL_K3": 1784,
+      "M3_Giam": 1044,
+      "TyLe_Giam": 36.92,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "22103413164",
       "TenKH": "CONG TY CO PHAN DAU TU SAI GON THANG LONG",
@@ -286,6 +300,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063313665",
+      "TenKH": "CONG TY CO PHAN ECO WIPES VIET NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1623,
+      "SL_K3": 1413,
+      "M3_Giam": 210,
+      "TyLe_Giam": 12.94,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063312295",
+      "TenKH": "CONG TY CO PHAN KY THUAT DONG PHUONG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.1",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 782,
+      "SL_K3": 577,
+      "M3_Giam": 205,
+      "TyLe_Giam": 26.21,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15062140286",
       "TenKH": "BAN QUAN TRI NHA CHUNG CU CCI - FELIX HOMES",
       "DiaChi": "N/A",
@@ -384,6 +426,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063326340",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN DICH VU CONG ICH QUAN 12",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_2",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 1069,
+      "SL_K3": 908,
+      "M3_Giam": 161,
+      "TyLe_Giam": 15.06,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22083368023",
       "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
       "DiaChi": "N/A",
@@ -409,6 +465,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 350,
       "M3_Giam": 152,
       "TyLe_Giam": 30.28,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063311010",
+      "TenKH": "CONG TY CP DICH VU BAT DONG SAN PHU NHUAN",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.1",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1033,
+      "SL_K3": 885,
+      "M3_Giam": 148,
+      "TyLe_Giam": 14.33,
       "Level": "YELLOW"
     },
     {
@@ -451,6 +521,34 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 387,
       "M3_Giam": 125,
       "TyLe_Giam": 24.41,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063323233",
+      "TenKH": "TRUNG TAM QUAN LY HA TANG KY THUAT THANH PHO HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.1",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 500,
+      "SL_K3": 394,
+      "M3_Giam": 106,
+      "TyLe_Giam": 21.2,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22023249328",
+      "TenKH": "CONG TY CO PHAN Y & JAY VINA",
+      "DiaChi": "N/A",
+      "MaDMA": "TCH.5_1",
+      "MaPhuong": "26785",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 512,
+      "SL_K3": 421,
+      "M3_Giam": 91,
+      "TyLe_Giam": 17.77,
       "Level": "YELLOW"
     },
     {
