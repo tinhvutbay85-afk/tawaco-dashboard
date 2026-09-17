@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 17/9/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 17/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 17/9/2026",
+  "lastUpdated": "10:20:15 17/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 42,
-  "tongM3Mat": 12323,
+  "tongKH": 51,
+  "tongM3Mat": 16282,
   "danhSach": [
     {
       "Danhba": "15150005005",
@@ -20,6 +20,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22023251243",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN PHAT TRIEN CONG VIEN PHAN MEM QUANG TRUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "TCH.3",
+      "MaPhuong": "26785",
+      "MaGia": "52",
+      "SL_K1": 0,
+      "SL_K2": 1701,
+      "SL_K3": 724,
+      "M3_Giam": 977,
+      "TyLe_Giam": 57.44,
+      "Level": "RED"
+    },
+    {
       "Danhba": "22103413164",
       "TenKH": "CONG TY CO PHAN DAU TU SAI GON THANG LONG",
       "DiaChi": "N/A",
@@ -31,6 +45,34 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 6054,
       "M3_Giam": 888,
       "TyLe_Giam": 12.79,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22053327281",
+      "TenKH": "CHUNG CU THANH LOC",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 3919,
+      "SL_K3": 3208,
+      "M3_Giam": 711,
+      "TyLe_Giam": 18.14,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013222620",
+      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.4",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2394,
+      "SL_K3": 1726,
+      "M3_Giam": 668,
+      "TyLe_Giam": 27.9,
       "Level": "YELLOW"
     },
     {
@@ -73,6 +115,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 8,
       "M3_Giam": 547,
       "TyLe_Giam": 98.56,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "15042020035",
+      "TenKH": "AGRIBANK - CHI NHANH GIA DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "4.7.1a",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 603,
+      "SL_K3": 69,
+      "M3_Giam": 534,
+      "TyLe_Giam": 88.56,
       "Level": "RED"
     },
     {
@@ -230,6 +286,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22053323517",
+      "TenKH": "HOP TAC XA GIA PHU",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1013,
+      "SL_K3": 722,
+      "M3_Giam": 291,
+      "TyLe_Giam": 28.73,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22053291359",
       "TenKH": "CN CTY TNHH MTV TM THUY NGOC",
       "DiaChi": "N/A",
@@ -255,6 +325,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 621,
       "M3_Giam": 273,
       "TyLe_Giam": 30.54,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063302140",
+      "TenKH": "CHI NHANH 8 - CONG TY CO PHAN TAP DOAN GIA DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_2",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 871,
+      "SL_K3": 615,
+      "M3_Giam": 256,
+      "TyLe_Giam": 29.39,
       "Level": "YELLOW"
     },
     {
@@ -384,6 +468,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22093375413",
+      "TenKH": "CN TCT CP MAY VIET TIEN-XN MAY VIET LONG",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.7",
+      "MaPhuong": "26791",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 652,
+      "SL_K3": 476,
+      "M3_Giam": 176,
+      "TyLe_Giam": 26.99,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22033332983",
       "TenKH": "CONG TY CO PHAN HTKT VA XNK SAVIMEX",
       "DiaChi": "N/A",
@@ -395,6 +493,34 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 718,
       "M3_Giam": 176,
       "TyLe_Giam": 19.69,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15151900357",
+      "TenKH": "LIEN HIEP HOP TAC XA THUONG MAI TP HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "15.2",
+      "MaPhuong": "26878",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1416,
+      "SL_K3": 1241,
+      "M3_Giam": 175,
+      "TyLe_Giam": 12.36,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013210049",
+      "TenKH": "TRUONG CD GIAO THONG VAN TAI",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.1_1",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 911,
+      "SL_K3": 740,
+      "M3_Giam": 171,
+      "TyLe_Giam": 18.77,
       "Level": "YELLOW"
     },
     {
