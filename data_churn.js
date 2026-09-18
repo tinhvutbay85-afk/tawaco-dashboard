@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 18/9/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 18/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 18/9/2026",
+  "lastUpdated": "10:20:15 18/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 51,
-  "tongM3Mat": 16282,
+  "tongKH": 53,
+  "tongM3Mat": 16983,
   "danhSach": [
     {
       "Danhba": "15150005005",
@@ -87,6 +87,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 139,
       "M3_Giam": 617,
       "TyLe_Giam": 81.61,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "22013222439",
+      "TenKH": "XUONG Z735/ CUC KY THUAT",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.4",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 645,
+      "SL_K3": 36,
+      "M3_Giam": 609,
+      "TyLe_Giam": 94.42,
       "Level": "RED"
     },
     {
@@ -661,6 +675,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 394,
       "M3_Giam": 106,
       "TyLe_Giam": 21.2,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013221062",
+      "TenKH": "CONG TY CO PHAN VIET HUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.4",
+      "MaPhuong": "26785",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 703,
+      "SL_K3": 611,
+      "M3_Giam": 92,
+      "TyLe_Giam": 13.09,
       "Level": "YELLOW"
     },
     {
