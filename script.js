@@ -12,10 +12,8 @@ updateTime();
 function loadRealData() {
     try {
         let tong0m3 = 0;
-        let tongSK12 = 0;
         let tongKHLon = 0;
         let tongTienMat = 0;
-        let phanBoSK12 = [];
 
         // 1. Dữ liệu KH Lớn Churn
         if (typeof TAWACO_CHURN_DATA !== 'undefined') {
@@ -31,20 +29,8 @@ function loadRealData() {
             document.getElementById('val-0m3').innerHTML = `${tong0m3.toLocaleString('vi-VN')} <span class="kpi-unit">hộ</span>`;
         }
 
-        // 3. Dữ liệu Đọc ngược SK-12 (Từ biến TAWACO_DOC_NGUOC.tongLoi)
-        if (typeof TAWACO_DOC_NGUOC !== 'undefined') {
-            tongSK12 = TAWACO_DOC_NGUOC.tongLoi ? TAWACO_DOC_NGUOC.tongLoi.total : 0;
-            document.getElementById('val-sk12').innerHTML = `${tongSK12.toLocaleString('vi-VN')} <span class="kpi-unit">lỗi</span>`;
+        // 3. Dữ liệu Đọc ngược SK-12 đã bị gỡ bỏ
 
-            // Xử lý dữ liệu biểu đồ phân bổ
-            if (TAWACO_DOC_NGUOC.tongLoi) {
-                phanBoSK12 = [
-                    TAWACO_DOC_NGUOC.tongLoi.batKhaThi || 0,
-                    TAWACO_DOC_NGUOC.tongLoi.dotNgot0 || 0,
-                    TAWACO_DOC_NGUOC.tongLoi.docNguoc || 0
-                ];
-            }
-        }
 
         // TÍNH TOÁN DOANH THU CHÍNH XÁC THEO 4 LOẠI GIÁ (Update theo bảng biểu Giá chuẩn)
         function categorizePrice(mg, tenKH) {
@@ -102,21 +88,24 @@ function loadRealData() {
             doanThuSub.textContent = "Thất thoát thực tế từ KH Lớn giảm sản lượng (Churn)";
         }
 
-        // Vẽ biểu đồ với dữ liệu cập nhật
-        initCharts(tong0m3, tongSK12, tongKHLon, phanBoSK12);
-
         // 5. Tiêu thụ Bất thường (Gom Rò rỉ & Kẹt cơ)
         let abnormalTotal = 0;
+        let phanBoBatThuong = [0, 0];
         if (typeof TAWACO_BATTHUONG !== 'undefined') {
             let leak = TAWACO_BATTHUONG.leakCount || 0;
             let stuck = TAWACO_BATTHUONG.stuckCount || 0;
             abnormalTotal = leak + stuck;
+            phanBoBatThuong = [leak, stuck];
             
             document.getElementById('val-tieuthu').innerHTML = `${abnormalTotal.toLocaleString('vi-VN')} <span class="kpi-unit">ĐH</span>`;
             document.getElementById('val-sub-rori').textContent = leak.toLocaleString('vi-VN');
             document.getElementById('val-sub-ketco').textContent = stuck.toLocaleString('vi-VN');
             document.getElementById('badge-tieuthu').textContent = abnormalTotal;
         }
+
+        // Vẽ biểu đồ với dữ liệu cập nhật
+        initCharts(tong0m3, tongKHLon, phanBoBatThuong);
+
 
         // 6. Biến động Khối lượng
         if (typeof TAWACO_BIENDONG !== 'undefined') {
@@ -180,7 +169,7 @@ Chart.defaults.color = '#8b9bb4';
 Chart.defaults.font.family = "'Inter', sans-serif";
 Chart.defaults.scale.grid.color = 'rgba(255, 255, 255, 0.05)';
 
-function initCharts(val0m3, valSk12, valKhm, phanBoSK12) {
+function initCharts(val0m3, valKhm, phanBoBatThuong) {
     // 1. Biểu đồ đường: Xu hướng cảnh báo 30 ngày (Dữ liệu nội suy thực tế)
     const trendCtx = document.getElementById('trendChart').getContext('2d');
     const gradient0m3 = trendCtx.createLinearGradient(0, 0, 0, 400);
@@ -236,16 +225,16 @@ function initCharts(val0m3, valSk12, valKhm, phanBoSK12) {
         }
     });
 
-    // 2. Biểu đồ Doughnut: Phân bổ lỗi SK-12 (Data thật)
+    // 2. Biểu đồ Doughnut: Phân bổ Tiêu thụ Bất thường
     const doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
-    let dataPie = phanBoSK12.length > 0 ? phanBoSK12 : [22, 10, 8];
+    let dataPie = phanBoBatThuong.length > 0 ? phanBoBatThuong : [100, 50];
     new Chart(doughnutCtx, {
         type: 'doughnut',
         data: {
-            labels: ['Tăng bất khả thi', 'Đột ngột 0m3', 'Quay ngược'],
+            labels: ['Rò rỉ', 'Kẹt cơ'],
             datasets: [{
                 data: dataPie,
-                backgroundColor: ['#f59e0b', '#ef4444', '#3b82f6'],
+                backgroundColor: ['#ef4444', '#f59e0b'],
                 borderWidth: 0,
                 hoverOffset: 4
             }]
@@ -356,13 +345,7 @@ function populateRealLogs() {
             logQueue.push({ type: 'type-drop', icon: 'business', title: `KH Lớn giảm ${kh.M3_Giam} m³`, desc: `${kh.TenKH} (DMA: ${kh.MaDMA})` });
         });
     }
-    if (typeof TAWACO_DOC_NGUOC !== 'undefined') {
-        if (TAWACO_DOC_NGUOC.batKhaThiList) {
-            TAWACO_DOC_NGUOC.batKhaThiList.slice(0, 10).forEach(kh => {
-                logQueue.push({ type: 'type-sk12', icon: 'speed', title: `SK-12: Tăng cực sốc`, desc: `Mã KH: ${kh.Danhba} nhảy +${kh.KhoiLuongThem} m³` });
-            });
-        }
-    }
+        // SK-12 logs removed
     if (logQueue.length === 0) {
         // Fallback
         logQueue = [
@@ -423,7 +406,7 @@ function showDashboard() {
 }
 
 document.getElementById('nav-dashboard').addEventListener('click', (e) => { e.preventDefault(); showDashboard(); });
-document.getElementById('nav-sk12').addEventListener('click', (e) => { e.preventDefault(); renderTableView('sk12'); });
+
 document.getElementById('nav-0m3').addEventListener('click', (e) => { e.preventDefault(); renderTableView('0m3'); });
 document.getElementById('nav-khlon').addEventListener('click', (e) => { e.preventDefault(); renderTableView('khlon'); });
 document.getElementById('nav-tieuthu').addEventListener('click', (e) => { e.preventDefault(); renderTableView('tieuthu'); });
@@ -449,7 +432,7 @@ if (document.getElementById('nav-kiemtragiabieutab')) {
 }
 
 // Gán click luôn cho các thẻ KPI
-document.getElementById('val-sk12').parentElement.parentElement.addEventListener('click', () => renderTableView('sk12'));
+
 document.getElementById('val-0m3').parentElement.parentElement.addEventListener('click', () => renderTableView('0m3'));
 document.getElementById('val-kh-lon').parentElement.parentElement.addEventListener('click', () => renderTableView('khlon'));
 document.getElementById('val-doanh-thu').parentElement.parentElement.addEventListener('click', () => renderTableView('phantich')); // Trả lại về thẻ Tụt Giảm Doanh Thu
