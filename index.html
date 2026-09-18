@@ -38,11 +38,7 @@
                     <span>Bảng ĐK Kinh Doanh</span>
                     <span class="alert-badge" style="background-color: #10b981;">KPI</span>
                 </a>
-                <a href="#" class="nav-item" id="nav-sk12">
-                    <span class="material-symbols-outlined">warning</span>
-                    <span>Cảnh báo SK-12</span>
-                    <span class="alert-badge">...</span>
-                </a>
+
                 <a href="#" class="nav-item" id="nav-0m3">
                     <span class="material-symbols-outlined">not_interested</span>
                     <span>Giám sát 0m³</span>
@@ -137,14 +133,15 @@
                     </div>
                 </div>
 
-                <!-- Card 2: SK-12 -->
-                <div class="kpi-card warning">
-                    <div class="kpi-icon"><span class="material-symbols-outlined">speed</span></div>
+                <!-- Card 2: Biến động Khối lượng -->
+                <div class="kpi-card info">
+                    <div class="kpi-icon" style="background-color: rgba(16, 185, 129, 0.1); color: #10b981;"><span class="material-symbols-outlined">swap_vert</span></div>
                     <div class="kpi-details">
-                        <span class="kpi-label">Cảnh báo Thiết bị SK-12</span>
-                        <h2 class="kpi-value" id="val-sk12">Đang tải... <span class="kpi-unit"></span></h2>
+                        <span class="kpi-label">Biến động Khối lượng (Net)</span>
+                        <h2 class="kpi-value" id="val-biendong-net">Đang tải... <span class="kpi-unit"></span></h2>
                         <div class="kpi-trend">
-                            <span>(Chủ yếu lỗi quay lùi)</span>
+                            <span class="material-symbols-outlined">analytics</span>
+                            <span>Chênh lệch Tăng/Giảm</span>
                         </div>
                     </div>
                 </div>
@@ -317,7 +314,7 @@
 
                 <div class="chart-card">
                     <div class="chart-header">
-                        <h3>Phân Bổ Lỗi Thiết Bị SK-12</h3>
+                        <h3>Phân Bổ Tiêu Thụ Bất Thường</h3>
                     </div>
                     <div class="chart-container">
                         <canvas id="doughnutChart"></canvas>
