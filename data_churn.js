@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 21/9/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 21/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 21/9/2026",
+  "lastUpdated": "10:20:15 21/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 53,
-  "tongM3Mat": 16983,
+  "tongKH": 56,
+  "tongM3Mat": 17406,
   "danhSach": [
     {
       "Danhba": "15150005005",
@@ -440,6 +440,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22023230010",
+      "TenKH": "TRUONG DH LAO DONG XA HOI (CS)",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 791,
+      "SL_K3": 597,
+      "M3_Giam": 194,
+      "TyLe_Giam": 24.53,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15103428219",
       "TenKH": "CONG TY TNHH MOT THANH VIEN TONG CONG TY 28",
       "DiaChi": "N/A",
@@ -636,6 +650,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22023245943",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN DONG HAI",
+      "DiaChi": "N/A",
+      "MaDMA": "TCH.4_2",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 563,
+      "SL_K3": 426,
+      "M3_Giam": 137,
+      "TyLe_Giam": 24.33,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15031920076",
       "TenKH": "CÔNG TY CP PHỤC VỤ MẶT ĐẤT SÀI GÒN",
       "DiaChi": "N/A",
@@ -675,6 +703,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 394,
       "M3_Giam": 106,
       "TyLe_Giam": 21.2,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013222744",
+      "TenKH": "CONG TY TNHH MAY THEU THUAN PHUONG",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.1",
+      "MaPhuong": "26785",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 711,
+      "SL_K3": 619,
+      "M3_Giam": 92,
+      "TyLe_Giam": 12.94,
       "Level": "YELLOW"
     },
     {
