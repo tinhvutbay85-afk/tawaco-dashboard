@@ -489,3 +489,4 @@ function renderTableView(type) {
     }
 }
 
+
