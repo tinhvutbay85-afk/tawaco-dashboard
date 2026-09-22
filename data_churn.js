@@ -1,10 +1,24 @@
-// TAWACO – Biến động KH Lớn – 09:20:15 22/9/2026
+// TAWACO – Biến động KH Lớn – 10:20:15 22/9/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "09:20:15 22/9/2026",
+  "lastUpdated": "10:20:15 22/9/2026",
   "kyRange": "K4 -> K5/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 56,
-  "tongM3Mat": 17406,
+  "tongKH": 62,
+  "tongM3Mat": 20082,
   "danhSach": [
+    {
+      "Danhba": "15072448232",
+      "TenKH": "CONG TY TNHH MTV DONG HAI",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 5145,
+      "SL_K3": 3745,
+      "M3_Giam": 1400,
+      "TyLe_Giam": 27.21,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "15150005005",
       "TenKH": "TRAN MINH SANG",
@@ -216,6 +230,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15072448545",
+      "TenKH": "BAN QUAN TRI NHA CHUNG CU BA SON",
+      "DiaChi": "N/A",
+      "MaDMA": "",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1108,
+      "SL_K3": 720,
+      "M3_Giam": 388,
+      "TyLe_Giam": 35.02,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22033332982",
       "TenKH": "CONG TY CO PHAN HTKT VA XNK SAVIMEX",
       "DiaChi": "N/A",
@@ -227,6 +255,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1099,
       "M3_Giam": 371,
       "TyLe_Giam": 25.24,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052171643",
+      "TenKH": "CÔNG TY TNHH ĐẠI VIỆT",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26876",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 676,
+      "SL_K3": 339,
+      "M3_Giam": 337,
+      "TyLe_Giam": 49.85,
       "Level": "YELLOW"
     },
     {
@@ -370,6 +412,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15052170811",
+      "TenKH": "TRUONG DAI HOC VAN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 1278,
+      "SL_K3": 1048,
+      "M3_Giam": 230,
+      "TyLe_Giam": 18,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22103412840",
       "TenKH": "BAN QUAN TRI CUM NHA CHUNG CU MOSCOW TOWER",
       "DiaChi": "N/A",
@@ -381,6 +437,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1318,
       "M3_Giam": 222,
       "TyLe_Giam": 14.42,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052171610",
+      "TenKH": "TRƯỜNG ĐẠI HỌC VĂN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 636,
+      "SL_K3": 416,
+      "M3_Giam": 220,
+      "TyLe_Giam": 34.59,
       "Level": "YELLOW"
     },
     {
@@ -703,6 +773,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 394,
       "M3_Giam": 106,
       "TyLe_Giam": 21.2,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444430",
+      "TenKH": "KHU N07",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 916,
+      "SL_K3": 815,
+      "M3_Giam": 101,
+      "TyLe_Giam": 11.03,
       "Level": "YELLOW"
     },
     {
