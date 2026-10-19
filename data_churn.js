@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 13:20:15 19/10/2026
+// TAWACO – Biến động KH Lớn – 14:20:15 19/10/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "13:20:15 19/10/2026",
+  "lastUpdated": "14:20:15 19/10/2026",
   "kyRange": "K9 ➔ K10/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 86,
   "tongM3Mat": 33233,
@@ -538,20 +538,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22023251243",
-      "TenKH": "CONG TY TNHH MOT THANH VIEN PHAT TRIEN CONG VIEN PHAN MEM QUANG TRUNG",
-      "DiaChi": "N/A",
-      "MaDMA": "TCH.3",
-      "MaPhuong": "26785",
-      "MaGia": "52",
-      "SL_K1": 0,
-      "SL_K2": 724,
-      "SL_K3": 425,
-      "M3_Giam": 299,
-      "TyLe_Giam": 41.3,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22013221982",
       "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
       "DiaChi": "N/A",
@@ -563,6 +549,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 2066,
       "M3_Giam": 299,
       "TyLe_Giam": 12.64,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22023251243",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN PHAT TRIEN CONG VIEN PHAN MEM QUANG TRUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "TCH.3",
+      "MaPhuong": "26785",
+      "MaGia": "52",
+      "SL_K1": 0,
+      "SL_K2": 724,
+      "SL_K3": 425,
+      "M3_Giam": 299,
+      "TyLe_Giam": 41.3,
       "Level": "YELLOW"
     },
     {
@@ -692,20 +692,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22103413144",
-      "TenKH": "CONG TY CO PHAN DICH VU NONG NGHIEP VA THUONG MAI THUAN KIEU",
-      "DiaChi": "N/A",
-      "MaDMA": "TTN.2",
-      "MaPhuong": "26791",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 1064,
-      "SL_K3": 862,
-      "M3_Giam": 202,
-      "TyLe_Giam": 18.98,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22113422143",
       "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
       "DiaChi": "N/A",
@@ -717,6 +703,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1052,
       "M3_Giam": 202,
       "TyLe_Giam": 16.11,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22103413144",
+      "TenKH": "CONG TY CO PHAN DICH VU NONG NGHIEP VA THUONG MAI THUAN KIEU",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.2",
+      "MaPhuong": "26791",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1064,
+      "SL_K3": 862,
+      "M3_Giam": 202,
+      "TyLe_Giam": 18.98,
       "Level": "YELLOW"
     },
     {
