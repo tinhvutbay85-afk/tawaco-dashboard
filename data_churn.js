@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:33:49 19/10/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 19/10/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:33:49 19/10/2026",
+  "lastUpdated": "11:20:15 19/10/2026",
   "kyRange": "K9 ➔ K10/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 87,
-  "tongM3Mat": 34054,
+  "tongKH": 86,
+  "tongM3Mat": 33233,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -87,20 +87,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 4370,
       "M3_Giam": 961,
       "TyLe_Giam": 18.03,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15151900274",
-      "TenKH": "BAN QUAN TRI NHA CHUNG CU OSIMI TOWER",
-      "DiaChi": "N/A",
-      "MaDMA": "15.1",
-      "MaPhuong": "26878",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1758,
-      "SL_K3": 937,
-      "M3_Giam": 821,
-      "TyLe_Giam": 46.7,
       "Level": "YELLOW"
     },
     {
