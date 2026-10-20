@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:15 20/10/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 20/10/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:15 20/10/2026",
+  "lastUpdated": "11:20:15 20/10/2026",
   "kyRange": "K9 ➔ K10/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 86,
-  "tongM3Mat": 33233,
+  "tongKH": 88,
+  "tongM3Mat": 33491,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -538,20 +538,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22013221982",
-      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
-      "DiaChi": "N/A",
-      "MaDMA": "TMT.4",
-      "MaPhuong": "26785",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 2365,
-      "SL_K3": 2066,
-      "M3_Giam": 299,
-      "TyLe_Giam": 12.64,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22023251243",
       "TenKH": "CONG TY TNHH MOT THANH VIEN PHAT TRIEN CONG VIEN PHAN MEM QUANG TRUNG",
       "DiaChi": "N/A",
@@ -563,6 +549,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 425,
       "M3_Giam": 299,
       "TyLe_Giam": 41.3,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013221982",
+      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.4",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2365,
+      "SL_K3": 2066,
+      "M3_Giam": 299,
+      "TyLe_Giam": 12.64,
       "Level": "YELLOW"
     },
     {
@@ -692,20 +692,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22113422143",
-      "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.1",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1254,
-      "SL_K3": 1052,
-      "M3_Giam": 202,
-      "TyLe_Giam": 16.11,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22103413144",
       "TenKH": "CONG TY CO PHAN DICH VU NONG NGHIEP VA THUONG MAI THUAN KIEU",
       "DiaChi": "N/A",
@@ -717,6 +703,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 862,
       "M3_Giam": 202,
       "TyLe_Giam": 18.98,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113422143",
+      "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1254,
+      "SL_K3": 1052,
+      "M3_Giam": 202,
+      "TyLe_Giam": 16.11,
       "Level": "YELLOW"
     },
     {
@@ -927,6 +927,34 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 911,
       "M3_Giam": 136,
       "TyLe_Giam": 12.99,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052167640",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN CHE TAC VA KINH DOANH TRANG SUC PNJ",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 727,
+      "SL_K3": 592,
+      "M3_Giam": 135,
+      "TyLe_Giam": 18.57,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052171120",
+      "TenKH": "CONG TY TNHH MTV CHE TAC VA KINH DOANH TRANG SUC PNJ",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 656,
+      "SL_K3": 533,
+      "M3_Giam": 123,
+      "TyLe_Giam": 18.75,
       "Level": "YELLOW"
     },
     {
