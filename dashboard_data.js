@@ -1,7 +1,7 @@
-// AUTO-GENERATED – 14:01 – 21/10/2026
+// AUTO-GENERATED – 14:21 21/10/2026
 const TAWACO_DATA = {
-  "capNhat": "14:01 – 21/10/2026",
-  "alertCount": 3,
+  "capNhat": "14:21 21/10/2026",
+  "alertCount": 1,
   "slTyLe": 84.95,
   "dtTyLe": 85.86,
   "hdPct": 6.47,
