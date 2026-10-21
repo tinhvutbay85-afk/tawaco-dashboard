@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 16:20:15 20/10/2026
+// TAWACO – Biến động KH Lớn – 13:31:39 21/10/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "16:20:15 20/10/2026",
+  "lastUpdated": "13:31:39 21/10/2026",
   "kyRange": "K9 ➔ K10/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 88,
-  "tongM3Mat": 33491,
+  "tongKH": 90,
+  "tongM3Mat": 34067,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -440,6 +440,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15072444411",
+      "TenKH": "Khách hàng Lớn",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 523,
+      "SL_K3": 169,
+      "M3_Giam": 354,
+      "TyLe_Giam": 67.69,
+      "Level": "RED"
+    },
+    {
       "Danhba": "22033332982",
       "TenKH": "CONG TY CO PHAN HTKT VA XNK SAVIMEX",
       "DiaChi": "N/A",
@@ -675,6 +689,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 398,
       "M3_Giam": 223,
       "TyLe_Giam": 35.91,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444413",
+      "TenKH": "KHU N01-2",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1434,
+      "SL_K3": 1212,
+      "M3_Giam": 222,
+      "TyLe_Giam": 15.48,
       "Level": "YELLOW"
     },
     {
