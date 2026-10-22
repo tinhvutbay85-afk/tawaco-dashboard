@@ -1,6 +1,6 @@
-// TAWACO â€“ 0mÂ³ >= 2 ká»³ 2026 DSD â€“ 16:20:16 21/10/2026
+// TAWACO â€“ 0mÂ³ >= 2 ká»³ 2026 DSD â€“ 11:20:14 22/10/2026
 const TAWACO_0M3_DSD = {
-  "lastUpdated": "16:20:16 21/10/2026",
+  "lastUpdated": "11:20:14 22/10/2026",
   "kyRange": "Rolling 0mÂ³: K7 + K8 + K9 + K10 (Bao gá»“m dá»¯ liá»‡u K10 Live)",
   "ghiChu": "TINHTRANG=DSD | ÄÃ£ cÃ³ SL>0 trong quÃ¡ khá»© | Sáº¯p xáº¿p theo ÄMA",
   "kyLabels": [
@@ -10,7 +10,7 @@ const TAWACO_0M3_DSD = {
     "K10"
   ],
   "endIdx": 24322,
-  "tongKH": 5739,
+  "tongKH": 5738,
   "phanBoDMA": [
     {
       "dma": "null",
@@ -34,7 +34,7 @@ const TAWACO_0M3_DSD = {
     },
     {
       "dma": "TCH.1",
-      "soKH": 116
+      "soKH": 115
     },
     {
       "dma": "17.7.1",
@@ -47063,16 +47063,6 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 13,
       "KyCoSL": "2026/K1"
-    },
-    {
-      "Danhba": "22023242931",
-      "MaDMA": "TCH.1",
-      "Roll1": 0,
-      "Roll2": 0,
-      "Roll3": 0,
-      "RollLive": 0,
-      "SLTruoc": 1,
-      "KyCoSL": "2026/K6"
     },
     {
       "Danhba": "22023242951",
