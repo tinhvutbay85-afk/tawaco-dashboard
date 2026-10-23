@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 16:20:14 22/10/2026
+// TAWACO – Biến động KH Lớn – 08:20:15 23/10/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "16:20:14 22/10/2026",
+  "lastUpdated": "08:20:15 23/10/2026",
   "kyRange": "K9 ➔ K10/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 90,
   "tongM3Mat": 34067,
@@ -552,20 +552,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22013221982",
-      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
-      "DiaChi": "N/A",
-      "MaDMA": "TMT.4",
-      "MaPhuong": "26785",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 2365,
-      "SL_K3": 2066,
-      "M3_Giam": 299,
-      "TyLe_Giam": 12.64,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22023251243",
       "TenKH": "CONG TY TNHH MOT THANH VIEN PHAT TRIEN CONG VIEN PHAN MEM QUANG TRUNG",
       "DiaChi": "N/A",
@@ -577,6 +563,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 425,
       "M3_Giam": 299,
       "TyLe_Giam": 41.3,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013221982",
+      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.4",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2365,
+      "SL_K3": 2066,
+      "M3_Giam": 299,
+      "TyLe_Giam": 12.64,
       "Level": "YELLOW"
     },
     {
@@ -720,20 +720,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22113422143",
-      "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.1",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1254,
-      "SL_K3": 1052,
-      "M3_Giam": 202,
-      "TyLe_Giam": 16.11,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22103413144",
       "TenKH": "CONG TY CO PHAN DICH VU NONG NGHIEP VA THUONG MAI THUAN KIEU",
       "DiaChi": "N/A",
@@ -745,6 +731,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 862,
       "M3_Giam": 202,
       "TyLe_Giam": 18.98,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113422143",
+      "TenKH": "CONG TY CO PHAN PHAT TRIEN VA KINH DOANH NHA",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1254,
+      "SL_K3": 1052,
+      "M3_Giam": 202,
+      "TyLe_Giam": 16.11,
       "Level": "YELLOW"
     },
     {
@@ -776,20 +776,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22113410835",
-      "TenKH": "CTTNHH MTV DV CONG ICH Q8",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.1",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1332,
-      "SL_K3": 1153,
-      "M3_Giam": 179,
-      "TyLe_Giam": 13.44,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "15112828766",
       "TenKH": "BENH VIEN GO VAP",
       "DiaChi": "N/A",
@@ -801,6 +787,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1574,
       "M3_Giam": 179,
       "TyLe_Giam": 10.21,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113410835",
+      "TenKH": "CTTNHH MTV DV CONG ICH Q8",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1332,
+      "SL_K3": 1153,
+      "M3_Giam": 179,
+      "TyLe_Giam": 13.44,
       "Level": "YELLOW"
     },
     {
@@ -1087,7 +1087,7 @@ const TAWACO_CHURN_DATA = {
       "Danhba": "22033277892",
       "TenKH": "CONG TY TNHH WOOYANG VINA II",
       "DiaChi": "N/A",
-      "MaDMA": "",
+      "MaDMA": "HT.3",
       "MaPhuong": "26782",
       "MaGia": "32",
       "SL_K1": 0,
