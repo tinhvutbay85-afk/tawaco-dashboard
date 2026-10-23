@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 13:20:14 23/10/2026
+// TAWACO – Biến động KH Lớn – 14:20:15 23/10/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "13:20:14 23/10/2026",
+  "lastUpdated": "14:20:15 23/10/2026",
   "kyRange": "K9 ➔ K10/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 90,
   "tongM3Mat": 34067,
@@ -776,20 +776,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22113410835",
-      "TenKH": "CTTNHH MTV DV CONG ICH Q8",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.1",
-      "MaPhuong": "26791",
-      "MaGia": "51",
-      "SL_K1": 0,
-      "SL_K2": 1332,
-      "SL_K3": 1153,
-      "M3_Giam": 179,
-      "TyLe_Giam": 13.44,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "15112828766",
       "TenKH": "BENH VIEN GO VAP",
       "DiaChi": "N/A",
@@ -801,6 +787,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1574,
       "M3_Giam": 179,
       "TyLe_Giam": 10.21,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113410835",
+      "TenKH": "CTTNHH MTV DV CONG ICH Q8",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1332,
+      "SL_K3": 1153,
+      "M3_Giam": 179,
+      "TyLe_Giam": 13.44,
       "Level": "YELLOW"
     },
     {
