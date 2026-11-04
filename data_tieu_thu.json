@@ -1,12 +1,19 @@
 {
-  "lastUpdated": "08:00:34 4/11/2026",
+  "lastUpdated": "09:00:35 4/11/2026",
   "nguonDuLieu": "SANLUONGDONGHOKHACHHANG – Kỳ 11 / Năm 2026",
   "nam": 2026,
   "ky": "11",
-  "tongSoKH": 34965,
-  "leakCount": 129,
-  "stuckCount": 108,
+  "tongSoKH": 36679,
+  "leakCount": 132,
+  "stuckCount": 117,
   "leakTop": [
+    {
+      "Danhba": "22103411389",
+      "KyTruoc": 315,
+      "KyHienTai": 1579,
+      "KhoiLuongTang": 1264,
+      "PhanTramTang": 401.3
+    },
     {
       "Danhba": "22033279954",
       "KyTruoc": 2,
@@ -218,18 +225,18 @@
       "PhanTramTang": 636.4
     },
     {
-      "Danhba": "22043301454",
-      "KyTruoc": 10,
-      "KyHienTai": 76,
-      "KhoiLuongTang": 66,
-      "PhanTramTang": 660
-    },
-    {
       "Danhba": "22043312109",
       "KyTruoc": 14,
       "KyHienTai": 80,
       "KhoiLuongTang": 66,
       "PhanTramTang": 471.4
+    },
+    {
+      "Danhba": "22043301454",
+      "KyTruoc": 10,
+      "KyHienTai": 76,
+      "KhoiLuongTang": 66,
+      "PhanTramTang": 660
     },
     {
       "Danhba": "22103410114",
@@ -309,6 +316,13 @@
       "PhanTramTang": 361.5
     },
     {
+      "Danhba": "22103390869",
+      "KyTruoc": 10,
+      "KyHienTai": 55,
+      "KhoiLuongTang": 45,
+      "PhanTramTang": 450
+    },
+    {
       "Danhba": "15122889349",
       "KyTruoc": 2,
       "KyHienTai": 46,
@@ -358,6 +372,13 @@
       "PhanTramTang": 316.7
     },
     {
+      "Danhba": "22033334423",
+      "KyTruoc": 4,
+      "KyHienTai": 39,
+      "KhoiLuongTang": 35,
+      "PhanTramTang": 875
+    },
+    {
       "Danhba": "15122890553",
       "KyTruoc": 6,
       "KyHienTai": 41,
@@ -372,18 +393,11 @@
       "PhanTramTang": 500
     },
     {
-      "Danhba": "22033334423",
-      "KyTruoc": 4,
-      "KyHienTai": 39,
-      "KhoiLuongTang": 35,
-      "PhanTramTang": 875
-    },
-    {
-      "Danhba": "22073340333",
-      "KyTruoc": 6,
-      "KyHienTai": 40,
+      "Danhba": "15062139794",
+      "KyTruoc": 11,
+      "KyHienTai": 45,
       "KhoiLuongTang": 34,
-      "PhanTramTang": 566.7
+      "PhanTramTang": 309.1
     },
     {
       "Danhba": "15122890396",
@@ -393,11 +407,11 @@
       "PhanTramTang": 377.8
     },
     {
-      "Danhba": "15062139794",
-      "KyTruoc": 11,
-      "KyHienTai": 45,
+      "Danhba": "22073340333",
+      "KyTruoc": 6,
+      "KyHienTai": 40,
       "KhoiLuongTang": 34,
-      "PhanTramTang": 309.1
+      "PhanTramTang": 566.7
     },
     {
       "Danhba": "15112841046",
@@ -421,18 +435,18 @@
       "PhanTramTang": 516.7
     },
     {
-      "Danhba": "22103414171",
-      "KyTruoc": 5,
-      "KyHienTai": 36,
-      "KhoiLuongTang": 31,
-      "PhanTramTang": 620
-    },
-    {
       "Danhba": "22103390875",
       "KyTruoc": 3,
       "KyHienTai": 34,
       "KhoiLuongTang": 31,
       "PhanTramTang": 1033.3
+    },
+    {
+      "Danhba": "22103414171",
+      "KyTruoc": 5,
+      "KyHienTai": 36,
+      "KhoiLuongTang": 31,
+      "PhanTramTang": 620
     },
     {
       "Danhba": "22103398668",
@@ -456,6 +470,13 @@
       "PhanTramTang": 3000
     },
     {
+      "Danhba": "22043314503",
+      "KyTruoc": 3,
+      "KyHienTai": 32,
+      "KhoiLuongTang": 29,
+      "PhanTramTang": 966.7
+    },
+    {
       "Danhba": "15173422203",
       "KyTruoc": 1,
       "KyHienTai": 30,
@@ -470,25 +491,11 @@
       "PhanTramTang": 322.2
     },
     {
-      "Danhba": "22043314503",
-      "KyTruoc": 3,
-      "KyHienTai": 32,
-      "KhoiLuongTang": 29,
-      "PhanTramTang": 966.7
-    },
-    {
       "Danhba": "15122890531",
       "KyTruoc": 8,
       "KyHienTai": 36,
       "KhoiLuongTang": 28,
       "PhanTramTang": 350
-    },
-    {
-      "Danhba": "22103390767",
-      "KyTruoc": 4,
-      "KyHienTai": 31,
-      "KhoiLuongTang": 27,
-      "PhanTramTang": 675
     },
     {
       "Danhba": "15062133786",
@@ -505,11 +512,11 @@
       "PhanTramTang": 337.5
     },
     {
-      "Danhba": "22033275189",
-      "KyTruoc": 1,
-      "KyHienTai": 27,
-      "KhoiLuongTang": 26,
-      "PhanTramTang": 2600
+      "Danhba": "22103390767",
+      "KyTruoc": 4,
+      "KyHienTai": 31,
+      "KhoiLuongTang": 27,
+      "PhanTramTang": 675
     },
     {
       "Danhba": "22043303114",
@@ -517,6 +524,20 @@
       "KyHienTai": 28,
       "KhoiLuongTang": 26,
       "PhanTramTang": 1300
+    },
+    {
+      "Danhba": "22033275189",
+      "KyTruoc": 1,
+      "KyHienTai": 27,
+      "KhoiLuongTang": 26,
+      "PhanTramTang": 2600
+    },
+    {
+      "Danhba": "15122842215",
+      "KyTruoc": 4,
+      "KyHienTai": 29,
+      "KhoiLuongTang": 25,
+      "PhanTramTang": 625
     },
     {
       "Danhba": "22043311208",
@@ -533,11 +554,11 @@
       "PhanTramTang": 625
     },
     {
-      "Danhba": "15122842215",
-      "KyTruoc": 4,
+      "Danhba": "22103401157",
+      "KyTruoc": 5,
       "KyHienTai": 29,
-      "KhoiLuongTang": 25,
-      "PhanTramTang": 625
+      "KhoiLuongTang": 24,
+      "PhanTramTang": 480
     },
     {
       "Danhba": "15062140007",
@@ -554,20 +575,6 @@
       "PhanTramTang": 2400
     },
     {
-      "Danhba": "22103401157",
-      "KyTruoc": 5,
-      "KyHienTai": 29,
-      "KhoiLuongTang": 24,
-      "PhanTramTang": 480
-    },
-    {
-      "Danhba": "22103410745",
-      "KyTruoc": 1,
-      "KyHienTai": 24,
-      "KhoiLuongTang": 23,
-      "PhanTramTang": 2300
-    },
-    {
       "Danhba": "15062136137",
       "KyTruoc": 6,
       "KyHienTai": 29,
@@ -582,11 +589,11 @@
       "PhanTramTang": 383.3
     },
     {
-      "Danhba": "22043334461",
-      "KyTruoc": 3,
-      "KyHienTai": 26,
+      "Danhba": "22033272667",
+      "KyTruoc": 5,
+      "KyHienTai": 28,
       "KhoiLuongTang": 23,
-      "PhanTramTang": 766.7
+      "PhanTramTang": 460
     },
     {
       "Danhba": "15122891277",
@@ -596,11 +603,18 @@
       "PhanTramTang": 2300
     },
     {
-      "Danhba": "22033272667",
-      "KyTruoc": 5,
-      "KyHienTai": 28,
+      "Danhba": "22103410745",
+      "KyTruoc": 1,
+      "KyHienTai": 24,
       "KhoiLuongTang": 23,
-      "PhanTramTang": 460
+      "PhanTramTang": 2300
+    },
+    {
+      "Danhba": "22043334461",
+      "KyTruoc": 3,
+      "KyHienTai": 26,
+      "KhoiLuongTang": 23,
+      "PhanTramTang": 766.7
     },
     {
       "Danhba": "22033334359",
@@ -624,6 +638,13 @@
       "PhanTramTang": 366.7
     },
     {
+      "Danhba": "22103411132",
+      "KyTruoc": 6,
+      "KyHienTai": 28,
+      "KhoiLuongTang": 22,
+      "PhanTramTang": 366.7
+    },
+    {
       "Danhba": "15112866040",
       "KyTruoc": 5,
       "KyHienTai": 27,
@@ -636,13 +657,6 @@
       "KyHienTai": 29,
       "KhoiLuongTang": 22,
       "PhanTramTang": 314.3
-    },
-    {
-      "Danhba": "22103411132",
-      "KyTruoc": 6,
-      "KyHienTai": 28,
-      "KhoiLuongTang": 22,
-      "PhanTramTang": 366.7
     },
     {
       "Danhba": "15062139068",
@@ -666,13 +680,6 @@
       "PhanTramTang": 420
     },
     {
-      "Danhba": "22033334358",
-      "KyTruoc": 3,
-      "KyHienTai": 24,
-      "KhoiLuongTang": 21,
-      "PhanTramTang": 700
-    },
-    {
       "Danhba": "22033273000",
       "KyTruoc": 2,
       "KyHienTai": 23,
@@ -685,6 +692,13 @@
       "KyHienTai": 23,
       "KhoiLuongTang": 21,
       "PhanTramTang": 1050
+    },
+    {
+      "Danhba": "22033334358",
+      "KyTruoc": 3,
+      "KyHienTai": 24,
+      "KhoiLuongTang": 21,
+      "PhanTramTang": 700
     },
     {
       "Danhba": "22033277962",
@@ -708,6 +722,13 @@
       "PhanTramTang": 1000
     },
     {
+      "Danhba": "15122886811",
+      "KyTruoc": 1,
+      "KyHienTai": 20,
+      "KhoiLuongTang": 19,
+      "PhanTramTang": 1900
+    },
+    {
       "Danhba": "15112865700",
       "KyTruoc": 2,
       "KyHienTai": 21,
@@ -720,13 +741,6 @@
       "KyHienTai": 22,
       "KhoiLuongTang": 19,
       "PhanTramTang": 633.3
-    },
-    {
-      "Danhba": "15122886811",
-      "KyTruoc": 1,
-      "KyHienTai": 20,
-      "KhoiLuongTang": 19,
-      "PhanTramTang": 1900
     },
     {
       "Danhba": "22033274337",
@@ -743,18 +757,18 @@
       "PhanTramTang": 475
     },
     {
-      "Danhba": "22043314544",
-      "KyTruoc": 3,
-      "KyHienTai": 22,
-      "KhoiLuongTang": 19,
-      "PhanTramTang": 633.3
-    },
-    {
       "Danhba": "22043306563",
       "KyTruoc": 4,
       "KyHienTai": 23,
       "KhoiLuongTang": 19,
       "PhanTramTang": 475
+    },
+    {
+      "Danhba": "22043314544",
+      "KyTruoc": 3,
+      "KyHienTai": 22,
+      "KhoiLuongTang": 19,
+      "PhanTramTang": 633.3
     },
     {
       "Danhba": "22073242156",
@@ -764,14 +778,21 @@
       "PhanTramTang": 316.7
     },
     {
-      "Danhba": "22043334390",
-      "KyTruoc": 3,
-      "KyHienTai": 21,
-      "KhoiLuongTang": 18,
-      "PhanTramTang": 600
+      "Danhba": "22103410240",
+      "KyTruoc": 5,
+      "KyHienTai": 24,
+      "KhoiLuongTang": 19,
+      "PhanTramTang": 380
     },
     {
-      "Danhba": "22033330091",
+      "Danhba": "22103413076",
+      "KyTruoc": 2,
+      "KyHienTai": 20,
+      "KhoiLuongTang": 18,
+      "PhanTramTang": 900
+    },
+    {
+      "Danhba": "22043334390",
       "KyTruoc": 3,
       "KyHienTai": 21,
       "KhoiLuongTang": 18,
@@ -783,6 +804,13 @@
       "KyHienTai": 19,
       "KhoiLuongTang": 18,
       "PhanTramTang": 1800
+    },
+    {
+      "Danhba": "22033330091",
+      "KyTruoc": 3,
+      "KyHienTai": 21,
+      "KhoiLuongTang": 18,
+      "PhanTramTang": 600
     },
     {
       "Danhba": "15122887430",
@@ -799,14 +827,14 @@
       "PhanTramTang": 600
     },
     {
-      "Danhba": "22103413076",
-      "KyTruoc": 2,
-      "KyHienTai": 20,
-      "KhoiLuongTang": 18,
-      "PhanTramTang": 900
+      "Danhba": "22033277072",
+      "KyTruoc": 5,
+      "KyHienTai": 22,
+      "KhoiLuongTang": 17,
+      "PhanTramTang": 340
     },
     {
-      "Danhba": "22103390656",
+      "Danhba": "15112822171",
       "KyTruoc": 4,
       "KyHienTai": 21,
       "KhoiLuongTang": 17,
@@ -820,25 +848,18 @@
       "PhanTramTang": 850
     },
     {
-      "Danhba": "15112822171",
-      "KyTruoc": 4,
-      "KyHienTai": 21,
-      "KhoiLuongTang": 17,
-      "PhanTramTang": 425
-    },
-    {
-      "Danhba": "22033277072",
-      "KyTruoc": 5,
-      "KyHienTai": 22,
-      "KhoiLuongTang": 17,
-      "PhanTramTang": 340
-    },
-    {
       "Danhba": "22073238879",
       "KyTruoc": 5,
       "KyHienTai": 22,
       "KhoiLuongTang": 17,
       "PhanTramTang": 340
+    },
+    {
+      "Danhba": "22103390656",
+      "KyTruoc": 4,
+      "KyHienTai": 21,
+      "KhoiLuongTang": 17,
+      "PhanTramTang": 425
     },
     {
       "Danhba": "22073239967",
@@ -853,20 +874,6 @@
       "KyHienTai": 18,
       "KhoiLuongTang": 16,
       "PhanTramTang": 800
-    },
-    {
-      "Danhba": "22033278349",
-      "KyTruoc": 5,
-      "KyHienTai": 21,
-      "KhoiLuongTang": 16,
-      "PhanTramTang": 320
-    },
-    {
-      "Danhba": "22033273722",
-      "KyTruoc": 3,
-      "KyHienTai": 19,
-      "KhoiLuongTang": 16,
-      "PhanTramTang": 533.3
     },
     {
       "Danhba": "22033334113",
@@ -890,11 +897,25 @@
       "PhanTramTang": 320
     },
     {
-      "Danhba": "15122890560",
-      "KyTruoc": 2,
-      "KyHienTai": 18,
+      "Danhba": "15062136243",
+      "KyTruoc": 3,
+      "KyHienTai": 19,
       "KhoiLuongTang": 16,
-      "PhanTramTang": 800
+      "PhanTramTang": 533.3
+    },
+    {
+      "Danhba": "22033273722",
+      "KyTruoc": 3,
+      "KyHienTai": 19,
+      "KhoiLuongTang": 16,
+      "PhanTramTang": 533.3
+    },
+    {
+      "Danhba": "22033278349",
+      "KyTruoc": 5,
+      "KyHienTai": 21,
+      "KhoiLuongTang": 16,
+      "PhanTramTang": 320
     },
     {
       "Danhba": "15122887560",
@@ -904,11 +925,11 @@
       "PhanTramTang": 533.3
     },
     {
-      "Danhba": "15062136243",
-      "KyTruoc": 3,
-      "KyHienTai": 19,
+      "Danhba": "15122890560",
+      "KyTruoc": 2,
+      "KyHienTai": 18,
       "KhoiLuongTang": 16,
-      "PhanTramTang": 533.3
+      "PhanTramTang": 800
     }
   ],
   "stuckTop": [
@@ -997,6 +1018,13 @@
       "PhanTramGiam": 79.2
     },
     {
+      "Danhba": "22103397330",
+      "KyTruoc": 152,
+      "KyHienTai": 25,
+      "KhoiLuongGiam": 127,
+      "PhanTramGiam": 83.6
+    },
+    {
       "Danhba": "22043334359",
       "KyTruoc": 124,
       "KyHienTai": 1,
@@ -1079,6 +1107,13 @@
       "KyHienTai": 1,
       "KhoiLuongGiam": 64,
       "PhanTramGiam": 98.5
+    },
+    {
+      "Danhba": "22103400381",
+      "KyTruoc": 23,
+      "KyHienTai": -39,
+      "KhoiLuongGiam": 62,
+      "PhanTramGiam": 269.6
     },
     {
       "Danhba": "15062136332",
@@ -1179,13 +1214,6 @@
       "PhanTramGiam": 100
     },
     {
-      "Danhba": "22103408658",
-      "KyTruoc": 49,
-      "KyHienTai": 9,
-      "KhoiLuongGiam": 40,
-      "PhanTramGiam": 81.6
-    },
-    {
       "Danhba": "22043301642",
       "KyTruoc": 40,
       "KyHienTai": 0,
@@ -1200,6 +1228,20 @@
       "PhanTramGiam": 97.6
     },
     {
+      "Danhba": "22103408658",
+      "KyTruoc": 49,
+      "KyHienTai": 9,
+      "KhoiLuongGiam": 40,
+      "PhanTramGiam": 81.6
+    },
+    {
+      "Danhba": "22103410164",
+      "KyTruoc": 49,
+      "KyHienTai": 10,
+      "KhoiLuongGiam": 39,
+      "PhanTramGiam": 79.6
+    },
+    {
       "Danhba": "22043314664",
       "KyTruoc": 42,
       "KyHienTai": 3,
@@ -1211,13 +1253,6 @@
       "KyTruoc": 39,
       "KyHienTai": 0,
       "KhoiLuongGiam": 39,
-      "PhanTramGiam": 100
-    },
-    {
-      "Danhba": "22103405257",
-      "KyTruoc": 38,
-      "KyHienTai": 0,
-      "KhoiLuongGiam": 38,
       "PhanTramGiam": 100
     },
     {
@@ -1235,14 +1270,28 @@
       "PhanTramGiam": 79.2
     },
     {
-      "Danhba": "22043298665",
+      "Danhba": "22103405257",
+      "KyTruoc": 38,
+      "KyHienTai": 0,
+      "KhoiLuongGiam": 38,
+      "PhanTramGiam": 100
+    },
+    {
+      "Danhba": "22103400359",
+      "KyTruoc": 45,
+      "KyHienTai": 9,
+      "KhoiLuongGiam": 36,
+      "PhanTramGiam": 80
+    },
+    {
+      "Danhba": "22043313448",
       "KyTruoc": 32,
       "KyHienTai": 0,
       "KhoiLuongGiam": 32,
       "PhanTramGiam": 100
     },
     {
-      "Danhba": "22043313448",
+      "Danhba": "22043298665",
       "KyTruoc": 32,
       "KyHienTai": 0,
       "KhoiLuongGiam": 32,
@@ -1270,13 +1319,6 @@
       "PhanTramGiam": 82.9
     },
     {
-      "Danhba": "22103391059",
-      "KyTruoc": 28,
-      "KyHienTai": 0,
-      "KhoiLuongGiam": 28,
-      "PhanTramGiam": 100
-    },
-    {
       "Danhba": "15062134332",
       "KyTruoc": 29,
       "KyHienTai": 1,
@@ -1291,18 +1333,18 @@
       "PhanTramGiam": 90.3
     },
     {
+      "Danhba": "22103391059",
+      "KyTruoc": 28,
+      "KyHienTai": 0,
+      "KhoiLuongGiam": 28,
+      "PhanTramGiam": 100
+    },
+    {
       "Danhba": "22073341635",
       "KyTruoc": 34,
       "KyHienTai": 7,
       "KhoiLuongGiam": 27,
       "PhanTramGiam": 79.4
-    },
-    {
-      "Danhba": "22103414181",
-      "KyTruoc": 31,
-      "KyHienTai": 4,
-      "KhoiLuongGiam": 27,
-      "PhanTramGiam": 87.1
     },
     {
       "Danhba": "22103393399",
@@ -1312,18 +1354,18 @@
       "PhanTramGiam": 90
     },
     {
+      "Danhba": "22103414181",
+      "KyTruoc": 31,
+      "KyHienTai": 4,
+      "KhoiLuongGiam": 27,
+      "PhanTramGiam": 87.1
+    },
+    {
       "Danhba": "22103408362",
       "KyTruoc": 26,
       "KyHienTai": 0,
       "KhoiLuongGiam": 26,
       "PhanTramGiam": 100
-    },
-    {
-      "Danhba": "15112865826",
-      "KyTruoc": 29,
-      "KyHienTai": 3,
-      "KhoiLuongGiam": 26,
-      "PhanTramGiam": 89.7
     },
     {
       "Danhba": "22043311760",
@@ -1338,6 +1380,13 @@
       "KyHienTai": 0,
       "KhoiLuongGiam": 26,
       "PhanTramGiam": 100
+    },
+    {
+      "Danhba": "15112865826",
+      "KyTruoc": 29,
+      "KyHienTai": 3,
+      "KhoiLuongGiam": 26,
+      "PhanTramGiam": 89.7
     },
     {
       "Danhba": "22043300388",
@@ -1361,11 +1410,25 @@
       "PhanTramGiam": 100
     },
     {
-      "Danhba": "15062133203",
-      "KyTruoc": 25,
-      "KyHienTai": 2,
+      "Danhba": "22043304464",
+      "KyTruoc": 29,
+      "KyHienTai": 6,
       "KhoiLuongGiam": 23,
-      "PhanTramGiam": 92
+      "PhanTramGiam": 79.3
+    },
+    {
+      "Danhba": "22103400502",
+      "KyTruoc": 30,
+      "KyHienTai": 7,
+      "KhoiLuongGiam": 23,
+      "PhanTramGiam": 76.7
+    },
+    {
+      "Danhba": "22103391341",
+      "KyTruoc": 21,
+      "KyHienTai": -2,
+      "KhoiLuongGiam": 23,
+      "PhanTramGiam": 109.5
     },
     {
       "Danhba": "15122887254",
@@ -1389,6 +1452,13 @@
       "PhanTramGiam": 82.1
     },
     {
+      "Danhba": "15062133203",
+      "KyTruoc": 25,
+      "KyHienTai": 2,
+      "KhoiLuongGiam": 23,
+      "PhanTramGiam": 92
+    },
+    {
       "Danhba": "15112860665",
       "KyTruoc": 26,
       "KyHienTai": 3,
@@ -1396,32 +1466,11 @@
       "PhanTramGiam": 88.5
     },
     {
-      "Danhba": "22043304464",
-      "KyTruoc": 29,
-      "KyHienTai": 6,
-      "KhoiLuongGiam": 23,
-      "PhanTramGiam": 79.3
-    },
-    {
-      "Danhba": "22043310990",
-      "KyTruoc": 27,
-      "KyHienTai": 5,
-      "KhoiLuongGiam": 22,
-      "PhanTramGiam": 81.5
-    },
-    {
       "Danhba": "15112860673",
       "KyTruoc": 27,
       "KyHienTai": 5,
       "KhoiLuongGiam": 22,
       "PhanTramGiam": 81.5
-    },
-    {
-      "Danhba": "22033273597",
-      "KyTruoc": 24,
-      "KyHienTai": 2,
-      "KhoiLuongGiam": 22,
-      "PhanTramGiam": 91.7
     },
     {
       "Danhba": "15062141012",
@@ -1438,25 +1487,18 @@
       "PhanTramGiam": 84.6
     },
     {
-      "Danhba": "15062137880",
-      "KyTruoc": 21,
-      "KyHienTai": 0,
-      "KhoiLuongGiam": 21,
-      "PhanTramGiam": 100
+      "Danhba": "22033273597",
+      "KyTruoc": 24,
+      "KyHienTai": 2,
+      "KhoiLuongGiam": 22,
+      "PhanTramGiam": 91.7
     },
     {
-      "Danhba": "22103390575",
-      "KyTruoc": 25,
-      "KyHienTai": 4,
-      "KhoiLuongGiam": 21,
-      "PhanTramGiam": 84
-    },
-    {
-      "Danhba": "15112840737",
-      "KyTruoc": 21,
-      "KyHienTai": 0,
-      "KhoiLuongGiam": 21,
-      "PhanTramGiam": 100
+      "Danhba": "22043310990",
+      "KyTruoc": 27,
+      "KyHienTai": 5,
+      "KhoiLuongGiam": 22,
+      "PhanTramGiam": 81.5
     },
     {
       "Danhba": "22043309891",
@@ -1473,11 +1515,25 @@
       "PhanTramGiam": 95.5
     },
     {
-      "Danhba": "22043310959",
-      "KyTruoc": 26,
-      "KyHienTai": 6,
-      "KhoiLuongGiam": 20,
-      "PhanTramGiam": 76.9
+      "Danhba": "22103390575",
+      "KyTruoc": 25,
+      "KyHienTai": 4,
+      "KhoiLuongGiam": 21,
+      "PhanTramGiam": 84
+    },
+    {
+      "Danhba": "15062137880",
+      "KyTruoc": 21,
+      "KyHienTai": 0,
+      "KhoiLuongGiam": 21,
+      "PhanTramGiam": 100
+    },
+    {
+      "Danhba": "15112840737",
+      "KyTruoc": 21,
+      "KyHienTai": 0,
+      "KhoiLuongGiam": 21,
+      "PhanTramGiam": 100
     },
     {
       "Danhba": "15112860625",
@@ -1485,13 +1541,6 @@
       "KyHienTai": 6,
       "KhoiLuongGiam": 20,
       "PhanTramGiam": 76.9
-    },
-    {
-      "Danhba": "22033276881",
-      "KyTruoc": 20,
-      "KyHienTai": 0,
-      "KhoiLuongGiam": 20,
-      "PhanTramGiam": 100
     },
     {
       "Danhba": "15062130032",
@@ -1508,11 +1557,32 @@
       "PhanTramGiam": 100
     },
     {
-      "Danhba": "15112820035",
-      "KyTruoc": 19,
+      "Danhba": "22033276881",
+      "KyTruoc": 20,
       "KyHienTai": 0,
-      "KhoiLuongGiam": 19,
+      "KhoiLuongGiam": 20,
       "PhanTramGiam": 100
+    },
+    {
+      "Danhba": "22043310959",
+      "KyTruoc": 26,
+      "KyHienTai": 6,
+      "KhoiLuongGiam": 20,
+      "PhanTramGiam": 76.9
+    },
+    {
+      "Danhba": "22073340334",
+      "KyTruoc": 22,
+      "KyHienTai": 3,
+      "KhoiLuongGiam": 19,
+      "PhanTramGiam": 86.4
+    },
+    {
+      "Danhba": "22103398200",
+      "KyTruoc": 24,
+      "KyHienTai": 5,
+      "KhoiLuongGiam": 19,
+      "PhanTramGiam": 79.2
     },
     {
       "Danhba": "22033279192",
@@ -1529,6 +1599,13 @@
       "PhanTramGiam": 79.2
     },
     {
+      "Danhba": "15112820035",
+      "KyTruoc": 19,
+      "KyHienTai": 0,
+      "KhoiLuongGiam": 19,
+      "PhanTramGiam": 100
+    },
+    {
       "Danhba": "15112867438",
       "KyTruoc": 19,
       "KyHienTai": 0,
@@ -1536,18 +1613,11 @@
       "PhanTramGiam": 100
     },
     {
-      "Danhba": "22073340334",
-      "KyTruoc": 22,
-      "KyHienTai": 3,
-      "KhoiLuongGiam": 19,
-      "PhanTramGiam": 86.4
-    },
-    {
-      "Danhba": "22043303728",
-      "KyTruoc": 19,
-      "KyHienTai": 1,
+      "Danhba": "22033275950",
+      "KyTruoc": 18,
+      "KyHienTai": 0,
       "KhoiLuongGiam": 18,
-      "PhanTramGiam": 94.7
+      "PhanTramGiam": 100
     },
     {
       "Danhba": "22033277095",
@@ -1557,11 +1627,46 @@
       "PhanTramGiam": 90
     },
     {
-      "Danhba": "22033275950",
-      "KyTruoc": 18,
-      "KyHienTai": 0,
+      "Danhba": "22043303728",
+      "KyTruoc": 19,
+      "KyHienTai": 1,
       "KhoiLuongGiam": 18,
+      "PhanTramGiam": 94.7
+    },
+    {
+      "Danhba": "22043304277",
+      "KyTruoc": 17,
+      "KyHienTai": 0,
+      "KhoiLuongGiam": 17,
       "PhanTramGiam": 100
+    },
+    {
+      "Danhba": "22043307097",
+      "KyTruoc": 21,
+      "KyHienTai": 4,
+      "KhoiLuongGiam": 17,
+      "PhanTramGiam": 81
+    },
+    {
+      "Danhba": "22043308864",
+      "KyTruoc": 22,
+      "KyHienTai": 5,
+      "KhoiLuongGiam": 17,
+      "PhanTramGiam": 77.3
+    },
+    {
+      "Danhba": "22043303711",
+      "KyTruoc": 17,
+      "KyHienTai": 0,
+      "KhoiLuongGiam": 17,
+      "PhanTramGiam": 100
+    },
+    {
+      "Danhba": "22033334420",
+      "KyTruoc": 18,
+      "KyHienTai": 1,
+      "KhoiLuongGiam": 17,
+      "PhanTramGiam": 94.4
     },
     {
       "Danhba": "15122880774",
@@ -1585,6 +1690,13 @@
       "PhanTramGiam": 89.5
     },
     {
+      "Danhba": "22103390114",
+      "KyTruoc": 20,
+      "KyHienTai": 3,
+      "KhoiLuongGiam": 17,
+      "PhanTramGiam": 85
+    },
+    {
       "Danhba": "22103390436",
       "KyTruoc": 17,
       "KyHienTai": 0,
@@ -1592,53 +1704,18 @@
       "PhanTramGiam": 100
     },
     {
-      "Danhba": "22043304277",
+      "Danhba": "22103413413",
       "KyTruoc": 17,
       "KyHienTai": 0,
       "KhoiLuongGiam": 17,
       "PhanTramGiam": 100
     },
     {
-      "Danhba": "22043303711",
-      "KyTruoc": 17,
+      "Danhba": "22103414163",
+      "KyTruoc": 16,
       "KyHienTai": 0,
-      "KhoiLuongGiam": 17,
+      "KhoiLuongGiam": 16,
       "PhanTramGiam": 100
-    },
-    {
-      "Danhba": "22033334420",
-      "KyTruoc": 18,
-      "KyHienTai": 1,
-      "KhoiLuongGiam": 17,
-      "PhanTramGiam": 94.4
-    },
-    {
-      "Danhba": "22043307097",
-      "KyTruoc": 21,
-      "KyHienTai": 4,
-      "KhoiLuongGiam": 17,
-      "PhanTramGiam": 81
-    },
-    {
-      "Danhba": "22043308864",
-      "KyTruoc": 22,
-      "KyHienTai": 5,
-      "KhoiLuongGiam": 17,
-      "PhanTramGiam": 77.3
-    },
-    {
-      "Danhba": "22043310615",
-      "KyTruoc": 21,
-      "KyHienTai": 5,
-      "KhoiLuongGiam": 16,
-      "PhanTramGiam": 76.2
-    },
-    {
-      "Danhba": "22073342687",
-      "KyTruoc": 19,
-      "KyHienTai": 3,
-      "KhoiLuongGiam": 16,
-      "PhanTramGiam": 84.2
     },
     {
       "Danhba": "22103411145",
@@ -1648,11 +1725,18 @@
       "PhanTramGiam": 100
     },
     {
-      "Danhba": "22103414163",
-      "KyTruoc": 16,
-      "KyHienTai": 0,
+      "Danhba": "22073342687",
+      "KyTruoc": 19,
+      "KyHienTai": 3,
       "KhoiLuongGiam": 16,
-      "PhanTramGiam": 100
+      "PhanTramGiam": 84.2
+    },
+    {
+      "Danhba": "22043310615",
+      "KyTruoc": 21,
+      "KyHienTai": 5,
+      "KhoiLuongGiam": 16,
+      "PhanTramGiam": 76.2
     },
     {
       "Danhba": "15112846390",
@@ -1676,8 +1760,8 @@
     "ketCoM3": ">15m³"
   },
   "tienDo": {
-    "tongDH": 34965,
-    "daDoc": 34965,
+    "tongDH": 36679,
+    "daDoc": 36679,
     "chuaDoc": 0,
     "pct": 100
   }
