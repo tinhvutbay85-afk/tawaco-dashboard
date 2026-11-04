@@ -1,10 +1,24 @@
-// TAWACO – Biến động KH Lớn – 10:20:14 4/11/2026
+// TAWACO – Biến động KH Lớn – 11:20:14 4/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:14 4/11/2026",
+  "lastUpdated": "11:20:14 4/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 3,
-  "tongM3Mat": 879,
+  "tongKH": 5,
+  "tongM3Mat": 1940,
   "danhSach": [
+    {
+      "Danhba": "15112840331",
+      "TenKH": "CONG AN THANH PHO HO CHI MINH",
+      "DiaChi": "N/A",
+      "MaDMA": "N/A",
+      "MaPhuong": "26898",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 4133,
+      "SL_K3": 3327,
+      "M3_Giam": 806,
+      "TyLe_Giam": 19.5,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "22103412053",
       "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
@@ -17,6 +31,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1386,
       "M3_Giam": 544,
       "TyLe_Giam": 28.19,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22033277945",
+      "TenKH": "CONG TY CO PHAN GIAY THIEN LOC",
+      "DiaChi": "N/A",
+      "MaDMA": "HT.4",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1661,
+      "SL_K3": 1406,
+      "M3_Giam": 255,
+      "TyLe_Giam": 15.35,
       "Level": "YELLOW"
     },
     {
