@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:15 5/11/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 5/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:15 5/11/2026",
+  "lastUpdated": "11:20:15 5/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 6,
-  "tongM3Mat": 2430,
+  "tongKH": 7,
+  "tongM3Mat": 2586,
   "danhSach": [
     {
       "Danhba": "15112840331",
@@ -73,6 +73,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1087,
       "M3_Giam": 192,
       "TyLe_Giam": 15.01,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15031710441",
+      "TenKH": "CÔNG TY TNHH DỊCH VỤ TL-CHI NHÁNH NUMBER 1",
+      "DiaChi": "N/A",
+      "MaDMA": "10.1.1",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1316,
+      "SL_K3": 1160,
+      "M3_Giam": 156,
+      "TyLe_Giam": 11.85,
       "Level": "YELLOW"
     },
     {
