@@ -1,10 +1,24 @@
-// TAWACO – Biến động KH Lớn – 11:20:15 5/11/2026
+// TAWACO – Biến động KH Lớn – 14:20:14 5/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "11:20:15 5/11/2026",
+  "lastUpdated": "14:20:14 5/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 7,
-  "tongM3Mat": 2586,
+  "tongKH": 8,
+  "tongM3Mat": 11351,
   "danhSach": [
+    {
+      "Danhba": "22073339999",
+      "TenKH": "CONG TY TNHH NHA MAY BIA HEINEKEN VIET NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "TA.1",
+      "MaPhuong": "26773",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 28180,
+      "SL_K3": 19415,
+      "M3_Giam": 8765,
+      "TyLe_Giam": 31.1,
+      "Level": "YELLOW"
+    },
     {
       "Danhba": "15112840331",
       "TenKH": "CONG AN THANH PHO HO CHI MINH",
