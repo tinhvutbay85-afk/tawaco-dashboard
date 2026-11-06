@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:14 6/11/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 6/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:14 6/11/2026",
+  "lastUpdated": "11:20:15 6/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 8,
-  "tongM3Mat": 11351,
+  "tongKH": 10,
+  "tongM3Mat": 12121,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -31,6 +31,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 3327,
       "M3_Giam": 806,
       "TyLe_Giam": 19.5,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15141939801",
+      "TenKH": "CONG TY TNHH KY THUAT - DICH VU - QUAN LY MINH DUNG",
+      "DiaChi": "N/A",
+      "MaDMA": "14.1",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1838,
+      "SL_K3": 1145,
+      "M3_Giam": 693,
+      "TyLe_Giam": 37.7,
       "Level": "YELLOW"
     },
     {
@@ -115,6 +129,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 918,
       "M3_Giam": 143,
       "TyLe_Giam": 13.48,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22103413312",
+      "TenKH": "TRUONG TRUNG HOC CO SO TRAN PHU",
+      "DiaChi": "N/A",
+      "MaDMA": "TTN.3",
+      "MaPhuong": "26791",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 718,
+      "SL_K3": 641,
+      "M3_Giam": 77,
+      "TyLe_Giam": 10.72,
       "Level": "YELLOW"
     }
   ]
