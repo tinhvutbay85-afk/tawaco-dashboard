@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "09:00:14 6/11/2026",
+  "lastUpdated": "09:20:13 6/11/2026",
   "nguonDuLieu": "SANLUONGDONGHOKHACHHANG – Kỳ 11 / Năm 2026",
   "nam": 2026,
   "ky": "11",
@@ -3230,9 +3230,9 @@
     "ketCoM3": ">15m³"
   },
   "tienDo": {
-    "tongDH": 69714,
+    "tongDH": 248606,
     "daDoc": 69714,
-    "chuaDoc": 0,
-    "pct": 100
+    "chuaDoc": 178892,
+    "pct": 28.04
   }
 }
