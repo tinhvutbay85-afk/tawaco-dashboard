@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 07:57:39 9/11/2026
+// TAWACO – Biến động KH Lớn – 08:20:15 9/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "07:57:39 9/11/2026",
+  "lastUpdated": "08:20:15 9/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 12,
-  "tongM3Mat": 12791,
+  "tongKH": 16,
+  "tongM3Mat": 13712,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -62,6 +62,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22083368724",
+      "TenKH": "XI NGHIEP CAO SU HOC MON",
+      "DiaChi": "N/A",
+      "MaDMA": "TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 2474,
+      "SL_K3": 1951,
+      "M3_Giam": 523,
+      "TyLe_Giam": 21.14,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22033334012",
       "TenKH": "TRUNG TAM 286 BO TU LENH 86",
       "DiaChi": "N/A",
@@ -101,6 +115,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1406,
       "M3_Giam": 255,
       "TyLe_Giam": 15.35,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22083368023",
+      "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 732,
+      "SL_K3": 518,
+      "M3_Giam": 214,
+      "TyLe_Giam": 29.23,
       "Level": "YELLOW"
     },
     {
@@ -160,6 +188,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22043300083",
+      "TenKH": "TRUONG TIEU HOC QUOI XUAN",
+      "DiaChi": "N/A",
+      "MaDMA": "TX.4_1",
+      "MaPhuong": "26773",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 629,
+      "SL_K3": 506,
+      "M3_Giam": 123,
+      "TyLe_Giam": 19.55,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22103413312",
       "TenKH": "TRUONG TRUNG HOC CO SO TRAN PHU",
       "DiaChi": "N/A",
@@ -171,6 +213,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 641,
       "M3_Giam": 77,
       "TyLe_Giam": 10.72,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22043310356",
+      "TenKH": "TRUONG MAM NON HONG YEN",
+      "DiaChi": "N/A",
+      "MaDMA": "N/A",
+      "MaPhuong": "26773",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 504,
+      "SL_K3": 443,
+      "M3_Giam": 61,
+      "TyLe_Giam": 12.1,
       "Level": "YELLOW"
     }
   ]
