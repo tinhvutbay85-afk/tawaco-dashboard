@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 13:20:15 10/11/2026
+// TAWACO – Biến động KH Lớn – 14:20:15 10/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "13:20:15 10/11/2026",
+  "lastUpdated": "14:20:15 10/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 22,
-  "tongM3Mat": 16526,
+  "tongKH": 28,
+  "tongM3Mat": 21363,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -17,6 +17,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 19415,
       "M3_Giam": 8765,
       "TyLe_Giam": 31.1,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15141950105",
+      "TenKH": "CONG TY CO PHAN DA GIAY SAGODA",
+      "DiaChi": "N/A",
+      "MaDMA": "N/A",
+      "MaPhuong": "26882",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 7728,
+      "SL_K3": 3866,
+      "M3_Giam": 3862,
+      "TyLe_Giam": 49.97,
       "Level": "YELLOW"
     },
     {
@@ -132,6 +146,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22053291359",
+      "TenKH": "CN CTY TNHH MTV TM THUY NGOC",
+      "DiaChi": "N/A",
+      "MaDMA": "TL_1",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1075,
+      "SL_K3": 763,
+      "M3_Giam": 312,
+      "TyLe_Giam": 29.02,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15141944002",
+      "TenKH": "CTY CP DT VA PT DIA OC KHANG GIA",
+      "DiaChi": "N/A",
+      "MaDMA": "N/A",
+      "MaPhuong": "26882",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2294,
+      "SL_K3": 1983,
+      "M3_Giam": 311,
+      "TyLe_Giam": 13.56,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22033277945",
       "TenKH": "CONG TY CO PHAN GIAY THIEN LOC",
       "DiaChi": "N/A",
@@ -171,6 +213,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 638,
       "M3_Giam": 208,
       "TyLe_Giam": 24.59,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063324953",
+      "TenKH": "CONG TY CO PHAN DAU TU BAT DONG SAN HUNG VUONG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1073,
+      "SL_K3": 875,
+      "M3_Giam": 198,
+      "TyLe_Giam": 18.45,
       "Level": "YELLOW"
     },
     {
@@ -286,6 +342,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063327381",
+      "TenKH": "HUYNH VAN THOI",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 619,
+      "SL_K3": 520,
+      "M3_Giam": 99,
+      "TyLe_Giam": 15.99,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22103413312",
       "TenKH": "TRUONG TRUNG HOC CO SO TRAN PHU",
       "DiaChi": "N/A",
@@ -311,6 +381,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 443,
       "M3_Giam": 61,
       "TyLe_Giam": 12.1,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063319560",
+      "TenKH": "TRUONG THCS AN PHU DONG",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 523,
+      "SL_K3": 468,
+      "M3_Giam": 55,
+      "TyLe_Giam": 10.52,
       "Level": "YELLOW"
     }
   ]
