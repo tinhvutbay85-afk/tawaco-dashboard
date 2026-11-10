@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:15 10/11/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 10/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:15 10/11/2026",
+  "lastUpdated": "11:20:15 10/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 18,
-  "tongM3Mat": 14377,
+  "tongKH": 22,
+  "tongM3Mat": 16526,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -17,6 +17,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 19415,
       "M3_Giam": 8765,
       "TyLe_Giam": 31.1,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22093371700",
+      "TenKH": "CTY TNHH DAT LANH(CAO OC",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.5",
+      "MaPhuong": "26791",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 15753,
+      "SL_K3": 14047,
+      "M3_Giam": 1706,
+      "TyLe_Giam": 10.83,
       "Level": "YELLOW"
     },
     {
@@ -146,6 +160,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15102720070",
+      "TenKH": "KHO 690- CUC QUAN NHU- TCHC",
+      "DiaChi": "N/A",
+      "MaDMA": "10.2",
+      "MaPhuong": "26884",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 846,
+      "SL_K3": 638,
+      "M3_Giam": 208,
+      "TyLe_Giam": 24.59,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22103410956",
       "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -216,6 +244,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15102748474",
+      "TenKH": "CONG TY TNHH MTV OM",
+      "DiaChi": "N/A",
+      "MaDMA": "10.3",
+      "MaPhuong": "26884",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 673,
+      "SL_K3": 544,
+      "M3_Giam": 129,
+      "TyLe_Giam": 19.17,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22043300083",
       "TenKH": "TRUONG TIEU HOC QUOI XUAN",
       "DiaChi": "N/A",
@@ -227,6 +269,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 506,
       "M3_Giam": 123,
       "TyLe_Giam": 19.55,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15102728907",
+      "TenKH": "CONG TY CO PHAN 28 HUNG PHU",
+      "DiaChi": "N/A",
+      "MaDMA": "10.2",
+      "MaPhuong": "26884",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 500,
+      "SL_K3": 394,
+      "M3_Giam": 106,
+      "TyLe_Giam": 21.2,
       "Level": "YELLOW"
     },
     {
