@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 16:20:15 10/11/2026
+// TAWACO – Biến động KH Lớn – 08:23:37 11/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "16:20:15 10/11/2026",
+  "lastUpdated": "08:23:37 11/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 28,
-  "tongM3Mat": 21363,
+  "tongKH": 27,
+  "tongM3Mat": 17501,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -17,20 +17,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 19415,
       "M3_Giam": 8765,
       "TyLe_Giam": 31.1,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15141950105",
-      "TenKH": "CONG TY CO PHAN DA GIAY SAGODA",
-      "DiaChi": "N/A",
-      "MaDMA": "N/A",
-      "MaPhuong": "26882",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 7728,
-      "SL_K3": 3866,
-      "M3_Giam": 3862,
-      "TyLe_Giam": 49.97,
       "Level": "YELLOW"
     },
     {
