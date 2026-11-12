@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:15 12/11/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 12/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:15 12/11/2026",
+  "lastUpdated": "11:20:15 12/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 27,
-  "tongM3Mat": 17501,
+  "tongKH": 35,
+  "tongM3Mat": 19764,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -76,6 +76,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "15042000010",
+      "TenKH": "TRUONG MAM NON HOA LAN",
+      "DiaChi": "N/A",
+      "MaDMA": "4.1",
+      "MaPhuong": "26890",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 893,
+      "SL_K3": 283,
+      "M3_Giam": 610,
+      "TyLe_Giam": 68.31,
+      "Level": "RED"
+    },
+    {
       "Danhba": "22103412053",
       "TenKH": "CONG TY TNHH KY THUAT DICH VU QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -132,6 +146,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15150005004",
+      "TenKH": "TRAN MINH SANG",
+      "DiaChi": "N/A",
+      "MaDMA": "TX.1",
+      "MaPhuong": "26878",
+      "MaGia": "57",
+      "SL_K1": 0,
+      "SL_K2": 1783,
+      "SL_K3": 1454,
+      "M3_Giam": 329,
+      "TyLe_Giam": 18.45,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22053291359",
       "TenKH": "CN CTY TNHH MTV TM THUY NGOC",
       "DiaChi": "N/A",
@@ -160,6 +188,48 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063313665",
+      "TenKH": "CONG TY CO PHAN ECO WIPES VIET NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.3",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 1246,
+      "SL_K3": 944,
+      "M3_Giam": 302,
+      "TyLe_Giam": 24.24,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063300808",
+      "TenKH": "CONG TY TNHH CTI VN",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_2",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 543,
+      "SL_K3": 258,
+      "M3_Giam": 285,
+      "TyLe_Giam": 52.49,
+      "Level": "RED"
+    },
+    {
+      "Danhba": "22023249509",
+      "TenKH": "BENH VIEN QUAN 12",
+      "DiaChi": "N/A",
+      "MaDMA": "TCH.5",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 1833,
+      "SL_K3": 1569,
+      "M3_Giam": 264,
+      "TyLe_Giam": 14.4,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22033277945",
       "TenKH": "CONG TY CO PHAN GIAY THIEN LOC",
       "DiaChi": "N/A",
@@ -171,6 +241,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1406,
       "M3_Giam": 255,
       "TyLe_Giam": 15.35,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063326340",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN DICH VU CONG ICH QUAN 12",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_2",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 1009,
+      "SL_K3": 793,
+      "M3_Giam": 216,
+      "TyLe_Giam": 21.41,
       "Level": "YELLOW"
     },
     {
@@ -241,6 +325,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 565,
       "M3_Giam": 167,
       "TyLe_Giam": 22.81,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15041988247",
+      "TenKH": "TRUNG TAM NUOI DUONG BAO TRO TRE EM GO VAP",
+      "DiaChi": "N/A",
+      "MaDMA": "4.1",
+      "MaPhuong": "26890",
+      "MaGia": "21",
+      "SL_K1": 0,
+      "SL_K2": 682,
+      "SL_K3": 515,
+      "M3_Giam": 167,
+      "TyLe_Giam": 24.49,
       "Level": "YELLOW"
     },
     {
@@ -339,6 +437,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 520,
       "M3_Giam": 99,
       "TyLe_Giam": 15.99,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063312230",
+      "TenKH": "CTY TNHH LAM SAN TOAN THINH",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.1",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 502,
+      "SL_K3": 412,
+      "M3_Giam": 90,
+      "TyLe_Giam": 17.93,
       "Level": "YELLOW"
     },
     {
