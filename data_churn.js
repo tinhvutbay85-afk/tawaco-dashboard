@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:15 13/11/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 13/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:15 13/11/2026",
+  "lastUpdated": "11:20:15 13/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 35,
-  "tongM3Mat": 19764,
+  "tongKH": 40,
+  "tongM3Mat": 20287,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -216,20 +216,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
-      "Danhba": "22023249509",
-      "TenKH": "BENH VIEN QUAN 12",
-      "DiaChi": "N/A",
-      "MaDMA": "TCH.5",
-      "MaPhuong": "26785",
-      "MaGia": "31",
-      "SL_K1": 0,
-      "SL_K2": 1833,
-      "SL_K3": 1569,
-      "M3_Giam": 264,
-      "TyLe_Giam": 14.4,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22033277945",
       "TenKH": "CONG TY CO PHAN GIAY THIEN LOC",
       "DiaChi": "N/A",
@@ -241,6 +227,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1406,
       "M3_Giam": 255,
       "TyLe_Giam": 15.35,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013215003",
+      "TenKH": "TRUNG TAM CONG NGHE SINH HOC",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.2_1",
+      "MaPhuong": "26785",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 1399,
+      "SL_K3": 1167,
+      "M3_Giam": 232,
+      "TyLe_Giam": 16.58,
       "Level": "YELLOW"
     },
     {
@@ -342,6 +342,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22053299999",
+      "TenKH": "CO SO TU THIEN XH PHAT GIAO CHUA KY QUANG II",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 550,
+      "SL_K3": 392,
+      "M3_Giam": 158,
+      "TyLe_Giam": 28.73,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22113410001",
       "TenKH": "BAN QL CHUNG CU AN SUONG",
       "DiaChi": "N/A",
@@ -381,6 +395,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 918,
       "M3_Giam": 143,
       "TyLe_Giam": 13.48,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063302140",
+      "TenKH": "CHI NHANH 8 - CONG TY CO PHAN TAP DOAN GIA DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_2",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 781,
+      "SL_K3": 645,
+      "M3_Giam": 136,
+      "TyLe_Giam": 17.41,
       "Level": "YELLOW"
     },
     {
@@ -440,6 +468,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22063302240",
+      "TenKH": "CHI NHANH 8 - CONG TY CO PHAN TAP DOAN GIA DINH",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2_2",
+      "MaPhuong": "26767",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 813,
+      "SL_K3": 719,
+      "M3_Giam": 94,
+      "TyLe_Giam": 11.56,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22093220809",
+      "TenKH": "TRUONG CAO DANG PHAT THANH -TRUYEN HINH II",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.8",
+      "MaPhuong": "26791",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 830,
+      "SL_K3": 739,
+      "M3_Giam": 91,
+      "TyLe_Giam": 10.96,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22063312230",
       "TenKH": "CTY TNHH LAM SAN TOAN THINH",
       "DiaChi": "N/A",
@@ -465,6 +521,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 641,
       "M3_Giam": 77,
       "TyLe_Giam": 10.72,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063325699",
+      "TenKH": "CONG TY CO PHAN SAN XUAT THUONG MAI DICH VU NATURAL RENDEZ - VOUS",
+      "DiaChi": "N/A",
+      "MaDMA": "APD.2",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 582,
+      "SL_K3": 506,
+      "M3_Giam": 76,
+      "TyLe_Giam": 13.06,
       "Level": "YELLOW"
     },
     {
