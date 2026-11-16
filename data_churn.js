@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 11:20:15 16/11/2026
+// TAWACO – Biến động KH Lớn – 14:20:15 16/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "11:20:15 16/11/2026",
+  "lastUpdated": "14:20:15 16/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 42,
-  "tongM3Mat": 20945,
+  "tongKH": 43,
+  "tongM3Mat": 22347,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -32,6 +32,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 1706,
       "TyLe_Giam": 10.83,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013222620",
+      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.4",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1421,
+      "SL_K3": 19,
+      "M3_Giam": 1402,
+      "TyLe_Giam": 98.66,
+      "Level": "RED"
     },
     {
       "Danhba": "15112840331",
@@ -328,20 +342,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "15041988247",
-      "TenKH": "TRUNG TAM NUOI DUONG BAO TRO TRE EM GO VAP",
-      "DiaChi": "N/A",
-      "MaDMA": "4.1",
-      "MaPhuong": "26890",
-      "MaGia": "21",
-      "SL_K1": 0,
-      "SL_K2": 682,
-      "SL_K3": 515,
-      "M3_Giam": 167,
-      "TyLe_Giam": 24.49,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22083368023",
       "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
       "DiaChi": "N/A",
@@ -353,6 +353,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 565,
       "M3_Giam": 167,
       "TyLe_Giam": 22.81,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15041988247",
+      "TenKH": "TRUNG TAM NUOI DUONG BAO TRO TRE EM GO VAP",
+      "DiaChi": "N/A",
+      "MaDMA": "4.1",
+      "MaPhuong": "26890",
+      "MaGia": "21",
+      "SL_K1": 0,
+      "SL_K2": 682,
+      "SL_K3": 515,
+      "M3_Giam": 167,
+      "TyLe_Giam": 24.49,
       "Level": "YELLOW"
     },
     {
