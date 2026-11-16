@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 16:20:15 13/11/2026
+// TAWACO – Biến động KH Lớn – 08:28:44 16/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "16:20:15 13/11/2026",
+  "lastUpdated": "08:28:44 16/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 40,
-  "tongM3Mat": 20287,
+  "tongKH": 43,
+  "tongM3Mat": 21177,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -132,6 +132,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22053327281",
+      "TenKH": "CHUNG CU THANH LOC",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 3728,
+      "SL_K3": 3277,
+      "M3_Giam": 451,
+      "TyLe_Giam": 12.1,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22083368724",
       "TenKH": "XI NGHIEP CAO SU HOC MON",
       "DiaChi": "N/A",
@@ -199,6 +213,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 944,
       "M3_Giam": 302,
       "TyLe_Giam": 24.24,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22063310508",
+      "TenKH": "CONG TY TNHH SAN XUAT THUONG MAI DICH VU THUAN AN AN",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 909,
+      "SL_K3": 624,
+      "M3_Giam": 285,
+      "TyLe_Giam": 31.35,
       "Level": "YELLOW"
     },
     {
@@ -381,6 +409,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1160,
       "M3_Giam": 156,
       "TyLe_Giam": 11.85,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22053321820",
+      "TenKH": "HOP TAC XA GIA PHU",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1038,
+      "SL_K3": 884,
+      "M3_Giam": 154,
+      "TyLe_Giam": 14.84,
       "Level": "YELLOW"
     },
     {
