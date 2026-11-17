@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:15 17/11/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 17/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:15 17/11/2026",
+  "lastUpdated": "11:20:15 17/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 49,
-  "tongM3Mat": 26094,
+  "tongKH": 55,
+  "tongM3Mat": 28591,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -62,6 +62,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "15072448232",
+      "TenKH": "CONG TY TNHH MTV DONG HAI",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 6496,
+      "SL_K3": 5129,
+      "M3_Giam": 1367,
+      "TyLe_Giam": 21.04,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15112840331",
       "TenKH": "CONG AN THANH PHO HO CHI MINH",
       "DiaChi": "N/A",
@@ -76,20 +90,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "15173438568",
-      "TenKH": "TRƯỜNG SĨ QUAN KỸ THUẬT QUÂN SỰ",
-      "DiaChi": "N/A",
-      "MaDMA": "17.7.1A",
-      "MaPhuong": "26884",
-      "MaGia": "38",
-      "SL_K1": 0,
-      "SL_K2": 3695,
-      "SL_K3": 2942,
-      "M3_Giam": 753,
-      "TyLe_Giam": 20.38,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "15141939801",
       "TenKH": "CONG TY TNHH KY THUAT - DICH VU - QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -101,6 +101,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1145,
       "M3_Giam": 693,
       "TyLe_Giam": 37.7,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15173438568",
+      "TenKH": "TRƯỜNG SĨ QUAN KỸ THUẬT QUÂN SỰ",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1A",
+      "MaPhuong": "26884",
+      "MaGia": "38",
+      "SL_K1": 0,
+      "SL_K2": 3695,
+      "SL_K3": 3011,
+      "M3_Giam": 684,
+      "TyLe_Giam": 18.51,
       "Level": "YELLOW"
     },
     {
@@ -186,6 +200,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 513,
       "TyLe_Giam": 83.41,
       "Level": "RED"
+    },
+    {
+      "Danhba": "15151900273",
+      "TenKH": "BAN QUAN TRI NHA CHUNG CU OSIMI TOWER",
+      "DiaChi": "N/A",
+      "MaDMA": "15.1",
+      "MaPhuong": "26878",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1627,
+      "SL_K3": 1121,
+      "M3_Giam": 506,
+      "TyLe_Giam": 31.1,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "22073342580",
@@ -286,17 +314,17 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22063310508",
-      "TenKH": "CONG TY TNHH SAN XUAT THUONG MAI DICH VU THUAN AN AN",
+      "Danhba": "22023230010",
+      "TenKH": "TRUONG DH LAO DONG XA HOI (CS)",
       "DiaChi": "N/A",
-      "MaDMA": "TL.2",
-      "MaPhuong": "26767",
-      "MaGia": "33",
+      "MaDMA": "N/A",
+      "MaPhuong": "26785",
+      "MaGia": "31",
       "SL_K1": 0,
-      "SL_K2": 909,
-      "SL_K3": 624,
-      "M3_Giam": 285,
-      "TyLe_Giam": 31.35,
+      "SL_K2": 1140,
+      "SL_K3": 843,
+      "M3_Giam": 297,
+      "TyLe_Giam": 26.05,
       "Level": "YELLOW"
     },
     {
@@ -312,6 +340,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 285,
       "TyLe_Giam": 52.49,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22063310508",
+      "TenKH": "CONG TY TNHH SAN XUAT THUONG MAI DICH VU THUAN AN AN",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 909,
+      "SL_K3": 624,
+      "M3_Giam": 285,
+      "TyLe_Giam": 31.35,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "22033277945",
@@ -496,6 +538,34 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "22083368911",
+      "TenKH": "CONG TY CO PHAN SIAM BROTHERS VIET NAM",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.3",
+      "MaPhuong": "26782",
+      "MaGia": "32",
+      "SL_K1": 0,
+      "SL_K2": 604,
+      "SL_K3": 452,
+      "M3_Giam": 152,
+      "TyLe_Giam": 25.17,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072448402",
+      "TenKH": "CONG TY TNHH MTV DONG HAI",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26890",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1026,
+      "SL_K3": 882,
+      "M3_Giam": 144,
+      "TyLe_Giam": 14.04,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15062140286",
       "TenKH": "BAN QUAN TRI NHA CHUNG CU CCI - FELIX HOMES",
       "DiaChi": "N/A",
@@ -563,6 +633,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 394,
       "M3_Giam": 106,
       "TyLe_Giam": 21.2,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15072444489",
+      "TenKH": "TIEU DOAN PHONG HOA 907",
+      "DiaChi": "N/A",
+      "MaDMA": "5.7.1A",
+      "MaPhuong": "26890",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 513,
+      "SL_K3": 413,
+      "M3_Giam": 100,
+      "TyLe_Giam": 19.49,
       "Level": "YELLOW"
     },
     {
