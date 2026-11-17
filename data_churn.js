@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 11:20:15 17/11/2026
+// TAWACO – Biến động KH Lớn – 14:20:15 17/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "11:20:15 17/11/2026",
+  "lastUpdated": "14:20:15 17/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 55,
-  "tongM3Mat": 28591,
+  "tongKH": 57,
+  "tongM3Mat": 29919,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -74,6 +74,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 1367,
       "TyLe_Giam": 21.04,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22013221982",
+      "TenKH": "CONG TY CO PHAN XAY DUNG VA QUAN LY CAO OC SAI GON",
+      "DiaChi": "N/A",
+      "MaDMA": "TMT.4",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 2066,
+      "SL_K3": 858,
+      "M3_Giam": 1208,
+      "TyLe_Giam": 58.47,
+      "Level": "RED"
     },
     {
       "Danhba": "15112840331",
@@ -619,6 +633,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 506,
       "M3_Giam": 123,
       "TyLe_Giam": 19.55,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15161970077",
+      "TenKH": "TRUONG TIEU HOC VO THI SAU",
+      "DiaChi": "N/A",
+      "MaDMA": "N/A",
+      "MaPhuong": "26878",
+      "MaGia": "31",
+      "SL_K1": 0,
+      "SL_K2": 543,
+      "SL_K3": 423,
+      "M3_Giam": 120,
+      "TyLe_Giam": 22.1,
       "Level": "YELLOW"
     },
     {
