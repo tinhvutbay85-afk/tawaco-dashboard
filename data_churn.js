@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 16:20:15 16/11/2026
+// TAWACO – Biến động KH Lớn – 08:38:24 17/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "16:20:15 16/11/2026",
+  "lastUpdated": "08:38:24 17/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 43,
-  "tongM3Mat": 22347,
+  "tongKH": 49,
+  "tongM3Mat": 26094,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -31,6 +31,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 14047,
       "M3_Giam": 1706,
       "TyLe_Giam": 10.83,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052171504",
+      "TenKH": "TRƯỜNG ĐẠI HỌC VĂN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 5940,
+      "SL_K3": 4355,
+      "M3_Giam": 1585,
+      "TyLe_Giam": 26.68,
       "Level": "YELLOW"
     },
     {
@@ -62,6 +76,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15173438568",
+      "TenKH": "TRƯỜNG SĨ QUAN KỸ THUẬT QUÂN SỰ",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1A",
+      "MaPhuong": "26884",
+      "MaGia": "38",
+      "SL_K1": 0,
+      "SL_K2": 3695,
+      "SL_K3": 2942,
+      "M3_Giam": 753,
+      "TyLe_Giam": 20.38,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15141939801",
       "TenKH": "CONG TY TNHH KY THUAT - DICH VU - QUAN LY MINH DUNG",
       "DiaChi": "N/A",
@@ -74,6 +102,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 693,
       "TyLe_Giam": 37.7,
       "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15161969110",
+      "TenKH": "CONG TY CO PHAN MAJOR EDUCATION",
+      "DiaChi": "N/A",
+      "MaDMA": "N/A",
+      "MaPhuong": "26878",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 855,
+      "SL_K3": 206,
+      "M3_Giam": 649,
+      "TyLe_Giam": 75.91,
+      "Level": "RED"
     },
     {
       "Danhba": "22043272030",
@@ -115,6 +157,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1386,
       "M3_Giam": 544,
       "TyLe_Giam": 28.19,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052171143",
+      "TenKH": "TRUONG DAI HOC VAN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 3861,
+      "SL_K3": 3337,
+      "M3_Giam": 524,
+      "TyLe_Giam": 13.57,
       "Level": "YELLOW"
     },
     {
@@ -370,6 +426,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15072444490",
+      "TenKH": "CTY TNHH MTV BA SON",
+      "DiaChi": "N/A",
+      "MaDMA": "N/A",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1341,
+      "SL_K3": 1179,
+      "M3_Giam": 162,
+      "TyLe_Giam": 12.08,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22053299999",
       "TenKH": "CO SO TU THIEN XH PHAT GIAO CHUA KY QUANG II",
       "DiaChi": "N/A",
@@ -577,6 +647,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 506,
       "M3_Giam": 76,
       "TyLe_Giam": 13.06,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15173438274",
+      "TenKH": "TRUONG SI QUAN KY THUAT QUAN SU ( VINHEMPICH )",
+      "DiaChi": "N/A",
+      "MaDMA": "17.7.1A",
+      "MaPhuong": "26884",
+      "MaGia": "38",
+      "SL_K1": 0,
+      "SL_K2": 537,
+      "SL_K3": 463,
+      "M3_Giam": 74,
+      "TyLe_Giam": 13.78,
       "Level": "YELLOW"
     },
     {
