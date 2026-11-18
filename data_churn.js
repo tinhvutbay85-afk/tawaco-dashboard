@@ -1,9 +1,9 @@
-// TAWACO – Biến động KH Lớn – 10:20:15 18/11/2026
+// TAWACO – Biến động KH Lớn – 11:20:15 18/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "10:20:15 18/11/2026",
+  "lastUpdated": "11:20:15 18/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
-  "tongKH": 57,
-  "tongM3Mat": 29919,
+  "tongKH": 58,
+  "tongM3Mat": 29447,
   "danhSach": [
     {
       "Danhba": "22073339999",
@@ -31,20 +31,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 14047,
       "M3_Giam": 1706,
       "TyLe_Giam": 10.83,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15052171504",
-      "TenKH": "TRƯỜNG ĐẠI HỌC VĂN LANG",
-      "DiaChi": "N/A",
-      "MaDMA": "5.2",
-      "MaPhuong": "26876",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 5940,
-      "SL_K3": 4355,
-      "M3_Giam": 1585,
-      "TyLe_Giam": 26.68,
       "Level": "YELLOW"
     },
     {
@@ -90,6 +76,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
+      "Danhba": "15173425679",
+      "TenKH": "CONG TY XAY DUNG SO 5",
+      "DiaChi": "N/A",
+      "MaDMA": "17.2",
+      "MaPhuong": "26884",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 5757,
+      "SL_K3": 4917,
+      "M3_Giam": 840,
+      "TyLe_Giam": 14.59,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "15112840331",
       "TenKH": "CONG AN THANH PHO HO CHI MINH",
       "DiaChi": "N/A",
@@ -101,6 +101,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 3327,
       "M3_Giam": 806,
       "TyLe_Giam": 19.5,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052171143",
+      "TenKH": "TRUONG DAI HOC VAN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 3861,
+      "SL_K3": 3086,
+      "M3_Giam": 775,
+      "TyLe_Giam": 20.07,
       "Level": "YELLOW"
     },
     {
@@ -185,20 +199,6 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1386,
       "M3_Giam": 544,
       "TyLe_Giam": 28.19,
-      "Level": "YELLOW"
-    },
-    {
-      "Danhba": "15052171143",
-      "TenKH": "TRUONG DAI HOC VAN LANG",
-      "DiaChi": "N/A",
-      "MaDMA": "5.2",
-      "MaPhuong": "26876",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 3861,
-      "SL_K3": 3337,
-      "M3_Giam": 524,
-      "TyLe_Giam": 13.57,
       "Level": "YELLOW"
     },
     {
@@ -328,20 +328,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22023230010",
-      "TenKH": "TRUONG DH LAO DONG XA HOI (CS)",
-      "DiaChi": "N/A",
-      "MaDMA": "N/A",
-      "MaPhuong": "26785",
-      "MaGia": "31",
-      "SL_K1": 0,
-      "SL_K2": 1140,
-      "SL_K3": 843,
-      "M3_Giam": 297,
-      "TyLe_Giam": 26.05,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22063310508",
       "TenKH": "CONG TY TNHH SAN XUAT THUONG MAI DICH VU THUAN AN AN",
       "DiaChi": "N/A",
@@ -426,6 +412,20 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
+      "Danhba": "15072444490",
+      "TenKH": "CTY TNHH MTV BA SON",
+      "DiaChi": "N/A",
+      "MaDMA": "N/A",
+      "MaPhuong": "26890",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 1341,
+      "SL_K3": 1136,
+      "M3_Giam": 205,
+      "TyLe_Giam": 15.29,
+      "Level": "YELLOW"
+    },
+    {
       "Danhba": "22063324953",
       "TenKH": "CONG TY CO PHAN DAU TU BAT DONG SAN HUNG VUONG",
       "DiaChi": "N/A",
@@ -454,20 +454,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22083368023",
-      "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
-      "DiaChi": "N/A",
-      "MaDMA": "TTH.1",
-      "MaPhuong": "26782",
-      "MaGia": "32",
-      "SL_K1": 0,
-      "SL_K2": 732,
-      "SL_K3": 565,
-      "M3_Giam": 167,
-      "TyLe_Giam": 22.81,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "15041988247",
       "TenKH": "TRUNG TAM NUOI DUONG BAO TRO TRE EM GO VAP",
       "DiaChi": "N/A",
@@ -482,17 +468,17 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "15072444490",
-      "TenKH": "CTY TNHH MTV BA SON",
+      "Danhba": "22083368023",
+      "TenKH": "XN CAO SU HOC MON - CTY CP CN CAO SU MIEN NAM",
       "DiaChi": "N/A",
-      "MaDMA": "N/A",
-      "MaPhuong": "26890",
-      "MaGia": "51",
+      "MaDMA": "TTH.1",
+      "MaPhuong": "26782",
+      "MaGia": "32",
       "SL_K1": 0,
-      "SL_K2": 1341,
-      "SL_K3": 1179,
-      "M3_Giam": 162,
-      "TyLe_Giam": 12.08,
+      "SL_K2": 732,
+      "SL_K3": 565,
+      "M3_Giam": 167,
+      "TyLe_Giam": 22.81,
       "Level": "YELLOW"
     },
     {
@@ -507,6 +493,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 392,
       "M3_Giam": 158,
       "TyLe_Giam": 28.73,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052170980",
+      "TenKH": "TRUONG DAI HOC VAN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1425,
+      "SL_K3": 1268,
+      "M3_Giam": 157,
+      "TyLe_Giam": 11.02,
       "Level": "YELLOW"
     },
     {
@@ -647,6 +647,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 423,
       "M3_Giam": 120,
       "TyLe_Giam": 22.1,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22023245942",
+      "TenKH": "CONG TY TNHH MOT THANH VIEN DONG HAI",
+      "DiaChi": "N/A",
+      "MaDMA": "TCH.4_2",
+      "MaPhuong": "26785",
+      "MaGia": "51",
+      "SL_K1": 0,
+      "SL_K2": 923,
+      "SL_K3": 804,
+      "M3_Giam": 119,
+      "TyLe_Giam": 12.89,
       "Level": "YELLOW"
     },
     {
