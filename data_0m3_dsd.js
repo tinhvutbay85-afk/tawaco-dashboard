@@ -1,6 +1,6 @@
-// TAWACO â€“ 0mÂ³ >= 2 ká»³ 2026 DSD â€“ 16:20:14 17/11/2026
+// TAWACO â€“ 0mÂ³ >= 2 ká»³ 2026 DSD â€“ 08:21:18 18/11/2026
 const TAWACO_0M3_DSD = {
-  "lastUpdated": "16:20:14 17/11/2026",
+  "lastUpdated": "08:21:18 18/11/2026",
   "kyRange": "Rolling 0mÂ³: K8 + K9 + K10 + K11 (Bao gá»“m dá»¯ liá»‡u K11 Live)",
   "ghiChu": "TINHTRANG=DSD | ÄÃ£ cÃ³ SL>0 trong quÃ¡ khá»© | Sáº¯p xáº¿p theo ÄMA",
   "kyLabels": [
@@ -10,11 +10,11 @@ const TAWACO_0M3_DSD = {
     "K11"
   ],
   "endIdx": 24323,
-  "tongKH": 5608,
+  "tongKH": 5749,
   "phanBoDMA": [
     {
       "dma": "null",
-      "soKH": 1309
+      "soKH": 1375
     },
     {
       "dma": "HT-TTH.1",
@@ -37,6 +37,10 @@ const TAWACO_0M3_DSD = {
       "soKH": 117
     },
     {
+      "dma": "TCH.1",
+      "soKH": 115
+    },
+    {
       "dma": "TL.2",
       "soKH": 113
     },
@@ -57,6 +61,10 @@ const TAWACO_0M3_DSD = {
       "soKH": 94
     },
     {
+      "dma": "TX-TL.2",
+      "soKH": 94
+    },
+    {
       "dma": "8.2",
       "soKH": 87
     },
@@ -73,10 +81,6 @@ const TAWACO_0M3_DSD = {
       "soKH": 82
     },
     {
-      "dma": "TX-TL.2",
-      "soKH": 79
-    },
-    {
       "dma": "TA.1",
       "soKH": 76
     },
@@ -90,10 +94,6 @@ const TAWACO_0M3_DSD = {
     },
     {
       "dma": "13.2",
-      "soKH": 68
-    },
-    {
-      "dma": "TCH.1",
       "soKH": 68
     },
     {
@@ -118,6 +118,10 @@ const TAWACO_0M3_DSD = {
     },
     {
       "dma": "9.1.1",
+      "soKH": 58
+    },
+    {
+      "dma": "TCH.1_3",
       "soKH": 58
     },
     {
@@ -158,10 +162,6 @@ const TAWACO_0M3_DSD = {
     },
     {
       "dma": "5.1",
-      "soKH": 45
-    },
-    {
-      "dma": "TCH.1_3",
       "soKH": 45
     },
     {
@@ -10375,6 +10375,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K4"
     },
     {
+      "Danhba": "22043270288",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 7,
+      "KyCoSL": "2026/K7"
+    },
+    {
       "Danhba": "22043270519",
       "MaDMA": "",
       "Roll1": 0,
@@ -10615,6 +10625,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K8"
     },
     {
+      "Danhba": "22043290284",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 9,
+      "KyCoSL": "2025/K7"
+    },
+    {
       "Danhba": "22043290693",
       "MaDMA": "",
       "Roll1": 0,
@@ -10633,6 +10653,26 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 43,
       "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22043290830",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K3"
+    },
+    {
+      "Danhba": "22043290890",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 9,
+      "KyCoSL": "2026/K7"
     },
     {
       "Danhba": "22043298204",
@@ -10885,6 +10925,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K6"
     },
     {
+      "Danhba": "22043301852",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K3"
+    },
+    {
       "Danhba": "22043301891",
       "MaDMA": "",
       "Roll1": 0,
@@ -11065,6 +11115,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K2"
     },
     {
+      "Danhba": "22043303050",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K1"
+    },
+    {
       "Danhba": "22043303119",
       "MaDMA": "",
       "Roll1": 0,
@@ -11103,6 +11163,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 8,
       "KyCoSL": "2025/K2"
+    },
+    {
+      "Danhba": "22043303328",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
     },
     {
       "Danhba": "22043303344",
@@ -11203,6 +11273,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 2,
       "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22043303918",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K5"
     },
     {
       "Danhba": "22043303959",
@@ -11393,6 +11473,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 2,
       "KyCoSL": "2025/K8"
+    },
+    {
+      "Danhba": "22043305566",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K5"
     },
     {
       "Danhba": "22043305636",
@@ -11845,6 +11935,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K5"
     },
     {
+      "Danhba": "22043308815",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 15,
+      "KyCoSL": "2026/K1"
+    },
+    {
       "Danhba": "22043308914",
       "MaDMA": "",
       "Roll1": 0,
@@ -11915,6 +12015,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K5"
     },
     {
+      "Danhba": "22043309390",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K11"
+    },
+    {
       "Danhba": "22043309397",
       "MaDMA": "",
       "Roll1": 0,
@@ -11943,6 +12053,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 45,
       "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22043309583",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
     },
     {
       "Danhba": "22043309663",
@@ -12115,6 +12235,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K4"
     },
     {
+      "Danhba": "22043310993",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K9"
+    },
+    {
       "Danhba": "22043311007",
       "MaDMA": "",
       "Roll1": 0,
@@ -12265,6 +12395,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K1"
     },
     {
+      "Danhba": "22043311598",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
       "Danhba": "22043311612",
       "MaDMA": "",
       "Roll1": 0,
@@ -12272,6 +12412,16 @@ const TAWACO_0M3_DSD = {
       "Roll3": 0,
       "RollLive": 0,
       "SLTruoc": 12,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22043311665",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
       "KyCoSL": "2026/K6"
     },
     {
@@ -12293,6 +12443,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 7,
       "KyCoSL": "2026/K1"
+    },
+    {
+      "Danhba": "22043312057",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 14,
+      "KyCoSL": "2026/K6"
     },
     {
       "Danhba": "22043312141",
@@ -12495,6 +12655,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K7"
     },
     {
+      "Danhba": "22043312782",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 2,
+      "KyCoSL": "2026/K1"
+    },
+    {
       "Danhba": "22043312786",
       "MaDMA": "",
       "Roll1": 0,
@@ -12635,6 +12805,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K3"
     },
     {
+      "Danhba": "22043313199",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
       "Danhba": "22043313253",
       "MaDMA": "",
       "Roll1": 0,
@@ -12643,6 +12823,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2025/K4"
+    },
+    {
+      "Danhba": "22043313275",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
     },
     {
       "Danhba": "22043313329",
@@ -12765,6 +12955,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K4"
     },
     {
+      "Danhba": "22043313881",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K4"
+    },
+    {
       "Danhba": "22043313960",
       "MaDMA": "",
       "Roll1": 0,
@@ -12843,6 +13043,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 3,
       "KyCoSL": "2026/K3"
+    },
+    {
+      "Danhba": "22043314417",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
     },
     {
       "Danhba": "22043314475",
@@ -12925,6 +13135,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K7"
     },
     {
+      "Danhba": "22053290022",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 24,
+      "KyCoSL": "2026/K4"
+    },
+    {
       "Danhba": "22053295558",
       "MaDMA": "",
       "Roll1": 0,
@@ -12955,6 +13175,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K6"
     },
     {
+      "Danhba": "22053298356",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 38,
+      "KyCoSL": "2026/K7"
+    },
+    {
       "Danhba": "22053298587",
       "MaDMA": "",
       "Roll1": 0,
@@ -12963,6 +13193,166 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 3,
       "KyCoSL": "2025/K7"
+    },
+    {
+      "Danhba": "22053311308",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 26,
+      "KyCoSL": "2025/K10"
+    },
+    {
+      "Danhba": "22053311380",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 2,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22053311435",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 13,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22053311620",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K1"
+    },
+    {
+      "Danhba": "22053311936",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K2"
+    },
+    {
+      "Danhba": "22053311937",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22053313295",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K1"
+    },
+    {
+      "Danhba": "22053313391",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K3"
+    },
+    {
+      "Danhba": "22053313783",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22053313876",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 42,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22053314900",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 7,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22053315277",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K5"
+    },
+    {
+      "Danhba": "22053315335",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22053315542",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22053315567",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 2,
+      "KyCoSL": "2025/K10"
+    },
+    {
+      "Danhba": "22053316190",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 10,
+      "KyCoSL": "2026/K6"
     },
     {
       "Danhba": "22053320020",
@@ -13055,6 +13445,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K6"
     },
     {
+      "Danhba": "22053320618",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 45,
+      "KyCoSL": "2026/K2"
+    },
+    {
       "Danhba": "22053320745",
       "MaDMA": "",
       "Roll1": 0,
@@ -13115,6 +13515,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K4"
     },
     {
+      "Danhba": "22053321536",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 38,
+      "KyCoSL": "2026/K4"
+    },
+    {
       "Danhba": "22053321932",
       "MaDMA": "",
       "Roll1": 0,
@@ -13123,6 +13533,26 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 3,
       "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22053322006",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22053322049",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 39,
+      "KyCoSL": "2025/K8"
     },
     {
       "Danhba": "22053322111",
@@ -13175,6 +13605,26 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K3"
     },
     {
+      "Danhba": "22053322880",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 11,
+      "KyCoSL": "2025/K12"
+    },
+    {
+      "Danhba": "22053322980",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
       "Danhba": "22053323281",
       "MaDMA": "",
       "Roll1": 0,
@@ -13183,6 +13633,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 3,
       "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22053323525",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K3"
     },
     {
       "Danhba": "22053323543",
@@ -13195,6 +13655,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K3"
     },
     {
+      "Danhba": "22053323587",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 2,
+      "KyCoSL": "2025/K11"
+    },
+    {
       "Danhba": "22053323835",
       "MaDMA": "",
       "Roll1": 0,
@@ -13203,6 +13673,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22053323952",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 14,
+      "KyCoSL": "2025/K10"
     },
     {
       "Danhba": "22053324293",
@@ -13225,6 +13705,36 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K2"
     },
     {
+      "Danhba": "22053324421",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 4,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22053324456",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22053324678",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
       "Danhba": "22053324684",
       "MaDMA": "",
       "Roll1": 0,
@@ -13233,6 +13743,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 17,
       "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22053324710",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K9"
     },
     {
       "Danhba": "22053324721",
@@ -13265,6 +13785,36 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K7"
     },
     {
+      "Danhba": "22053325735",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22053326195",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 11,
+      "KyCoSL": "2026/K2"
+    },
+    {
+      "Danhba": "22053326561",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K1"
+    },
+    {
       "Danhba": "22053326602",
       "MaDMA": "",
       "Roll1": 0,
@@ -13273,6 +13823,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22053327009",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K3"
     },
     {
       "Danhba": "22053327065",
@@ -13305,6 +13865,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K5"
     },
     {
+      "Danhba": "22053327439",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 10,
+      "KyCoSL": "2026/K2"
+    },
+    {
       "Danhba": "22053327527",
       "MaDMA": "",
       "Roll1": 0,
@@ -13313,6 +13883,46 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 4,
       "KyCoSL": "2025/K8"
+    },
+    {
+      "Danhba": "22053328236",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 4,
+      "KyCoSL": "2025/K4"
+    },
+    {
+      "Danhba": "22053328237",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 12,
+      "KyCoSL": "2025/K5"
+    },
+    {
+      "Danhba": "22053328238",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 10,
+      "KyCoSL": "2025/K5"
+    },
+    {
+      "Danhba": "22053328239",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K5"
     },
     {
       "Danhba": "22053328256",
@@ -13385,6 +13995,36 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K6"
     },
     {
+      "Danhba": "22053328975",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 26,
+      "KyCoSL": "2026/K2"
+    },
+    {
+      "Danhba": "22053329002",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 11,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22053329112",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 16,
+      "KyCoSL": "2026/K1"
+    },
+    {
       "Danhba": "22053329117",
       "MaDMA": "",
       "Roll1": 0,
@@ -13393,6 +14033,26 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22053329363",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 5,
+      "KyCoSL": "2026/K3"
+    },
+    {
+      "Danhba": "22053329377",
+      "MaDMA": "",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 2,
+      "KyCoSL": "2026/K4"
     },
     {
       "Danhba": "22053329489",
@@ -46575,6 +47235,56 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K5"
     },
     {
+      "Danhba": "22023243265",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22023243270",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22023243272",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023243339",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023243344",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K3"
+    },
+    {
       "Danhba": "22023243440",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46595,6 +47305,26 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K4"
     },
     {
+      "Danhba": "22023243486",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023243526",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K4"
+    },
+    {
       "Danhba": "22023243708",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46605,6 +47335,126 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K6"
     },
     {
+      "Danhba": "22023243743",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 4,
+      "KyCoSL": "2025/K6"
+    },
+    {
+      "Danhba": "22023243747",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22023243805",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K10"
+    },
+    {
+      "Danhba": "22023243893",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023243907",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023243914",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 12,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22023243938",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22023243974",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023243977",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22023243989",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22023244011",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023244020",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 2,
+      "KyCoSL": "2026/K4"
+    },
+    {
       "Danhba": "22023244431",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46613,6 +47463,26 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2025/K8"
+    },
+    {
+      "Danhba": "22023244647",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 8,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22023244679",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 15,
+      "KyCoSL": "2026/K5"
     },
     {
       "Danhba": "22023244820",
@@ -46663,6 +47533,26 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 14,
       "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22023245183",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22023245196",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 5,
+      "KyCoSL": "2025/K7"
     },
     {
       "Danhba": "22023245301",
@@ -46725,6 +47615,26 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K7"
     },
     {
+      "Danhba": "22023245960",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 4,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22023245963",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
       "Danhba": "22023246282",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46733,6 +47643,66 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023246419",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023246456",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 15,
+      "KyCoSL": "2026/K2"
+    },
+    {
+      "Danhba": "22023246469",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22023246480",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023246683",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K1"
+    },
+    {
+      "Danhba": "22023246691",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 3,
+      "KyCoSL": "2026/K3"
     },
     {
       "Danhba": "22023247041",
@@ -46745,6 +47715,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K1"
     },
     {
+      "Danhba": "22023247591",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
       "Danhba": "22023248058",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46753,6 +47733,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2025/K4"
+    },
+    {
+      "Danhba": "22023248306",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K3"
     },
     {
       "Danhba": "22023248432",
@@ -46775,6 +47765,26 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K6"
     },
     {
+      "Danhba": "22023248600",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023248610",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K7"
+    },
+    {
       "Danhba": "22023248653",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46783,6 +47793,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023249142",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 9,
+      "KyCoSL": "2026/K6"
     },
     {
       "Danhba": "22023249269",
@@ -46835,6 +47855,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K7"
     },
     {
+      "Danhba": "22023250068",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
       "Danhba": "22023250071",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46843,6 +47873,26 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 3,
       "KyCoSL": "2025/K10"
+    },
+    {
+      "Danhba": "22023250266",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22023250460",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 25,
+      "KyCoSL": "2025/K8"
     },
     {
       "Danhba": "22023250576",
@@ -46855,6 +47905,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K7"
     },
     {
+      "Danhba": "22023250578",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 3,
+      "KyCoSL": "2025/K9"
+    },
+    {
       "Danhba": "22023250667",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46862,6 +47922,16 @@ const TAWACO_0M3_DSD = {
       "Roll3": 0,
       "RollLive": 0,
       "SLTruoc": 1,
+      "KyCoSL": "2026/K1"
+    },
+    {
+      "Danhba": "22023250688",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 14,
       "KyCoSL": "2026/K1"
     },
     {
@@ -46885,6 +47955,26 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K1"
     },
     {
+      "Danhba": "22023251267",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 163,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22023251343",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
       "Danhba": "22023251407",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46895,7 +47985,27 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K5"
     },
     {
+      "Danhba": "22023251464",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K2"
+    },
+    {
       "Danhba": "22023251510",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22023251514",
       "MaDMA": "TCH.1",
       "Roll1": 0,
       "Roll2": 0,
@@ -46935,6 +48045,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K5"
     },
     {
+      "Danhba": "22023251788",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K10"
+    },
+    {
       "Danhba": "22023251835",
       "MaDMA": "TCH.1",
       "Roll1": 0,
@@ -46966,6 +48086,16 @@ const TAWACO_0M3_DSD = {
     },
     {
       "Danhba": "22023252124",
+      "MaDMA": "TCH.1",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023252158",
       "MaDMA": "TCH.1",
       "Roll1": 0,
       "Roll2": 0,
@@ -47015,6 +48145,26 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K4"
     },
     {
+      "Danhba": "22023238671",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22023238693",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
       "Danhba": "22023238740",
       "MaDMA": "TCH.1_3",
       "Roll1": 0,
@@ -47033,6 +48183,36 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023242513",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 3,
+      "KyCoSL": "2025/K9"
+    },
+    {
+      "Danhba": "22023242533",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22023243078",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
     },
     {
       "Danhba": "22023243586",
@@ -47166,6 +48346,46 @@ const TAWACO_0M3_DSD = {
     },
     {
       "Danhba": "22023244341",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023244579",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22023244602",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22023244907",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22023244944",
       "MaDMA": "TCH.1_3",
       "Roll1": 0,
       "Roll2": 0,
@@ -47325,6 +48545,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K3"
     },
     {
+      "Danhba": "22023248819",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K1"
+    },
+    {
       "Danhba": "22023249039",
       "MaDMA": "TCH.1_3",
       "Roll1": 0,
@@ -47365,6 +48595,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K6"
     },
     {
+      "Danhba": "22023250694",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K1"
+    },
+    {
       "Danhba": "22023250775",
       "MaDMA": "TCH.1_3",
       "Roll1": 0,
@@ -47395,6 +48635,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K1"
     },
     {
+      "Danhba": "22023250958",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 2,
+      "KyCoSL": "2026/K6"
+    },
+    {
       "Danhba": "22023251188",
       "MaDMA": "TCH.1_3",
       "Roll1": 0,
@@ -47423,6 +48673,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K2"
+    },
+    {
+      "Danhba": "22023251405",
+      "MaDMA": "TCH.1_3",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 6,
+      "KyCoSL": "2025/K4"
     },
     {
       "Danhba": "22023251734",
@@ -55795,6 +57055,26 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K2"
     },
     {
+      "Danhba": "22043300222",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 10,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22043300242",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 10,
+      "KyCoSL": "2025/K9"
+    },
+    {
       "Danhba": "22043300853",
       "MaDMA": "TX-TL.2",
       "Roll1": 0,
@@ -55813,6 +57093,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 8,
       "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22043301106",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2025/K11"
     },
     {
       "Danhba": "22043301342",
@@ -55845,6 +57135,26 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2026/K6"
     },
     {
+      "Danhba": "22043305510",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22043305776",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
       "Danhba": "22043305936",
       "MaDMA": "TX-TL.2",
       "Roll1": 0,
@@ -55863,6 +57173,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22043306551",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 3,
+      "KyCoSL": "2025/K12"
     },
     {
       "Danhba": "22043308417",
@@ -55893,6 +57213,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 1,
       "KyCoSL": "2026/K7"
+    },
+    {
+      "Danhba": "22043309088",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 5,
+      "KyCoSL": "2025/K4"
     },
     {
       "Danhba": "22043309325",
@@ -55995,6 +57325,16 @@ const TAWACO_0M3_DSD = {
       "KyCoSL": "2025/K8"
     },
     {
+      "Danhba": "22043313555",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 42,
+      "KyCoSL": "2025/K9"
+    },
+    {
       "Danhba": "22043313767",
       "MaDMA": "TX-TL.2",
       "Roll1": 0,
@@ -56003,6 +57343,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 2,
       "KyCoSL": "2026/K3"
+    },
+    {
+      "Danhba": "22043314220",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 26,
+      "KyCoSL": "2026/K5"
     },
     {
       "Danhba": "22053290774",
@@ -56023,6 +57373,16 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 7,
       "KyCoSL": "2026/K2"
+    },
+    {
+      "Danhba": "22053310195",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 5,
+      "KyCoSL": "2026/K5"
     },
     {
       "Danhba": "22053322479",
@@ -56093,6 +57453,26 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 5,
       "KyCoSL": "2026/K2"
+    },
+    {
+      "Danhba": "22053324977",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 2,
+      "KyCoSL": "2026/K4"
+    },
+    {
+      "Danhba": "22053324989",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
     },
     {
       "Danhba": "22053326006",
@@ -56283,6 +57663,36 @@ const TAWACO_0M3_DSD = {
       "RollLive": 0,
       "SLTruoc": 28,
       "KyCoSL": "2025/K3"
+    },
+    {
+      "Danhba": "22053327751",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K6"
+    },
+    {
+      "Danhba": "22053327752",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 1,
+      "KyCoSL": "2026/K5"
+    },
+    {
+      "Danhba": "22053327758",
+      "MaDMA": "TX-TL.2",
+      "Roll1": 0,
+      "Roll2": 0,
+      "Roll3": 0,
+      "RollLive": 0,
+      "SLTruoc": 20,
+      "KyCoSL": "2025/K12"
     },
     {
       "Danhba": "22053328008",
