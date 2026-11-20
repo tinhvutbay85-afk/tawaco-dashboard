@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 13:21:00 20/11/2026
+// TAWACO – Biến động KH Lớn – 14:20:15 20/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "13:21:00 20/11/2026",
+  "lastUpdated": "14:20:15 20/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 57,
   "tongM3Mat": 28768,
@@ -510,20 +510,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "22113410001",
-      "TenKH": "BAN QL CHUNG CU AN SUONG",
-      "DiaChi": "N/A",
-      "MaDMA": "DHT.1",
-      "MaPhuong": "26791",
-      "MaGia": "59",
-      "SL_K1": 0,
-      "SL_K2": 1217,
-      "SL_K3": 1060,
-      "M3_Giam": 157,
-      "TyLe_Giam": 12.9,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "15052170980",
       "TenKH": "TRUONG DAI HOC VAN LANG",
       "DiaChi": "N/A",
@@ -535,6 +521,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1268,
       "M3_Giam": 157,
       "TyLe_Giam": 11.02,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "22113410001",
+      "TenKH": "BAN QL CHUNG CU AN SUONG",
+      "DiaChi": "N/A",
+      "MaDMA": "DHT.1",
+      "MaPhuong": "26791",
+      "MaGia": "59",
+      "SL_K1": 0,
+      "SL_K2": 1217,
+      "SL_K3": 1060,
+      "M3_Giam": 157,
+      "TyLe_Giam": 12.9,
       "Level": "YELLOW"
     },
     {
