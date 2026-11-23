@@ -1,6 +1,6 @@
-// TAWACO – Biến động KH Lớn – 16:20:15 20/11/2026
+// TAWACO – Biến động KH Lớn – 09:20:15 23/11/2026
 const TAWACO_CHURN_DATA = {
-  "lastUpdated": "16:20:15 20/11/2026",
+  "lastUpdated": "09:20:15 23/11/2026",
   "kyRange": "K10 ➔ K11/2026 (Giảm sản lượng KH Lớn)",
   "tongKH": 57,
   "tongM3Mat": 28768,
@@ -328,20 +328,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "RED"
     },
     {
-      "Danhba": "22063310508",
-      "TenKH": "CONG TY TNHH SAN XUAT THUONG MAI DICH VU THUAN AN AN",
-      "DiaChi": "N/A",
-      "MaDMA": "TL.2",
-      "MaPhuong": "26767",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 909,
-      "SL_K3": 624,
-      "M3_Giam": 285,
-      "TyLe_Giam": 31.35,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22063300808",
       "TenKH": "CONG TY TNHH CTI VN",
       "DiaChi": "N/A",
@@ -354,6 +340,20 @@ const TAWACO_CHURN_DATA = {
       "M3_Giam": 285,
       "TyLe_Giam": 52.49,
       "Level": "RED"
+    },
+    {
+      "Danhba": "22063310508",
+      "TenKH": "CONG TY TNHH SAN XUAT THUONG MAI DICH VU THUAN AN AN",
+      "DiaChi": "N/A",
+      "MaDMA": "TL.2",
+      "MaPhuong": "26767",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 909,
+      "SL_K3": 624,
+      "M3_Giam": 285,
+      "TyLe_Giam": 31.35,
+      "Level": "YELLOW"
     },
     {
       "Danhba": "22033277945",
@@ -510,20 +510,6 @@ const TAWACO_CHURN_DATA = {
       "Level": "YELLOW"
     },
     {
-      "Danhba": "15052170980",
-      "TenKH": "TRUONG DAI HOC VAN LANG",
-      "DiaChi": "N/A",
-      "MaDMA": "5.2",
-      "MaPhuong": "26876",
-      "MaGia": "33",
-      "SL_K1": 0,
-      "SL_K2": 1425,
-      "SL_K3": 1268,
-      "M3_Giam": 157,
-      "TyLe_Giam": 11.02,
-      "Level": "YELLOW"
-    },
-    {
       "Danhba": "22113410001",
       "TenKH": "BAN QL CHUNG CU AN SUONG",
       "DiaChi": "N/A",
@@ -535,6 +521,20 @@ const TAWACO_CHURN_DATA = {
       "SL_K3": 1060,
       "M3_Giam": 157,
       "TyLe_Giam": 12.9,
+      "Level": "YELLOW"
+    },
+    {
+      "Danhba": "15052170980",
+      "TenKH": "TRUONG DAI HOC VAN LANG",
+      "DiaChi": "N/A",
+      "MaDMA": "5.2",
+      "MaPhuong": "26876",
+      "MaGia": "33",
+      "SL_K1": 0,
+      "SL_K2": 1425,
+      "SL_K3": 1268,
+      "M3_Giam": 157,
+      "TyLe_Giam": 11.02,
       "Level": "YELLOW"
     },
     {
